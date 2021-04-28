@@ -16,3 +16,7 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
+
+## Deployment
+
+CI and hosting on [Fleek](https://fleek.co/).
