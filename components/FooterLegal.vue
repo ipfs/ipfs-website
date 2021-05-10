@@ -1,0 +1,61 @@
+<template>
+  <div class="flex items-center text-sm">
+    <span>
+      <a
+        href="https://protocol.ai"
+        target="_blank"
+        class="mr-1 inline-block align-middle"
+      >
+        <svg-icon
+          name="logo-icon"
+          title="Protocol Labs"
+          class="w-4 h-4 fill-current"
+        />
+      </a>
+      ©
+      <a
+        class="text-blueGreenLight hover:underline"
+        href="https://protocol.ai"
+        target="_blank"
+        >Protocol Labs</a
+      >
+      | Except as
+      <a
+        class="text-blueGreenLight hover:underline"
+        href="https://protocol.ai/legal/"
+        target="_blank"
+        >noted</a
+      >, content licensed
+      <a
+        class="text-blueGreenLight hover:underline"
+        href="https://creativecommons.org/licenses/by/3.0/"
+        target="_blank"
+        >CC-BY 3.0</a
+      >
+      |
+      <a
+        class="text-blueGreenLight hover:underline"
+        href="https://protocol.ai/legal/#terms-of-service"
+        target="_blank"
+        >Terms</a
+      >
+      |
+      <a
+        class="text-blueGreenLight hover:underline"
+        href="https://protocol.ai/legal/#privacy-policy"
+        target="_blank"
+        >Privacy</a
+      >
+      |
+      <a class="text-blueGreenLight hover:underline" href="/legal"
+        >DMCA</a
+      ></span
+    >
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FooterLegal',
+};
+</script>

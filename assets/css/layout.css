@@ -1,0 +1,20 @@
+body {
+    @apply antialiased;
+}
+
+.grid-margins {
+    @apply mx-15px;
+}
+
+@screen md {
+    .grid-margins {
+        margin: 0 4%;
+    }
+}
+
+/* 1440 max width + 58px left & right padding */
+@media only screen and (min-width: 1556px) {
+    .grid-margins {
+        @apply max-w-screen-xxl mx-auto;
+    }
+}
