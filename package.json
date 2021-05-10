@@ -22,8 +22,14 @@
     }
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/svg-sprite": "^0.5.2",
+    "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "lodash": "^4.17.21",
+    "nuxt": "^2.15.3",
+    "nuxt-mq": "^2.0.2",
+    "pixi.js": "^4.8.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",

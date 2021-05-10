@@ -14,6 +14,9 @@
     "SharedArrayBuffer": "readonly"
   },
   "rules": {
-    "vue/no-v-html": "off"
+    "vue/no-v-html": "off",
+    "prettier/prettier": [
+      "error", { "singleQuote": true }
+    ]
   }
 }
