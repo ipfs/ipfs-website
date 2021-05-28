@@ -12,17 +12,16 @@
               :key="'link-' + index"
               class="sm:mr-10 last:mr-0"
               :class="[{ 'mb-4': item.children && item.children.length }]"
+              @click="onLinkClick(item)"
             >
-              <a
-                :href="item.link"
+              <Link
+                :item="item"
                 class="footer-link font-medium hover:opacity-75 transition-opacity duration-300 ease-in-out"
-              >
-                {{ item.text }}
-              </a>
+              />
             </li>
           </ul>
         </div>
-        <SocialLinks class="flex items-center" />
+        <SocialLinks class="flex items-center" tracking="footer" />
       </div>
       <FooterLegal class="mt-4 md:mt-8" />
     </div>
@@ -30,6 +29,7 @@
 </template>
 
 <script>
+import Link from './Link';
 import SocialLinks from './SocialLinks';
 import FooterLegal from './FooterLegal';
 import NewsletterForm from './NewsletterForm';
@@ -50,10 +50,19 @@ const footerNavigation = [
 
 export default {
   name: 'Footer',
-  components: { SocialLinks, FooterLegal, NewsletterForm },
+  components: { Link, SocialLinks, FooterLegal, NewsletterForm },
   data: () => ({
     footerNavigation: footerNavigation,
   }),
+  methods: {
+    onLinkClick(item) {
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
+        path: this.$route.path,
+        text: item.text,
+        href: item.link,
+      });
+    },
+  },
 };
 </script>
 

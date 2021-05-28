@@ -9,11 +9,15 @@
           <div class="flex-grow justify-center flex flex-col">
             <nav>
               <h1 v-for="page in mobileNavLinks" :key="page.text" class="mb-3">
-                <Link class="mobile-nav-link" :item="page" />
+                <Link
+                  class="mobile-nav-link"
+                  :item="page"
+                  :on-click="onLinkClick"
+                />
               </h1>
             </nav>
           </div>
-          <SocialLinks class="flex" />
+          <SocialLinks class="flex" tracking="mobile-menu" />
         </div>
       </div>
     </transition>
@@ -91,6 +95,13 @@ export default {
           e.preventDefault();
         }
       }
+    },
+    onLinkClick(item) {
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
+        path: this.$route.path,
+        text: item.text,
+        href: item.link,
+      });
     },
   },
 };

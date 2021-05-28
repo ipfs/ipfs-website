@@ -7,6 +7,7 @@
       :href="link.link"
       target="_blank"
       rel="noopener noreferrer"
+      @click="() => onClick(link)"
     >
       <svg-icon
         class="w-8 h-8 fill-current hover:opacity-75 transition duration-300 ease-in-out"
@@ -43,8 +44,24 @@ const socialLinks = [
 
 export default {
   name: 'SocialLinks',
+  props: {
+    tracking: {
+      type: String,
+      default: '',
+    },
+  },
   data: () => ({
     socialLinks: socialLinks,
   }),
+  methods: {
+    onClick(item) {
+      this.$countly.trackEvent(this.$countly.events.SOCIAL_MEDIA_OUTBOUNDS, {
+        path: this.$route.path,
+        text: item.text,
+        href: item.link,
+        ui: this.tracking,
+      });
+    },
+  },
 };
 </script>

@@ -1,10 +1,13 @@
 <template>
   <header
     ref="header"
-    class="fixed top-0 w-full text-white transition duration-300 ease-out transform z-50"
+    class="top-0 w-full text-white transition duration-300 ease-out transform z-50"
     :class="[
       {
         '-translate-y-full': navVisibility.navSticky,
+        fixed: !noHero,
+        static: noHero,
+        'bg-gradient-6': noHero,
         navVisible: navVisibility.navVisible,
         navSticky: navVisibility.navSticky && !mobileNavActive,
         mobileNavOpen: mobileNavActive,
@@ -12,18 +15,20 @@
     ]"
   >
     <div class="grid-margins flex justify-between items-center h-20">
-      <a
+      <Link
         class="hover:opacity-75 transition-opacity duration-300 ease-in-out mobile-nav-link"
-        href="/"
+        :item="{ link: '/', text: 'Homepage (logo)' }"
+        :on-click="onLinkClick"
       >
         <svg-icon name="ipfs-logo" class="w-32 h-20 fill-current" />
-      </a>
+      </Link>
       <nav class="hidden md:flex justify-between w-full max-w-lg">
         <Link
           v-for="link in headerLinks"
           :key="link.text"
           :item="link"
           class="nav-link font-display font-medium relative"
+          :on-click="onLinkClick"
         />
       </nav>
       <button
@@ -54,6 +59,12 @@ const headerLinks = [
 export default {
   name: 'Header',
   components: { Link },
+  props: {
+    noHero: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     headerLinks: headerLinks,
     navVisibility: {
@@ -116,6 +127,13 @@ export default {
     },
     toggleMobileMenu() {
       this.$store.commit('appState/toggleMobileNav', !this.mobileNavActive);
+    },
+    onLinkClick(item) {
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
+        path: this.$route.path,
+        text: item.text,
+        href: item.link,
+      });
     },
   },
 };
