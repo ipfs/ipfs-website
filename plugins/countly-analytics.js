@@ -14,14 +14,13 @@ export default function (ctx, inject) {
         return;
       }
 
+      window.Countly.q.push(['add_event', { key: event, segmentation: data }]);
+
       process.env.NODE_ENV !== 'production' &&
         console.log(
-          '[plugin/countly-analytics] trackEvent',
-          `event=${event}`,
+          `✅ [plugin/countly-analytics] trackEvent("${event}", data) event sent`,
           data
         );
-
-      window.Countly.q.push(['add_event', { key: event, segmentation: data }]);
     },
   };
 
