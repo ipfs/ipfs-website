@@ -41,13 +41,18 @@ export default {
   computed: {
     classnames() {
       const defaultClasses =
-        'inline-block px-3 py-2 font-semibold rounded hover:opacity-75 transition duration-300 ease-in-out';
+        'inline-block px-3 py-2 font-semibold rounded transition duration-300 ease-in-out';
 
       if (this.type === 'primary') {
-        return defaultClasses + ' text-white bg-blueGreen';
+        return (
+          defaultClasses + ' text-white bg-blueGreen hover:bg-blueGreenScreen'
+        );
       }
 
-      return defaultClasses + ' bg-white text-blueGreen border-blueGreen';
+      return (
+        defaultClasses +
+        ' bg-white text-blueGreen border-blueGreen hover:bg-gray-200'
+      );
     },
   },
 };

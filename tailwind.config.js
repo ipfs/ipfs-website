@@ -6,6 +6,7 @@ const theme = {
     ),
     colors: {
       blueGreen: '#34797D',
+      blueGreenScreen: '#66989a',
       blueGreenLight: '#6BC4CE',
       deepBlue: '#002256',
       plBlack: '#16161F',
