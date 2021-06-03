@@ -25,7 +25,7 @@
     <section id="why" class="grid-margins py-36">
       <div class="text-center mb-20">
         <h2 class="mb-3">The web of tomorrow needs IPFS today</h2>
-        <h5 class="text-navy">
+        <h5>
           IPFS aims to surpass HTTP in order to build a better web for all of
           us.
         </h5>
@@ -35,8 +35,8 @@
           <div class="flex justify-center h-52">
             <svg-icon name="ipfs-illustration-http" />
           </div>
-          <h5 class="text-center text-navy mb-4">
-            <strong>Today's web is inefficient and expensive</strong>
+          <h5 class="text-center text-navy mb-4 font-bold">
+            Today's web is inefficient and expensive
           </h5>
           <p>
             HTTP downloads files from one computer at a time instead of pieces
@@ -61,8 +61,8 @@
           <div class="flex justify-center h-52">
             <svg-icon name="ipfs-illustration-history" />
           </div>
-          <h5 class="text-center text-navy mb-4">
-            <strong>Today's web can't preserve humanity's history</strong>
+          <h5 class="text-center text-navy mb-4 font-bold">
+            Today's web can't preserve humanity's history
           </h5>
           <p>
             <Link
@@ -85,8 +85,8 @@
           <div class="flex justify-center h-52">
             <svg-icon name="ipfs-illustration-centralized" />
           </div>
-          <h5 class="text-center text-navy mb-4">
-            <strong>Today's web is centralized, limiting opportunity</strong>
+          <h5 class="text-center text-navy mb-4 font-bold">
+            Today's web is centralized, limiting opportunity
           </h5>
           <p>
             The Internet has turbocharged innovation by being one of the great
@@ -100,8 +100,8 @@
           <div class="flex justify-center h-52">
             <svg-icon name="ipfs-illustration-network" />
           </div>
-          <h5 class="text-center text-navy mb-4">
-            <strong>Today's web is addicted to the backbone</strong>
+          <h5 class="text-center text-navy mb-4 font-bold">
+            Today's web is addicted to the backbone
           </h5>
           <p>
             IPFS powers the creation of diversely resilient networks that enable
@@ -143,7 +143,7 @@
               rel="noopener"
               ><h4 class="text-blueGreenLight mb-1.5">IPFS Desktop</h4></a
             >
-            <h5 class="mb-4">IPFS for everyone</h5>
+            <h5 class="mb-4 font-bold">IPFS for everyone</h5>
             <p class="mb-4">
               The desktop app offers menubar/tray shortcuts and an easy
               interface for adding, pinning, and sharing files &mdash; plus a
@@ -183,7 +183,7 @@
                 Command-line install
               </h4></a
             >
-            <h5 class="mb-4">All IPFS, no frills</h5>
+            <h5 class="mb-4 font-bold">All IPFS, no frills</h5>
             <p class="mb-4">
               Just want IPFS in your terminal? Get step-by-step instructions
               getting up and running on the command line using the Go
@@ -224,10 +224,10 @@
                 rel="noopener"
                 ><h4 class="text-blueGreenLight mb-1.5">IPFS Companion</h4></a
               >
-              <h5 class="mb-4">Add IPFS to your browser</h5>
+              <h5 class="mb-4 font-bold">Add IPFS to your browser</h5>
               <p class="mb-4">
-                Get ipfs:// URL support and much more in your web browser with
-                this extension.
+                Get <code>ipfs://</code> URL support and much more in your web
+                browser with this extension.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
@@ -257,7 +257,7 @@
               <a href="https://cluster.ipfs.io/" target="_blank" rel="noopener"
                 ><h4 class="text-blueGreenLight mb-1.5">IPFS Cluster</h4></a
               >
-              <h5 class="mb-4">For servers or big data</h5>
+              <h5 class="mb-4 font-bold">For servers or big data</h5>
               <p class="mb-4">
                 Automatically allocate, replicate, and track your data as
                 pinsets across multiple IPFS nodes.
