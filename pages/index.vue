@@ -43,6 +43,7 @@
             from multiple computers simultaneously. Peer-to-peer IPFS saves big
             on bandwidth &mdash;
             <Link
+              class="text-blueGreen font-bold hover:underline"
               :item="{
                 link:
                   'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
@@ -65,6 +66,7 @@
           </h5>
           <p>
             <Link
+              class="text-blueGreen font-bold hover:underline"
               :item="{
                 link:
                   'https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/',
