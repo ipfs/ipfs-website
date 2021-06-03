@@ -87,3 +87,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+</style>

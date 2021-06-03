@@ -74,10 +74,9 @@
                 (item) => onCTAClick({ ui: 'why/2-preservation', ...item })
               "
             />
-            before it's before it's gone forever. It's not good enough for the
-            primary medium of our era to be this fragile. IPFS keeps every
-            version of and makes it simple to set up resilient networks for
-            mirroring data.
+            before it's gone forever. It's not good enough for the medium of our
+            era to be this fragile. IPFS keeps every version of and makes it
+            simple to set up resilient networks for mirroring data.
           </p>
         </div>
         <div>
@@ -616,6 +615,12 @@ export default {
 </script>
 
 <style scoped>
+h2,
+h3,
+h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 h2 {
   @apply text-3xl;
 }

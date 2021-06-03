@@ -79,13 +79,15 @@ canvas {
   z-index: 2;
 }
 
-h2 {
+.hero-container h2 {
   font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
-h3 {
+.hero-container h3 {
   font-size: 1.375rem;
   font-weight: 200;
+  font-family: 'inter', sans-serif;
 }
 
 @media (max-width: 768px) {
