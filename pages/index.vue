@@ -361,9 +361,7 @@
     <section id="how" class="grid-margins py-20">
       <div class="text-center mb-16">
         <h2 class="mb-4">Here's how IPFS works</h2>
-        <h5 class="text-navy">
-          Take a look at what happens when you add a file to IPFS.
-        </h5>
+        <h5>Take a look at what happens when you add a file to IPFS.</h5>
       </div>
       <div class="max-w-3xl mx-auto">
         <div
@@ -375,11 +373,11 @@
             <svg-icon name="ipfs-illustrations-how-1" />
           </div>
           <div class="pl-0 sm:pl-14">
-            <h5 class="leading-normal">
+            <p class="leading-normal">
               Your file, and all of the <strong>blocks within it</strong>, is
               given a <strong>unique fingerprint</strong> called a
               <strong>cryptographic hash</strong>.
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -391,9 +389,9 @@
             <svg-icon name="ipfs-illustrations-how-2" />
           </div>
           <div class="pl-0 sm:pl-14">
-            <h5 class="leading-normal">
+            <p class="leading-normal">
               IPFS <strong>removes duplications</strong> across the network.
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -405,11 +403,11 @@
             <svg-icon name="ipfs-illustrations-how-3" />
           </div>
           <div class="pl-0 sm:pl-14">
-            <h5 class="leading-normal">
+            <p class="leading-normal">
               Each <strong>network node</strong> stores only content it is
               interested in, plus some indexing information that helps figure
               out which node is storing what.
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -421,11 +419,11 @@
             <svg-icon name="ipfs-illustrations-how-4" />
           </div>
           <div class="pl-0 sm:pl-14">
-            <h5 class="leading-normal">
+            <p class="leading-normal">
               When you <strong>look up a file</strong> to view or download,
               you're asking the network to find the nodes that are storing the
               content behind that file's hash.
-            </h5>
+            </p>
           </div>
         </div>
         <div
@@ -437,18 +435,18 @@
             <svg-icon name="ipfs-illustrations-how-5" />
           </div>
           <div class="pl-0 sm:pl-14">
-            <h5 class="leading-normal">
+            <p class="leading-normal">
               You don't need to remember the hash, though &mdash; every file can
               be found by <strong>human-readable names</strong> using a
               decentralized naming system called <strong>IPNS</strong>.
-            </h5>
+            </p>
           </div>
         </div>
       </div>
-      <h3 class="text-center my-16">Take a closer look</h3>
+      <h3 class="text-center mt-16 mb-8">Take a closer look</h3>
       <div class="flex flex-col sm:flex-row justify-around">
         <div class="flex flex-col items-center mb-8 sm:mb-0">
-          <h5 class="mb-4 text-navy">Want to dig in?</h5>
+          <h5 class="text-navy font-semibold mb-4">Want to dig in?</h5>
           <Button
             type="primary"
             href="https://docs.ipfs.io/"
@@ -458,7 +456,7 @@
           />
         </div>
         <div class="flex flex-col items-center mb-8 sm:mb-0">
-          <h5 class="mb-4 text-navy">Hands-on learner?</h5>
+          <h5 class="text-navy font-semibold mb-4">Hands-on learner?</h5>
           <Button
             type="primary"
             href="https://proto.school/course/ipfs"
@@ -468,7 +466,9 @@
           />
         </div>
         <div class="flex flex-col items-center">
-          <h5 class="mb-4 text-navy">Curious where it all began?</h5>
+          <h5 class="text-navy font-semibold mb-4">
+            Curious where it all began?
+          </h5>
           <Button
             type="primary"
             href="https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf"
@@ -489,13 +489,13 @@
         class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-24"
       >
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
+          <div class="max-h-24 mb-12">
             <svg-icon
               name="ipfs-illustration-archivists"
-              class="w-full h-full"
+              class="h-36 w-36 mx-auto"
             />
           </div>
-          <h5 class="text-navy mb-4">Archivists</h5>
+          <h5 class="text-navy font-semibold mb-2">Archivists</h5>
           <p>
             IPFS provides deduplication, high performance, and clustered
             persistence &mdash; empowering you to store the world's information
@@ -503,10 +503,13 @@
           </p>
         </div>
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
-            <svg-icon name="ipfs-illustration-service" class="w-full h-full" />
+          <div class="max-h-24 mb-12">
+            <svg-icon
+              name="ipfs-illustration-service"
+              class="h-36 w-36 mx-auto"
+            />
           </div>
-          <h5 class="text-navy mb-4">Service providers</h5>
+          <h5 class="text-navy font-semibold mb-2">Service providers</h5>
           <p>
             Providing large amounts of data to users? IPFS offers secure,
             peer-to-peer content delivery &mdash; an approach that could save
@@ -514,10 +517,10 @@
           </p>
         </div>
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
-            <svg-icon name="ipfs-illustration-data" class="w-full h-full" />
+          <div class="max-h-24 mb-12">
+            <svg-icon name="ipfs-illustration-data" class="h-36 w-36 mx-auto" />
           </div>
-          <h5 class="text-navy mb-4">Researchers</h5>
+          <h5 class="text-navy font-semibold mb-2">Researchers</h5>
           <p>
             If you're working with or distributing large data sets, IPFS can
             help provide fast performance and decentralized archiving.
@@ -528,13 +531,13 @@
         class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-12"
       >
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
+          <div class="max-h-24 mb-12">
             <svg-icon
               name="ipfs-illustration-developing"
-              class="w-full h-full"
+              class="h-36 w-36 mx-auto"
             />
           </div>
-          <h5 class="text-navy mb-4">Developing world</h5>
+          <h5 class="text-navy font-semibold mb-2">Developing world</h5>
           <p>
             High-latency networks are a big barrier for those with poor internet
             infrastructure. IPFS provides resilient access to data independent
@@ -542,13 +545,13 @@
           </p>
         </div>
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
+          <div class="max-h-24 mb-12">
             <svg-icon
               name="ipfs-illustration-blockchains"
-              class="w-full h-full"
+              class="h-36 w-36 mx-auto"
             />
           </div>
-          <h5 class="text-navy mb-4">Blockchains</h5>
+          <h5 class="text-navy font-semibold mb-2">Blockchains</h5>
           <p>
             With IPFS, you can address large amounts of data and put immutable,
             permanent links in transactions &mdash; timestamping and securing
@@ -556,10 +559,13 @@
           </p>
         </div>
         <div class="flex flex-col">
-          <div class="max-h-24 mb-4">
-            <svg-icon name="ipfs-illustration-creators" class="w-full h-full" />
+          <div class="max-h-24 mb-12">
+            <svg-icon
+              name="ipfs-illustration-creators"
+              class="h-36 w-36 mx-auto"
+            />
           </div>
-          <h5 class="text-navy mb-4">Content creators</h5>
+          <h5 class="text-navy font-semibold mb-2">Content creators</h5>
           <p>
             IPFS brings the freedom and independent spirit of the web in full
             force &mdash; and can help you deliver your content at a much lower
@@ -568,7 +574,7 @@
         </div>
       </div>
       <h3 class="mb-4 mt-16">Who's already using IPFS?</h3>
-      <h5 class="text-navy mb-4">
+      <h5 class="mb-6">
         Companies and organizations worldwide are already building amazing
         things on IPFS.
       </h5>
