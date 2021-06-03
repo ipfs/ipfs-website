@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/speedcurve": "^1.1.2",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.9.1",

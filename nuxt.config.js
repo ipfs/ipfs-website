@@ -2,6 +2,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: {
+    fallback: 'ipfs-404.html',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'IPFS Powers the Distributed Web',
@@ -24,7 +28,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/countly-analytics'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,12 +44,35 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content', '@nuxtjs/svg-sprite', 'nuxt-mq'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/svg-sprite',
+    'nuxt-mq',
+    '@nuxtjs/speedcurve',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
   svgSprite: {
     input: '~/assets/svgs/',
+  },
+
+  publicRuntimeConfig: {
+    // Speedcurve config
+    lux: {
+      id: process.env.SPEEDCURVE_ID || '',
+    },
+    countly: {
+      key: process.env.COUNTLY_KEY || '',
+      domain: process.env.DEPLOY_DOMAIN || '',
+      events: {
+        LINK_CLICK_NAV: 'linkClickNav',
+        LINK_CLICK_FOOTER: 'linkClickFooter',
+        SOCIAL_MEDIA_OUTBOUNDS: 'socialMediaOutbounds',
+        NEWSLETTER_SUBSCRIBE: 'newsletterSubscribe',
+        NOT_FOUND: '404NotFound',
+      },
+    },
   },
 };

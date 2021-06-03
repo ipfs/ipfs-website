@@ -3,12 +3,12 @@
     v-if="isInternal"
     :to="link"
     :exact="exact"
-    @click="onClick(item)"
+    @click.native="onClick(item)"
   >
-    {{ item.text }}
+    <slot>{{ item.text }}</slot>
   </RouterLink>
   <a v-else :href="link" :target="target" :rel="rel" @click="onClick(item)">
-    {{ item.text }}
+    <slot>{{ item.text }}</slot>
   </a>
 </template>
 

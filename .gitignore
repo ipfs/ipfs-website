@@ -4,6 +4,7 @@ dist
 .temp
 .eslintcache
 .nuxt
+.env
 
 # logs
 logs

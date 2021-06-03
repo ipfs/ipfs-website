@@ -21,6 +21,7 @@
       action="https://ipfs.us4.list-manage.com/subscribe/post?u=25473244c7d18b897f5a1ff6b&amp;id=cad54b2230"
       method="post"
       target="_blank"
+      @submit="onSubmit"
     >
       <div id="mc_embed_signup_scroll" class="grid gric-col-2 w-full">
         <div class="fields flex flex-col sm:flex-row col-start-1 col-span-2">
@@ -79,5 +80,10 @@ export default {
   data: () => ({
     email: null,
   }),
+  methods: {
+    onSubmit() {
+      this.$countly.trackEvent(this.$countly.events.NEWSLETTER_SUBSCRIBE);
+    },
+  },
 };
 </script>

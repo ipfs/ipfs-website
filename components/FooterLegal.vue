@@ -5,6 +5,7 @@
         href="https://protocol.ai"
         target="_blank"
         class="mr-1 inline-block align-middle"
+        @click="(event) => onClick(event, true)"
       >
         <svg-icon
           name="logo-icon"
@@ -17,19 +18,24 @@
         class="text-blueGreenLight hover:underline"
         href="https://protocol.ai"
         target="_blank"
-        >Protocol Labs</a
+        @click="onClick"
       >
+        Protocol Labs
+      </a>
       | Except as
       <a
         class="text-blueGreenLight hover:underline"
         href="https://protocol.ai/legal/"
         target="_blank"
-        >noted</a
+        @click="onClick"
+      >
+        noted</a
       >, content licensed
       <a
         class="text-blueGreenLight hover:underline"
         href="https://creativecommons.org/licenses/by/3.0/"
         target="_blank"
+        @click="onClick"
         >CC-BY 3.0</a
       >
       |
@@ -37,6 +43,7 @@
         class="text-blueGreenLight hover:underline"
         href="https://protocol.ai/legal/#terms-of-service"
         target="_blank"
+        @click="onClick"
         >Terms</a
       >
       |
@@ -44,18 +51,48 @@
         class="text-blueGreenLight hover:underline"
         href="https://protocol.ai/legal/#privacy-policy"
         target="_blank"
+        @click="onClick"
         >Privacy</a
       >
       |
-      <a class="text-blueGreenLight hover:underline" href="/legal"
-        >DMCA</a
-      ></span
-    >
+      <Link
+        class="text-blueGreenLight hover:underline"
+        :item="{ link: '/legal', text: 'DMCA' }"
+        :on-click="onLinkClick"
+      />
+    </span>
   </div>
 </template>
 
 <script>
+import Link from './Link';
+
 export default {
   name: 'FooterLegal',
+  components: {
+    Link,
+  },
+  methods: {
+    onClick(event, isSvg) {
+      const href = isSvg
+        ? event.srcElement.parentElement.href
+        : event.srcElement.href;
+
+      const text = isSvg ? event.srcElement.textContent : event.srcElement.text;
+
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
+        path: this.$route.path,
+        text: text.trim(),
+        href,
+      });
+    },
+    onLinkClick(item) {
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
+        path: this.$route.path,
+        text: item.text.trim(),
+        href: item.link,
+      });
+    },
+  },
 };
 </script>
