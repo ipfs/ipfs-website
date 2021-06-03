@@ -1,12 +1,7 @@
 <template>
-  <RouterLink
-    v-if="isInternal"
-    :to="link"
-    :exact="exact"
-    @click.native="onClick(item)"
-  >
+  <NuxtLink v-if="isInternal" :to="link" :exact="exact" @click="onClick(item)">
     <slot>{{ item.text }}</slot>
-  </RouterLink>
+  </NuxtLink>
   <a v-else :href="link" :target="target" :rel="rel" @click="onClick(item)">
     <slot>{{ item.text }}</slot>
   </a>

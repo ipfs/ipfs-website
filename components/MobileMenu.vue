@@ -1,27 +1,25 @@
 <template>
-  <mq-layout :mq="['sm', 'md']">
-    <transition name="transition-content" @after-enter="afterEnter">
-      <div
-        v-if="mobileNavActive"
-        class="mobile-nav bg-gradient-6 grid grid-cols-12 fixed h-full top-0 inset-x-0 text-white z-40"
-      >
-        <div class="col-span-10 col-start-2 flex flex-col py-8">
-          <div class="flex-grow justify-center flex flex-col">
-            <nav>
-              <h1 v-for="page in mobileNavLinks" :key="page.text" class="mb-3">
-                <Link
-                  class="mobile-nav-link"
-                  :item="page"
-                  :on-click="onLinkClick"
-                />
-              </h1>
-            </nav>
-          </div>
-          <SocialLinks class="flex" tracking="mobile-menu" />
+  <transition name="transition-content" @after-enter="afterEnter">
+    <div
+      v-if="mobileNavActive"
+      class="mobile-nav bg-gradient-6 grid grid-cols-12 fixed h-full top-0 inset-x-0 text-white z-40"
+    >
+      <div class="col-span-10 col-start-2 flex flex-col py-8">
+        <div class="flex-grow justify-center flex flex-col">
+          <nav>
+            <h1 v-for="page in mobileNavLinks" :key="page.text" class="mb-3">
+              <Link
+                class="mobile-nav-link"
+                :item="page"
+                :on-click="onLinkClick"
+              />
+            </h1>
+          </nav>
         </div>
+        <SocialLinks class="flex" tracking="mobile-menu" />
       </div>
-    </transition>
-  </mq-layout>
+    </div>
+  </transition>
 </template>
 
 <script>

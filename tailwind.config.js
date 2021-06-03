@@ -12,6 +12,7 @@ const theme = {
       gray: {
         background: '#f1f3f2',
       },
+      navy: '#0B3A53',
     },
     fontFamily: {
       sans: 'inter, sans-serif',
