@@ -583,7 +583,7 @@
         href="/images/ipfs-applications-diagram.png"
         target="_blank"
         rel="noopener noreferrer"
-        text="See the list"
+        text="Explore the ecosystem"
         :on-click="(item) => onCTAClick({ ui: 'who/see-list', ...item })"
       />
     </section>
