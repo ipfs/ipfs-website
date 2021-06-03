@@ -75,6 +75,7 @@ export default {
         LINK_CLICK_NAV: 'linkClickNav',
         LINK_CLICK_FOOTER: 'linkClickFooter',
         SOCIAL_MEDIA_OUTBOUNDS: 'socialMediaOutbounds',
+        CTA_CLICK: 'ctaClick',
         NEWSLETTER_SUBSCRIBE: 'newsletterSubscribe',
         NOT_FOUND: '404NotFound',
       },

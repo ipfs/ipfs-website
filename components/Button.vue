@@ -1,9 +1,14 @@
 <template>
-  <a v-if="href" :href="href" :class="classnames">
+  <a
+    v-if="href"
+    :href="href"
+    :class="classnames"
+    @click="onClick({ text, href })"
+  >
     {{ text }}
     <slot />
   </a>
-  <button v-else :class="classnames" @click="onClick">
+  <button v-else :class="classnames" @click="onClick({ text, href })">
     {{ text }}
     <slot />
   </button>

@@ -10,10 +10,16 @@
         <Button
           type="primary"
           href="#install"
+          text="Get started"
           class="mr-0 sm:mr-2.5 mb-2.5 sm:mb-0 px-8 py-3"
-          >Get started</Button
-        >
-        <Button href="#how" class="px-8 py-3">How it works</Button>
+          :on-click="(item) => onCTAClick({ ui: 'hero/install', ...item })"
+        />
+        <Button
+          href="#how"
+          class="px-8 py-3"
+          text="How it works"
+          :on-click="(item) => onCTAClick({ ui: 'hero/how', ...item })"
+        />
       </div>
     </StarfieldHero>
     <section id="why" class="grid-margins py-36">
@@ -36,10 +42,16 @@
             HTTP downloads files from one computer at a time instead of pieces
             from multiple computers simultaneously. Peer-to-peer IPFS saves big
             on bandwidth &mdash;
-            <a
-              href="http://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf"
-              >up to 60% for video</a
-            >
+            <Link
+              :item="{
+                link:
+                  'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
+                text: 'up to 60% for video',
+              }"
+              :on-click="
+                (item) => onCTAClick({ ui: 'why/1-performance', ...item })
+              "
+            />
             &mdash; making it possible to efficiently distribute high volumes of
             data without duplication.
           </p>
@@ -52,10 +64,16 @@
             <strong>Today's web can't preserve humanity's history</strong>
           </h5>
           <p>
-            <a
-              href="https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/"
-              >The average lifespan of a web page is 100 days</a
-            >
+            <Link
+              :item="{
+                link:
+                  'https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/',
+                text: 'The average lifespan of a web page is 100 days',
+              }"
+              :on-click="
+                (item) => onCTAClick({ ui: 'why/2-preservation', ...item })
+              "
+            />
             before it's before it's gone forever. It's not good enough for the
             primary medium of our era to be this fragile. IPFS keeps every
             version of and makes it simple to set up resilient networks for
@@ -136,8 +154,11 @@
                 href="https://github.com/ipfs-shipyard/ipfs-desktop"
                 target="_blank"
                 rel="noopener"
-                >Get IPFS Desktop</Button
-              >
+                text="Get IPFS Desktop"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'install/ipfs-desktop', ...item })
+                "
+              />
             </div>
           </div>
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
@@ -173,8 +194,11 @@
                 href="https://docs.ipfs.io/how-to/command-line-quick-start"
                 target="_blank"
                 rel="noopener"
-                >Get the CLI</Button
-              >
+                text="Get the CLI"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'install/ipfs-cli', ...item })
+                "
+              />
             </div>
           </div>
           <div
@@ -209,8 +233,12 @@
                   href="https://github.com/ipfs-shipyard/ipfs-companion"
                   target="_blank"
                   rel="noopener"
-                  >Get Companion</Button
-                >
+                  text="Get Companion"
+                  :on-click="
+                    (item) =>
+                      onCTAClick({ ui: 'install/ipfs-companion', ...item })
+                  "
+                />
               </div>
             </div>
           </div>
@@ -238,8 +266,12 @@
                   href="https://cluster.ipfs.io/"
                   target="_blank"
                   rel="noopener"
-                  >Get Cluster</Button
-                >
+                  text="Get Cluster"
+                  :on-click="
+                    (item) =>
+                      onCTAClick({ ui: 'install/ipfs-cluster', ...item })
+                  "
+                />
               </div>
             </div>
           </div>
@@ -279,8 +311,11 @@
                   href="https://github.com/ipfs/go-ipfs"
                   target="_blank"
                   rel="noopener"
-                  >Get go-ipfs</Button
-                >
+                  text="Get go-ipfs"
+                  :on-click="
+                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                  "
+                />
               </div>
             </div>
           </div>
@@ -307,9 +342,15 @@
                 browser implementations.
               </p>
               <div class="flex justify-center sm:justify-start">
-                <Button href="https://js.ipfs.io" target="_blank" rel="noopener"
-                  >Get js-ipfs</Button
-                >
+                <Button
+                  href="https://js.ipfs.io"
+                  target="_blank"
+                  rel="noopener"
+                  text="Get js-ipfs"
+                  :on-click="
+                    (item) => onCTAClick({ ui: 'install/js-ipfs', ...item })
+                  "
+                />
               </div>
             </div>
           </div>
@@ -407,9 +448,13 @@
       <div class="flex flex-col sm:flex-row justify-around">
         <div class="flex flex-col items-center mb-8 sm:mb-0">
           <h5 class="mb-4 text-navy">Want to dig in?</h5>
-          <Button type="primary" href="https://docs.ipfs.io/" target="_blank"
-            >Check out the docs</Button
-          >
+          <Button
+            type="primary"
+            href="https://docs.ipfs.io/"
+            target="_blank"
+            text="Check out the docs"
+            :on-click="(item) => onCTAClick({ ui: 'how/docs', ...item })"
+          />
         </div>
         <div class="flex flex-col items-center mb-8 sm:mb-0">
           <h5 class="mb-4 text-navy">Hands-on learner?</h5>
@@ -417,8 +462,9 @@
             type="primary"
             href="https://proto.school/course/ipfs"
             target="_blank"
-            >Explore ProtoSchool</Button
-          >
+            text="Explore ProtoSchool"
+            :on-click="(item) => onCTAClick({ ui: 'how/protoschool', ...item })"
+          />
         </div>
         <div class="flex flex-col items-center">
           <h5 class="mb-4 text-navy">Curious where it all began?</h5>
@@ -426,8 +472,9 @@
             type="primary"
             href="https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf"
             target="_blank"
-            >Read the whitepaper</Button
-          >
+            text="Read the whitepaper"
+            :on-click="(item) => onCTAClick({ ui: 'how/whitepaper', ...item })"
+          />
         </div>
       </div>
     </section>
@@ -529,8 +576,9 @@
         href="/images/ipfs-applications-diagram.png"
         target="_blank"
         rel="noopener noreferrer"
-        >See the list</Button
-      >
+        text="See the list"
+        :on-click="(item) => onCTAClick({ ui: 'who/see-list', ...item })"
+      />
     </section>
     <Divider />
     <section class="grid-margins py-20">
@@ -556,6 +604,14 @@ import StarfieldHero from '../components/StarfieldHero';
 
 export default {
   components: { Button, StarfieldHero },
+  methods: {
+    onCTAClick(data) {
+      this.$countly.trackEvent(this.$countly.events.CTA_CLICK, {
+        path: this.$route.path,
+        ...data,
+      });
+    },
+  },
 };
 </script>
 
