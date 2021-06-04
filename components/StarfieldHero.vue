@@ -7,7 +7,7 @@
         v-if="title"
         class="flex flex-col justify-center items-center text-white"
       >
-        <h2 class="pb-5 text-center">{{ title }}</h2>
+        <h1 class="pb-5 text-center">{{ title }}</h1>
         <Divider v-if="$slots.default" class="mb-5" />
         <slot />
       </div>

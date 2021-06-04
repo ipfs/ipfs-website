@@ -128,6 +128,7 @@
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
               src="~/assets/img/ipfs-desktop-hex.png"
+              alt="IPFS Desktop icon"
             />
           </div>
           <div
@@ -168,6 +169,7 @@
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
               src="~/assets/img/command-line-hex.png"
+              alt="Screenshot of IPFS command-line interface"
             />
           </div>
           <div
@@ -211,6 +213,7 @@
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
                 src="~/assets/img/ipfs-companion-hex.png"
+                alt="IPFS Companion icon"
               />
             </div>
             <div
@@ -255,6 +258,7 @@
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
                 src="~/assets/img/ipfs-cluster.png"
+                alt="IPFS Cluster logo"
               />
             </div>
             <div class="col-span-12 text-center sm:col-span-4 sm:text-left">
@@ -300,6 +304,7 @@
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
                 src="~/assets/img/go-ipfs-hex-logo.png"
+                alt="IPFS icon with a superimposed Go logo"
               />
             </div>
             <div
@@ -341,6 +346,7 @@
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
                 src="~/assets/img/js-ipfs-logo.png"
+                alt="js-ipfs logo"
               />
             </div>
             <div
