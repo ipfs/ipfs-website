@@ -57,9 +57,6 @@
         </label>
       </div>
       <div id="mergeRow-gdpr">
-        <div>
-          <fieldset class="" name="interestgroup_field"></fieldset>
-        </div>
         <div style="position: absolute; left: -5000px" aria-hidden="true">
           <input
             type="text"
