@@ -305,7 +305,7 @@
             </div>
           </div>
         </div>
-        <h3 class="text-2xl sm:text-3xl font-display text-center mt-24 mb-4">
+        <h3 class="text-2xl sm:text-3xl font-display text-center mt-24 mb-8">
           Build with IPFS
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">

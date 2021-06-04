@@ -87,6 +87,11 @@ export default {
 
 <style scoped>
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  @apply font-display;
+
+  font-weight: 500;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 </style>

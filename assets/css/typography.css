@@ -15,17 +15,6 @@ h2 {
     line-height: 1.4;
 }
 
-footer {
-    h2 {
-        @apply font-display;
-
-        font-weight: 500;
-        font-size: 1.75rem;
-        line-height: 1.2;
-        letter-spacing: -.01em;
-    }
-}
-
 @screen lg {
     h1 {
         font-size: 3.125rem;
