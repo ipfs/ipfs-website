@@ -114,7 +114,7 @@
       </div>
     </section>
     <section id="install" class="py-20 bg-gradient-6 text-white">
-      <div class="grid-margins">
+      <div class="grid-margins 2xl:px-32">
         <div class="text-center mb-16">
           <h2 class="font-display mb-3">Install IPFS</h2>
           <p class="text-base sm:text-lg">
