@@ -125,24 +125,26 @@
         <h3 class="text-center">Store and share files</h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-            <a
-              href="https://github.com/ipfs-shipyard/ipfs-desktop"
-              target="_blank"
-              rel="noopener"
-              ><img
-                class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/ipfs-desktop-hex.png"
-            /></a>
+            <img
+              class="max-h-24 sm:max-h-36 mx-auto"
+              src="~/assets/img/ipfs-desktop-hex.png"
+            />
           </div>
           <div
             class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left"
           >
-            <a
-              href="https://github.com/ipfs-shipyard/ipfs-desktop"
-              target="_blank"
-              rel="noopener"
-              ><h4 class="text-blueGreenLight mb-1.5">IPFS Desktop</h4></a
-            >
+            <h4 class="mb-1.5">
+              <Link
+                class="text-blueGreenLight hover:underline"
+                :item="{
+                  link: 'https://github.com/ipfs-shipyard/ipfs-desktop',
+                  text: 'IPFS Desktop',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'install/ipfs-desktop', ...item })
+                "
+              />
+            </h4>
             <h5 class="mb-4 font-bold">IPFS for everyone</h5>
             <p class="mb-4">
               The desktop app offers menubar/tray shortcuts and an easy
@@ -163,26 +165,26 @@
             </div>
           </div>
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-            <a
-              href="https://docs.ipfs.io/how-to/command-line-quick-start"
-              target="_blank"
-              rel="noopener"
-              ><img
-                class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/command-line-hex.png"
-            /></a>
+            <img
+              class="max-h-24 sm:max-h-36 mx-auto"
+              src="~/assets/img/command-line-hex.png"
+            />
           </div>
           <div
             class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left"
           >
-            <a
-              href="https://docs.ipfs.io/how-to/command-line-quick-start"
-              target="_blank"
-              rel="noopener"
-              ><h4 class="text-blueGreenLight mb-1.5">
-                Command-line install
-              </h4></a
-            >
+            <h4 class="mb-1.5">
+              <Link
+                class="text-blueGreenLight hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/how-to/command-line-quick-start',
+                  text: 'Command-line install',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'install/ipfs-cli', ...item })
+                "
+              />
+            </h4>
             <h5 class="mb-4 font-bold">All IPFS, no frills</h5>
             <p class="mb-4">
               Just want IPFS in your terminal? Get step-by-step instructions
@@ -206,24 +208,27 @@
             class="col-span-12 sm:col-span-6 grid grid-cols-12 sm:grid-cols-6"
           >
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-              <a
-                href="https://github.com/ipfs-shipyard/ipfs-companion"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  class="max-h-24 sm:max-h-36 mx-auto"
-                  src="~/assets/img/ipfs-companion-hex.png"
-              /></a>
+              <img
+                class="max-h-24 sm:max-h-36 mx-auto"
+                src="~/assets/img/ipfs-companion-hex.png"
+              />
             </div>
             <div
               class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-4 sm:text-left"
             >
-              <a
-                href="https://github.com/ipfs-shipyard/ipfs-companion"
-                target="_blank"
-                rel="noopener"
-                ><h4 class="text-blueGreenLight mb-1.5">IPFS Companion</h4></a
-              >
+              <h4 class="mb-1.5">
+                <Link
+                  class="text-blueGreenLight hover:underline"
+                  :item="{
+                    link: 'https://github.com/ipfs-shipyard/ipfs-companion',
+                    text: 'IPFS Companion',
+                  }"
+                  :on-click="
+                    (item) =>
+                      onCTAClick({ ui: 'install/ipfs-companion', ...item })
+                  "
+                />
+              </h4>
               <h5 class="mb-4 font-bold">Add IPFS to your browser</h5>
               <p class="mb-4">
                 Get <code>ipfs://</code> URL support and much more in your web
@@ -247,16 +252,25 @@
             class="col-span-12 sm:col-span-6 grid grid-cols-12 sm:grid-cols-6"
           >
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-              <a href="https://cluster.ipfs.io/" target="_blank" rel="noopener"
-                ><img
-                  class="max-h-24 sm:max-h-36 mx-auto"
-                  src="~/assets/img/ipfs-cluster.png"
-              /></a>
+              <img
+                class="max-h-24 sm:max-h-36 mx-auto"
+                src="~/assets/img/ipfs-cluster.png"
+              />
             </div>
             <div class="col-span-12 text-center sm:col-span-4 sm:text-left">
-              <a href="https://cluster.ipfs.io/" target="_blank" rel="noopener"
-                ><h4 class="text-blueGreenLight mb-1.5">IPFS Cluster</h4></a
-              >
+              <h4 class="mb-1.5">
+                <Link
+                  class="text-blueGreenLight hover:underline"
+                  :item="{
+                    link: 'https://cluster.ipfs.io/',
+                    text: 'IPFS Cluster',
+                  }"
+                  :on-click="
+                    (item) =>
+                      onCTAClick({ ui: 'install/ipfs-cluster', ...item })
+                  "
+                />
+              </h4>
               <h5 class="mb-4 font-bold">For servers or big data</h5>
               <p class="mb-4">
                 Automatically allocate, replicate, and track your data as
@@ -283,26 +297,26 @@
             class="col-span-12 sm:col-span-6 grid grid-cols-12 sm:grid-cols-6"
           >
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-              <a
-                href="https://github.com/ipfs/go-ipfs"
-                target="_blank"
-                rel="noopener"
-                ><img
-                  class="max-h-24 sm:max-h-36 mx-auto"
-                  src="~/assets/img/go-ipfs-hex-logo.png"
-              /></a>
+              <img
+                class="max-h-24 sm:max-h-36 mx-auto"
+                src="~/assets/img/go-ipfs-hex-logo.png"
+              />
             </div>
             <div
               class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left"
             >
-              <a
-                href="https://github.com/ipfs/go-ipfs"
-                target="_blank"
-                rel="noopener"
-                ><h4 class="text-blueGreenLight mb-1.5">
-                  Go implementation
-                </h4></a
-              >
+              <h4 class="mb-1.5">
+                <Link
+                  class="text-blueGreenLight hover:underline"
+                  :item="{
+                    link: 'https://github.com/ipfs/go-ipfs',
+                    text: 'Go implementation',
+                  }"
+                  :on-click="
+                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                  "
+                />
+              </h4>
               <p class="mb-4">
                 The original IPFS, with core implementation, daemon server, CLI
                 tooling, and more.
@@ -324,20 +338,26 @@
             class="col-span-12 sm:col-span-6 grid grid-cols-12 sm:grid-cols-6"
           >
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
-              <a href="https://js.ipfs.io" target="_blank" rel="noopener"
-                ><img
-                  class="max-h-24 sm:max-h-36 mx-auto"
-                  src="~/assets/img/js-ipfs-logo.png"
-              /></a>
+              <img
+                class="max-h-24 sm:max-h-36 mx-auto"
+                src="~/assets/img/js-ipfs-logo.png"
+              />
             </div>
             <div
               class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left"
             >
-              <a href="https://js.ipfs.io" target="_blank" rel="noopener"
-                ><h4 class="text-blueGreenLight mb-1.5">
-                  JS implementation
-                </h4></a
-              >
+              <h4 class="mb-1.5">
+                <Link
+                  class="text-blueGreenLight hover:underline"
+                  :item="{
+                    link: 'https://js.ipfs.io',
+                    text: 'JS implementation',
+                  }"
+                  :on-click="
+                    (item) => onCTAClick({ ui: 'install/js-ipfs', ...item })
+                  "
+                />
+              </h4>
               <p class="mb-4">
                 Written entirely in JavaScript for a world of possibilities in
                 browser implementations.
