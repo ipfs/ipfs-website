@@ -1,11 +1,11 @@
 <template>
   <div>
     <StarfieldHero title="IPFS powers the Distributed Web">
-      <h3 class="text-center">
+      <h2 class="text-center">
         A peer-to-peer hypermedia protocol
         <br />
         designed to make the web faster, safer, and more open.
-      </h3>
+      </h2>
       <div class="flex flex-col sm:flex-row mt-6">
         <Button
           type="primary"

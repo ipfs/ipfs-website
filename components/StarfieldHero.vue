@@ -80,14 +80,10 @@ canvas {
 }
 
 .hero-container h2 {
-  font-size: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.hero-container h3 {
   font-size: 1.375rem;
   font-weight: 200;
   font-family: 'inter', sans-serif;
+  line-height: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -98,12 +94,9 @@ canvas {
 }
 
 @media (max-width: 640px) {
-  h2 {
-    font-size: 1.375rem;
-  }
-
-  h3 {
-    font-size: 1.0625rem;
+  .hero-container h2 {
+    font-size: 1.1625rem;
+    line-height: 1.6rem;
   }
 }
 </style>
