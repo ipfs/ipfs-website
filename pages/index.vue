@@ -407,12 +407,10 @@
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
-          <div
-            class="flex items-center justify-center max-h-36 w-1/4 mb-5 sm:mb-0"
-          >
-            <svg-icon name="ipfs-illustrations-how-1" />
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
           </div>
-          <div class="pl-0 sm:pl-14">
+          <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               Your file, and all of the <strong>blocks within it</strong>, is
               given a <strong>unique fingerprint</strong> called a
@@ -423,12 +421,10 @@
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
-          <div
-            class="flex items-center justify-center max-h-36 w-1/4 mb-5 sm:mb-0"
-          >
-            <svg-icon name="ipfs-illustrations-how-2" />
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
           </div>
-          <div class="pl-0 sm:pl-14">
+          <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               IPFS <strong>removes duplications</strong> across the network.
             </p>
@@ -437,12 +433,10 @@
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
-          <div
-            class="flex items-center justify-center max-h-36 w-1/4 mb-5 sm:mb-0"
-          >
-            <svg-icon name="ipfs-illustrations-how-3" />
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
           </div>
-          <div class="pl-0 sm:pl-14">
+          <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               Each <strong>network node</strong> stores only content it is
               interested in, plus some indexing information that helps figure
@@ -453,12 +447,10 @@
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
-          <div
-            class="flex items-center justify-center max-h-36 w-1/4 mb-5 sm:mb-0"
-          >
-            <svg-icon name="ipfs-illustrations-how-4" />
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
           </div>
-          <div class="pl-0 sm:pl-14">
+          <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               When you <strong>look up a file</strong> to view or download,
               you're asking the network to find the nodes that are storing the
@@ -469,12 +461,10 @@
         <div
           class="flex flex-col sm:flex-row text-center sm:text-left items-center"
         >
-          <div
-            class="flex items-center justify-center max-h-36 w-1/4 mb-5 sm:mb-0"
-          >
-            <svg-icon name="ipfs-illustrations-how-5" />
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
           </div>
-          <div class="pl-0 sm:pl-14">
+          <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               You don't need to remember the hash, though &mdash; every file can
               be found by <strong>human-readable names</strong> using a
