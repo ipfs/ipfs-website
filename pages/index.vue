@@ -32,8 +32,8 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
         <div>
-          <div class="flex justify-center h-52">
-            <svg-icon name="ipfs-illustration-http" />
+          <div class="flex justify-center h-52 px-3">
+            <svg-icon name="ipfs-illustration-http" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is inefficient and expensive
@@ -58,8 +58,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52">
-            <svg-icon name="ipfs-illustration-history" />
+          <div class="flex justify-center h-52 px-3">
+            <svg-icon name="ipfs-illustration-history" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web can't preserve humanity's history
@@ -82,8 +82,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52">
-            <svg-icon name="ipfs-illustration-centralized" />
+          <div class="flex justify-center h-52 px-3">
+            <svg-icon name="ipfs-illustration-centralized" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is centralized, limiting opportunity
@@ -97,8 +97,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52">
-            <svg-icon name="ipfs-illustration-network" />
+          <div class="flex justify-center h-52 px-3">
+            <svg-icon name="ipfs-illustration-network" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is addicted to the backbone
