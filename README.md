@@ -1,6 +1,11 @@
-# IPFS website
+# IPFS Website (ipfs.io
 
-## Build Setup
+[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?)](http://ipfs.io/)
+[![](https://img.shields.io/badge/framework-Nuxt-green.svg)](https://nuxtjs.org/)
+[![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](http://fleek.co/)
+
+## Build setup
 
 ```bash
 # install dependencies
@@ -21,6 +26,10 @@ $ npm run generate
 
 CI and hosting on [Fleek](https://fleek.co/).
 
+## Maintainers
+
+This site's codebase is under active maintenance by members of the core [IPFS team](https://ipfs.io/team/).
+
 ## License
 
-All software code is copyright (c) Protocol Labs, Inc. under the **MIT license**. Other written documentation and content is copyright (c) Protocol Labs, Inc. under the [**Creative Commons Attribution-Share-Alike License**](https://creativecommons.org/licenses/by/4.0/).
+© Protocol Labs | Code is licensed with the [MIT](LICENSE) License. Except as noted, other content licensed [CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/us/).
