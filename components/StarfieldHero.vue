@@ -89,7 +89,7 @@ canvas {
 @media (max-width: 768px) {
   .hero-container {
     margin-top: 10rem;
-    padding: 0 15%;
+    padding: 0 13%;
   }
 }
 
