@@ -22,8 +22,8 @@
         />
       </div>
     </StarfieldHero>
-    <section id="why" class="grid-margins py-36">
-      <div class="text-center mb-20">
+    <section id="why" class="grid-margins py-20 sm:py-36">
+      <div class="text-center mb-8 sm:mb-20">
         <h2 class="font-display mb-3">The web of tomorrow needs IPFS today</h2>
         <p class="text-base sm:text-lg">
           IPFS aims to surpass HTTP in order to build a better web for all of
@@ -113,7 +113,7 @@
         </div>
       </div>
     </section>
-    <section id="install" class="py-20 bg-gradient-6 text-white">
+    <section id="install" class="pt-20 pb-10 sm:py-20 bg-gradient-6 text-white">
       <div class="grid-margins 2xl:px-32">
         <div class="text-center mb-16">
           <h2 class="font-display mb-3">Install IPFS</h2>
@@ -524,7 +524,7 @@
         No matter what you do with the web, IPFS helps make it better today.
       </p>
       <div
-        class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-24"
+        class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-12 sm:mt-24"
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
