@@ -5,7 +5,12 @@
 [![](https://img.shields.io/badge/framework-Nuxt-green.svg)](https://nuxtjs.org/)
 [![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](http://fleek.co/)
 
-## Build setup
+
+## For site developers
+
+### Build and run locally
+
+To build a local copy, run the following:
 
 ```bash
 # install dependencies
@@ -22,9 +27,14 @@ $ npm run start
 $ npm run generate
 ```
 
-## Deployment
+### PR and preview
 
-CI and hosting on [Fleek](https://fleek.co/).
+Once you're happy with your local changes, please make a PR **against the `main` branch**. Including detailed notes on your PR - particularly screenshots to depict any changes in UI - will help speed up approval and deployment.
+
+All PRs against `main` automatically generate Fleek previews to make it easier to "check your work". You can view your PR's preview by clicking `Details` in the `fleek/build` check at the bottom of your PR page:<br/>
+![image](https://user-images.githubusercontent.com/1507828/110034382-9dbb5b80-7cf7-11eb-89a4-7772970677d3.png)
+
+A reviewer will be by shortly to have a look!
 
 ## Maintainers
 
