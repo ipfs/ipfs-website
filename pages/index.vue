@@ -134,9 +134,9 @@
             />
           </div>
           <div
-            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left"
+            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3"
           >
-            <h4 class="text-xl sm:text-2xl mb-1.5">
+            <h4 class="text-xl md:text-2xl mb-1.5">
               <Link
                 class="text-blueGreenLight font-display hover:underline"
                 :item="{
@@ -148,7 +148,7 @@
                 "
               />
             </h4>
-            <h5 class="mb-4 text-base sm:text-lg font-bold">
+            <h5 class="mb-4 text-base md:text-lg font-bold">
               IPFS for everyone
             </h5>
             <p class="mb-4">
@@ -177,9 +177,9 @@
             />
           </div>
           <div
-            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left"
+            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3"
           >
-            <h4 class="text-xl sm:text-2xl mb-1.5">
+            <h4 class="text-xl md:text-2xl mb-1.5">
               <Link
                 class="text-blueGreenLight font-display hover:underline"
                 :item="{
@@ -191,7 +191,7 @@
                 "
               />
             </h4>
-            <h5 class="mb-4 text-base sm:text-lg font-bold">
+            <h5 class="mb-4 text-base md:text-lg font-bold">
               All IPFS, no frills
             </h5>
             <p class="mb-4">
@@ -223,9 +223,9 @@
               />
             </div>
             <div
-              class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-4 sm:text-left"
+              class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10"
             >
-              <h4 class="text-xl sm:text-2xl mb-1.5">
+              <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
@@ -238,7 +238,7 @@
                   "
                 />
               </h4>
-              <h5 class="mb-4 text-base sm:text-lg font-bold">
+              <h5 class="mb-4 text-base md:text-lg font-bold">
                 Add IPFS to your browser
               </h5>
               <p class="mb-4">
@@ -269,8 +269,10 @@
                 alt="IPFS Cluster logo"
               />
             </div>
-            <div class="col-span-12 text-center sm:col-span-4 sm:text-left">
-              <h4 class="text-xl sm:text-2xl mb-1.5">
+            <div
+              class="col-span-12 text-center sm:col-span-4 sm:text-left sm:ml-3"
+            >
+              <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
@@ -283,7 +285,7 @@
                   "
                 />
               </h4>
-              <h5 class="mb-4 text-base sm:text-lg font-bold">
+              <h5 class="mb-4 text-base md:text-lg font-bold">
                 For servers or big data
               </h5>
               <p class="mb-4">
@@ -320,9 +322,9 @@
               />
             </div>
             <div
-              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left"
+              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10"
             >
-              <h4 class="text-xl sm:text-2xl mb-1.5">
+              <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
@@ -362,9 +364,9 @@
               />
             </div>
             <div
-              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left"
+              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left sm:ml-3"
             >
-              <h4 class="text-xl sm:text-2xl mb-1.5">
+              <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
