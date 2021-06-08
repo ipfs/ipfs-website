@@ -30,7 +30,7 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.6",
     "nuxt-mq": "^2.0.2",
-    "pixi.js": "^4.8.8"
+    "pixi.js": "^6.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
