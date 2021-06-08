@@ -12,6 +12,7 @@ const theme = {
       plBlack: '#16161F',
       gray: {
         background: '#f1f3f2',
+        light: '#b7c0c3',
       },
       navy: '#0B3A53',
     },

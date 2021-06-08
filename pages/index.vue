@@ -644,20 +644,78 @@
     <section class="grid-margins py-20">
       <h2 class="font-display text-center mb-12">News and more</h2>
       <div class="grid grid-cols-4">
-        <div class="col-span-1">
+        <div class="col-span-4 sm:col-span-1 pr-8 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
-            From the blog
+            IPFS blog
           </h3>
+          <ol>
+            <li
+              v-for="post in latestPosts"
+              :key="post.title"
+              class="flex flex-col mb-2.5"
+            >
+              <span class="text-sm text-gray-light">{{ post.date }}</span>
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: post.url,
+                  text: post.title,
+                }"
+              />
+            </li>
+          </ol>
         </div>
-        <div class="col-span-1">
+        <div class="col-span-4 sm:col-span-1 pr-8 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
             In the media
           </h3>
+          <ol>
+            <li
+              v-for="news in latestNews"
+              :key="news.title"
+              class="flex flex-col mb-2.5"
+            >
+              <span class="text-sm text-gray-light">{{ news.date }}</span>
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: news.url,
+                  text: news.title,
+                }"
+              />
+            </li>
+          </ol>
         </div>
-        <div class="col-span-2">
+        <div class="col-span-4 sm:col-span-2">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
             Latest videos
           </h3>
+          <div class="flex mb-4">
+            <div
+              v-for="video in latestVideos"
+              :key="video.title"
+              class="flex flex-col mr-8 w-5/12"
+            >
+              <a :href="video.url">
+                <img :src="video.thumbnail" :alt="video.title" class="mb-2" />
+              </a>
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: video.url,
+                  text: video.title,
+                }"
+              />
+            </div>
+          </div>
+          <Button
+            href="https://blog.ipfs.io/?category=Video"
+            text="More videos"
+            target="_blank"
+            :on-click="
+              (item) => onCTAClick({ ui: 'latest/more-videos', ...item })
+            "
+          />
         </div>
       </div>
     </section>
@@ -670,6 +728,35 @@ import StarfieldHero from '../components/StarfieldHero';
 
 export default {
   components: { Button, StarfieldHero },
+  data() {
+    return {
+      latestPosts: [],
+      latestNews: [],
+      latestVideos: [],
+    };
+  },
+  async fetch() {
+    this.latestPosts = await fetch('https://blog.ipfs.io/index.json')
+      .then((res) => res.json())
+      .then((data) => data.posts)
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+    this.latestNews = await fetch('https://blog.ipfs.io/news.json')
+      .then((res) => res.json())
+      .then((data) => data.news)
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+    this.latestVideos = await fetch('https://blog.ipfs.io/videos.json')
+      .then((res) => res.json())
+      .then((data) => data.videos)
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  },
   methods: {
     onCTAClick(data) {
       this.$countly.trackEvent(this.$countly.events.CTA_CLICK, {
