@@ -41,7 +41,7 @@
               type="submit"
               value="Subscribe"
               name="subscribe"
-              class="p-2 text-white font-semibold bg-blueGreen hover:bg-blueGreenScreen rounded cursor-pointer w-full"
+              class="p-2 text-white font-semibold bg-blueGreen hover:bg-blueGreenScreen transition duration-300 rounded cursor-pointer w-full"
             />
           </div>
         </div>

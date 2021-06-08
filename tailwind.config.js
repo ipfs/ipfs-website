@@ -45,6 +45,7 @@ const theme = {
       300: '18.75rem',
     },
     maxHeight: {
+      168: '42rem',
       1200: '75rem',
     },
     spacing: {

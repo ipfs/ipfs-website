@@ -51,7 +51,7 @@ export default {
 
       return (
         defaultClasses +
-        ' bg-white text-blueGreen border-blueGreen hover:bg-gray-200'
+        ' bg-white text-blueGreen border border-blueGreen hover:bg-gray-200'
       );
     },
   },

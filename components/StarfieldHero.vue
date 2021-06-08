@@ -1,5 +1,8 @@
 <template>
-  <div id="stars" class="relative bg-gradient-6 pt-20 h-screen max-h-1200">
+  <div
+    id="stars"
+    class="relative bg-gradient-6 pt-20 h-screen max-h-168 sm:max-h-1200"
+  >
     <div
       class="hero-container absolute left-0 right-0 mx-auto grid-margins mb-20"
     >
@@ -97,6 +100,17 @@ canvas {
   .hero-container h2 {
     font-size: 1.1625rem;
     line-height: 1.6rem;
+  }
+
+  .hero-container {
+    margin-top: 5vh;
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 420px) {
+  #stars {
+    min-height: 44rem;
   }
 }
 </style>
