@@ -644,7 +644,7 @@
     <section class="grid-margins py-20">
       <h2 class="font-display text-center mb-12">News and more</h2>
       <div class="grid grid-cols-4">
-        <div class="col-span-4 sm:col-span-1 pr-8 mb-8 sm:mb-0">
+        <div class="col-span-4 sm:col-span-1 pr-16 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
             IPFS blog
           </h3>
@@ -665,7 +665,7 @@
             </li>
           </ol>
         </div>
-        <div class="col-span-4 sm:col-span-1 pr-8 mb-8 sm:mb-0">
+        <div class="col-span-4 sm:col-span-1 pr-16 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
             In the media
           </h3>
@@ -694,13 +694,13 @@
             <div
               v-for="video in latestVideos"
               :key="video.title"
-              class="flex flex-col mr-8 w-5/12"
+              class="flex flex-col mr-8 w-6/12"
             >
               <a :href="video.url">
                 <img
                   :src="video.thumbnail"
                   :alt="video.title"
-                  class="mb-2 rounded border-2 border-gray-100"
+                  class="max-h-48 mb-2 rounded border-2 border-gray-100"
                 />
               </a>
               <Link
