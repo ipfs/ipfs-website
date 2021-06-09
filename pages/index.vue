@@ -617,7 +617,7 @@
             />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Blockchains
+            Blockchains + IPFS
           </h3>
           <p>
             With IPFS, you can address large amounts of data and put immutable,
@@ -636,9 +636,9 @@
             Content creators
           </h3>
           <p>
-            IPFS brings the freedom and independent spirit of the web in full
-            force &mdash; and can help you deliver your content at a much lower
-            cost.
+            IPFS empowers content creators to build and share on the
+            decentralized web &mdash; whether that's helping deliver content at
+            a much lower cost or minting NFTs that stand the test of time.
           </p>
         </div>
       </div>
