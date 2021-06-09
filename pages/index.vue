@@ -654,7 +654,7 @@
               :key="post.title"
               class="flex flex-col mb-2.5"
             >
-              <span class="text-sm text-gray-light">{{ post.date }}</span>
+              <span class="text-sm text-gray-500">{{ post.date }}</span>
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
@@ -675,7 +675,7 @@
               :key="news.title"
               class="flex flex-col mb-2.5"
             >
-              <span class="text-sm text-gray-light">{{ news.date }}</span>
+              <span class="text-sm text-gray-500">{{ news.date }}</span>
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
