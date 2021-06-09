@@ -709,6 +709,7 @@
             </div>
           </div>
           <Button
+            type="primary"
             href="https://blog.ipfs.io/?category=Video"
             text="More videos"
             target="_blank"
