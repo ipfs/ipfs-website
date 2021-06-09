@@ -4,8 +4,17 @@
       <h1 v-if="error.statusCode === 404" class="mb-8">Page not found</h1>
       <h1 v-else class="mb-8">An error occurred</h1>
       <p>
-        Go to the
-        <Link :item="{ link: '/', text: 'Home page' }" />
+        Unfortunately, we can't find what you're looking for. To continue your
+        adventure, visit the
+        <Link
+          class="text-blueGreen font-bold hover:underline"
+          :item="{ link: '/', text: 'homepage' }"
+        />
+        or learn where to get
+        <Link
+          class="text-blueGreen font-bold hover:underline"
+          :item="{ link: '/help', text: 'IPFS help and support' }"
+        />.
       </p>
     </div>
   </main>
