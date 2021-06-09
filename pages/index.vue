@@ -697,7 +697,11 @@
               class="flex flex-col mr-8 w-5/12"
             >
               <a :href="video.url">
-                <img :src="video.thumbnail" :alt="video.title" class="mb-2" />
+                <img
+                  :src="video.thumbnail"
+                  :alt="video.title"
+                  class="mb-2 rounded border-2 border-gray-100"
+                />
               </a>
               <Link
                 class="text-blueGreen font-bold hover:underline"
