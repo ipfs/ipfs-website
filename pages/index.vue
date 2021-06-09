@@ -416,7 +416,16 @@
             <p class="leading-normal">
               Your file, and all of the <strong>blocks within it</strong>, is
               given a <strong>unique fingerprint</strong> called a
-              <strong>cryptographic hash</strong>.
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/hashing/',
+                  text: 'cryptographic hash',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-hashing', ...item })
+                "
+              />.
             </p>
           </div>
         </div>
@@ -470,7 +479,17 @@
             <p class="leading-normal">
               You don't need to remember the hash, though &mdash; every file can
               be found by <strong>human-readable names</strong> using a
-              decentralized naming system called <strong>IPNS</strong>.
+              decentralized naming system called
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/ipns/',
+                  text: 'IPNS',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-performance', ...item })
+                "
+              />.
             </p>
           </div>
         </div>
