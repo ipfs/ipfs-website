@@ -680,6 +680,10 @@
                   link: post.url,
                   text: post.title,
                 }"
+                :on-click="
+                  (item) =>
+                    onCTAClick({ ui: 'latest/link', type: 'blog', ...item })
+                "
               />
             </li>
           </ol>
@@ -701,6 +705,10 @@
                   link: news.url,
                   text: news.title,
                 }"
+                :on-click="
+                  (item) =>
+                    onCTAClick({ ui: 'latest/link', type: 'media', ...item })
+                "
               />
             </li>
           </ol>
@@ -715,11 +723,26 @@
               :key="video.title"
               class="flex flex-col mr-8 w-6/12"
             >
-              <a :href="video.url">
+              <a
+                :href="video.url"
+                class="relative"
+                @click="
+                  () =>
+                    onCTAClick({
+                      ui: 'latest/link',
+                      type: 'video',
+                      url: video.url,
+                    })
+                "
+              >
                 <img
                   :src="video.thumbnail"
                   :alt="video.title"
-                  class="max-h-48 mb-2 rounded border-2 border-gray-100"
+                  class="max-h-48 mb-2 rounded border-2 border-gray-100 filter brightness-75"
+                />
+                <svg-icon
+                  name="video-play"
+                  class="absolute top-0 bottom-0 left-0 right-0 mx-auto my-auto w-1/5"
                 />
               </a>
               <Link
@@ -728,6 +751,10 @@
                   link: video.url,
                   text: video.title,
                 }"
+                :on-click="
+                  (item) =>
+                    onCTAClick({ ui: 'latest/link', type: 'video', ...item })
+                "
               />
             </div>
           </div>

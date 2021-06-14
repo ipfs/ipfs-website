@@ -44,6 +44,7 @@ const theme = {
     },
     minHeight: {
       300: '18.75rem',
+      640: '40rem',
     },
     maxHeight: {
       168: '42rem',

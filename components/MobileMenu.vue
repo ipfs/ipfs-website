@@ -95,6 +95,8 @@ export default {
       }
     },
     onLinkClick(item) {
+      this.$store.commit('appState/toggleMobileNav', false);
+
       this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
         path: this.$route.path,
         text: item.text,

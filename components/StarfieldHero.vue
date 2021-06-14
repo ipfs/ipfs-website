@@ -1,7 +1,7 @@
 <template>
   <div
     id="stars"
-    class="relative bg-gradient-6 pt-20 h-screen max-h-168 sm:max-h-1200"
+    class="relative bg-gradient-6 pt-20 h-screen max-h-168 sm:max-h-1200 min-h-640"
   >
     <div
       class="hero-container absolute left-0 right-0 mx-auto grid-margins mb-20"
@@ -91,7 +91,7 @@ canvas {
 
 @media (max-width: 768px) {
   .hero-container {
-    margin-top: 10rem;
+    margin-top: 15vh;
     padding: 0 13%;
   }
 }
