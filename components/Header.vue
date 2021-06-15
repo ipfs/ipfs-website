@@ -18,9 +18,18 @@
       <Link
         class="hover:opacity-75 transition-opacity duration-300 ease-in-out mobile-nav-link"
         :item="{ link: '/', text: 'Homepage (logo)' }"
-        :on-click="onLinkClick"
       >
-        <svg-icon name="ipfs-logo" class="w-32 h-20 fill-current" />
+        <!--
+          The onclick handler is in the svg because for some reason in this
+          particular link the handler gets called AFTER the routes changes,
+          which does not allow us to track the originating path to countly.
+          We could parse document.referrer but this works also.
+        -->
+        <svg-icon
+          name="ipfs-logo"
+          class="w-32 h-20 fill-current"
+          @click="() => onLinkClick({ link: '/', text: 'Homepage (logo)' })"
+        />
       </Link>
       <nav class="hidden md:flex justify-between w-full max-w-lg">
         <Link

@@ -1,10 +1,19 @@
 <template>
-  <div id="stars" class="relative bg-gradient-6 pt-20 h-screen max-h-1200">
-    <div class="grid-margins pt-5">
-      <div v-if="title" class="flex flex-col justify-center items-center">
-        <h2 class="text-white pb-5">{{ title }}</h2>
+  <div
+    id="stars"
+    class="relative bg-gradient-6 pt-20 h-screen max-h-168 sm:max-h-1200 min-h-640"
+  >
+    <div
+      class="hero-container absolute left-0 right-0 mx-auto grid-margins mb-20"
+    >
+      <div
+        v-if="title"
+        class="flex flex-col justify-center items-center text-white"
+      >
+        <h1 class="pb-5 text-center">{{ title }}</h1>
+        <Divider v-if="$slots.default" class="mb-5" />
+        <slot />
       </div>
-      <slot />
     </div>
     <button
       id="toggle-animation"
@@ -12,6 +21,12 @@
     >
       Disable animation
     </button>
+    <a
+      href="#why"
+      class="view-more block absolute bottom-8 w-full sm:hidden hover:opacity-75"
+    >
+      <svg-icon name="down-arrow-01" class="h-6 mx-auto" />
+    </a>
   </div>
 </template>
 
@@ -43,15 +58,59 @@ canvas {
   pointer-events: none;
   user-select: none;
 }
+</style>
 
+<style scoped>
 #toggle-animation {
   background-color: rgba(6, 27, 45, 0.6);
   min-width: initial;
   border: none;
   color: #8c9aa2;
+  z-index: 2;
 
   &:hover {
     @apply text-blueGreenLight;
+  }
+}
+
+.view-more {
+  z-index: 2;
+}
+
+.hero-container {
+  margin-top: 23vh;
+  z-index: 2;
+}
+
+.hero-container h2 {
+  font-size: 1.375rem;
+  font-weight: 200;
+  font-family: 'inter', sans-serif;
+  line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    margin-top: 15vh;
+    padding: 0 13%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-container h2 {
+    font-size: 1.1625rem;
+    line-height: 1.6rem;
+  }
+
+  .hero-container {
+    margin-top: 5vh;
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 420px) {
+  #stars {
+    min-height: 44rem;
   }
 }
 </style>

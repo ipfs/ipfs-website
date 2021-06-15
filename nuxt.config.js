@@ -47,7 +47,12 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/svg-sprite',
-    'nuxt-mq',
+    [
+      'nuxt-mq',
+      {
+        breakpoints: { sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1440 },
+      },
+    ],
     '@nuxtjs/speedcurve',
   ],
 
@@ -70,6 +75,7 @@ export default {
         LINK_CLICK_NAV: 'linkClickNav',
         LINK_CLICK_FOOTER: 'linkClickFooter',
         SOCIAL_MEDIA_OUTBOUNDS: 'socialMediaOutbounds',
+        CTA_CLICK: 'ctaClick',
         NEWSLETTER_SUBSCRIBE: 'newsletterSubscribe',
         NOT_FOUND: '404NotFound',
       },

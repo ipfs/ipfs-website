@@ -6,12 +6,15 @@ const theme = {
     ),
     colors: {
       blueGreen: '#34797D',
+      blueGreenScreen: '#66989a',
       blueGreenLight: '#6BC4CE',
       deepBlue: '#002256',
       plBlack: '#16161F',
       gray: {
         background: '#f1f3f2',
+        light: '#b7c0c3',
       },
+      navy: '#0B3A53',
     },
     fontFamily: {
       sans: 'inter, sans-serif',
@@ -41,8 +44,10 @@ const theme = {
     },
     minHeight: {
       300: '18.75rem',
+      640: '40rem',
     },
     maxHeight: {
+      168: '42rem',
       1200: '75rem',
     },
     spacing: {
