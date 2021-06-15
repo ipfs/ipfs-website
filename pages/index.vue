@@ -1,5 +1,9 @@
 <template>
   <div>
+    <seo-tags
+      title="IPFS powers the Distributed Web"
+      description="A peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open."
+    />
     <StarfieldHero title="IPFS powers the Distributed Web">
       <h2 class="text-center">
         A peer-to-peer hypermedia protocol
@@ -774,11 +778,12 @@
 </template>
 
 <script>
-import Button from '../components/Button';
-import StarfieldHero from '../components/StarfieldHero';
+import SeoTags from '~/components/SeoTags.vue';
+import Button from '~/components/Button';
+import StarfieldHero from '~/components/StarfieldHero';
 
 export default {
-  components: { Button, StarfieldHero },
+  components: { Button, StarfieldHero, SeoTags },
   data() {
     return {
       latestPosts: [],
