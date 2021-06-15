@@ -653,9 +653,9 @@
             Archivists
           </h3>
           <p>
-            IPFS provides deduplication, high performance, and clustered
-            persistence &mdash; empowering you to store the world's information
-            for future generations.
+            Storing archival data using IPFS enables deduplication, clustered
+            persistence, and high performance &mdash; empowering you to store
+            the world's information for future generations.
           </p>
         </div>
         <div class="flex flex-col">
@@ -669,9 +669,9 @@
             Service providers
           </h3>
           <p>
-            Providing large amounts of data to users? IPFS offers secure,
-            peer-to-peer content delivery &mdash; an approach that could save
-            you millions in bandwidth costs.
+            Providing large amounts of data to users? Storing on IPFS could help
+            you slash bandwidth costs thanks to its use of secure, peer-to-peer
+            content delivery.
           </p>
         </div>
         <div class="flex flex-col">
@@ -682,8 +682,9 @@
             Researchers
           </h3>
           <p>
-            If you're working with or distributing large datasets, IPFS can help
-            provide fast performance and decentralized archiving.
+            If you're working with or distributing large datasets, storing that
+            data using IPFS can help speed up performance and unlock
+            decentralized archiving.
           </p>
         </div>
       </div>
@@ -700,33 +701,18 @@
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
             <svg-icon
-              name="ipfs-illustration-developing"
-              class="h-36 w-36 mx-auto"
-            />
-          </div>
-          <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Developing world
-          </h3>
-          <p>
-            High-latency networks are a big barrier for those with poor internet
-            infrastructure. IPFS provides resilient access to data independent
-            of latency or backbone connectivity.
-          </p>
-        </div>
-        <div class="flex flex-col">
-          <div class="max-h-24 mb-12">
-            <svg-icon
               name="ipfs-illustration-blockchains"
               class="h-36 w-36 mx-auto"
             />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Blockchains + IPFS
+            Blockchain developers
           </h3>
           <p>
-            With IPFS, you can address large amounts of data and put immutable,
-            permanent links in transactions &mdash; timestamping and securing
-            content without having to put the data itself on-chain.
+            IPFS content addressing enables you to store large files off-chain
+            and put immutable, permanent links in transactions &mdash;
+            timestamping and securing content without having to put the data
+            itself on-chain.
           </p>
         </div>
         <div class="flex flex-col">
@@ -740,9 +726,25 @@
             Content creators
           </h3>
           <p>
-            IPFS empowers content creators to build and share on the
-            decentralized web &mdash; whether that's helping deliver content at
-            a much lower cost or minting NFTs that stand the test of time.
+            IPFS empowers creators to build and share on the decentralized web
+            &mdash; whether that's delivering content free from intermediary
+            control or minting NFTs that stand the test of time.
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <div class="max-h-24 mb-12">
+            <svg-icon
+              name="ipfs-illustration-developing"
+              class="h-36 w-36 mx-auto"
+            />
+          </div>
+          <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
+            Offline-prone users
+          </h3>
+          <p>
+            High-latency networks cause major obstacles for those with poor
+            internet infrastructure. Peer-to-peer IPFS offers resilient access
+            to data independent of latency or backbone connectivity.
           </p>
         </div>
       </div>
