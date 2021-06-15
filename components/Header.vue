@@ -35,7 +35,7 @@
         <Link
           v-for="link in headerLinks"
           :key="link.text"
-          :item="link"
+          :item="{ link: link.link, text: link.text }"
           class="nav-link font-display font-medium relative"
           :on-click="onLinkClick"
         />
