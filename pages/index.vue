@@ -429,9 +429,11 @@
     </section>
     <section id="how" class="grid-margins py-20">
       <div class="text-center mb-16">
-        <h2 class="font-display mb-4">Here's how IPFS works</h2>
+        <h2 class="font-display mb-4">How IPFS works</h2>
         <p class="text-base sm:text-lg">
-          Take a look at what happens when you add a file to IPFS.
+          Here's what happens when you add a file to IPFS — whether you're
+          storing that file on your own local node or one operated by a pinning
+          service or IPFS-enabled app.
         </p>
       </div>
       <div class="max-w-3xl mx-auto">
@@ -450,58 +452,19 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              Your file, and all of the <strong>blocks within it</strong>, is
-              given a <strong>unique fingerprint</strong> called a
+              When you add a file to IPFS, your file is cryptographically hashed
+              and given a
+              <strong>unique fingerprint</strong> called a
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/hashing/',
-                  text: 'cryptographic hash',
+                  link: 'https://proto.school/anatomy-of-a-cid',
+                  text: 'content identifier',
                 }"
-                :on-click="
-                  (item) => onCTAClick({ ui: 'how/1-hashing', ...item })
-                "
-              />.
-            </p>
-          </div>
-        </div>
-        <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
-        >
-          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
-          </div>
-          <div class="pl-0 sm:pl-10">
-            <p class="leading-normal">
-              IPFS <strong>removes duplications</strong> across the network.
-            </p>
-          </div>
-        </div>
-        <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
-        >
-          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
-          </div>
-          <div class="pl-0 sm:pl-10">
-            <p class="leading-normal">
-              Each <strong>network node</strong> stores only content it is
-              interested in, plus some indexing information that helps figure
-              out which node is storing what.
+                :on-click="(item) => onCTAClick({ ui: 'how/1-cid', ...item })"
+              />
+              (CID). This CID acts an unchangeable record of your file as it
+              exists at that point in time.
             </p>
           </div>
         </div>
@@ -520,9 +483,71 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              When you <strong>look up a file</strong> to view or download,
-              you're asking the network to find the nodes that are storing the
-              content behind that file's hash.
+              When other nodes <strong>look up your file</strong>, they ask
+              their peer nodes who's storing the hashed content behind the
+              file's CID. When they view or download your file, they keep their
+              own copy — and become another provider of your content for a fixed
+              period of time.
+            </p>
+          </div>
+        </div>
+        <div
+          class="
+            flex flex-col
+            sm:flex-row
+            text-center
+            sm:text-left
+            items-center
+            mb-12
+          "
+        >
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
+          </div>
+          <div class="pl-0 sm:pl-10">
+            <p class="leading-normal">
+              A node can
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/persistence/',
+                  text: 'pin content',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-pinning', ...item })
+                "
+              />
+              in order to keep (and provide) it forever, or discard content it
+              hasn't used in a while to save space. This means each node in the
+              network
+              <strong>stores only content it is interested in</strong>, plus
+              some indexing information that helps figure out which node is
+              storing what.
+            </p>
+          </div>
+        </div>
+        <div
+          class="
+            flex flex-col
+            sm:flex-row
+            text-center
+            sm:text-left
+            items-center
+            mb-12
+          "
+        >
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
+          </div>
+          <div class="pl-0 sm:pl-10">
+            <p class="leading-normal">
+              If you add a new version of your file to IPFS, its cryptographic
+              hash is different, and so it gets a new CID. Because of this,
+              <strong
+                >files stored on IPFS are resistant to tampering and
+                censorship</strong
+              >
+              — any changes to a file don't overwrite the original.
             </p>
           </div>
         </div>
@@ -540,9 +565,10 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              You don't need to remember the hash, though &mdash; every file can
-              be found by <strong>human-readable names</strong> using a
-              decentralized naming system called
+              This doesn't mean you need to remember a long string of CIDs,
+              though &mdash; every file can be found by
+              <strong>human-readable names</strong> using a decentralized naming
+              system called
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
@@ -656,8 +682,8 @@
             Researchers
           </h3>
           <p>
-            If you're working with or distributing large data sets, IPFS can
-            help provide fast performance and decentralized archiving.
+            If you're working with or distributing large datasets, IPFS can help
+            provide fast performance and decentralized archiving.
           </p>
         </div>
       </div>
