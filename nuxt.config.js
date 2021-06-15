@@ -53,6 +53,7 @@ export default {
       },
     ],
     '@nuxtjs/speedcurve',
+    '~/modules/nuxt-module-ipfs',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

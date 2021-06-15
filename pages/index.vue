@@ -134,7 +134,7 @@
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
-              src="~/assets/img/ipfs-desktop-hex.png"
+              :src="$relativity('/images/ipfs-desktop-hex.png')"
               alt="IPFS Desktop icon"
             />
           </div>
@@ -182,7 +182,7 @@
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
-              src="~/assets/img/command-line-hex.png"
+              :src="$relativity('/images/command-line-hex.png')"
               alt="Screenshot of IPFS command-line interface"
             />
           </div>
@@ -233,7 +233,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/ipfs-companion-hex.png"
+                :src="$relativity('/images/ipfs-companion-hex.png')"
                 alt="IPFS Companion icon"
               />
             </div>
@@ -285,7 +285,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/ipfs-cluster.png"
+                :src="$relativity('/images/ipfs-cluster.png')"
                 alt="IPFS Cluster logo"
               />
             </div>
@@ -337,7 +337,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/go-ipfs-hex-logo.png"
+                :src="$relativity('/images/go-ipfs-hex-logo.png')"
                 alt="IPFS icon with a superimposed Go logo"
               />
             </div>
@@ -385,7 +385,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                src="~/assets/img/js-ipfs-logo.png"
+                :src="$relativity('/images/js-ipfs-logo.png')"
                 alt="js-ipfs logo"
               />
             </div>
@@ -773,7 +773,7 @@
       </p>
       <Button
         type="primary"
-        href="/images/ipfs-applications-diagram.png"
+        :href="$relativity('/images/ipfs-applications-diagram.png')"
         target="_blank"
         rel="noopener noreferrer"
         text="Explore the ecosystem"

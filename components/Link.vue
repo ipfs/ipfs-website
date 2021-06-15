@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-if="isInternal"
-    :to="link"
+    :to="$relativity(link)"
     :exact="exact"
     @click.native="onClick(item)"
   >
