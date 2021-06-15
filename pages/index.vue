@@ -791,7 +791,7 @@ export default {
       fetch('https://blog.ipfs.io/index.json')
         .then((res) => res.json())
         .then((data) => data.posts),
-      fetch('https://blog.ipfs.io/news1.json')
+      fetch('https://blog.ipfs.io/news.json')
         .then((res) => res.json())
         .then((data) => data.news),
       fetch('https://blog.ipfs.io/videos.json')
