@@ -1,7 +1,7 @@
 <template>
   <div>
     <seo-tags
-      :title="content.title | IPFS"
+      :title="content.title + ' | IPFS'"
       :description="content.description"
     />
     <Hero :title="content.title" :description="content.description" />
