@@ -45,7 +45,8 @@
             <Link
               class="text-blueGreen font-bold hover:underline"
               :item="{
-                link: 'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
+                link:
+                  'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
                 text: 'up to 60% for video',
               }"
               :on-click="
@@ -67,7 +68,8 @@
             <Link
               class="text-blueGreen font-bold hover:underline"
               :item="{
-                link: 'https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/',
+                link:
+                  'https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/',
                 text: 'The average lifespan of a web page is 100 days',
               }"
               :on-click="
@@ -132,12 +134,7 @@
             />
           </div>
           <div
-            class="
-              col-span-12
-              mb-16
-              text-center
-              sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3
-            "
+            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3"
           >
             <h4 class="text-xl md:text-2xl mb-1.5">
               <Link
@@ -180,12 +177,7 @@
             />
           </div>
           <div
-            class="
-              col-span-12
-              mb-16
-              text-center
-              sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3
-            "
+            class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3"
           >
             <h4 class="text-xl md:text-2xl mb-1.5">
               <Link
@@ -231,12 +223,7 @@
               />
             </div>
             <div
-              class="
-                col-span-12
-                mb-16
-                text-center
-                sm:mb-0 sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10
-              "
+              class="col-span-12 mb-16 text-center sm:mb-0 sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10"
             >
               <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
@@ -335,13 +322,7 @@
               />
             </div>
             <div
-              class="
-                col-span-12
-                mb-16
-                sm:mb-0
-                text-center
-                sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10
-              "
+              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left sm:ml-3 sm:mr-10"
             >
               <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
@@ -383,13 +364,7 @@
               />
             </div>
             <div
-              class="
-                col-span-12
-                mb-16
-                sm:mb-0
-                text-center
-                sm:col-span-4 sm:text-left sm:ml-3
-              "
+              class="col-span-12 mb-16 sm:mb-0 text-center sm:col-span-4 sm:text-left sm:ml-3"
             >
               <h4 class="text-xl md:text-2xl mb-1.5">
                 <Link
@@ -432,14 +407,7 @@
       </div>
       <div class="max-w-3xl mx-auto">
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
+          class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
             <svg-icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
@@ -462,14 +430,7 @@
           </div>
         </div>
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
+          class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
             <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
@@ -481,14 +442,7 @@
           </div>
         </div>
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
+          class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
             <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
@@ -502,14 +456,7 @@
           </div>
         </div>
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
+          class="flex flex-col sm:flex-row text-center sm:text-left items-center mb-12"
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
             <svg-icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
@@ -523,13 +470,7 @@
           </div>
         </div>
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-          "
+          class="flex flex-col sm:flex-row text-center sm:text-left items-center"
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
             <svg-icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
@@ -602,15 +543,7 @@
         No matter what you do with the web, IPFS helps make it better today.
       </p>
       <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-3
-          gap-y-12
-          sm:gap-y-0
-          gap-x-8
-          mt-12
-          sm:mt-24
-        "
+        class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-12 sm:mt-24"
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
@@ -658,14 +591,7 @@
         </div>
       </div>
       <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-3
-          gap-y-12
-          sm:gap-y-0
-          gap-x-8
-          mt-12
-        "
+        class="grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 gap-x-8 mt-12"
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
@@ -812,27 +738,11 @@
                 <img
                   :src="video.thumbnail"
                   :alt="video.title"
-                  class="
-                    max-h-48
-                    mb-2
-                    rounded
-                    border-2 border-gray-300
-                    filter
-                    brightness-75
-                  "
+                  class="max-h-48 mb-2 rounded border-2 border-gray-300 filter brightness-75"
                 />
                 <svg-icon
                   name="video-play"
-                  class="
-                    absolute
-                    top-0
-                    bottom-0
-                    left-0
-                    right-0
-                    mx-auto
-                    my-auto
-                    w-1/5
-                  "
+                  class="absolute top-0 bottom-0 left-0 right-0 mx-auto my-auto w-1/5"
                 />
               </a>
               <Link
@@ -877,26 +787,29 @@ export default {
     };
   },
   async fetch() {
-    this.latestPosts = await fetch('https://blog.ipfs.io/index.json')
-      .then((res) => res.json())
-      .then((data) => data.posts)
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    const [latestPosts, latestNews, latestVideos] = await Promise.allSettled([
+      fetch('https://blog.ipfs.io/index.json')
+        .then((res) => res.json())
+        .then((data) => data.posts),
+      fetch('https://blog.ipfs.io/news1.json')
+        .then((res) => res.json())
+        .then((data) => data.news),
+      fetch('https://blog.ipfs.io/videos.json')
+        .then((res) => res.json())
+        .then((data) => data.videos),
+    ]);
 
-    this.latestNews = await fetch('https://blog.ipfs.io/news.json')
-      .then((res) => res.json())
-      .then((data) => data.news)
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    if (latestPosts.status === 'fulfilled') {
+      this.latestPosts = latestPosts.value;
+    }
 
-    this.latestVideos = await fetch('https://blog.ipfs.io/videos.json')
-      .then((res) => res.json())
-      .then((data) => data.videos)
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+    if (latestNews.status === 'fulfilled') {
+      this.latestNews = latestNews.value;
+    }
+
+    if (latestVideos.status === 'fulfilled') {
+      this.latestVideos = latestVideos.value;
+    }
   },
   methods: {
     onCTAClick(data) {
