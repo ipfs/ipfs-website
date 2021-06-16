@@ -210,7 +210,7 @@
               All IPFS, no frills
             </h5>
             <p class="mb-4">
-              Just want to use IPFS from your terminal? Get step-by-step
+              Just want to use IPFS from your terminal? Follow these step-by-step
               instructions for getting up and running on the command line using
               the Go implementation of IPFS. Includes directions for Windows,
               macOS, and Linux.
