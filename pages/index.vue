@@ -45,20 +45,20 @@
             Today's web is inefficient and expensive
           </h3>
           <p>
-            HTTP downloads files from one computer at a time instead of pieces
-            from multiple computers simultaneously. Peer-to-peer IPFS saves big
-            on bandwidth &mdash;
+            HTTP downloads files from one server at a time — but peer-to-peer
+            IPFS retrieves pieces from multiple nodes at once, saving big on
+            bandwidth. With
             <Link
               class="text-blueGreen font-bold hover:underline"
               :item="{
                 link: 'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
-                text: 'up to 60% for video',
+                text: 'up to 60% savings for video,',
               }"
               :on-click="
                 (item) => onCTAClick({ ui: 'why/1-performance', ...item })
               "
             />
-            &mdash; making it possible to efficiently distribute high volumes of
+            IPFS makes it possible to efficiently distribute high volumes of
             data without duplication.
           </p>
         </div>
@@ -80,9 +80,10 @@
                 (item) => onCTAClick({ ui: 'why/2-preservation', ...item })
               "
             />
-            before it's gone forever. It's not good enough for the medium of our
-            era to be this fragile. IPFS keeps every version of and makes it
-            simple to set up resilient networks for mirroring data.
+            before it's gone forever. The medium of our era shouldn't be this
+            fragile. IPFS makes it simple to set up resilient networks for
+            mirroring data, and thanks to content addressing, files stored using
+            IPFS are automatically versioned.
           </p>
         </div>
         <div>
@@ -109,7 +110,7 @@
           </h3>
           <p>
             IPFS powers the creation of diversely resilient networks that enable
-            persistent availability &mdash; with or without Internet backbone
+            persistent availability &mdash; with or without internet backbone
             connectivity. This means better connectivity for the developing
             world, during natural disasters, or just when you're on flaky coffee
             shop wi-fi.
