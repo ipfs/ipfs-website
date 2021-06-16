@@ -79,8 +79,8 @@
               "
             />
             before it's gone forever. It's not good enough for the medium of our
-            era to be this fragile. IPFS keeps every version of and makes it
-            simple to set up resilient networks for mirroring data.
+            era to be this fragile. IPFS keeps every version of your files and
+            makes it simple to set up resilient networks for mirroring data.
           </p>
         </div>
         <div>
@@ -207,7 +207,7 @@
               All IPFS, no frills
             </h5>
             <p class="mb-4">
-              Just want IPFS in your terminal? Get step-by-step instructions
+              Just want IPFS in your terminal? Get step-by-step instructions for
               getting up and running on the command line using the Go
               implementation of IPFS. Includes directions for Windows, macOS,
               and Linux.
