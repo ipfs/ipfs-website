@@ -125,7 +125,7 @@
           </p>
         </div>
         <h3 class="text-2xl sm:text-3xl font-display text-center">
-          Store and share files
+          Store and provide files
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
@@ -159,17 +159,17 @@
               IPFS for everyone
             </h5>
             <p class="mb-4">
-              The desktop app offers menubar/tray shortcuts and an easy
+              The IPFS Desktop app offers menubar/tray shortcuts and an easy
               interface for adding, pinning, and sharing files &mdash; plus a
-              full IPFS node ready for heavy-duty hosting and development too. A
-              great choice for devs and non-devs alike.
+              full IPFS node ready for heavy-duty hosting and development. Great
+              for developers and less experienced users alike.
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
                 href="https://github.com/ipfs-shipyard/ipfs-desktop"
                 target="_blank"
                 rel="noopener"
-                text="Get IPFS Desktop"
+                text="Install IPFS Desktop"
                 :on-click="
                   (item) => onCTAClick({ ui: 'install/ipfs-desktop', ...item })
                 "
@@ -207,17 +207,17 @@
               All IPFS, no frills
             </h5>
             <p class="mb-4">
-              Just want IPFS in your terminal? Get step-by-step instructions
-              getting up and running on the command line using the Go
-              implementation of IPFS. Includes directions for Windows, macOS,
-              and Linux.
+              Just want to use IPFS from your terminal? Get step-by-step
+              instructions for getting up and running on the command line using
+              the Go implementation of IPFS. Includes directions for Windows,
+              macOS, and Linux.
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
                 href="https://docs.ipfs.io/how-to/command-line-quick-start"
                 target="_blank"
                 rel="noopener"
-                text="Get the CLI"
+                text="Install the IPFS CLI"
                 :on-click="
                   (item) => onCTAClick({ ui: 'install/ipfs-cli', ...item })
                 "
@@ -259,15 +259,15 @@
                 Add IPFS to your browser
               </h5>
               <p class="mb-4">
-                Get <code>ipfs://</code> URL support and much more in your web
-                browser with this extension.
+                Get <code>ipfs://</code> address support and more in your
+                browser with this extension for Chrome and Firefox.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
                   href="https://github.com/ipfs-shipyard/ipfs-companion"
                   target="_blank"
                   rel="noopener"
-                  text="Get Companion"
+                  text="Get IPFS Companion"
                   :on-click="
                     (item) =>
                       onCTAClick({ ui: 'install/ipfs-companion', ...item })
@@ -303,18 +303,18 @@
                 />
               </h4>
               <h5 class="mb-4 text-base md:text-lg font-bold">
-                For servers or big data
+                Orchestrate multiple IPFS nodes
               </h5>
               <p class="mb-4">
-                Automatically allocate, replicate, and track your data as
-                pinsets across multiple IPFS nodes.
+                Automatically allocate, replicate, and track your data as a
+                global pinset distributed among a swarm of peers.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
                   href="https://cluster.ipfs.io/"
                   target="_blank"
                   rel="noopener"
-                  text="Get Cluster"
+                  text="Get IPFS Cluster"
                   :on-click="
                     (item) =>
                       onCTAClick({ ui: 'install/ipfs-cluster', ...item })
@@ -325,7 +325,7 @@
           </div>
         </div>
         <h3 class="text-2xl sm:text-3xl font-display text-center mt-24 mb-8">
-          Build with IPFS
+          For developers
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
           <div
@@ -360,7 +360,7 @@
                 />
               </h4>
               <p class="mb-4">
-                The original IPFS, with core implementation, daemon server, CLI
+                The original IPFS implementation: IPFS core, daemon server, CLI
                 tooling, and more.
               </p>
               <div class="flex justify-center sm:justify-start">
@@ -408,8 +408,8 @@
                 />
               </h4>
               <p class="mb-4">
-                Written entirely in JavaScript for a world of possibilities in
-                browser implementations.
+                IPFS implemented entirely in JavaScript for a world of
+                possibilities in the browser.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
@@ -771,7 +771,7 @@
       <div class="grid grid-cols-4">
         <div class="col-span-4 sm:col-span-1 pr-16 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
-            IPFS blog
+            Latest blog posts
           </h3>
           <ol>
             <li
