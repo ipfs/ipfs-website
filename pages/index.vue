@@ -46,8 +46,8 @@
           </h3>
           <p>
             HTTP downloads files from one server at a time — but peer-to-peer
-            IPFS retrieves pieces from multiple nodes at once, saving big on
-            bandwidth. With
+            IPFS retrieves pieces from multiple nodes at once, enabling
+            substantial bandwidth savings. With
             <Link
               class="text-blueGreen font-bold hover:underline"
               :item="{
