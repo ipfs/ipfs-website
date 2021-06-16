@@ -570,10 +570,9 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              This doesn't mean you need to remember a long string of CIDs,
-              though &mdash; every file can be found by
-              <strong>human-readable names</strong> using a decentralized naming
-              system called
+              However, this doesn't mean you need to remember a long string of
+              CIDs &mdash; computers can find the latest version of your file
+              using the
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
@@ -583,7 +582,20 @@
                 :on-click="
                   (item) => onCTAClick({ ui: 'how/1-performance', ...item })
                 "
-              />.
+              />
+              decentralized naming system, and
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/dnslink/',
+                  text: 'DNSLink',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-performance', ...item })
+                "
+              />
+              can be used to map CIDs to
+              <strong>human-readable DNS names</strong>.
             </p>
           </div>
         </div>
