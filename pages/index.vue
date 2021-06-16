@@ -906,6 +906,7 @@ export default {
       this.latestVideos = latestVideos.value;
     }
   },
+  fetchOnServer: false,
   methods: {
     onCTAClick(data) {
       this.$countly.trackEvent(this.$countly.events.CTA_CLICK, {
