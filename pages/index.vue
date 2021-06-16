@@ -169,7 +169,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://github.com/ipfs-shipyard/ipfs-desktop"
+                href="https://docs.ipfs.io/install/ipfs-desktop/"
                 target="_blank"
                 rel="noopener"
                 text="Install IPFS Desktop"
@@ -267,7 +267,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://github.com/ipfs-shipyard/ipfs-companion"
+                  href="https://docs.ipfs.io/install/ipfs-companion/"
                   target="_blank"
                   rel="noopener"
                   text="Get IPFS Companion"
