@@ -412,7 +412,7 @@
               </h4>
               <p class="mb-4">
                 IPFS implemented entirely in JavaScript for a world of
-                possibilities in the browser.
+                possibilities in the browser and Node.js.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
