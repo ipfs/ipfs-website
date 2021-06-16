@@ -263,7 +263,7 @@
               </h5>
               <p class="mb-4">
                 Get <code>ipfs://</code> address support and more in your
-                browser with this extension for Chrome and Firefox.
+                browser with this extension for Chromium and Firefox.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
