@@ -488,9 +488,9 @@
             <p class="leading-normal">
               When other nodes <strong>look up your file</strong>, they ask
               their peer nodes who's storing the hashed content behind the
-              file's CID. When they view or download your file, they keep their
-              own copy — and become another provider of your content for a fixed
-              period of time.
+              file's CID. When they view or download your file, they cache a
+              copy — and become another provider of your content until their
+              cache is cleared.
             </p>
           </div>
         </div>
