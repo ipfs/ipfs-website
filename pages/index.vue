@@ -455,7 +455,7 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              When you add a file to IPFS, your file is cryptographically hashed
+              When you add a file to IPFS, your file is split into smaller chunks, cryptographically hashed
               and given a
               <strong>unique fingerprint</strong> called a
               <Link
