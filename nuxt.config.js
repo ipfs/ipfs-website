@@ -44,6 +44,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@/modules/https',
     '@nuxt/content',
     '@nuxtjs/svg-sprite',
     [
