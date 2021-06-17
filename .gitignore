@@ -6,6 +6,13 @@ dist
 .nuxt
 .env
 
+# SSL keys
+localhost_cert.pem
+localhost_key.pem
+localhost_fullchain.pem
+server.key
+server.crt
+
 # logs
 logs
 *.log
