@@ -1,7 +1,15 @@
 <template>
   <div
     id="stars"
-    class="relative bg-gradient-6 pt-20 h-screen max-h-168 sm:max-h-1200 min-h-640"
+    class="
+      relative
+      bg-gradient-6
+      pt-20
+      h-screen
+      max-h-168
+      sm:max-h-1200
+      min-h-640
+    "
   >
     <div
       class="hero-container absolute left-0 right-0 mx-auto grid-margins mb-20"
@@ -17,24 +25,47 @@
     </div>
     <button
       id="toggle-animation"
-      class="absolute left-0 bottom-0 text-xs m-1.5 py-1.5 px-2 transition duration-300 ease-in-out"
+      class="
+        absolute
+        left-0
+        bottom-0
+        text-xs
+        m-1.5
+        py-1.5
+        px-2
+        transition
+        duration-300
+        ease-in-out
+      "
     >
       Disable animation
     </button>
     <a
       href="#why"
-      class="view-more block absolute bottom-8 w-full sm:hidden hover:opacity-75"
+      class="
+        view-more
+        block
+        absolute
+        bottom-8
+        w-full
+        sm:hidden
+        hover:opacity-75
+      "
     >
-      <svg-icon name="down-arrow-01" class="h-6 mx-auto" />
+      <Icon name="down-arrow" class="h-6 mx-auto" />
     </a>
   </div>
 </template>
 
 <script>
+import Icon from './Icon.vue';
 import stars from '@/assets/js/stars';
 
 export default {
   name: 'StarfieldHero',
+  components: {
+    Icon,
+  },
   props: {
     title: {
       type: String,

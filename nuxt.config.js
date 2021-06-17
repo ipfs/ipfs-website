@@ -40,13 +40,13 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@/modules/https',
     '@nuxt/content',
-    '@nuxtjs/svg-sprite',
     [
       'nuxt-mq',
       {
@@ -59,10 +59,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-
-  svgSprite: {
-    input: '~/assets/svgs/',
-  },
 
   publicRuntimeConfig: {
     // Speedcurve config

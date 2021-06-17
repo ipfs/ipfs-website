@@ -1,18 +1,18 @@
 <template>
   <div class="flex items-center text-sm">
+    <a
+      href="https://protocol.ai"
+      target="_blank"
+      class="mr-2 inline-block align-middle"
+      @click="(event) => onClick(event, true)"
+    >
+      <icon
+        name="protocol-labs-icon"
+        title="Protocol Labs"
+        class="w-4 h-4 fill-current"
+      />
+    </a>
     <span>
-      <a
-        href="https://protocol.ai"
-        target="_blank"
-        class="mr-1 inline-block align-middle"
-        @click="(event) => onClick(event, true)"
-      >
-        <svg-icon
-          name="logo-icon"
-          title="Protocol Labs"
-          class="w-4 h-4 fill-current"
-        />
-      </a>
       ©
       <a
         class="text-blueGreenLight hover:underline"
@@ -66,11 +66,13 @@
 
 <script>
 import Link from './Link';
+import Icon from './Icon.vue';
 
 export default {
   name: 'FooterLegal',
   components: {
     Link,
+    Icon,
   },
   methods: {
     onClick(event, isSvg) {

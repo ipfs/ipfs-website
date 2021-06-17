@@ -1,7 +1,16 @@
 <template>
   <header
     ref="header"
-    class="top-0 w-full text-white transition duration-300 ease-out transform z-50"
+    class="
+      top-0
+      w-full
+      text-white
+      transition
+      duration-300
+      ease-out
+      transform
+      z-50
+    "
     :class="[
       {
         '-translate-y-full': navVisibility.navSticky,
@@ -16,7 +25,13 @@
   >
     <div class="grid-margins flex justify-between items-center h-20">
       <Link
-        class="hover:opacity-75 transition-opacity duration-300 ease-in-out mobile-nav-link"
+        class="
+          hover:opacity-75
+          transition-opacity
+          duration-300
+          ease-in-out
+          mobile-nav-link
+        "
         :item="{ link: '/', text: 'Homepage (logo)' }"
       >
         <!--
@@ -25,7 +40,7 @@
           which does not allow us to track the originating path to countly.
           We could parse document.referrer but this works also.
         -->
-        <svg-icon
+        <Icon
           name="ipfs-logo"
           class="w-32 h-20 fill-current"
           @click="() => onLinkClick({ link: '/', text: 'Homepage (logo)' })"
@@ -52,9 +67,11 @@
 </template>
 
 <script>
-import Link from './Link';
 import throttle from 'lodash/throttle';
 import { mapState } from 'vuex';
+
+import Link from './Link';
+import Icon from './Icon.vue';
 
 const headerLinks = [
   { text: 'About', link: '/#why' },
@@ -67,7 +84,7 @@ const headerLinks = [
 
 export default {
   name: 'Header',
-  components: { Link },
+  components: { Link, Icon },
   props: {
     noHero: {
       type: Boolean,

@@ -36,8 +36,8 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-http" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-http" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is inefficient and expensive
@@ -61,8 +61,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-history" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-history" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web can't preserve humanity's history
@@ -84,8 +84,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-centralized" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-centralized" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is centralized, limiting opportunity
@@ -99,8 +99,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-network" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-network" class="max-w-xs" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is addicted to the backbone
@@ -446,7 +446,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -476,7 +476,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -495,7 +495,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -516,7 +516,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -536,7 +536,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -618,7 +618,7 @@
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-archivists"
               class="h-36 w-36 mx-auto"
             />
@@ -634,10 +634,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
-              name="ipfs-illustration-service"
-              class="h-36 w-36 mx-auto"
-            />
+            <Icon name="ipfs-illustration-service" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Service providers
@@ -650,7 +647,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon name="ipfs-illustration-data" class="h-36 w-36 mx-auto" />
+            <Icon name="ipfs-illustration-data" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Researchers
@@ -673,7 +670,7 @@
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-developing"
               class="h-36 w-36 mx-auto"
             />
@@ -689,7 +686,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-blockchains"
               class="h-36 w-36 mx-auto"
             />
@@ -705,10 +702,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
-              name="ipfs-illustration-creators"
-              class="h-36 w-36 mx-auto"
-            />
+            <Icon name="ipfs-illustration-creators" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Content creators
@@ -825,7 +819,7 @@
                     brightness-75
                   "
                 />
-                <svg-icon
+                <Icon
                   name="video-play"
                   class="
                     absolute
