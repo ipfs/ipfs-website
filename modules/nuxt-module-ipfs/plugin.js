@@ -19,7 +19,7 @@ const Relativity = (path) => {
       console.log(ipfsPathPrefix);
       if (ipfsPathPrefix) {
         console.log(`${ipfsPathPrefix}${path}`);
-        return `${ipfsPathPrefix}${path}`;
+        return `${ipfsPathPrefix}${path}/`;
       } else {
         return path;
       }
