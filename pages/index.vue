@@ -37,7 +37,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
         <div>
           <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-http" class="max-w-xs" />
+            <Icon name="ipfs-illustration-http" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is inefficient and expensive
@@ -62,7 +62,7 @@
         </div>
         <div>
           <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-history" class="max-w-xs" />
+            <Icon name="ipfs-illustration-history" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web can't preserve humanity's history
@@ -85,7 +85,7 @@
         </div>
         <div>
           <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-centralized" class="max-w-xs" />
+            <Icon name="ipfs-illustration-centralized" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is centralized, limiting opportunity
@@ -100,7 +100,7 @@
         </div>
         <div>
           <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-network" class="max-w-xs" />
+            <Icon name="ipfs-illustration-network" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is addicted to the backbone
