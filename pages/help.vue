@@ -21,5 +21,8 @@ export default {
       title: 'Getting Help | IPFS',
     };
   },
+  mounted() {
+    console.log(this);
+  },
 };
 </script>

@@ -21,5 +21,8 @@ export default {
       title: 'Team | IPFS',
     };
   },
+  mounted() {
+    console.log(this);
+  },
 };
 </script>
