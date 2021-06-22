@@ -28,7 +28,7 @@
     "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.14.0",
     "lodash": "^4.17.21",
-    "nuxt": "^2.15.6",
+    "nuxt": "^2.15.7",
     "nuxt-mq": "^2.0.2",
     "pixi.js": "^4.8.8"
   },
