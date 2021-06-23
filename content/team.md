@@ -1,179 +1,41 @@
 ---
 title: The IPFS team
-description: Learn how the global IPFS team asynchronously collaborates to decentralize the web.
+description: Learn how the global IPFS community asynchronously collaborates to decentralize the web.
 ---
 
-IPFS is the collective work of thousands of contributors from multiple geographies and backgrounds, working <a href="https://github.com/ipfs/team-mgmt#how-we-work-together">collaboratively and asynchronously</a> to decentralize the web.
+IPFS is the collective work of thousands of contributors from multiple geographies and backgrounds, working [collaboratively and asynchronously](https://github.com/ipfs/team-mgmt#how-we-work-together) to decentralize the web.
 
-We organize ourselves into focused teams called Working Groups. Each group defines its own roadmap, objectives and priorities. You can find more information about this group structure in the [team management repo](https://github.com/ipfs/team-mgmt/blob/master/TEAMS_ROLES_STRUCTURES.md#working-groups).
+## Open-source community
 
-The IPFS Working Groups are:
+As an [open-source project](https://github.com/ipfs/ipfs), anyone can [contribute to IPFS](https://docs.ipfs.io/community/contribute/ways-to-contribute/) and help make an impact on the future of the web – regardless of areas of interest or specialty. IPFS open-source contributors bring a broad range of valuable skills to the project, making tangible differences in a wide variety of areas:
 
-- [**Project**](#project)
-- [**Content Routing**](#content-routing)
-- [**Testground**](#testground)
-- [**Ecosystem**](#ecosystem)
+- [Protocol design](https://docs.ipfs.io/community/contribute/ways-to-contribute/#protocol-design) and [implementation](https://docs.ipfs.io/community/contribute/ways-to-contribute/#code)
+- [Documentation](https://docs.ipfs.io/community/contribute/ways-to-contribute/#documentation)
+- [Community outreach](https://docs.ipfs.io/community/contribute/ways-to-contribute/#community) and [support](https://docs.ipfs.io/community/contribute/ways-to-contribute/#support)
+- [Functional testing](https://docs.ipfs.io/community/contribute/ways-to-contribute/#testing) and user testing
+- [Visual and user experience design](https://docs.ipfs.io/community/contribute/ways-to-contribute/#design)
+- [Building apps and services](https://docs.ipfs.io/community/contribute/ways-to-contribute/#applications) that use IPFS
 
-There are also Special Interest Groups, pushing forward research and development on:
+There's never been a more exciting time to be part of the global IPFS community, so if you'd like to make a difference and help shape the future of the internet, there's a place for you to jump in! The IPFS community is an engaged, inquisitive, and helpful collective with a [code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md) intended to create an environment that is friendly, safe, and accepting, and free from intimidation or harassment.
 
-- [Project](#project)
-- [Content Routing](#content-routing)
-- [Testground](#testground)
-- [Bifrost](#bifrost)
-- [Ecosystem](#ecosystem)
-- [Special Interest Groups](#special-interest-groups)
-  - [Collabs and Community](#collabs-and-community)
-  - [Developer Experience](#developer-experience)
-  - [Integration with Web Browsers](#integration-with-web-browsers)
-  - [IPFS GUI/UX](#ipfs-guiux)
-  - [Local Offline Collaboration (Locol)](#local-offline-collaboration-locol)
+If you'd like to start by dipping your toes in the water, [IPFS meetups](https://www.meetup.com/pro/ipfs/) are a great place to begin. Local community meetups happen worldwide, and there's also a well-attended monthly virtual meetup showcasing the latest community projects, current IPFS news and events, and more.
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ0IEMEJpCM6wawOPDRCCOTqDNSvlKf-3WQE6ZEYqCipDdiaep41htmGfXsLH0tJwRWYNRvzEAdA5EV/pub?w=737&amp;h=419" alt="Working Group leads org chart">
+## IPFS core team
 
-### Project
+While IPFS is primarily an open-source, community-driven project, community priorities are shepherded by a core team that helps to ensure that strategic roadmapping and overall velocity continue to meet the project's high-level goals of decentralizing the web.
 
-- **Coordination**: https://github.com/ipfs/team-mgmt
-- **[Molly Mackinlay](https://github.com/momack2): Captain**
+Many, but not all, of the IPFS core team are also part of [Protocol Labs](https://protocol.ai), an open-source R&D lab whose mission is to drive breakthroughs in computing to push humanity forward. 
 
-The Project working group helps support team functioning, prioritization, and day-to-day operations.
+The IPFS core team is organized flexibly and responsively to nimbly adjust to shifting priorities over time. While team organization may iterate on an as-needed basis to best serve current project priorities, team structure always reflects a high-level commitment to _improving the IPFS developer experience and toolset_ as part of making IPFS and its sibling web3 protocols [Filecoin](https://filecoin.io), [libp2p](https://libp2p.io/), [IPLD](https://ipld.io), and [Multiformats](https://multiformats.io/) a seamless, ubiquitous part of the future web. Current areas of high-level organization include:
 
-**Responsibilities include:**
+- **Web3 Developer Tools:** Ensuring that developers on the decentralized web have a robust, performant, easy-to-use stack — including IPFS — available to them in order to accelerate the impact of the future internet.
+- **Ecosystem:** Seeding the long-term growth of the decentralized web by fostering relationships with a wide variety of developers and other stakeholders who are using IPFS and related protocols and tools in the web3 stack.
+- **Stewards:** Ensuring the existing IPFS codebase and related tools are well maintained and iteratively improved upon in response to community needs and future goals.
 
-- Manage cross-coordination and problem-solving between working groups
-- Track progression of objectives and key results (OKRs) for the project
-- Organize team meet-ups and summits
+The IPFS core team strictly adheres to a policy of _public discussion and communication by default_ in order to maximize opportunities for community involvement and feedback. This means a commitment to communicating and discussing strategic direction and other high-level decisionmaking in public-facing, async-friendly channels such as [GitHub](https://github.com/ipfs) and the [official IPFS forums](https://discuss.ipfs.io). For example, calls to participate in roadmapping and similar strategic activities will be announced on the [IPFS Blog & News](https://blog.ipfs.io/), and proposals and discussions regarding future strategic work can be found in the [IPFS Roadmap repo](https://github.com/ipfs/roadmap/issues).
 
-### Content Routing
+## Jobs working with IPFS
 
-- **Coordination**: https://github.com/ipfs/go-libp2p
-- **[Steven Allen](https://github.com/stebalien): Captain**
-- **[Jake Heun](https://github.com/jacobheun): Technical project manager (TPM)**
+The simplest way to search for jobs building on or working with IPFS is to [subscribe to the IPFS Weekly newsletter](https://ipfs.us4.list-manage.com/subscribe?u=25473244c7d18b897f5a1ff6b&id=cad54b2230) — each week's edition includes new job postings from a wide variety of companies and organizations looking for talented individuals interested in building the decentralized web.
 
-The Content Routing working group focuses on making improvements to the core implementations in both IPFS and libp2p such that all IPFS users can find and access content they care about in a distributed network of nodes.
-
-**Responsibilities include:**
-
-- Design and implement improvements to the go-libp2p DHT
-- Add new features to providers or connection management subsystems
-- Test and benchmark existing performance on finding and connecting to nodes with the desired content
-
-### Testground
-
-- **Coordination**: https://github.com/ipfs/testground
-- **[Raul Kripalani](https://github.com/raulk): Architect**
-- **[David Dias](https://github.com/daviddias): TPM**
-
-The IPFS Testground working group builds testing tooling to validate scalability and reliability of the core IPFS implementations, with easy onboarding for core developers to use in continuous integration and one-off testing.
-
-**Responsibilities include:**
-
-- Build large-scale testing infrastructure to simulate and benchmark IPFS
-- Create dashboards and CI hooks to make testing infra more useful/usable
-- Support core implementation developers in creating and running real-world test scenarios
-
-### Bifrost
-
-- **Coordination**: TBD
-- **[Oli Evans](https://github.com/olizilla): Captain**
-
-Improve performance and stability of IPFS gateways and pinning, and provide public observability of services.
-
-**Responsibilities include:**
-
-- Manage and maintain the IPFS HTTP gateway
-- Manage and maintain the IPFS bootstrapper nodes
-- Manage and maintain pinbot, the IPFS pinning service
-- Monitor services and hosts used by the IPFS dev teams
-- Provide guidance to other users that want to host IPFS nodes
-
-### Ecosystem
-
-- **Coordination**: TBD
-- **[Dietrich Ayala](https://github.com/autonome): Captain and TPM**
-
-Ensure community health and growth through collaborations, developer experience, and platform availability. This group is the parent group for the [**Integration with Web Browsers**](#integration-with-web-browsers), [**Developer Experience**](#developer-experience), and [**Collabs & Community**](#collabs--community) SIGs.
-
-**Responsibilities include:**
-
-- Steward and improve community and contributor enablement/support
-- Manage collaborations (including [with web browsers](https://github.com/ipfs/in-web-browsers))
-- Maintain lower-priority systems and tools
-
-### Special Interest Groups
-
-_Cross-cutting research, analysis, and development teams_
-
-#### Collabs and Community
-
-- **Coordination**: https://github.com/ipfs/community
-- **[Dietrich Ayala](https://github.com/autonome): Captain, TPM**
-
-The Collabs and Community SIG supports IPFS users and nurtures new opportunities through research, collaborations, and community engagement.
-
-**Responsibilities include**:
-
-- Manage community communications channels
-- Own collaborations with IPFS users and ecosystem
-- Identify areas of opportunity for future IPFS development
-
-#### Developer Experience
-
-- **Coordination**: TBD
-- **[Dietrich Ayala](https://github.com/autonome): Captain, TPM**
-
-The Developer Experience SIG supports the IPFS technical community through documentation, contributor experience, API ergonomics, and tooling.
-
-**Responsibilities include:**
-
-- Steward [IPFS documentation](https://docs.ipfs.io) accuracy, usability, and accessibility
-- Audit, research, and assess community needs to make IPFS more accessible to developer users
-- Make improvements to IPFS user-facing subsystems, including the HTTP and client APIs
-  
-#### Integration with Web Browsers
-
-- **Coordination**: https://github.com/ipfs/in-web-browsers
-- **Roadmap**: https://github.com/ipfs/roadmap/blob/master/WG_INTEGRATION_IN_WEB_BROWSERS.md
-- **[Marcin Rataj](https://github.com/lidel): Captain, TPM**
-- **[Github team](https://github.com/orgs/ipfs/teams/wg-web-browsers/members)**
-
-The Integration with Web Browsers SIG designs and implements browser integrations, web extensions, service workers, and any other strategy that contributes to IPFS being integrated with today's web.
-
-**Responsibilities include**:
-
-- Browser integrations (Firefox, Chrome, Brave and others)
-- IPFS web extension
-- IPFS service worker
-- IPFS web worker
-- Collaborate with with browser vendors
-- Identify blockers and design constraints of each integration, figuring out new ways to go around those limitations
-- Increase the adoption of the distributed web by making it easy for users to access it
-- Define specifications for address schemes, and advocate for those schemes to be adopted
-
-#### IPFS GUI/UX
-
-- **Coordination**: https://github.com/ipfs/ipfs-gui
-- **[Marcin Rataj](https://github.com/lidel): Captain, TPM**
-- **[Github Team](https://github.com/orgs/ipfs/teams/wg-gui-ux)**
-
-Making IPFS GUIs simple, accessible, reusable, and beautiful.
-
-**Responsibilities include**:
-
-- Fight complexity at every step
-- Make IPFS usable and comprehensible for everyone
-- Publish and promote this work; make doing the right thing the easiest thing
-- Demonstrate the nature of the system with effortless, coherent, and compelling interfaces
-
-#### Local Offline Collaboration (Locol)
-
- - **Coordination**: https://github.com/ipfs/local-offline-collab
- - **[Teri Chadbourne](https://github.com/terichadbourne): Captain**
-
-User research, collaborations, and features to make the knowledge and tools on the internet accessible and useful on partitioned, low-bandwidth, or intermittent networks.
-
-**Responsibilities include**:
-
-- Participate in communities like [Offline First](http://offlinefirst.org/)
-- Conduct user research around offline and local-first use cases, communities, and best practices
-- Support collaborations between IPFS and community members who are building tools for peer-to-peer sharing and collaboration in local/offline networks
-- Research and prototype applications that utilize IPFS for local-first collaboration and resilient offline usage
+Additionally, open positions to work on the IPFS core team can be found [here](https://protocol.ai/join/).
