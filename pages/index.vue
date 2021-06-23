@@ -8,9 +8,9 @@
       <h2 class="text-center">
         A peer-to-peer hypermedia protocol
         <br />
-        for a resilient, upgradeable, open network
+        designed to preserve and grow humanity's knowledge
         <br />
-        to preserve and grow humanity's knowledge.
+        by making the web upgradeable, resilient, and more open.
       </h2>
       <div class="flex flex-col sm:flex-row mt-6">
         <Button
