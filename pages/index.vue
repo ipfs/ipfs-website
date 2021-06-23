@@ -546,10 +546,8 @@
             <p class="leading-normal">
               If you add a new version of your file to IPFS, its cryptographic
               hash is different, and so it gets a new CID. This means
-              <strong
-                >files stored on IPFS are resistant to tampering and
-                censorship</strong
-              >
+              <strong>files stored on IPFS are resistant to tampering and
+                censorship</strong>
               — any changes to a file don't overwrite the original, even though
               common chunks of bigger files are reused in order to minimize
               storage costs.
