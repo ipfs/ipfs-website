@@ -2,7 +2,7 @@
   <div>
     <seo-tags
       title="IPFS Powers the Distributed Web"
-      description="The InterPlanetary File System is a peer-to-peer hypermedia protocol for a resilient, upgradeable, open network to preserve and grow humanity's knowledge."
+      description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
     />
     <StarfieldHero title="IPFS powers the Distributed Web">
       <h2 class="text-center">
