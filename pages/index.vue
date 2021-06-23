@@ -2,13 +2,15 @@
   <div>
     <seo-tags
       title="IPFS Powers the Distributed Web"
-      description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open."
+      description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
     />
     <StarfieldHero title="IPFS powers the Distributed Web">
       <h2 class="text-center">
         A peer-to-peer hypermedia protocol
         <br />
-        designed to make the web faster, safer, and more open.
+        designed to preserve and grow humanity's knowledge
+        <br />
+        by making the web upgradeable, resilient, and more open.
       </h2>
       <div class="flex flex-col sm:flex-row mt-6">
         <Button
@@ -43,20 +45,20 @@
             Today's web is inefficient and expensive
           </h3>
           <p>
-            HTTP downloads files from one computer at a time instead of pieces
-            from multiple computers simultaneously. Peer-to-peer IPFS saves big
-            on bandwidth &mdash;
+            HTTP downloads files from one server at a time — but peer-to-peer
+            IPFS retrieves pieces from multiple nodes at once, enabling
+            substantial bandwidth savings. With
             <Link
               class="text-blueGreen font-bold hover:underline"
               :item="{
                 link: 'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
-                text: 'up to 60% for video',
+                text: 'up to 60% savings for video,',
               }"
               :on-click="
                 (item) => onCTAClick({ ui: 'why/1-performance', ...item })
               "
             />
-            &mdash; making it possible to efficiently distribute high volumes of
+            IPFS makes it possible to efficiently distribute high volumes of
             data without duplication.
           </p>
         </div>
@@ -78,9 +80,10 @@
                 (item) => onCTAClick({ ui: 'why/2-preservation', ...item })
               "
             />
-            before it's gone forever. It's not good enough for the medium of our
-            era to be this fragile. IPFS keeps every version of your files and
-            makes it simple to set up resilient networks for mirroring data.
+            before it's gone forever. The medium of our era shouldn't be this
+            fragile. IPFS makes it simple to set up resilient networks for
+            mirroring data, and thanks to content addressing, files stored using
+            IPFS are automatically versioned.
           </p>
         </div>
         <div>
@@ -107,7 +110,7 @@
           </h3>
           <p>
             IPFS powers the creation of diversely resilient networks that enable
-            persistent availability &mdash; with or without Internet backbone
+            persistent availability &mdash; with or without internet backbone
             connectivity. This means better connectivity for the developing
             world, during natural disasters, or just when you're on flaky coffee
             shop wi-fi.
@@ -125,7 +128,7 @@
           </p>
         </div>
         <h3 class="text-2xl sm:text-3xl font-display text-center">
-          Store and share files
+          Store and provide files
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
@@ -159,17 +162,17 @@
               IPFS for everyone
             </h5>
             <p class="mb-4">
-              The desktop app offers menubar/tray shortcuts and an easy
+              The IPFS Desktop app offers menubar/tray shortcuts and an easy
               interface for adding, pinning, and sharing files &mdash; plus a
-              full IPFS node ready for heavy-duty hosting and development too. A
-              great choice for devs and non-devs alike.
+              full IPFS node ready for heavy-duty hosting and development. Great
+              for developers and less experienced users alike.
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://github.com/ipfs-shipyard/ipfs-desktop"
+                href="https://docs.ipfs.io/install/ipfs-desktop/"
                 target="_blank"
                 rel="noopener"
-                text="Get IPFS Desktop"
+                text="Install IPFS Desktop"
                 :on-click="
                   (item) => onCTAClick({ ui: 'install/ipfs-desktop', ...item })
                 "
@@ -207,17 +210,17 @@
               All IPFS, no frills
             </h5>
             <p class="mb-4">
-              Just want IPFS in your terminal? Get step-by-step instructions for
-              getting up and running on the command line using the Go
-              implementation of IPFS. Includes directions for Windows, macOS,
-              and Linux.
+              Just want to use IPFS from your terminal? Follow these
+              step-by-step instructions for getting up and running on the
+              command line using the Go implementation of IPFS. Includes
+              directions for Windows, macOS, and Linux.
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
                 href="https://docs.ipfs.io/how-to/command-line-quick-start"
                 target="_blank"
                 rel="noopener"
-                text="Get the CLI"
+                text="Install the IPFS CLI"
                 :on-click="
                   (item) => onCTAClick({ ui: 'install/ipfs-cli', ...item })
                 "
@@ -259,15 +262,15 @@
                 Add IPFS to your browser
               </h5>
               <p class="mb-4">
-                Get <code>ipfs://</code> URL support and much more in your web
-                browser with this extension.
+                Get <code>ipfs://</code> address support and more in your
+                browser with this extension for Chromium and Firefox.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://github.com/ipfs-shipyard/ipfs-companion"
+                  href="https://docs.ipfs.io/install/ipfs-companion/"
                   target="_blank"
                   rel="noopener"
-                  text="Get Companion"
+                  text="Get IPFS Companion"
                   :on-click="
                     (item) =>
                       onCTAClick({ ui: 'install/ipfs-companion', ...item })
@@ -303,18 +306,18 @@
                 />
               </h4>
               <h5 class="mb-4 text-base md:text-lg font-bold">
-                For servers or big data
+                Orchestrate multiple IPFS nodes
               </h5>
               <p class="mb-4">
-                Automatically allocate, replicate, and track your data as
-                pinsets across multiple IPFS nodes.
+                Automatically allocate, replicate, and track your data as a
+                global pinset distributed among a swarm of peers.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
                   href="https://cluster.ipfs.io/"
                   target="_blank"
                   rel="noopener"
-                  text="Get Cluster"
+                  text="Get IPFS Cluster"
                   :on-click="
                     (item) =>
                       onCTAClick({ ui: 'install/ipfs-cluster', ...item })
@@ -325,7 +328,7 @@
           </div>
         </div>
         <h3 class="text-2xl sm:text-3xl font-display text-center mt-24 mb-8">
-          Build with IPFS
+          For developers
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
           <div
@@ -360,7 +363,7 @@
                 />
               </h4>
               <p class="mb-4">
-                The original IPFS, with core implementation, daemon server, CLI
+                The original IPFS implementation: IPFS core, daemon server, CLI
                 tooling, and more.
               </p>
               <div class="flex justify-center sm:justify-start">
@@ -408,8 +411,8 @@
                 />
               </h4>
               <p class="mb-4">
-                Written entirely in JavaScript for a world of possibilities in
-                browser implementations.
+                IPFS implemented entirely in JavaScript for a world of
+                possibilities in the browser and Node.js.
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
@@ -429,9 +432,11 @@
     </section>
     <section id="how" class="grid-margins py-20">
       <div class="text-center mb-16">
-        <h2 class="font-display mb-4">Here's how IPFS works</h2>
+        <h2 class="font-display mb-4">How IPFS works</h2>
         <p class="text-base sm:text-lg">
-          Take a look at what happens when you add a file to IPFS.
+          Here's what happens when you add a file to IPFS — whether you're
+          storing that file on your own local node or one operated by a pinning
+          service or IPFS-enabled app.
         </p>
       </div>
       <div class="max-w-3xl mx-auto">
@@ -450,58 +455,19 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              Your file, and all of the <strong>blocks within it</strong>, is
-              given a <strong>unique fingerprint</strong> called a
+              When you add a file to IPFS, your file is split into smaller
+              chunks, cryptographically hashed, and given a
+              <strong>unique fingerprint</strong> called a
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/hashing/',
-                  text: 'cryptographic hash',
+                  link: 'https://proto.school/anatomy-of-a-cid',
+                  text: 'content identifier',
                 }"
-                :on-click="
-                  (item) => onCTAClick({ ui: 'how/1-hashing', ...item })
-                "
-              />.
-            </p>
-          </div>
-        </div>
-        <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
-        >
-          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
-          </div>
-          <div class="pl-0 sm:pl-10">
-            <p class="leading-normal">
-              IPFS <strong>removes duplications</strong> across the network.
-            </p>
-          </div>
-        </div>
-        <div
-          class="
-            flex flex-col
-            sm:flex-row
-            text-center
-            sm:text-left
-            items-center
-            mb-12
-          "
-        >
-          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
-          </div>
-          <div class="pl-0 sm:pl-10">
-            <p class="leading-normal">
-              Each <strong>network node</strong> stores only content it is
-              interested in, plus some indexing information that helps figure
-              out which node is storing what.
+                :on-click="(item) => onCTAClick({ ui: 'how/1-cid', ...item })"
+              />
+              (CID). This CID acts as an permanent record of your file as it
+              exists at that point in time.
             </p>
           </div>
         </div>
@@ -520,9 +486,71 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              When you <strong>look up a file</strong> to view or download,
-              you're asking the network to find the nodes that are storing the
-              content behind that file's hash.
+              When other nodes <strong>look up your file</strong>, they ask
+              their peer nodes who's storing the content referenced by the
+              file's CID. When they view or download your file, they cache a
+              copy — and become another provider of your content until their
+              cache is cleared.
+            </p>
+          </div>
+        </div>
+        <div
+          class="
+            flex flex-col
+            sm:flex-row
+            text-center
+            sm:text-left
+            items-center
+            mb-12
+          "
+        >
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
+          </div>
+          <div class="pl-0 sm:pl-10">
+            <p class="leading-normal">
+              A node can
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/persistence/',
+                  text: 'pin content',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-pinning', ...item })
+                "
+              />
+              in order to keep (and provide) it forever, or discard content it
+              hasn't used in a while to save space. This means each node in the
+              network
+              <strong>stores only content it is interested in</strong>, plus
+              some indexing information that helps figure out which node is
+              storing what.
+            </p>
+          </div>
+        </div>
+        <div
+          class="
+            flex flex-col
+            sm:flex-row
+            text-center
+            sm:text-left
+            items-center
+            mb-12
+          "
+        >
+          <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
+            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
+          </div>
+          <div class="pl-0 sm:pl-10">
+            <p class="leading-normal">
+              If you add a new version of your file to IPFS, its cryptographic
+              hash is different, and so it gets a new CID. This means
+              <strong>files stored on IPFS are resistant to tampering and
+                censorship</strong>
+              — any changes to a file don't overwrite the original, and
+              common chunks across files can be reused in order to minimize
+              storage costs.
             </p>
           </div>
         </div>
@@ -540,9 +568,9 @@
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
-              You don't need to remember the hash, though &mdash; every file can
-              be found by <strong>human-readable names</strong> using a
-              decentralized naming system called
+              However, this doesn't mean you need to remember a long string of
+              CIDs &mdash; IPFS can find the latest version of your file
+              using the
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
@@ -552,7 +580,20 @@
                 :on-click="
                   (item) => onCTAClick({ ui: 'how/1-performance', ...item })
                 "
-              />.
+              />
+              decentralized naming system, and
+              <Link
+                class="text-blueGreen font-bold hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.io/concepts/dnslink/',
+                  text: 'DNSLink',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'how/1-performance', ...item })
+                "
+              />
+              can be used to map CIDs to
+              <strong>human-readable DNS names</strong>.
             </p>
           </div>
         </div>
@@ -627,9 +668,9 @@
             Archivists
           </h3>
           <p>
-            IPFS provides deduplication, high performance, and clustered
-            persistence &mdash; empowering you to store the world's information
-            for future generations.
+            Storing archival data using IPFS enables deduplication, clustered
+            persistence, and high performance &mdash; empowering you to store
+            the world's information for future generations.
           </p>
         </div>
         <div class="flex flex-col">
@@ -643,9 +684,9 @@
             Service providers
           </h3>
           <p>
-            Providing large amounts of data to users? IPFS offers secure,
-            peer-to-peer content delivery &mdash; an approach that could save
-            you millions in bandwidth costs.
+            Providing large amounts of data to users? Storing on IPFS could help
+            you slash bandwidth costs thanks to its use of secure, peer-to-peer
+            content delivery.
           </p>
         </div>
         <div class="flex flex-col">
@@ -656,8 +697,9 @@
             Researchers
           </h3>
           <p>
-            If you're working with or distributing large data sets, IPFS can
-            help provide fast performance and decentralized archiving.
+            If you're working with or distributing large datasets, storing that
+            data using IPFS can help speed up performance and unlock
+            decentralized archiving.
           </p>
         </div>
       </div>
@@ -674,33 +716,18 @@
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
             <svg-icon
-              name="ipfs-illustration-developing"
-              class="h-36 w-36 mx-auto"
-            />
-          </div>
-          <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Developing world
-          </h3>
-          <p>
-            High-latency networks are a big barrier for those with poor internet
-            infrastructure. IPFS provides resilient access to data independent
-            of latency or backbone connectivity.
-          </p>
-        </div>
-        <div class="flex flex-col">
-          <div class="max-h-24 mb-12">
-            <svg-icon
               name="ipfs-illustration-blockchains"
               class="h-36 w-36 mx-auto"
             />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Blockchains + IPFS
+            Blockchain developers
           </h3>
           <p>
-            With IPFS, you can address large amounts of data and put immutable,
-            permanent links in transactions &mdash; timestamping and securing
-            content without having to put the data itself on-chain.
+            IPFS content addressing enables you to store large files off-chain
+            and put immutable, permanent links in transactions &mdash;
+            timestamping and securing content without having to put the data
+            itself on-chain.
           </p>
         </div>
         <div class="flex flex-col">
@@ -714,9 +741,25 @@
             Content creators
           </h3>
           <p>
-            IPFS empowers content creators to build and share on the
-            decentralized web &mdash; whether that's helping deliver content at
-            a much lower cost or minting NFTs that stand the test of time.
+            IPFS empowers creators to build and share on the decentralized web
+            &mdash; whether that's delivering content free from intermediary
+            control or minting NFTs that stand the test of time.
+          </p>
+        </div>
+        <div class="flex flex-col">
+          <div class="max-h-24 mb-12">
+            <svg-icon
+              name="ipfs-illustration-developing"
+              class="h-36 w-36 mx-auto"
+            />
+          </div>
+          <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
+            Offline users
+          </h3>
+          <p>
+            High-latency networks cause major obstacles for those with poor
+            internet infrastructure. Peer-to-peer IPFS offers resilient access
+            to data independent of latency or backbone connectivity.
           </p>
         </div>
       </div>
@@ -743,7 +786,7 @@
       <div class="grid grid-cols-4">
         <div class="col-span-4 sm:col-span-1 pr-16 mb-8 sm:mb-0">
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
-            IPFS blog
+            Latest blog posts
           </h3>
           <ol>
             <li
