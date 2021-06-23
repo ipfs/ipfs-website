@@ -754,7 +754,7 @@
             />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
-            Offline-prone users
+            Offline users
           </h3>
           <p>
             High-latency networks cause major obstacles for those with poor
