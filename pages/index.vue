@@ -569,7 +569,7 @@
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               However, this doesn't mean you need to remember a long string of
-              CIDs &mdash; computers can find the latest version of your file
+              CIDs &mdash; IPFS can find the latest version of your file
               using the
               <Link
                 class="text-blueGreen font-bold hover:underline"
