@@ -487,7 +487,7 @@
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               When other nodes <strong>look up your file</strong>, they ask
-              their peer nodes who's storing the hashed content behind the
+              their peer nodes who's storing the content referenced by the
               file's CID. When they view or download your file, they cache a
               copy — and become another provider of your content until their
               cache is cleared.
