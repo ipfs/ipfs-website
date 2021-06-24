@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     v-if="isInternal"
-    :to="$relativity(link)"
+    :to="link"
     :exact="exact"
     @click.native="onClick(item)"
   >
@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     link() {
-      return ensureExt(this.item.link);
+      return this.$relativity(ensureExt(this.item.link));
     },
     exact() {
       return this.link === '/';

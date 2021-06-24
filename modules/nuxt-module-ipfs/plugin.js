@@ -14,6 +14,7 @@ const Relativity = function (path) {
     let ipfsMatch = window.location.pathname.match(/\/ipfs\/[^/]+\//)
     return ipfsMatch ? ipfsMatch[0] + path : path
   }
+  return ''
 }
 
 // ///////////////////////////////////////////////////////////// Export & Inject
