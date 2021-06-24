@@ -14,7 +14,6 @@ const Relativity = function (path) {
     let ipfsMatch = window.location.pathname.match(/\/ipfs\/[^/]+\//)
     console.log(path)
     console.log(ipfsMatch)
-    console.log(ipfsMatch[0])
     console.log(ipfsMatch ? ipfsMatch[0] + path : path)
     return ipfsMatch ? ipfsMatch[0] + path : path
   }
