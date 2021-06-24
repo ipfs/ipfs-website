@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     link() {
-      return this.$relativity(ensureExt(this.item.link));
+      return ensureExt(this.item.link);
     },
     exact() {
       return this.link === '/';
