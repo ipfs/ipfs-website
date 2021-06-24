@@ -52,16 +52,20 @@
         hover:opacity-75
       "
     >
-      <svg-icon name="down-arrow-01" class="h-6 mx-auto" />
+      <Icon name="down-arrow" class="h-6 mx-auto" />
     </a>
   </div>
 </template>
 
 <script>
+import Icon from './Icon.vue';
 import stars from '@/assets/js/stars';
 
 export default {
   name: 'StarfieldHero',
+  components: {
+    Icon,
+  },
   props: {
     title: {
       type: String,

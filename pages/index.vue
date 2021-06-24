@@ -38,8 +38,8 @@
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-http" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-http" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is inefficient and expensive
@@ -63,8 +63,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-history" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-history" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web can't preserve humanity's history
@@ -87,8 +87,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-centralized" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-centralized" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is centralized, limiting opportunity
@@ -102,8 +102,8 @@
           </p>
         </div>
         <div>
-          <div class="flex justify-center h-52 px-3">
-            <svg-icon name="ipfs-illustration-network" class="max-w-xs" />
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-network" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is addicted to the backbone
@@ -451,7 +451,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-1" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -482,7 +482,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-4" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -505,7 +505,7 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-3" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
@@ -540,17 +540,19 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-2" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               If you add a new version of your file to IPFS, its cryptographic
               hash is different, and so it gets a new CID. This means
-              <strong>files stored on IPFS are resistant to tampering and
-                censorship</strong>
-              — any changes to a file don't overwrite the original, and
-              common chunks across files can be reused in order to minimize
-              storage costs.
+              <strong
+                >files stored on IPFS are resistant to tampering and
+                censorship</strong
+              >
+              — any changes to a file don't overwrite the original, and common
+              chunks across files can be reused in order to minimize storage
+              costs.
             </p>
           </div>
         </div>
@@ -564,13 +566,13 @@
           "
         >
           <div class="flex items-center justify-center max-h-36 mb-5 sm:mb-0">
-            <svg-icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
+            <Icon name="ipfs-illustrations-how-5" class="w-40 max-h-32" />
           </div>
           <div class="pl-0 sm:pl-10">
             <p class="leading-normal">
               However, this doesn't mean you need to remember a long string of
-              CIDs &mdash; IPFS can find the latest version of your file
-              using the
+              CIDs &mdash; IPFS can find the latest version of your file using
+              the
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
@@ -659,7 +661,7 @@
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-archivists"
               class="h-36 w-36 mx-auto"
             />
@@ -675,10 +677,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
-              name="ipfs-illustration-service"
-              class="h-36 w-36 mx-auto"
-            />
+            <Icon name="ipfs-illustration-service" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Service providers
@@ -691,7 +690,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon name="ipfs-illustration-data" class="h-36 w-36 mx-auto" />
+            <Icon name="ipfs-illustration-data" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Researchers
@@ -715,7 +714,7 @@
       >
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-blockchains"
               class="h-36 w-36 mx-auto"
             />
@@ -732,10 +731,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
-              name="ipfs-illustration-creators"
-              class="h-36 w-36 mx-auto"
-            />
+            <Icon name="ipfs-illustration-creators" class="h-36 w-36 mx-auto" />
           </div>
           <h3 class="text-navy text-base sm:text-lg font-semibold mb-2">
             Content creators
@@ -748,7 +744,7 @@
         </div>
         <div class="flex flex-col">
           <div class="max-h-24 mb-12">
-            <svg-icon
+            <Icon
               name="ipfs-illustration-developing"
               class="h-36 w-36 mx-auto"
             />
@@ -868,7 +864,7 @@
                     brightness-75
                   "
                 />
-                <svg-icon
+                <Icon
                   name="video-play"
                   class="
                     absolute

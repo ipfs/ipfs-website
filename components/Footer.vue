@@ -16,7 +16,14 @@
             >
               <Link
                 :item="item"
-                class="footer-link font-medium hover:opacity-75 transition-opacity duration-300 ease-in-out"
+                class="
+                  footer-link
+                  font-medium
+                  hover:opacity-75
+                  transition-opacity
+                  duration-300
+                  ease-in-out
+                "
               />
             </li>
           </ul>
@@ -43,8 +50,7 @@ const footerNavigation = [
   },
   {
     text: 'Security',
-    link:
-      'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues',
+    link: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues',
   },
 ];
 
