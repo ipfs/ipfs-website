@@ -12,6 +12,10 @@ console.log(`🔌 [Module | NuxtModuleIpfs] Methods`)
 const Relativity = function (path) {
   if (process.client) {
     let ipfsMatch = window.location.pathname.match(/\/ipfs\/[^/]+\//)
+    console.log(path)
+    console.log(ipfsMatch)
+    console.log(ipfsMatch[0])
+    console.log(ipfsMatch ? ipfsMatch[0] + path : path)
     return ipfsMatch ? ipfsMatch[0] + path : path
   }
   return ''
