@@ -12,21 +12,10 @@ console.log(`🔌 [Plugin | NuxtPluginIpfs] Methods`)
 const Relativity = function (path) {
   if (process.client) {
     if (!path) { return '' }
-    let ipfsMatch = window.location.pathname.match(/\/ipfs\/[^/]+\//)
-    console.log(ipfsMatch ? ipfsMatch[0] + path : path)
+    const ipfsMatch = window.location.pathname.match(/^(\/(?:ipfs|ipns)\/[^/]+)/)
     return ipfsMatch ? ipfsMatch[0] + path : path
-    // if (!path) { return '' }
-    // return ''
-    // const append = path.charAt(0) === '/' ? path.slice(1) : path
-    // const ipfsPathRegExp = /^(\/(?:ipfs|ipns)\/[^/]+)/
-    // const ipfsPathPrefix = (window.location.pathname.match(ipfsPathRegExp) || [])[1] || ''
-    // if (ipfsPathPrefix) {
-    //   return `${ipfsPathPrefix}/${append}`
-    // } else {
-    //   return path
-    // }
   }
-  return ''
+  return path
 }
 
 // ///////////////////////////////////////////////////////////// Export & Inject
