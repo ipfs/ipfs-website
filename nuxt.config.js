@@ -58,7 +58,17 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    html: {
+      minify: {
+        collapseWhitespace: true, // this solves route-based hydration issues
+      },
+    },
+  },
+
+  router: {
+    base: '/ipfs/hash/',
+  },
 
   publicRuntimeConfig: {
     // Speedcurve config
