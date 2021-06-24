@@ -42,13 +42,13 @@ _Support for the `assets` directory potentially coming in the future_
 
 All image assets must be placed in the `static` directory, _not_ the `assets` directory.
 
-All links and image assets must be wrapped using the included `$relativity()` global method.
+All image assets must be wrapped using the included `$relativity()` global method.
 
 **component.vue**
 
 ```vue
 <template>
-  <nuxt-link :to="$relativity('/duck')">
+  <nuxt-link :to="/duck">
     <img :src="$relativity('/images/duck.jpg')" />
   </nuxt-link>
 </template>
