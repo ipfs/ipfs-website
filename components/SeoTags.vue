@@ -28,6 +28,11 @@ export default {
           content: this.description,
         },
         {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
           hid: 'twitter:title',
           name: 'twitter:title',
           content: this.title,
@@ -46,6 +51,11 @@ export default {
           hid: 'twitter:image:alt',
           name: 'twitter:image:alt',
           content: this.title,
+        },
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: '@ipfs',
         },
         {
           hid: 'og:title',
