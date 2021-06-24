@@ -1,10 +1,10 @@
 /*
  *
- * 🔌 [Plugin | NuxtModuleIpfs] Methods
+ * 🔌 [Plugin | NuxtPluginIpfs] Methods
  *
  */
 
-console.log(`🔌 [Module | NuxtModuleIpfs] Methods`)
+console.log(`🔌 [Plugin | NuxtPluginIpfs] Methods`)
 
 // /////////////////////////////////////////////////////////////////// Functions
 // -----------------------------------------------------------------------------
@@ -12,25 +12,24 @@ console.log(`🔌 [Module | NuxtModuleIpfs] Methods`)
 const Relativity = function (path) {
   if (process.client) {
     // let ipfsMatch = window.location.pathname.match(/\/ipfs\/[^/]+\//)
-    // console.log(path)
-    // console.log(ipfsMatch)
     // console.log(ipfsMatch ? ipfsMatch[0] + path : path)
     // return ipfsMatch ? ipfsMatch[0] + path : path
-    const ipfsPathRegExp = /^(\/(?:ipfs|ipns)\/[^/]+)/
-    console.log(ipfsPathRegExp)
-    const ipfsPathPrefix = (window.location.pathname.match(ipfsPathRegExp) || [])[1] || ''
-    if (!ipfsPathPrefix) { return path }
-    console.log(ipfsPathPrefix)
-    const base = ipfsPathPrefix ? `${ipfsPathPrefix}/` : ''
-    console.log(base)
-    console.log(path.charAt(0) === '/' ? `${base}${path.slice(1)}` : path)
-    return path.charAt(0) === '/' ? `${base}${path.slice(1)}` : path
+    if (!path) { return '' }
+    return path
+    // const append = path.charAt(0) === '/' ? path.slice(1) : path
+    // const ipfsPathRegExp = /^(\/(?:ipfs|ipns)\/[^/]+)/
+    // const ipfsPathPrefix = (window.location.pathname.match(ipfsPathRegExp) || [])[1] || ''
+    // if (ipfsPathPrefix) {
+    //   return `${ipfsPathPrefix}/${append}`
+    // } else {
+    //   return path
+    // }
   }
   return ''
 }
 
 // ///////////////////////////////////////////////////////////// Export & Inject
 // -----------------------------------------------------------------------------
-export default ({}, inject) => {
+export default (ctx, inject) => {
   inject('relativity', Relativity)
 }
