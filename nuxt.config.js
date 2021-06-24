@@ -40,12 +40,12 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxt/content',
-    '@nuxtjs/svg-sprite',
     [
       'nuxt-mq',
       {
@@ -53,13 +53,20 @@ export default {
       },
     ],
     '@nuxtjs/speedcurve',
+    '~/modules/nuxt-module-ipfs',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    html: {
+      minify: {
+        collapseWhitespace: true, // this solves route-based hydration issues
+      },
+    },
+  },
 
-  svgSprite: {
-    input: '~/assets/svgs/',
+  router: {
+    base: '/ipfs/hash/',
   },
 
   publicRuntimeConfig: {

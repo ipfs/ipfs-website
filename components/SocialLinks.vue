@@ -9,9 +9,17 @@
       rel="noopener noreferrer"
       @click="() => onClick(link)"
     >
-      <svg-icon
-        class="w-8 h-8 fill-current hover:opacity-75 transition duration-300 ease-in-out"
+      <Icon
         :name="link.icon"
+        class="
+          w-8
+          h-8
+          fill-current
+          hover:opacity-75
+          transition
+          duration-300
+          ease-in-out
+        "
         :title="link.text"
       />
     </a>
@@ -19,6 +27,8 @@
 </template>
 
 <script>
+import Icon from './Icon';
+
 const socialLinks = [
   {
     text: 'Github',
@@ -44,6 +54,9 @@ const socialLinks = [
 
 export default {
   name: 'SocialLinks',
+  components: {
+    Icon,
+  },
   props: {
     tracking: {
       type: String,
