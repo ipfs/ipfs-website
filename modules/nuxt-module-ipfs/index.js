@@ -45,18 +45,18 @@ const addHooks = async (instance) => {
       seds(
         /basePath:"\/ipfs\/hash\/"/gm,
         htmlFile,
-        "basePath:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
+        "basePath:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
       );
       seds(
         /assetsPath:"\/_nuxt\/"/gm,
         htmlFile,
-        "assetsPath:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'.') + '/_nuxt/'"
+        "assetsPath:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'.') + '/_nuxt/'"
       );
       seds(
         /staticAssetsBase:"(\/_nuxt\/static\/)([^"]+)/gm,
         htmlFile,
         (_, start, end) => {
-          return `staticAssetsBase:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+/),(ipfsMatch?ipfsMatch[0]:'.'))+"\u002F_nuxt\u002Fstatic\u002F${end}`;
+          return `staticAssetsBase:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+/),(ipfsMatch?ipfsMatch[0]:'.'))+"\u002F_nuxt\u002Fstatic\u002F${end}`;
         }
       );
       seds(
@@ -66,7 +66,7 @@ const addHooks = async (instance) => {
           ? ''
           : '<script>\n' +
               "base = document.createElement('base')\n" +
-              "base.href = (ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+/),(ipfsMatch?ipfsMatch[0]+'/':'/'))\n" +
+              "base.href = (ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+/),(ipfsMatch?ipfsMatch[0]+'/':'/'))\n" +
               "document.getElementsByTagName('head')[0].appendChild(base)\n" +
               '</script>'
       );
@@ -81,35 +81,34 @@ const addHooks = async (instance) => {
       seds(
         /"\/ipfs\/hash\/_nuxt\/\"/,
         jsFile,
-        // "(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+'/_nuxt/':'./_nuxt/')"
-        '(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'\/_nuxt\/\':\'\/_nuxt\/\')'
+        '(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'\/_nuxt\/\':\'\/_nuxt\/\')'
       );
       seds(
         /base: '\/ipfs\/hash\/'/gm,
         jsFile,
-        "base:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
+        "base:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
       );
       seds(
         /(staticAssetsBase:"\\u002Fipfs\\u002Fhash\\u002F_nuxt\\u002Fstatic\\u002F)([^"]+)/gm,
         jsFile,
         (_, start, end) => {
-          return `staticAssetsBase:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+/),(ipfsMatch?ipfsMatch[0]:''))+"/_nuxt\u002Fstatic\u002F${end}`;
+          return `staticAssetsBase:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+/),(ipfsMatch?ipfsMatch[0]:''))+"/_nuxt\u002Fstatic\u002F${end}`;
         }
       );
       seds(
         /basePath:"\\u002Fipfs\\u002Fhash\\u002F"/gm,
         jsFile,
-        "basePath:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
+        "basePath:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'/')"
       );
       seds(
         /assetsPath:"\\u002Fipfs\\u002Fhash\\u002F_nuxt\\u002F"/gm,
         jsFile,
-        "assetsPath:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'.') + '/_nuxt/'"
+        "assetsPath:(ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'.') + '/_nuxt/'"
       );
       seds(
         /return __webpack_require__\.p/gm,
         jsFile,
-        "return __webpack_require__.p.replace(\'./\', (ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'/\':\'/\'))"
+        "return __webpack_require__.p.replace(\'./\', (ipfsMatch=window.location.pathname.match(/\\/ip[fn]s\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'/\':\'/\'))"
       );
     }
   });
