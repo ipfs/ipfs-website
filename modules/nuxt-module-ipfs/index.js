@@ -81,7 +81,8 @@ const addHooks = async (instance) => {
       seds(
         /"\/ipfs\/hash\/_nuxt\/\"/,
         jsFile,
-        "(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+'/_nuxt/':'./_nuxt/')"
+        // "(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+'/_nuxt/':'./_nuxt/')"
+        '(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'\/_nuxt\/\':\'\/_nuxt\/\')'
       );
       seds(
         /base: '\/ipfs\/hash\/'/gm,
@@ -104,6 +105,11 @@ const addHooks = async (instance) => {
         /assetsPath:"\\u002Fipfs\\u002Fhash\\u002F_nuxt\\u002F"/gm,
         jsFile,
         "assetsPath:(ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]:'.') + '/_nuxt/'"
+      );
+      seds(
+        /return __webpack_require__\.p/gm,
+        jsFile,
+        "return __webpack_require__.p.replace(\'./\', (ipfsMatch=window.location.pathname.match(/\\/ipfs\\/[^/]+\\//), ipfsMatch?ipfsMatch[0]+\'/\':\'/\'))"
       );
     }
   });

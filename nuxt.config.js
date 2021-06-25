@@ -63,6 +63,9 @@ export default {
         collapseWhitespace: true, // this solves route-based hydration issues
       },
     },
+    extend(config, ctx) {
+      config.optimization.minimize = false;
+    },
   },
 
   router: {
