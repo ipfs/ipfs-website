@@ -761,20 +761,63 @@
       </div>
     </section>
     <Divider />
-    <section class="grid-margins text-center py-20">
-      <h2 class="font-display mb-4">Who's already using IPFS?</h2>
-      <p class="text-base sm:text-lg mb-6">
-        Companies and organizations worldwide are already building amazing
-        things on IPFS.
-      </p>
-      <Button
-        type="primary"
-        :href="$relativity('/images/ipfs-applications-diagram.png')"
-        target="_blank"
-        rel="noopener noreferrer"
-        text="Explore the ecosystem"
-        :on-click="(item) => onCTAClick({ ui: 'who/see-list', ...item })"
-      />
+    <section class="grid-margins py-20">
+      <h2 class="font-display text-center mb-12">Who's already using IPFS?</h2>
+      <div class="grid grid-cols-2">
+        <div class="col-span-2 md:col-span-1 mb-8 md:mb-0 md:mr-12">
+          <div class="max-w-sm md:max-w-xl mx-auto md:mx-0 md:float-right">
+            <a
+              href="https://youtu.be/c50licHTOik"
+              class="relative"
+              @click="
+                () =>
+                  onCTAClick({
+                    ui: 'who/meet-builders',
+                    type: 'video',
+                    url: 'https://youtu.be/c50licHTOik',
+                  })
+              "
+            >
+              <img
+                :src="$relativity('/images/meet-builders-thumbnail-pinata.png')"
+                alt="Meet the Builders: Pinata"
+                class="rounded border-2 border-gray-300 filter brightness-75"
+              />
+              <Icon
+                name="video-play"
+                class="
+                  absolute
+                  top-0
+                  bottom-0
+                  left-0
+                  right-0
+                  mx-auto
+                  my-auto
+                  w-1/5
+                "
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-span-2 md:col-span-1 md:max-w-xl text-center md:text-left"
+        >
+          <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
+            Explore the ecosystem
+          </h3>
+          <p class="text-base sm:text-lg mb-6">
+            Companies and organizations worldwide are building amazing apps,
+            services, and developer tools on IPFS. Explore the interactive
+            ecosystem directory to learn more.
+          </p>
+          <Button
+            type="primary"
+            href="https://ecosystem.ipfs.io"
+            text="View the full ecosystem"
+            :on-click="(item) => onCTAClick({ ui: 'who/ecosystem', ...item })"
+          />
+        </div>
+      </div>
     </section>
     <Divider />
     <section class="grid-margins py-20">
