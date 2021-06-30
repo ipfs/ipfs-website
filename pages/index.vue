@@ -768,7 +768,7 @@
           <div class="max-w-sm md:max-w-xl mx-auto md:mx-0 md:float-right">
             <a
               href="https://youtu.be/c50licHTOik"
-              class="relative"
+              class="relative block"
               @click="
                 () =>
                   onCTAClick({
@@ -793,7 +793,7 @@
                   right-0
                   mx-auto
                   my-auto
-                  w-1/5
+                  w-1/6
                 "
               />
             </a>
