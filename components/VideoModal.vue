@@ -21,7 +21,7 @@
           lg:p-8
         "
       >
-        <h1 class="type-h5 text-xl text-primary mr-4">
+        <h1 class="type-h5 font-semibold text-xl text-primary mr-4">
           <Link
             :item="{ link: video.url, text: video.title }"
             class="clamp-3 hover:underline"
