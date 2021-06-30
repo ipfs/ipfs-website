@@ -766,16 +766,21 @@
       <div class="grid grid-cols-2">
         <div class="col-span-2 md:col-span-1 mb-8 md:mb-0 md:mr-12">
           <div class="max-w-sm md:max-w-xl mx-auto md:mx-0 md:float-right">
-            <a
-              href="https://youtu.be/c50licHTOik"
-              class="relative block"
+            <div
+              class="relative"
               @click="
-                () =>
+                () => {
+                  openVideoModal({
+                    title: 'Building Web3: Audius',
+                    url: 'https://www.youtube.com/watch?v=c50licHTOik',
+                  });
+
                   onCTAClick({
                     ui: 'who/meet-builders',
                     type: 'video',
-                    url: 'https://youtu.be/c50licHTOik',
-                  })
+                    url: 'https://www.youtube.com/watch?v=c50licHTOik',
+                  });
+                }
               "
             >
               <img
@@ -796,7 +801,7 @@
                   w-1/6
                 "
               />
-            </a>
+            </div>
           </div>
         </div>
         <div
@@ -946,6 +951,7 @@
         </div>
       </div>
     </section>
+    <VideoModal ref="videoModal" />
   </div>
 </template>
 
@@ -953,9 +959,10 @@
 import SeoTags from '~/components/SeoTags.vue';
 import Button from '~/components/Button';
 import StarfieldHero from '~/components/StarfieldHero';
+import VideoModal from '~/components/VideoModal.vue';
 
 export default {
-  components: { Button, StarfieldHero, SeoTags },
+  components: { Button, StarfieldHero, SeoTags, VideoModal },
   data() {
     return {
       latestPosts: [],
@@ -995,6 +1002,9 @@ export default {
         path: this.$route.path,
         ...data,
       });
+    },
+    openVideoModal: function (video) {
+      this.$refs.videoModal.openModal(video);
     },
   },
 };

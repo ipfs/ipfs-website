@@ -23,6 +23,7 @@ export default {
   css: [
     '~/assets/fonts/index.css',
     '~/assets/css/layout.css',
+    '~/assets/css/embed-responsive.css',
     '~/assets/css/typography.css',
   ],
 
