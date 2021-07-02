@@ -772,13 +772,13 @@
                 () => {
                   openVideoModal({
                     title: 'Building Web3: Audius',
-                    url: 'https://www.youtube.com/watch?v=c50licHTOik',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4',
                   });
 
                   onCTAClick({
                     ui: 'who/meet-builders',
                     type: 'video',
-                    url: 'https://www.youtube.com/watch?v=c50licHTOik',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4',
                   });
                 }
               "
