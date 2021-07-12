@@ -771,14 +771,14 @@
               @click="
                 () => {
                   openVideoModal({
-                    title: 'Building Web3: Audius',
-                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4',
+                    title: 'Building Web3: Pinata',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4&list=PL_0VrY55uV1-THfh1GVoE6v0SxKO9M0gs',
                   });
 
                   onCTAClick({
                     ui: 'who/meet-builders',
                     type: 'video',
-                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4&list=PL_0VrY55uV1-THfh1GVoE6v0SxKO9M0gs',
                   });
                 }
               "
@@ -812,13 +812,14 @@
           </h3>
           <p class="text-base sm:text-lg mb-6">
             Companies and organizations worldwide are building amazing apps,
-            services, and developer tools on IPFS. Explore the interactive
+            services, and developer tools on IPFS. Check out the video to hear
+            straight from IPFS builders, and explore the interactive IPFS
             ecosystem directory to learn more.
           </p>
           <Button
             type="primary"
             href="https://ecosystem.ipfs.io"
-            text="View the full ecosystem"
+            text="View the ecosystem directory"
             :on-click="(item) => onCTAClick({ ui: 'who/ecosystem', ...item })"
           />
         </div>
