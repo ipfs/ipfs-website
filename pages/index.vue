@@ -761,20 +761,69 @@
       </div>
     </section>
     <Divider />
-    <section class="grid-margins text-center py-20">
-      <h2 class="font-display mb-4">Who's already using IPFS?</h2>
-      <p class="text-base sm:text-lg mb-6">
-        Companies and organizations worldwide are already building amazing
-        things on IPFS.
-      </p>
-      <Button
-        type="primary"
-        :href="$relativity('/images/ipfs-applications-diagram.png')"
-        target="_blank"
-        rel="noopener noreferrer"
-        text="Explore the ecosystem"
-        :on-click="(item) => onCTAClick({ ui: 'who/see-list', ...item })"
-      />
+    <section class="grid-margins py-20">
+      <h2 class="font-display text-center mb-12">Who's already using IPFS?</h2>
+      <div class="grid grid-cols-2">
+        <div class="col-span-2 md:col-span-1 mb-8 md:mb-0 md:mr-12">
+          <div class="max-w-sm md:max-w-xl mx-auto md:mx-0 md:float-right">
+            <div
+              class="relative"
+              @click="
+                () => {
+                  openVideoModal({
+                    title: 'Building Web3: Pinata',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4&list=PL_0VrY55uV1-THfh1GVoE6v0SxKO9M0gs',
+                  });
+
+                  onCTAClick({
+                    ui: 'who/meet-builders',
+                    type: 'video',
+                    url: 'https://www.youtube.com/watch?v=29k2C1JXyg4&list=PL_0VrY55uV1-THfh1GVoE6v0SxKO9M0gs',
+                  });
+                }
+              "
+            >
+              <img
+                :src="$relativity('/images/meet-builders-thumbnail-pinata.png')"
+                alt="Meet the Builders: Pinata"
+                class="rounded border-2 border-gray-300 filter brightness-75"
+              />
+              <Icon
+                name="video-play"
+                class="
+                  absolute
+                  top-0
+                  bottom-0
+                  left-0
+                  right-0
+                  mx-auto
+                  my-auto
+                  w-1/6
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-span-2 md:col-span-1 md:max-w-xl text-center md:text-left"
+        >
+          <h3 class="text-navy text-base sm:text-lg font-semibold mb-4">
+            Explore the ecosystem
+          </h3>
+          <p class="text-base sm:text-lg mb-6">
+            Companies and organizations worldwide are building amazing apps,
+            services, and developer tools on IPFS. Check out the video to hear
+            straight from IPFS builders, and explore the interactive IPFS
+            ecosystem directory to learn more.
+          </p>
+          <Button
+            type="primary"
+            href="https://ecosystem.ipfs.io"
+            text="View the ecosystem directory"
+            :on-click="(item) => onCTAClick({ ui: 'who/ecosystem', ...item })"
+          />
+        </div>
+      </div>
     </section>
     <Divider />
     <section class="grid-margins py-20">
@@ -903,6 +952,7 @@
         </div>
       </div>
     </section>
+    <VideoModal ref="videoModal" />
   </div>
 </template>
 
@@ -910,9 +960,10 @@
 import SeoTags from '~/components/SeoTags.vue';
 import Button from '~/components/Button';
 import StarfieldHero from '~/components/StarfieldHero';
+import VideoModal from '~/components/VideoModal.vue';
 
 export default {
-  components: { Button, StarfieldHero, SeoTags },
+  components: { Button, StarfieldHero, SeoTags, VideoModal },
   data() {
     return {
       latestPosts: [],
@@ -952,6 +1003,9 @@ export default {
         path: this.$route.path,
         ...data,
       });
+    },
+    openVideoModal: function (video) {
+      this.$refs.videoModal.openModal(video);
     },
   },
 };

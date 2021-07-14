@@ -38,9 +38,9 @@ As an open-source project, IPFS is home to a vibrant, diverse community of thous
 
 A vast variety of commercial and non-profit projects alike are incorporating IPFS as critical to their goals and success. Many are amenable to talking to the media. Find out more about existing success stories at the following resources:
 
-- [Case studies](https://docs.ipfs.io/concepts/#examples-and-case-studies) for IPFS success stories in a variety of industries
-- Video presentations and demos from IPFS builders and collaborators in our [YouTube channel](https://www.youtube.com/c/IPFSbot/videos)
-- Map of the [IPFS ecosystem of collaborators and builders](/images/ipfs-applications-diagram.png) (fully interactive version coming soon!)
+- [Case studies](https://docs.ipfs.io/concepts/#examples-and-case-studies) for IPFS success stories in a variety of industries.
+- Video presentations and demos from IPFS builders and collaborators in our [YouTube channel](https://www.youtube.com/c/IPFSbot/videos).
+- Interactive [IPFS ecosystem directory](https://ecosystem.ipfs.io) of companies and organizations worldwide building apps, services, and developer tools on IPFS.
 
 ### Logos
 To request official IPFS logos and other graphic elements, please [email](mailto:press@protocol.ai).
