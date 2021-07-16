@@ -765,9 +765,18 @@
       <h2 class="font-display text-center mb-12">Who's already using IPFS?</h2>
       <div class="grid grid-cols-2">
         <div class="col-span-2 md:col-span-1 mb-8 md:mb-0 md:mr-12">
-          <div class="max-w-sm md:max-w-xl mx-auto md:mx-0 md:float-right">
+          <div
+            class="
+              video-preview
+              max-w-sm
+              md:max-w-xl
+              mx-auto
+              md:mx-0 md:float-right
+              cursor-pointer
+            "
+          >
             <div
-              class="relative"
+              class="relative overflow-hidden rounded border-2 border-gray-300"
               @click="
                 () => {
                   openVideoModal({
@@ -786,7 +795,14 @@
               <img
                 :src="$relativity('/images/meet-builders-thumbnail-pinata.png')"
                 alt="Meet the Builders: Pinata"
-                class="rounded border-2 border-gray-300 filter brightness-75"
+                class="
+                  video-preview-thumbnail
+                  filter
+                  brightness-75
+                  transform
+                  transition-transform
+                  duration-300
+                "
               />
               <Icon
                 name="video-play"
@@ -887,11 +903,17 @@
             <div
               v-for="video in latestVideos"
               :key="video.title"
-              class="flex flex-col mr-8 w-6/12"
+              class="video-preview flex flex-col mr-8 w-6/12"
             >
               <a
                 :href="video.url"
-                class="relative"
+                class="
+                  relative
+                  overflow-hidden
+                  rounded
+                  border-2 border-gray-300
+                  mb-2
+                "
                 @click="
                   () =>
                     onCTAClick({
@@ -905,12 +927,13 @@
                   :src="video.thumbnail"
                   :alt="video.title"
                   class="
+                    video-preview-thumbnail
                     max-h-48
-                    mb-2
-                    rounded
-                    border-2 border-gray-300
                     filter
                     brightness-75
+                    transform
+                    transition-transform
+                    duration-300
                   "
                 />
                 <Icon
@@ -1012,6 +1035,10 @@ export default {
 </script>
 
 <style scoped>
+.video-preview:hover .video-preview-thumbnail {
+  @apply scale-105;
+}
+
 h2 {
   @apply text-3xl;
 }
