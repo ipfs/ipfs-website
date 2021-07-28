@@ -4,7 +4,10 @@
       title="IPFS Powers the Distributed Web"
       description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
     />
-    <StarfieldHero title="IPFS powers the Distributed Web">
+    <StarfieldHero
+      title="IPFS powers the Distributed Web"
+      class="mb-8 sm:mb-28"
+    >
       <h2 class="text-center">
         A peer-to-peer hypermedia protocol
         <br />
@@ -28,7 +31,8 @@
         />
       </div>
     </StarfieldHero>
-    <section id="why" class="grid-margins py-20 sm:py-36">
+    <TaskCompletionSurveyBanner project="ipfs" type="sticky" />
+    <section id="why" class="grid-margins pb-20 sm:pb-36">
       <div class="text-center mb-8 sm:mb-20">
         <h2 class="font-display mb-3">The web of tomorrow needs IPFS today</h2>
         <p class="text-base sm:text-lg">
@@ -980,13 +984,21 @@
 </template>
 
 <script>
+import TaskCompletionSurveyBanner from '@carsy/task-completion-survey-banner/src/index.vue';
+
 import SeoTags from '~/components/SeoTags.vue';
 import Button from '~/components/Button';
 import StarfieldHero from '~/components/StarfieldHero';
 import VideoModal from '~/components/VideoModal.vue';
 
 export default {
-  components: { Button, StarfieldHero, SeoTags, VideoModal },
+  components: {
+    Button,
+    StarfieldHero,
+    SeoTags,
+    VideoModal,
+    TaskCompletionSurveyBanner,
+  },
   data() {
     return {
       latestPosts: [],
@@ -1033,7 +1045,19 @@ export default {
   },
 };
 </script>
+<style>
+#pl--task-completion-survey-banner {
+  display: none;
+}
 
+@media (min-width: 640px) {
+  #pl--task-completion-survey-banner {
+    --max-width: 12rem;
+
+    display: inherit;
+  }
+}
+</style>
 <style scoped>
 .video-preview:hover .video-preview-thumbnail {
   @apply scale-105;
