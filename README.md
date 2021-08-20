@@ -1,7 +1,7 @@
-# IPFS Website (ipfs.io)
+# IPFS Website (ipfs.eth.link)
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai)
-[![](https://img.shields.io/badge/project-IPFS-blue.svg?)](http://ipfs.io/)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?)](https://ipfs.eth.link/)
 [![](https://img.shields.io/badge/framework-Nuxt-green.svg)](https://nuxtjs.org/)
 [![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](http://fleek.co/)
 
