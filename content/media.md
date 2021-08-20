@@ -46,11 +46,11 @@ A vast variety of commercial and non-profit projects alike are incorporating IPF
 To request official IPFS logos and other graphic elements, please [email](mailto:press@protocol.ai).
 
 ### Featured news
-All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.io) page. Items can be filtered by topic for easy access:
+All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.eth.link) page. Items can be filtered by topic for easy access:
 
-- [Blog posts](http://blog.ipfs.io/?category=Blog%20post)
-- [Video content](http://blog.ipfs.io/?category=Video)
-- [News coverage](http://blog.ipfs.io/?category=News%20coverage)
-- [Events](http://blog.ipfs.io/?category=Event)
+- [Blog posts](http://blog.ipfs.eth.link/?category=Blog%20post)
+- [Video content](http://blog.ipfs.eth.link/?category=Video)
+- [News coverage](http://blog.ipfs.eth.link/?category=News%20coverage)
+- [Events](http://blog.ipfs.eth.link/?category=Event)
 
 Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew) channels.

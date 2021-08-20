@@ -78,7 +78,7 @@ const headerLinks = [
   { text: 'Install', link: '/#install' },
   { text: 'Docs', link: 'https://docs.ipfs.eth.link/' },
   { text: 'Team', link: '/team' },
-  { text: 'Blog', link: 'https://blog.ipfs.io/' },
+  { text: 'Blog', link: 'https://blog.ipfs.eth.link/' },
   { text: 'Help', link: '/help' },
 ];
 

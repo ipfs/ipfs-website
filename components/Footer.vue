@@ -42,7 +42,7 @@ import FooterLegal from './FooterLegal';
 import NewsletterForm from './NewsletterForm';
 
 const footerNavigation = [
-  { text: 'Blog & news', link: 'https://blog.ipfs.io/' },
+  { text: 'Blog & news', link: 'https://blog.ipfs.eth.link/' },
   { text: 'Press', link: '/media' },
   {
     text: 'Code of conduct',

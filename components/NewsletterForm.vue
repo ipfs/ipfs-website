@@ -8,7 +8,7 @@
       <p class="mt-2 mr-2">
         Sign up for the IPFS Weekly newsletter (<a
           class="text-blueGreenLight hover:underline"
-          href="https://blog.ipfs.io/?tags=weekly"
+          href="https://blog.ipfs.eth.link/?tags=weekly"
           >example</a
         >) for the latest on releases, upcoming developments, community events,
         and more.
