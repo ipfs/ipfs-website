@@ -7,7 +7,7 @@
 
 ![Image of IPFS website displayed on a laptop](https://user-images.githubusercontent.com/1507828/121082054-c3df1480-c79a-11eb-89f0-681f41ec705c.png)
 
-**This repository contains code and content for the [official IPFS Project website](https://ipfs.io)**, located at https://ipfs.io. This site acts as a high-level overview of the IPFS project, offering valuable introductory information and next-steps pathways for prospective and current IPFS users and developers, members of the press, and more.
+**This repository contains code and content for the [official IPFS Project website](https://ipfs.eth.link)**, located at https://ipfs.eth.link. This site acts as a high-level overview of the IPFS project, offering valuable introductory information and next-steps pathways for prospective and current IPFS users and developers, members of the press, and more.
 
 Please note that some sites closely related to this primary IPFS website have their own repos:
 - [IPFS Blog & News](https://github.com/ipfs/ipfs-blog)
@@ -46,7 +46,7 @@ A reviewer will be by shortly to have a look!
 
 ## Maintainers
 
-This site's codebase is under active maintenance by members of the core [IPFS team](https://ipfs.io/team/).
+This site's codebase is under active maintenance by members of the core [IPFS team](https://ipfs.eth.link/team/).
 
 ## License
 
