@@ -466,7 +466,7 @@
                 }"
                 :on-click="(item) => onCTAClick({ ui: 'how/1-cid', ...item })"
               />
-              (CID). This CID acts as an permanent record of your file as it
+              (CID). This CID acts as a permanent record of your file as it
               exists at that point in time.
             </p>
           </div>
