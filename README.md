@@ -1,13 +1,13 @@
-# IPFS Website (ipfs.io)
+# IPFS Website (ipfs.network)
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai)
-[![](https://img.shields.io/badge/project-IPFS-blue.svg?)](http://ipfs.io/)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?)](https://ipfs.network/)
 [![](https://img.shields.io/badge/framework-Nuxt-green.svg)](https://nuxtjs.org/)
-[![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](http://fleek.co/)
+[![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](https://fleek.co/)
 
 ![Image of IPFS website displayed on a laptop](https://user-images.githubusercontent.com/1507828/121082054-c3df1480-c79a-11eb-89f0-681f41ec705c.png)
 
-**This repository contains code and content for the [official IPFS Project website](https://ipfs.io)**, located at https://ipfs.io. This site acts as a high-level overview of the IPFS project, offering valuable introductory information and next-steps pathways for prospective and current IPFS users and developers, members of the press, and more.
+**This repository contains code and content for the [official IPFS Project website](https://ipfs.network)**, located at https://ipfs.network. This site acts as a high-level overview of the IPFS project, offering valuable introductory information and next-steps pathways for prospective and current IPFS users and developers, members of the press, and more.
 
 Please note that some sites closely related to this primary IPFS website have their own repos:
 - [IPFS Blog & News](https://github.com/ipfs/ipfs-blog)
@@ -46,7 +46,7 @@ A reviewer will be by shortly to have a look!
 
 ## Maintainers
 
-This site's codebase is under active maintenance by members of the core [IPFS team](https://ipfs.io/team/).
+This site's codebase is under active maintenance by members of the core [IPFS team](https://ipfs.network/team/).
 
 ## License
 
