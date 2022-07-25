@@ -23,6 +23,7 @@
     }
   },
   "dependencies": {
+    "@carsy/task-completion-survey-banner": "^1.3.0",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/speedcurve": "^1.1.2",
     "@tailwindcss/typography": "^0.4.1",
