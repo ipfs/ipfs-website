@@ -22,7 +22,7 @@ Your DMCA Notice must include all of the following information:
 6. A statement that the information in your DMCA Notice is accurate, and under penalty of perjury, that you are the copyright owner or are authorized to act on behalf of the copyright owner.
 
 ### Where do you email/send the DMCA Notice?
-The quickest way is to email it to **abuse@ipfs.network**. If you prefer, you can instead send it to:
+The quickest way is to email it to abuse@ipfs.io. If you prefer, you can instead send it to:
 
     Protocol Labs Inc.
     Attn: IPFS Designated DMCA Agent

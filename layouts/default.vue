@@ -13,26 +13,31 @@ export default {
     if (process.client && window) {
       window.history.scrollRestoration = 'auto';
 
-      // redirect 'ipfs.io' to the new canonical domain name 'ipfs.network'
-      // https://github.com/protocol/bifrost-infra/issues/178#issuecomment-1133082634
+      // redirect 'ipfs.io' to the new canonical domain name 'ipfs.tech'
+      // https://github.com/protocol/bifrost-infra/issues/178#issuecomment-1195867284
       const { hostname, pathname } = window.location;
       // regular ipfs.io
-      if (hostname === 'ipfs.io' && !(pathname.startsWith('/ipns/ipfs.io/') || pathname.startsWith('/ipfs/'))) {
-        window.location.hostname = hostname.replace('ipfs.io', 'ipfs.network');
+      if (
+        hostname === 'ipfs.io' &&
+        !(
+          pathname.startsWith('/ipns/ipfs.io/') || pathname.startsWith('/ipfs/')
+        )
+      ) {
+        window.location.hostname = hostname.replace('ipfs.io', 'ipfs.tech');
       }
       // subdomain gateways (no tls)
       if (hostname.startsWith('ipfs.io.ipns.')) {
-        window.location.hostname = hostname.replace('ipfs.io', 'ipfs.network');
+        window.location.hostname = hostname.replace('ipfs.io', 'ipfs.tech');
       }
       // subdomain gateways (inlined)
       if (hostname.startsWith('ipfs-io.ipns.')) {
-        window.location.hostname = hostname.replace('ipfs-io', 'ipfs-network');
+        window.location.hostname = hostname.replace('ipfs-io', 'ipfs-tech');
       }
       // path gateways
       if (pathname.startsWith('/ipns/ipfs.io/')) {
         window.location.pathname = pathname.replace(
           '/ipns/ipfs.io/',
-          '/ipns/ipfs.network/'
+          '/ipns/ipfs.tech/'
         );
       }
     }

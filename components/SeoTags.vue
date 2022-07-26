@@ -15,7 +15,7 @@ export default {
     },
     image: {
       type: String,
-      default: 'https://ipfs.network/images/social-card.png',
+      default: 'https://ipfs.tech/images/social-card.png',
     },
   },
 
