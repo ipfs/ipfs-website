@@ -55,7 +55,7 @@ export default {
     ],
     '@nuxtjs/speedcurve',
     '~/modules/nuxt-module-ipfs',
-    ['nuxt-canonical', { baseUrl: 'https://ipfs.io' }],
+    ['nuxt-canonical', { baseUrl: 'https://ipfs.tech' }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -169,7 +169,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://docs.ipfs.io/install/ipfs-desktop/"
+                href="https://docs.ipfs.tech/install/ipfs-desktop/"
                 target="_blank"
                 rel="noopener"
                 text="Install IPFS Desktop"
@@ -198,7 +198,7 @@
               <Link
                 class="text-blueGreenLight font-display hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/how-to/command-line-quick-start',
+                  link: 'https://docs.ipfs.tech/how-to/command-line-quick-start',
                   text: 'Command-line install',
                 }"
                 :on-click="
@@ -217,7 +217,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://docs.ipfs.io/how-to/command-line-quick-start"
+                href="https://docs.ipfs.tech/how-to/command-line-quick-start"
                 target="_blank"
                 rel="noopener"
                 text="Install the IPFS CLI"
@@ -267,7 +267,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://docs.ipfs.io/install/ipfs-companion/"
+                  href="https://docs.ipfs.tech/install/ipfs-companion/"
                   target="_blank"
                   rel="noopener"
                   text="Get IPFS Companion"
@@ -513,7 +513,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/persistence/',
+                  link: 'https://docs.ipfs.tech/concepts/persistence/',
                   text: 'pin content',
                 }"
                 :on-click="
@@ -576,7 +576,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/ipns/',
+                  link: 'https://docs.ipfs.tech/concepts/ipns/',
                   text: 'IPNS',
                 }"
                 :on-click="
@@ -587,7 +587,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/dnslink/',
+                  link: 'https://docs.ipfs.tech/concepts/dnslink/',
                   text: 'DNSLink',
                 }"
                 :on-click="
@@ -610,7 +610,7 @@
           </h4>
           <Button
             type="primary"
-            href="https://docs.ipfs.io/"
+            href="https://docs.ipfs.tech/"
             target="_blank"
             text="Check out the docs"
             :on-click="(item) => onCTAClick({ ui: 'how/docs', ...item })"

@@ -66,7 +66,7 @@ Additionally, it may be useful in the future to add a canonicalization option, t
 <link rel="canonical" href="foo.com/bar" />
 ```
 
-Since IPFS gateway URLs were an older (and by some standards _legacy_) implementation, this tag would typically be added to the IPFS Gateway URLs only.
+This can be done by adding https://www.npmjs.com/package/nuxt-canonical plugin.
 
 ## Roadmap
 
