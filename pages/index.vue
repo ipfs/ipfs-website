@@ -337,7 +337,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/go-ipfs-hex-logo.png')"
+                :src="$relativity('/images/kubo-hex-logo.png')"
                 alt="IPFS icon with a superimposed Go logo"
               />
             </div>
@@ -354,11 +354,11 @@
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
-                    link: 'https://github.com/ipfs/go-ipfs',
+                    link: 'https://github.com/ipfs/kubo',
                     text: 'Go implementation',
                   }"
                   :on-click="
-                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                    (item) => onCTAClick({ ui: 'install/kubo', ...item })
                   "
                 />
               </h4>
@@ -368,12 +368,12 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://github.com/ipfs/go-ipfs"
+                  href="https://github.com/ipfs/kubo"
                   target="_blank"
                   rel="noopener"
-                  text="Get go-ipfs"
+                  text="Get Kubo"
                   :on-click="
-                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                    (item) => onCTAClick({ ui: 'install/kubo', ...item })
                   "
                 />
               </div>
