@@ -1,7 +1,7 @@
 <script>
 export default {
   asyncData({ redirect }) {
-    redirect(301, 'http://docs.ipfs.tech/');
+    redirect(301, 'https://docs.ipfs.tech/');
   },
 };
 </script>
