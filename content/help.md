@@ -3,20 +3,20 @@ title: Getting help
 description: Learn where to get help and support in the extensive, diverse IPFS ecosystem.
 ---
 
-* **IPFS documentation**: We have a [dedicated docs site](https://docs.ipfs.io) that's the best first place to look.
-* **Technical support**: For specific questions, including technical support, please use the [official IPFS discussion forums](https://discuss.ipfs.io).
-* **General questions and discussions**: Use the [official IPFS discussion forums](https://discuss.ipfs.io) or [chat on Matrix](https://docs.ipfs.io/community/#chat).
-* **IPFS-related community announcements**: If you'd like to announce something to the IPFS community at large, use the [official IPFS discussion forums](https://discuss.ipfs.io); we monitor the forums for things to include in the weekly IPFS newsletter! You can also inform people via [Matrix](https://docs.ipfs.io/community/#chat) and the [other venues](#other-venues) listed below.
-* **Bugs and feature proposals**: IPFS-codebase-related bugs and feature proposals can be reported directly in their repositories (most are in the [IPFS](https://github.com/ipfs) and [IPFS Shipyard](https://github.com/ipfs-shipyard) GitHub orgs), for example [Kubo](https://github.com/ipfs/kubo) or [js-ipfs](https://github.com/ipfs/js-ipfs). If you're not sure where the best place to report a bug or request a feature is, ask in the [forums](https://discuss.ipfs.io) and someone will point you in the right direction.
+* **IPFS documentation**: We have a [dedicated docs site](https://docs.ipfs.tech) that's the best first place to look.
+* **Technical support**: For specific questions, including technical support, please use the [official IPFS discussion forums](https://discuss.ipfs.tech).
+* **General questions and discussions**: Use the [official IPFS discussion forums](https://discuss.ipfs.tech) or [chat on Matrix](https://docs.ipfs.tech/community/#chat).
+* **IPFS-related community announcements**: If you'd like to announce something to the IPFS community at large, use the [official IPFS discussion forums](https://discuss.ipfs.tech); we monitor the forums for things to include in the weekly IPFS newsletter! You can also inform people via [Matrix](https://docs.ipfs.tech/community/#chat) and the [other venues](#other-venues) listed below.
+* **Bugs and feature proposals**: IPFS-codebase-related bugs and feature proposals can be reported directly in their repositories (most are in the [IPFS](https://github.com/ipfs) and [IPFS Shipyard](https://github.com/ipfs-shipyard) GitHub orgs), for example [Kubo](https://github.com/ipfs/kubo) or [js-ipfs](https://github.com/ipfs/js-ipfs). If you're not sure where the best place to report a bug or request a feature is, ask in the [forums](https://discuss.ipfs.tech) and someone will point you in the right direction.
 * **Support for libp2p**: Questions specific to libp2p should use the [libp2p forums](https://discuss.libp2p.io) for faster results.
 * **Reporting security issues**: To report [security issues](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues), please email <a href="mailto:security@ipfs.io">security@ipfs.io</a>.
 * **Reporting abuse**: To report [abuse](https://github.com/ipfs/community/blob/master/code-of-conduct.md), please email <a href="mailto:abuse@ipfs.io">abuse@ipfs.io</a>.
-* **Something else not listed here?** Ask in the [official IPFS discussion forums](https://discuss.ipfs.io).
+* **Something else not listed here?** Ask in the [official IPFS discussion forums](https://discuss.ipfs.tech).
 
 
 ### IPFS discussion forums
 
-We aim to direct the majority of discussions and support questions toward the [official IPFS discussion forums](https://discuss.ipfs.io). IPFS developers keep an eye on posts in the forums and are happy to jump in to help. This makes it easier to search and learn from previous discussions, and it helps us keep code repositories focused — thereby increasing the ratio of actionable, clearly defined, and scoped issues that anyone can contribute to.
+We aim to direct the majority of discussions and support questions toward the [official IPFS discussion forums](https://discuss.ipfs.tech). IPFS developers keep an eye on posts in the forums and are happy to jump in to help. This makes it easier to search and learn from previous discussions, and it helps us keep code repositories focused — thereby increasing the ratio of actionable, clearly defined, and scoped issues that anyone can contribute to.
 
 ### GitHub repositories
 
@@ -30,7 +30,7 @@ We aim to keep the issue trackers in most repositories for specific, scoped disc
 
 ### Matrix and Discord
 
-Our official chat rooms in [Matrix](https://app.element.io/#/room/#lobby:ipfs.io) and [Discord](https://discord.gg/Z4H6tdECb9) are bridged, so you can join whichever you prefer. They can be used to ask questions and discuss with the community — however, while IPFS core developers are usually in these rooms, it can be hard to keep up with the running conversation and questions can be missed or disappear due to a lack of indexing. Therefore, we prefer the [forums](https://discuss.ipfs.io) for support questions, though you can still try the chats!
+Our official chat rooms in [Matrix](https://app.element.io/#/room/#lobby:ipfs.io) and [Discord](https://discord.gg/Z4H6tdECb9) are bridged, so you can join whichever you prefer. They can be used to ask questions and discuss with the community — however, while IPFS core developers are usually in these rooms, it can be hard to keep up with the running conversation and questions can be missed or disappear due to a lack of indexing. Therefore, we prefer the [forums](https://discuss.ipfs.tech) for support questions, though you can still try the chats!
 
 ### Other venues
 

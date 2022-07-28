@@ -76,7 +76,7 @@ import Icon from './Icon.vue';
 const headerLinks = [
   { text: 'About', link: '/#why' },
   { text: 'Install', link: '/#install' },
-  { text: 'Docs', link: 'https://docs.ipfs.io/' },
+  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
   { text: 'Team', link: '/team' },
   { text: 'Blog', link: 'https://blog.ipfs.io/' },
   { text: 'Help', link: '/help' },

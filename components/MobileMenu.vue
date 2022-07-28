@@ -2,7 +2,17 @@
   <transition name="transition-content" @after-enter="afterEnter">
     <div
       v-if="mobileNavActive"
-      class="mobile-nav bg-gradient-6 grid grid-cols-12 fixed h-full top-0 inset-x-0 text-white z-40"
+      class="
+        mobile-nav
+        bg-gradient-6
+        grid grid-cols-12
+        fixed
+        h-full
+        top-0
+        inset-x-0
+        text-white
+        z-40
+      "
     >
       <div class="col-span-10 col-start-2 flex flex-col py-8">
         <div class="flex-grow justify-center flex flex-col">
@@ -29,7 +39,7 @@ import SocialLinks from './SocialLinks';
 const mobileNavLinks = [
   { text: 'About', link: '/#why' },
   { text: 'Install', link: '/#install' },
-  { text: 'Docs', link: 'https://docs.ipfs.io/' },
+  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
   { text: 'Team', link: '/team' },
   { text: 'Blog', link: 'https://blog.ipfs.io/' },
   { text: 'Help', link: '/help' },
