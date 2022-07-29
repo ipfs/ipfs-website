@@ -1,0 +1,14 @@
+<!doctype html><html lang="en-US">
+<head>
+    <script>
+    // if someone tries to open a gateway path on .tech, redirect to .io
+    const { hostname, pathname, href: url } = window.location
+    if (hostname === 'ipfs.tech' && (pathname.startsWith('/ipns/') || pathname.startsWith('/ipfs/'))) {
+      window.location.replace(url.replace('//ipfs.tech/', '//ipfs.io/'))
+    }
+    </script>
+</head>
+<body>
+  <h1>Not a gateway :-)</h1>
+  <p>Try one of the <a href="https://ipfs.github.io/public-gateway-checker/">public gateways</a> instead.</p>
+</body>
