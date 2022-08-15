@@ -48,6 +48,13 @@ export default {
       if (hostname.startsWith('www.ipfs.')) {
         window.location.replace(url.replace('//www.ipfs.', '//ipfs.'));
       }
+      // ipfs.network → ipfs.tech (we used it before we got .tech)
+      if (url.includes('ipfs.network')) {
+        window.location.replace(url.replace('ipfs.network', 'ipfs.tech'));
+      }
+      if (url.includes('ipfs-network')) {
+        window.location.replace(url.replace('ipfs-network', 'ipfs-tech'));
+      }
     }
   },
 };
