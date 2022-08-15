@@ -296,7 +296,7 @@
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
-                    link: 'https://cluster.ipfs.io/',
+                    link: 'https://ipfscluster.io/',
                     text: 'IPFS Cluster',
                   }"
                   :on-click="
@@ -314,7 +314,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://cluster.ipfs.io/"
+                  href="https://ipfscluster.io/"
                   target="_blank"
                   rel="noopener"
                   text="Get IPFS Cluster"
