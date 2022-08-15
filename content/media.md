@@ -40,7 +40,7 @@ A vast variety of commercial and non-profit projects alike are incorporating IPF
 
 - [Case studies](https://docs.ipfs.tech/concepts/#examples-and-case-studies) for IPFS success stories in a variety of industries.
 - Video presentations and demos from IPFS builders and collaborators in our [YouTube channel](https://www.youtube.com/c/IPFSbot/videos).
-- Interactive [IPFS ecosystem directory](https://ecosystem.ipfs.io) of companies and organizations worldwide building apps, services, and developer tools on IPFS.
+- Interactive [IPFS ecosystem directory](https://ecosystem.ipfs.tech) of companies and organizations worldwide building apps, services, and developer tools on IPFS.
 
 ### Logos
 To request official IPFS logos and other graphic elements, please [email](mailto:press@protocol.ai).

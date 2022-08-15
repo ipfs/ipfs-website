@@ -834,7 +834,7 @@
           </p>
           <Button
             type="primary"
-            href="https://ecosystem.ipfs.io"
+            href="https://ecosystem.ipfs.tech"
             text="View the ecosystem directory"
             :on-click="(item) => onCTAClick({ ui: 'who/ecosystem', ...item })"
           />
