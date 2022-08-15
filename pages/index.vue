@@ -965,7 +965,7 @@
           </div>
           <Button
             type="primary"
-            href="https://blog.ipfs.io/?category=Video"
+            href="https://blog.ipfs.tech/?category=Video"
             text="More videos"
             target="_blank"
             :on-click="
@@ -996,13 +996,13 @@ export default {
   },
   async fetch() {
     const [latestPosts, latestNews, latestVideos] = await Promise.allSettled([
-      fetch('https://blog.ipfs.io/index.json')
+      fetch('https://blog.ipfs.tech/index.json')
         .then((res) => res.json())
         .then((data) => data.posts),
-      fetch('https://blog.ipfs.io/news.json')
+      fetch('https://blog.ipfs.tech/news.json')
         .then((res) => res.json())
         .then((data) => data.news),
-      fetch('https://blog.ipfs.io/videos.json')
+      fetch('https://blog.ipfs.tech/videos.json')
         .then((res) => res.json())
         .then((data) => data.videos),
     ]);
