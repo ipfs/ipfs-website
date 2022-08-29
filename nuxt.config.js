@@ -82,6 +82,7 @@ export default {
     countly: {
       key: process.env.COUNTLY_KEY || '',
       domain: process.env.DEPLOY_DOMAIN || '',
+      countlyUrl: process.env.COUNTLY_URL || '',
       events: {
         LINK_CLICK_NAV: 'linkClickNav',
         LINK_CLICK_FOOTER: 'linkClickFooter',

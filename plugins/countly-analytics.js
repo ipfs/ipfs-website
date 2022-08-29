@@ -28,22 +28,15 @@ export default function (ctx, inject) {
 
   // client
   if (process.client) {
-    if (!options.key || !options.domain) {
+    if (!options.key || !options.countlyUrl) {
       return;
     }
-
-    // prepend countly to the domain
-    const domain = options.domain.startsWith('http')
-      ? `${options.domain.split('//')[0]}//countly.${
-          options.domain.split('//')[1]
-        }`
-      : `https://countly.${options.domain}`;
 
     window.Countly = window.Countly || {};
     window.Countly.q = window.Countly.q || [];
     // provide countly initialization parameters
     window.Countly.app_key = options.key;
-    window.Countly.url = domain;
+    window.Countly.url = options.countlyUrl;
     window.Countly.q.push(['track_sessions']);
     window.Countly.q.push(['track_pageview']);
     window.Countly.q.push(['track_clicks']);
@@ -54,7 +47,7 @@ export default function (ctx, inject) {
     const countlyRemoteScript = document.createElement('script');
     countlyRemoteScript.type = 'text/javascript';
     countlyRemoteScript.async = true;
-    countlyRemoteScript.src = `${domain}/sdk/web/countly.min.js`;
+    countlyRemoteScript.src = `${options.countlyUrl}/sdk/web/countly.min.js`;
     countlyRemoteScript.onload = function () {
       window.Countly.init();
     };
