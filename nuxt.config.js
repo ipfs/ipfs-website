@@ -53,7 +53,6 @@ export default {
         breakpoints: { sm: 640, md: 768, lg: 1024, xl: 1280, xxl: 1440 },
       },
     ],
-    '@nuxtjs/speedcurve',
     '~/modules/nuxt-module-ipfs',
     ['nuxt-canonical', { baseUrl: 'https://ipfs.tech' }],
   ],
@@ -75,10 +74,6 @@ export default {
   },
 
   publicRuntimeConfig: {
-    // Speedcurve config
-    lux: {
-      id: process.env.SPEEDCURVE_ID || '',
-    },
     countly: {
       key: process.env.COUNTLY_KEY || '',
       domain: process.env.DEPLOY_DOMAIN || '',
