@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="with-banner flex flex-col min-h-screen">
     <Header />
     <MobileMenu />
     <Nuxt />
@@ -59,3 +59,23 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss">
+/* banner styles */
+.banner {
+  @apply hidden block text-center text-white text-sm font-bold;
+  @apply bg-indigo-500 hover:bg-indigo-400;
+}
+
+.banner > .banner-cta {
+  @apply block p-4 text-white text-center;
+}
+
+.with-banner {
+  border-top-width: 3rem;
+  @apply border-indigo-500;
+}
+.with-banner .banner {
+  display: block;
+}
+</style>
