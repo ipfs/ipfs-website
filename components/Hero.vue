@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-6 pt-20 pb-10 lg:py-20">
+  <div class="bg-gradient-6 py-28 lg:py-30">
     <div class="grid-margins pt-4">
       <div class="max-w-6xl mx-auto">
         <h1 class="text-white mt-4">{{ title }}</h1>

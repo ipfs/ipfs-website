@@ -23,6 +23,9 @@
       },
     ]"
   >
+    <Banner cta="https://2022.ipfs.camp/">
+      🏕 IPFS Camp is back! <span class="font-bold">Join us →</span>
+    </Banner>
     <div class="grid-margins flex justify-between items-center h-20">
       <Link
         class="
@@ -165,7 +168,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .navVisible {
   @apply translate-y-0;
 }
