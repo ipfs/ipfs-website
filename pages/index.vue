@@ -32,7 +32,7 @@
       <div class="text-center mb-8 sm:mb-20">
         <h2 class="font-display mb-3">The web of tomorrow needs IPFS today</h2>
         <p class="text-base sm:text-lg">
-          IPFS aims to surpass HTTP in order to build a better web for all of
+          IPFS aims to complement HTTP in order to build a better web for all of
           us.
         </p>
       </div>
