@@ -47,17 +47,7 @@
           <p>
             HTTP downloads files from one server at a time — but peer-to-peer
             IPFS retrieves pieces from multiple nodes at once, enabling
-            substantial bandwidth savings. With
-            <Link
-              class="text-blueGreen font-bold hover:underline"
-              :item="{
-                link: 'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
-                text: 'up to 60% savings for video,',
-              }"
-              :on-click="
-                (item) => onCTAClick({ ui: 'why/1-performance', ...item })
-              "
-            />
+            substantial bandwidth savings.
             IPFS makes it possible to efficiently distribute high volumes of
             data without duplication.
           </p>
