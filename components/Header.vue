@@ -23,10 +23,9 @@
       },
     ]"
   >
-    <Banner cta="https://blog.ipfs.tech/state-of-ipfs-in-js/">
-      <!-- 🏕 IPFS Camp is back! <span class="font-bold">Join us →</span> -->
+    <!-- <Banner cta="https://blog.ipfs.tech/state-of-ipfs-in-js/">
       💡 Read more about the state of IPFS in JS in 2022 & 2023
-    </Banner>
+    </Banner> -->
     <div class="grid-margins flex justify-between items-center h-20">
       <Link
         class="
