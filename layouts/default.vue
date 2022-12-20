@@ -1,5 +1,5 @@
 <template>
-  <div class="with-banner flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen">
     <Header />
     <MobileMenu />
     <Nuxt />
