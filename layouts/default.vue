@@ -21,7 +21,7 @@ export default {
       if (
         hostname === 'ipfs.io' &&
         !(
-          pathname.startsWith('/ipns/ipfs.io/') || pathname.startsWith('/ipfs/')
+          pathname.startsWith('/ipns/') || pathname.startsWith('/ipfs/')
         )
       ) {
         window.location.replace(url.replace('//ipfs.io/', '//ipfs.tech/'));
