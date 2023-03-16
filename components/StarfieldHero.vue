@@ -114,8 +114,8 @@ canvas {
 }
 
 .hero-container h2 {
-  font-size: 1.375rem;
-  font-weight: 200;
+  font-size: 1.5rem;
+  font-weight: 300;
   font-family: 'inter', sans-serif;
   line-height: 2rem;
 }

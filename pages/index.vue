@@ -1,16 +1,14 @@
 <template>
   <div>
     <seo-tags
-      title="IPFS Powers the Distributed Web"
-      description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
+      title="Discover What’s Out There with IPFS"
+      description="IPFS is an open system to manage data without a central server."
     />
-    <StarfieldHero title="IPFS powers the Distributed Web">
-      <h2 class="text-center">
-        A peer-to-peer hypermedia protocol
+    <StarfieldHero title="Discover What’s Out There with IPFS">
+      <h2 class="text-center text-3xl">
+        IPFS is an open system
         <br />
-        designed to preserve and grow humanity's knowledge
-        <br />
-        by making the web upgradeable, resilient, and more open.
+        to manage data without a central server
       </h2>
       <div class="flex flex-col sm:flex-row mt-6">
         <Button
@@ -30,26 +28,24 @@
     </StarfieldHero>
     <section id="why" class="grid-margins py-20 sm:py-36">
       <div class="text-center mb-8 sm:mb-20">
-        <h2 class="font-display mb-3">The web of tomorrow needs IPFS today</h2>
+        <h2 class="font-display mb-3">Why IPFS?</h2>
         <p class="text-base sm:text-lg">
-          IPFS aims to complement HTTP in order to build a better web for all of
-          us.
+          Our peer-to-peer content delivery network is built around content
+          addressing: Store, retrieve, and locate data based on the guts of its
+          content vs. its name or location.
         </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-16 gap-y-20">
         <div>
           <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-http" class="max-w-xs h-52" />
+            <Icon name="ipfs-illustration-centralized" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
-            Today's web is inefficient and expensive
+            Open
           </h3>
           <p>
-            HTTP downloads files from one server at a time — but peer-to-peer
-            IPFS retrieves pieces from multiple nodes at once, enabling
-            substantial bandwidth savings.
-            IPFS makes it possible to efficiently distribute high volumes of
-            data without duplication.
+            The IPFS network is distributed and participatory, which reduces
+            data silos from central servers.
           </p>
         </div>
         <div>
@@ -57,43 +53,28 @@
             <Icon name="ipfs-illustration-history" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
-            Today's web can't preserve humanity's history
+            Verifiable
           </h3>
           <p>
-            <Link
-              class="text-blueGreen font-bold hover:underline"
-              :item="{
-                link: 'https://blogs.loc.gov/thesignal/2011/11/the-average-lifespan-of-a-webpage/',
-                text: 'The average lifespan of a web page is 100 days',
-              }"
-              :on-click="
-                (item) => onCTAClick({ ui: 'why/2-preservation', ...item })
-              "
-            />
-            before it's gone forever. The medium of our era shouldn't be this
-            fragile. IPFS makes it simple to set up resilient networks for
-            mirroring data, and thanks to content addressing, files stored using
-            IPFS are automatically versioned.
+            The integrity of all data is verified using cryptographic hashes, so
+            you can trust that you always get the data you’re looking for.
           </p>
         </div>
-        <div>
-          <div class="flex justify-center items-center h-52 px-3">
-            <Icon name="ipfs-illustration-centralized" class="max-w-xs h-52" />
-          </div>
-          <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
-            Today's web is centralized, limiting opportunity
-          </h3>
-          <p>
-            The Internet has turbocharged innovation by being one of the great
-            equalizers in human history &mdash; but increasing consolidation of
-            control threatens that progress. IPFS stays true to the original
-            vision of an open, flat web by delivering technology to make that
-            vision a reality.
-          </p>
-        </div>
-        <div>
+        <div class="">
           <div class="flex justify-center items-center h-52 px-3">
             <Icon name="ipfs-illustration-network" class="max-w-xs h-52" />
+          </div>
+          <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
+            Resilient
+          </h3>
+          <p>
+            Files and data can be stored across multiple nodes, which keeps
+            content at the ready even during critical outages
+          </p>
+        </div>
+        <!-- <div>
+          <div class="flex justify-center items-center h-52 px-3">
+            <Icon name="ipfs-illustration-http" class="max-w-xs h-52" />
           </div>
           <h3 class="text-center text-navy text-base sm:text-lg mb-4 font-bold">
             Today's web is addicted to the backbone
@@ -105,22 +86,72 @@
             world, during natural disasters, or just when you're on flaky coffee
             shop wi-fi.
           </p>
-        </div>
+        </div> -->
       </div>
     </section>
     <section id="install" class="pt-20 pb-10 sm:py-20 bg-gradient-6 text-white">
       <div class="grid-margins 2xl:px-32">
         <div class="text-center mb-16">
-          <h2 class="font-display mb-3">Install IPFS</h2>
+          <h2 class="font-display mb-3">Get Started</h2>
           <p class="text-base sm:text-lg">
-            Join the future of the web right now &mdash; just choose the option
-            that's right for you.
+            Join thousands of developers who choose IPFS to build software
+            that’s open, verifiable, and resilient.
           </p>
         </div>
         <h3 class="text-2xl sm:text-3xl font-display text-center">
-          Store and provide files
+          Publish and provide files
         </h3>
         <div class="grid grid-cols-12 p-4 mt-4 gap-y-0 sm:gap-y-24">
+          <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
+            <img
+              class="max-h-24 sm:max-h-36 mx-auto"
+              :src="$relativity('/images/web3-storage.png')"
+              alt="Web3 storage icon"
+            />
+          </div>
+
+          <div
+            class="
+              col-span-12
+              mb-16
+              text-center
+              sm:mb-0 sm:col-span-10 sm:text-left sm:ml-3
+            "
+          >
+            <h4 class="text-xl md:text-2xl mb-1.5">
+              <Link
+                class="text-blueGreenLight font-display hover:underline"
+                :item="{
+                  link: 'https://docs.ipfs.tech/concepts/persistence/#pinning-services',
+                  text: 'Pinning service',
+                }"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'pinning-services', ...item })
+                "
+              />
+            </h4>
+            <h5 class="mb-4 text-base md:text-lg font-bold">
+              Publish a file to IPFS using a pinning service
+            </h5>
+            <p class="mb-4">
+              Pinning a file to IPFS is how content is published to IPFS. Any
+              given file can be pinned to multiple IPFS nodes to increase the
+              redundancy and resilience of a file on the network. Pinning
+              services handle running an IPFS node for you.
+            </p>
+            <div class="flex justify-center sm:justify-start">
+              <Button
+                href="https://bafybeididaq7rf73c4rqnfh76ofsqhvhv3exy4wnqudiyuk5mq3c7x4yly.on.fleek.co/quickstart/publish/"
+                target="_blank"
+                rel="noopener"
+                text="Publish a file to IPFS"
+                :on-click="
+                  (item) => onCTAClick({ ui: 'publish-a-file', ...item })
+                "
+              />
+            </div>
+          </div>
+
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
@@ -128,6 +159,7 @@
               alt="IPFS Desktop icon"
             />
           </div>
+
           <div
             class="
               col-span-12
@@ -149,7 +181,7 @@
               />
             </h4>
             <h5 class="mb-4 text-base md:text-lg font-bold">
-              IPFS for everyone
+              Run an IPFS node on your computer
             </h5>
             <p class="mb-4">
               The IPFS Desktop app offers menubar/tray shortcuts and an easy
@@ -169,6 +201,7 @@
               />
             </div>
           </div>
+
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
