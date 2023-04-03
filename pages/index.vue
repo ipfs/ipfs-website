@@ -141,7 +141,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://bafybeididaq7rf73c4rqnfh76ofsqhvhv3exy4wnqudiyuk5mq3c7x4yly.on.fleek.co/quickstart/publish/"
+                href="https://docs.ipfs.tech/quickstart/publish/"
                 target="_blank"
                 rel="noopener"
                 text="Publish a file to IPFS"
