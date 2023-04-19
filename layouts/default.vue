@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen">
     <Header />
     <MobileMenu />
-    <Nuxt />
+    <slot />
     <Footer />
   </div>
 </template>
