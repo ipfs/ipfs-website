@@ -1,7 +1,7 @@
 {
  "build": {
    "image": "fleek/nuxtjs",
-   "command": "npm install && npm run generate",
+   "command": "pnpm install && pnpm generate",
    "publicDir": "dist",
    "baseDir": ""
  }
