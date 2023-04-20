@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import SocialLinks from './SocialLinks';
 
 const mobileNavLinks = [
@@ -54,9 +53,9 @@ export default {
     tabItems: [],
     mobileNavLinks: mobileNavLinks,
   }),
-  computed: {
-    ...mapState('appState', ['mobileNavActive', 'routerLocation']),
-  },
+  // computed: {
+  //   ...mapState('appState', ['mobileNavActive', 'routerLocation']),
+  // },
   watch: {
     routerLocation() {
       if (this.mobileNavActive) {

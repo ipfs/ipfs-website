@@ -71,7 +71,6 @@
 
 <script>
 import throttle from 'lodash/throttle';
-import { mapState } from 'vuex';
 
 import Link from './Link';
 import Icon from './Icon.vue';
@@ -102,7 +101,8 @@ export default {
     },
   }),
   computed: {
-    ...mapState('appState', ['mobileNavActive', 'navHeight']),
+   mobileNavActive: false,
+   navHeight: 100
   },
   mounted() {
     this.$store.commit(
@@ -119,7 +119,7 @@ export default {
   methods: {
     handleScroll() {
       // responsive force: lower on mobile higher on desktop
-      const SCROLL_FORCE = ['sm', 'md'].includes(this.$mq) ? 20 : 40;
+      const SCROLL_FORCE = 20;
 
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;

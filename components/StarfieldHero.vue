@@ -59,7 +59,6 @@
 
 <script>
 import Icon from './Icon.vue';
-import stars from '@/assets/js/stars';
 
 export default {
   name: 'StarfieldHero',
@@ -71,10 +70,6 @@ export default {
       type: String,
       default: '',
     },
-  },
-  async mounted() {
-    const PIXI = await import('pixi.js');
-    stars(PIXI);
   },
 };
 </script>
