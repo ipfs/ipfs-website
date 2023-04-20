@@ -8,7 +8,7 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <PageSection :background="props.background" :overlay="props.overlay" overlay-position="top-0 right-0">
+  <PageSection :background="props.background" :overlay="props.overlay" background-color="bg-brand-dark" overlay-position="top-0 right-0">
     <div class="p-y-52">
       <h1 class="text-5xl text-center text-white m-b-5 m-x-auto">
         <slot name="title" />
