@@ -27,6 +27,13 @@ export default defineConfig({
       scale: 1.2,
     }),
     presetTypography(),
+    presetWebFonts({
+      provider: 'bunny',
+      fonts: {
+        sans: 'IBM Plex Sans:400,700',
+        mono: ['Fira Code', 'Fira Mono:400,700'],
+      },
+    }),
   ],
   transformers: [
     transformerDirectives(),
