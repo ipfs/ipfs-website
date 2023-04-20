@@ -18,6 +18,9 @@ export default defineConfig({
         teal: '#10D3D4',
       },
     },
+    fontSize: {
+      '4xl': '2.5rem',
+    },
   },
   shortcuts: [],
   presets: [
