@@ -13,8 +13,10 @@ const props = defineProps<Props>()
   <section :id="id" class="relative">
     <div v-if="props.backgroundColor" :class="`absolute -z-1 w-full h-full ${backgroundColor}`" />
     <img v-if="props.background" :src="`./images/${background}`" alt="" class="absolute -z-1 w-full h-full object-cover">
-    <img v-if="props.overlay" :src="`./images/${overlay}`" alt="" :class="`absolute ${overlayPosition}`">
-    <div class="max-w-screen-xl mx-auto p-x-32 relative">
+    <div :class="`absolute inset-0 lg:overflow-visible overflow-x-hidden ${overlayPosition}`">
+      <img v-if="props.overlay" :src="`./images/${overlay}`" alt="">
+    </div>
+    <div class="max-w-screen-xl mx-auto lg:p-x-32 p-x-7 relative">
       <slot />
     </div>
   </section>
