@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
-    '@/assets/fonts/fonts.css',
+    '@/assets/css/fonts.css',
   ],
   modules: [
     '@nuxt/content',
