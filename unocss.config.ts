@@ -27,6 +27,12 @@ export default defineConfig({
       scale: 1.2,
     }),
     presetTypography(),
+    presetWebFonts({
+      provider: 'none',
+      fonts: {
+        sans: 'IBM Plex Sans',
+      },
+    }),
   ],
   transformers: [
     transformerDirectives(),
