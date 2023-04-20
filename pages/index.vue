@@ -124,7 +124,7 @@
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
-              :src="$relativity('/images/ipfs-desktop-hex.png')"
+              src="/images/ipfs-desktop-hex.png"
               alt="IPFS Desktop icon"
             />
           </div>
@@ -172,7 +172,7 @@
           <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
             <img
               class="max-h-24 sm:max-h-36 mx-auto"
-              :src="$relativity('/images/command-line-hex.png')"
+              src="/images/command-line-hex.png"
               alt="Screenshot of IPFS command-line interface"
             />
           </div>
@@ -223,7 +223,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/ipfs-companion-hex.png')"
+                src="/images/ipfs-companion-hex.png"
                 alt="IPFS Companion icon"
               />
             </div>
@@ -275,7 +275,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/ipfs-cluster.png')"
+                src="/images/ipfs-cluster.png"
                 alt="IPFS Cluster logo"
               />
             </div>
@@ -327,7 +327,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/kubo-hex-logo.png')"
+                src="/images/kubo-hex-logo.png'"
                 alt="IPFS icon with a superimposed Go logo"
               />
             </div>
@@ -375,7 +375,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/js-ipfs-logo.png')"
+                src="/images/js-ipfs-logo.png"
                 alt="js-ipfs logo"
               />
             </div>
@@ -783,7 +783,7 @@
               "
             >
               <img
-                :src="$relativity('/images/meet-builders-thumbnail-pinata.png')"
+                src="/images/meet-builders-thumbnail-pinata.png"
                 alt="Meet the Builders: Pinata"
                 class="
                   video-preview-thumbnail
