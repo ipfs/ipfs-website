@@ -28,9 +28,10 @@ export default defineConfig({
     }),
     presetTypography(),
     presetWebFonts({
-      provider: 'none',
+      provider: 'bunny',
       fonts: {
-        sans: 'IBM Plex Sans',
+        sans: 'IBM Plex Sans:400,700',
+        mono: ['Fira Code', 'Fira Mono:400,700'],
       },
     }),
   ],
