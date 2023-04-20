@@ -4,7 +4,7 @@
       title="IPFS Powers the Distributed Web"
       description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
     />
-    <Hero background="star-aurora.jpg" overlay="constellations-hero.svg">
+    <Hero background="star-aurora.jpg" overlay="constellations-hero.svg" :tall="true">
       <template #title>
         Discover What's<br>
         Out There with IPFS
