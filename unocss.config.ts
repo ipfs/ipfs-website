@@ -16,13 +16,17 @@ export default defineConfig({
         dark: '#0D0F18',
         yellow: '#FFE85E',
         teal: '#10D3D4',
+        orange: '#FFA135',
       },
     },
     fontSize: {
       '4xl': '2.5rem',
     },
   },
-  shortcuts: [],
+  shortcuts: [
+    ['btn', 'py-2 px-8 whitespace-nowrap bg-brand-teal text-white text-base font-semibold rounded-full cursor-pointer inline-block focus:outline-none scale-[0.99] hover:scale-100 active:scale-[0.98] transition duration-150'],
+    ['btn-primary', 'bg-brand-orange/95 text-black hover:bg-brand-yellow'],
+  ],
   presets: [
     presetUno(),
     presetAttributify(),
