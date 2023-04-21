@@ -14,6 +14,7 @@ export default defineConfig({
     colors: {
       brand: {
         dark: '#0D0F18',
+        blue: '#1c3e5a',
         yellow: '#FFE85E',
         teal: '#10D3D4',
         orange: '#FFA135',

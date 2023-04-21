@@ -9,8 +9,8 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <PageSection id="hero" :background="props.background" :overlay="props.overlay" background-color="bg-brand-dark" overlay-position="top-0 right-0">
-    <div :class="`${props.tall ? 'p-y-52' : 'pt-36 pb-20'} max-w-xl m-x-auto`">
+  <PageSection id="hero" :background="props.background" :overlay="props.overlay" overlay-position="top-0 right-0">
+    <div :class="`${props.tall ? 'p-y-16' : 'pt-16'} max-w-xl m-x-auto`">
       <h1 class="text-5xl text-center text-white m-b-4">
         <slot name="title" />
       </h1>

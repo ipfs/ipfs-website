@@ -15,81 +15,46 @@
     </Hero>
     <PageSection>
       <ImageSplit image="ipfs-logo.svg">
-        <Heading>A Universe Of Uses</Heading>
+        <Heading>
+          A Universe Of Uses
+        </Heading>
         <Subhead>How IPFS is Used in Production</Subhead>
-        <p class="text-xl">IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.</p>
+        <p class="text-xl">
+          IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
+        </p>
       </ImageSplit>
+    </PageSection>
+    <PageSection>
+      <Heading center>
+        Why IPFS?
+      </Heading>
+      <p class="text-xl">
+        Our peer-to-peer content delivery network is built around content addressing: Store, retrieve, and locate data based on the guts of its content vs. its name or location.
+      </p>
+    </PageSection>
+    <PageSection dark-gradient text-white>
+      <Heading center>
+        Get Started
+      </Heading>
+      <p class="text-xl">
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.
+      </p>
+    </PageSection>
+    <PageSection>
+      <Heading center>
+        Connect Through Community
+      </Heading>
+      <p class="text-xl">
+        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+      </p>
+    </PageSection>
+    <PageSection dark-gradient text-white>
+      <Heading center>
+        IPFS By The Numbers
+      </Heading>
+      <p class="text-xl">
+        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.
+      </p>
     </PageSection>
   </div>
 </template>
-
-<script>
-import SeoTags from '~/components/SeoTags.vue';
-import Button from '~/components/Button';
-import StarfieldHero from '~/components/StarfieldHero';
-import VideoModal from '~/components/VideoModal.vue';
-
-export default {
-  components: { Button, StarfieldHero, SeoTags, VideoModal },
-  data() {
-    return {
-      latestPosts: [],
-      latestNews: [],
-      latestVideos: [],
-    };
-  },
-  async fetch() {
-    const [latestPosts, latestNews, latestVideos] = await Promise.allSettled([
-      fetch('https://blog.ipfs.tech/index.json')
-        .then((res) => res.json())
-        .then((data) => data.posts),
-      fetch('https://blog.ipfs.tech/news.json')
-        .then((res) => res.json())
-        .then((data) => data.news),
-      fetch('https://blog.ipfs.tech/videos.json')
-        .then((res) => res.json())
-        .then((data) => data.videos),
-    ]);
-
-    if (latestPosts.status === 'fulfilled') {
-      this.latestPosts = latestPosts.value;
-    }
-
-    if (latestNews.status === 'fulfilled') {
-      this.latestNews = latestNews.value;
-    }
-
-    if (latestVideos.status === 'fulfilled') {
-      this.latestVideos = latestVideos.value;
-    }
-  },
-  fetchOnServer: false,
-  methods: {
-    onCTAClick(data) {
-      this.$countly.trackEvent(this.$countly.events.CTA_CLICK, {
-        path: this.$route.path,
-        ...data,
-      });
-    },
-    openVideoModal: function (video) {
-      this.$refs.videoModal.openModal(video);
-    },
-  },
-};
-</script>
-
-<style scoped>
-.video-preview:hover .video-preview-thumbnail {
-  @apply scale-105;
-}
-
-h2 {
-  @apply text-3xl;
-}
-
-@screen sm {
-  h2 {
-    @apply text-4xl;
-  }
-}
-</style>
