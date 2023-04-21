@@ -1,15 +1,19 @@
 <script setup lang="ts">
 interface Props {
+  flip?: boolean
   image?: string
+  imageClass?: string
+  gap?: string
+  gapLg?: string
 }
 const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex lg:gap-32 gap-16 lg:flex-row flex-col-reverse lg:text-left text-center">
+  <div class="flex flex-col-reverse lg:text-left text-center" :class="`${flip ? 'lg:flex-row-reverse' : 'lg:flex-row'}`">
     <div class="">
       <slot />
     </div>
-    <img class="lg:w-auto w-40 lg:m-l-0 m-x-auto" :src="`./images/${props.image}`">
+    <img class="lg:m-l-0 m-x-auto" :class="imageClass" :src="`./images/${props.image}`">
   </div>
 </template>

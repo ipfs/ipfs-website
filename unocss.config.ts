@@ -14,10 +14,13 @@ export default defineConfig({
     colors: {
       brand: {
         dark: '#0D0F18',
+        light: '#f3f9fa',
         blue: '#1c3e5a',
-        yellow: '#FFE85E',
         teal: '#10D3D4',
+        tealLight: '#d6edef',
+        tealDark: '#10AAB2',
         orange: '#FFA135',
+        yellow: '#FFE85E',
       },
     },
     fontSize: {
