@@ -1,81 +1,53 @@
 <template>
-  <footer class="bg-gradient-6 text-white py-8 md:py-16 mt-auto">
-    <div class="grid-margins">
-      <NewsletterForm class="col-start-1 col-span-12 lg:pb-20" />
-      <div class="flex flex-col lg:flex-row lg:items-top lg:justify-between">
-        <div
-          class="flex flex-col lg:flex-row lg:items-center mb-4 md:mb-8 lg:mb-0"
-        >
-          <ul class="flex flex-col sm:flex-row mt-4 md:mt-8 lg:mt-0">
-            <li
-              v-for="(item, index) in footerNavigation"
-              :key="'link-' + index"
-              class="sm:mr-10 last:mr-0"
-              :class="[{ 'mb-4': item.children && item.children.length }]"
-              @click="onLinkClick(item)"
-            >
-              <Link
-                :item="item"
-                class="
-                  footer-link
-                  font-medium
-                  hover:opacity-75
-                  transition-opacity
-                  duration-300
-                  ease-in-out
-                "
-              />
-            </li>
-          </ul>
+  <footer class="relative">
+    <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue" />
+    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7 lg:py-32 py-16">
+      <div class="grid grid-cols-2 text-white">
+        <div class="flex">
+          <img src="/images/ipfs-logo.svg" alt="IPFS logo" class="w-32 mr-6">
+          <div class="text-white">
+            <NewsletterForm />
+          </div>
         </div>
-        <SocialLinks class="flex items-center" tracking="footer" />
+        <div class="pl-8">
+          <div class="flex justify-between gap-4">
+            <div>
+              <Subheading>About</Subheading>
+              <ul class="mt-4">
+                <li><a href="#">About Protocol Labs</a></li>
+                <li><a href="#">Blog &amp; News</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Code of conduct</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Browsers</a></li>
+              </ul>
+            </div>
+            <div>
+              <Subheading>Community</Subheading>
+              <ul class="mt-4">
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Office Hours</a></li>
+                <li><a href="#">Hackathons</a></li>
+                <li><a href="#">Developer Grants</a></li>
+                <li><a href="#">Accelerators</a></li>
+              </ul>
+            </div>
+            <div>
+              <Subheading>Resources</Subheading>
+              <ul class="mt-4">
+                <li><a href="#">Specs</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Research</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-end">
+            <p>Twitter</p>
+            <p>Twitter</p>
+            <p>Twitter</p>
+          </div>
+        </div>
       </div>
-      <FooterLegal class="mt-4 md:mt-8" />
     </div>
   </footer>
 </template>
-
-<script>
-import Link from './Link';
-import SocialLinks from './SocialLinks';
-import FooterLegal from './FooterLegal';
-import NewsletterForm from './NewsletterForm';
-
-const footerNavigation = [
-  { text: 'Blog & news', link: 'https://blog.ipfs.tech/' },
-  { text: 'Press', link: '/media' },
-  {
-    text: 'Code of conduct',
-    link: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md',
-  },
-  {
-    text: 'Security',
-    link: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues',
-  },
-];
-
-export default {
-  name: 'Footer',
-  components: { Link, SocialLinks, FooterLegal, NewsletterForm },
-  data: () => ({
-    footerNavigation: footerNavigation,
-  }),
-  methods: {
-    onLinkClick(item) {
-      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-      });
-    },
-  },
-};
-</script>
-
-<style scoped>
-.footer-link {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-}
-</style>
