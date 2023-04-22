@@ -95,7 +95,7 @@
         <Btn href="#" primary>How it works</Btn>
       </div>
     </PageSection>
-    <PageSection dark-gradient text-white>
+    <PageSection dark-gradient text-white overlay="constellations-home-get-started.svg" overlay-position="right-0">
       <Heading center>
         Get Started
       </Heading>
@@ -104,7 +104,7 @@
       </p>
       <Grid cols="2">
         <Card>
-          <ImageSplit image="constellation-peer.svg" gap="6" gap-lg="6">
+          <ImageSplit image="constellation-peer.svg" image-class="mr-6">
             <h3 class="text-xl text-black mb-4">
               Build peer-to-peer apps with IPFS
             </h3>
@@ -114,7 +114,7 @@
           </ImageSplit>
         </Card>
         <Card>
-          <ImageSplit image="constellation-tooling.svg" gap="6" gap-lg="6">
+          <ImageSplit image="constellation-tooling.svg" image-class="mr-6">
             <h3 class="text-xl text-black mb-4">
               Build tooling for IPFS
             </h3>
@@ -124,7 +124,7 @@
           </ImageSplit>
         </Card>
         <Card>
-          <ImageSplit image="constellation-apps.svg" gap="6" gap-lg="6">
+          <ImageSplit image="constellation-apps.svg" image-class="mr-6">
             <h3 class="text-xl text-black mb-4">
               Use IPFS apps
             </h3>
@@ -134,7 +134,7 @@
           </ImageSplit>
         </Card>
         <Card>
-          <ImageSplit image="constellation-store.svg" gap="6" gap-lg="6">
+          <ImageSplit image="constellation-store.svg" image-class="mr-6">
             <h3 class="text-xl text-black mb-4">
               Store and manage your data on IPFS
             </h3>
@@ -149,40 +149,25 @@
       <Heading center>
         Connect Through Community
       </Heading>
-      <p class="text-xl">
-        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-      </p>
+      <div class="text-center">
+        <p class="text-xl mb-8">
+          Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+        </p>
+        <p class="text-xl mb-8">
+          <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
+        </p>
+        <Btn href="#" primary>Join Our Community</Btn>
+      </div>
     </PageSection>
-    <PageSection dark-gradient text-white>
+    <PageSection dark-gradient text-white overlay="constellations-home-by-the-numbers.svg" overlay-position="right-0 top-16">
       <Heading center>
         IPFS By The Numbers
       </Heading>
       <div class="mt-16">
         <Grid>
-          <div class="text-center">
-            <h3 class="text-6xl text-brand-teal-dark mb-4">
-              2000+
-            </h3>
-            <p class="text-xl">
-              active contributors
-            </p>
-          </div>
-          <div class="text-center">
-            <h3 class="text-6xl text-brand-teal-dark mb-4">
-              280,000+
-            </h3>
-            <p class="text-xl">
-              unique nodes
-            </p>
-          </div>
-          <div class="text-center">
-            <h3 class="text-6xl text-brand-teal-dark mb-4">
-              1 Billion+
-            </h3>
-            <p class="text-xl">
-              CIDs published to network
-            </p>
-          </div>
+          <Stat number="2000+" label="active contributors" />
+          <Stat number="280,000+" label="unique nodes" />
+          <Stat number="1 Billion+" label="CIDs published to network" />
         </Grid>
       </div>
     </PageSection>
@@ -294,17 +279,9 @@
       </div>
     </PageSection>
     <PageSection light-gradient>
-      <ImageSplit image="portrait-mauve-signweaver.png" image-class="w-80 pr-12" flip>
-        <Heading>
-          Testimonials
-        </Heading>
-        <p class="text-xl mb-6">
-          “IPFS gives us a set of flexible building blocks for connecting devices and exchanging data. The plethora of IPFS documentation and community members contributes toward our goal at Agregore of making peer-to-peer web apps easy to use.”
-        </p>
-        <p class="text-xl font-bold">
-          Mauve Signweaver, Aregore
-        </p>
-      </ImageSplit>
+      <Testimonial image="portrait-mauve-signweaver.png" name="Mauve Signweaver, Aregore">
+        “IPFS gives us a set of flexible build`zing blocks for connecting devices and exchanging data. The plethora of IPFS documentation and community members contributes toward our goal at Agregore of making peer-to-peer web apps easy to use.”
+      </Testimonial>
     </PageSection>
   </div>
 </template>

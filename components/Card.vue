@@ -16,18 +16,16 @@ const bgColor = computed(() => {
     return 'bg-brand-blue'
   return 'bg-white'
 })
-
-const textCenter = props.center ? 'text-center' : ''
 </script>
 
 <template>
-  <div class="p-8 rounded-xl flex flex-col justify-between" :class="bgColor">
-    <div :class="textCenter">
+  <div class="p-10 rounded-xl flex flex-col justify-between" :class="bgColor">
+    <div :class="props.center ? 'text-center' : ''">
       <slot />
     </div>
-    <div class="flex-none" :class="props.center ? 'mx-auto' : ''">
-      <Btn v-if="props.buttonLabel" :href="props.buttonLink">
-        {{ props.buttonLabel }}
+    <div class="flex-none" :class="center ? 'mx-auto' : ''">
+      <Btn v-if="buttonLabel" :href="buttonLink">
+        {{ buttonLabel }}
       </Btn>
     </div>
   </div>

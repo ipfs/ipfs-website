@@ -3,17 +3,15 @@ interface Props {
   flip?: boolean
   image?: string
   imageClass?: string
-  gap?: string
-  gapLg?: string
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex flex-col-reverse lg:text-left text-center" :class="`${flip ? 'lg:flex-row-reverse' : 'lg:flex-row'}`">
+  <div class="flex flex-col-reverse lg:text-left text-center items-center" :class="`${flip ? 'lg:flex-row-reverse' : 'lg:flex-row'}`">
     <div class="">
       <slot />
     </div>
-    <img class="lg:m-l-0 m-x-auto" :class="imageClass" :src="`./images/${props.image}`">
+    <img class="lg:ml-0 mx-auto" :class="imageClass" :src="`./images/${image}`">
   </div>
 </template>
