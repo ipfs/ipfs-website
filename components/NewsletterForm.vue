@@ -21,21 +21,20 @@ export default {
     <form
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
-      class="flex lg:justify-end max-w-2xl xl:w-3/5"
       action="https://ipfs.us4.list-manage.com/subscribe/post?u=25473244c7d18b897f5a1ff6b&amp;id=cad54b2230"
       method="post"
       target="_blank"
       @submit="onSubmit"
     >
-      <div id="mc_embed_signup_scroll" class="grid gric-col-2 w-full">
-        <div class="fields flex flex-col sm:flex-row col-start-1 col-span-2">
+      <div id="mc_embed_signup_scroll">
+        <div class="relative mb-3">
           <input
             id="mce-EMAIL"
             v-model="email"
             required
             type="email"
             aria-label="Email Address"
-            class="flex-grow text-black p-2 pr-8 rounded-full"
+            class="text-black rounded-full w-full h-8 pr-36 pl-3 py-2"
             placeholder="email@your.domain"
             name="EMAIL"
           >
@@ -45,7 +44,7 @@ export default {
               type="submit"
               value="Subscribe"
               name="subscribe"
-              class="btn btn-primary"
+              class="btn btn-primary absolute -right-px top-0 h-8 py-0 opacity-90"
             >
           </div>
         </div>
