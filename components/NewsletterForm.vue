@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div id="newsletter-form">
-    <h2 class="text-lg mb-4">Stay informed</h2>
+    <Subhead bold small>Stay informed</Subhead>
     <p class="text-sm mb-8 ">
       Sign up for the IPFS Weekly newsletter (<a class="text-blueGreenLight hover:underline" href="https://blog.ipfs.tech/?tags=weekly">example</a>) for the latest on releases, upcoming developments, community events, and more.
     </p>
