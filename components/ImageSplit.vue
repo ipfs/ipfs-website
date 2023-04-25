@@ -8,7 +8,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex flex-col-reverse lg:text-left text-center items-center" :class="`${flip ? 'lg:flex-row-reverse' : 'lg:flex-row'}`">
+  <div class="flex flex-col-reverse lg:text-left text-center items-center" :class="[flip ? 'lg:flex-row-reverse' : 'lg:flex-row']">
     <div class="">
       <slot />
     </div>

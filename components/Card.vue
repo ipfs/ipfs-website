@@ -21,10 +21,12 @@ const bgColor = computed(() => {
 
 <template>
   <div class="p-10 rounded-xl flex flex-col justify-between" :class="bgColor">
-    <div :class="center ? 'text-center' : ''">
+    <div
+      :class="{ 'text-center': center }"
+    >
       <slot />
     </div>
-    <div class="flex-none" :class="center ? 'mx-auto' : ''">
+    <div class="flex-none" :class="{ 'mx-auto': center }">
       <Btn v-if="buttonLabel" :href="buttonLink">
         {{ buttonLabel }}
       </Btn>
