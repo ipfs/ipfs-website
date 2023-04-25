@@ -1,6 +1,9 @@
 <template>
   <footer class="relative">
     <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue" />
+    <div class="absolute lg:overflow-visible overflow-x-hidden bottom-0 right-0">
+      <img src="/images/constellations-footer.svg" alt="">
+    </div>
     <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7 lg:py-32 py-16">
       <div class="grid lg:grid-cols-2 grid-cols-1 text-white">
         <div class="flex lg:flex-row flex-col">
