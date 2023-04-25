@@ -10,7 +10,7 @@ defineProps<Props>()
 
 <template>
   <PageSection id="hero" :background="background" :overlay="overlay" overlay-position="top-0 right-0">
-    <div :class="`${tall ? 'p-y-16' : 'pt-16'} max-w-xl m-x-auto`">
+    <div class="max-w-xl m-x-auto" :class="[tall ? 'p-y-16' : 'pt-16']">
       <h1 class="text-5xl text-center text-white m-b-4">
         <slot name="title" />
       </h1>
