@@ -7,7 +7,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <ImageSplit :image="image" image-class="w-80 pr-12" flip>
+  <ImageSplit :image="image" image-width="260" flip>
     <Heading>
       Testimonials
     </Heading>

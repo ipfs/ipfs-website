@@ -14,7 +14,7 @@
       </template>
     </Hero>
     <PageSection>
-      <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12" >
+      <ImageSplit image="ipfs-logo.svg">
         <Heading>
           A Universe Of Uses
         </Heading>
@@ -92,7 +92,9 @@
         </Card>
       </Grid>
       <div class="table mx-auto">
-        <Btn href="#" primary>How it works</Btn>
+        <Btn href="#" primary>
+          How it works
+        </Btn>
       </div>
     </PageSection>
     <PageSection dark-gradient text-white overlay="constellations-home-get-started.svg" overlay-position="right-0">
@@ -104,12 +106,12 @@
       </p>
       <Grid cols="2">
         <Card>
-          <ImageSplit image="constellation-peer.svg" image-class="mr-6">
+          <ImageSplit image="constellation-peer.svg" tight>
             <h3 class="text-xl text-black mb-4">
               Build peer-to-peer apps with IPFS
             </h3>
             <p class="text-lg text-black">
-              Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+              Join thousands of developers who choose IPFS to build software that's open, verifiable, and resilient.
             </p>
           </ImageSplit>
           <ListLinks>
@@ -119,7 +121,7 @@
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-tooling.svg" image-class="mr-6">
+          <ImageSplit image="constellation-tooling.svg" tight>
             <h3 class="text-xl text-black mb-4">
               Build tooling for IPFS
             </h3>
@@ -135,7 +137,7 @@
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-apps.svg" image-class="mr-6">
+          <ImageSplit image="constellation-apps.svg" tight>
             <h3 class="text-xl text-black mb-4">
               Use IPFS apps
             </h3>
@@ -149,7 +151,7 @@
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-store.svg" image-class="mr-6">
+          <ImageSplit image="constellation-store.svg" tight>
             <h3 class="text-xl text-black mb-4">
               Store and manage your data on IPFS
             </h3>
@@ -177,7 +179,9 @@
         <p class="text-xl mb-8">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
         </p>
-        <Btn href="#" primary>Join Our Community</Btn>
+        <Btn href="#" primary>
+          Join Our Community
+        </Btn>
       </div>
     </PageSection>
     <PageSection dark-gradient text-white overlay="constellations-home-by-the-numbers.svg" overlay-position="right-0 top-16">
