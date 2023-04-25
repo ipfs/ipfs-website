@@ -14,12 +14,24 @@ export default defineConfig({
     colors: {
       brand: {
         dark: '#0D0F18',
-        yellow: '#FFE85E',
+        light: '#f3f9fa',
+        blue: '#1c3e5a',
         teal: '#10D3D4',
+        tealLight: '#d6edef',
+        tealDark: '#10AAB2',
+        tealTransparent: 'rgba(17,160,169,0.40)',
+        orange: '#FFA135',
+        yellow: '#FFE85E',
       },
     },
+    fontSize: {
+      '4xl': '2.5rem',
+    },
   },
-  shortcuts: [],
+  shortcuts: [
+    ['btn', 'py-2 px-8 whitespace-nowrap bg-brand-teal text-white text-base font-semibold rounded-full cursor-pointer inline-block focus:outline-none scale-[0.99] hover:scale-100 active:scale-[0.98] transition duration-150'],
+    ['btn-primary', 'bg-brand-orange text-black'],
+  ],
   presets: [
     presetUno(),
     presetAttributify(),
@@ -39,4 +51,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+  safelist: 'grid-cols-1 grid-cols-2 grid-cols-3 grid-cols-4 grid-cols-5 lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 lg:grid-cols-5'.split(' '),
 })

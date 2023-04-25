@@ -5,6 +5,7 @@ dist
 .eslintcache
 .nuxt
 .env
+.output
 
 # logs
 logs
@@ -16,3 +17,4 @@ yarn-error.log*
 # editor
 .vscode
 .history
+NOTES.md

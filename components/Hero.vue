@@ -5,12 +5,12 @@ interface Props {
   overlay?: string
   overlayPosition?: string
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
-  <PageSection id="hero" :background="props.background" :overlay="props.overlay" background-color="bg-brand-dark" overlay-position="top-0 right-0">
-    <div :class="`${props.tall ? 'p-y-52' : 'pt-36 pb-20'} max-w-xl m-x-auto`">
+  <PageSection id="hero" :background="background" :overlay="overlay" overlay-position="top-0 right-0">
+    <div class="max-w-xl m-x-auto" :class="[tall ? 'p-y-16' : 'pt-16']">
       <h1 class="text-5xl text-center text-white m-b-4">
         <slot name="title" />
       </h1>

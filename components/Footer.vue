@@ -1,81 +1,68 @@
 <template>
-  <footer class="bg-gradient-6 text-white py-8 md:py-16 mt-auto">
-    <div class="grid-margins">
-      <NewsletterForm class="col-start-1 col-span-12 lg:pb-20" />
-      <div class="flex flex-col lg:flex-row lg:items-top lg:justify-between">
-        <div
-          class="flex flex-col lg:flex-row lg:items-center mb-4 md:mb-8 lg:mb-0"
-        >
-          <ul class="flex flex-col sm:flex-row mt-4 md:mt-8 lg:mt-0">
-            <li
-              v-for="(item, index) in footerNavigation"
-              :key="'link-' + index"
-              class="sm:mr-10 last:mr-0"
-              :class="[{ 'mb-4': item.children && item.children.length }]"
-              @click="onLinkClick(item)"
-            >
-              <Link
-                :item="item"
-                class="
-                  footer-link
-                  font-medium
-                  hover:opacity-75
-                  transition-opacity
-                  duration-300
-                  ease-in-out
-                "
-              />
-            </li>
-          </ul>
+  <footer class="relative">
+    <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue" />
+    <div class="absolute lg:overflow-visible overflow-x-hidden bottom-0 right-0">
+      <img src="/images/constellations-footer.svg" alt="">
+    </div>
+    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7 lg:py-32 py-16">
+      <div class="grid lg:grid-cols-2 grid-cols-1 text-white">
+        <div class="flex lg:flex-row flex-col">
+          <img src="/images/ipfs-logo.svg" alt="IPFS logo" class="w-28 mr-8 lg:mb-0 mb-8">
+          <div class="text-white">
+            <NewsletterForm />
+          </div>
         </div>
-        <SocialLinks class="flex items-center" tracking="footer" />
+        <div class="lg:pl-8 pl-0 lg:mt-0 mt-8">
+          <div class="flex justify-between gap-4">
+            <div>
+              <Subhead bold small>
+                About
+              </Subhead>
+              <ul class="lg:text-sm text-xs leading-7">
+                <li><a href="https://protocol.ai/">About Protocol Labs</a></li>
+                <li><a href="https://blog.ipfs.tech/">Blog &amp; News</a></li>
+                <li><a href="https://ipfs.tech/media">Press</a></li>
+                <li><a href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">Code of conduct</a></li>
+                <li><a href="https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues">Security</a></li>
+                <li><a href="#">Browsers</a></li>
+              </ul>
+            </div>
+            <div>
+              <Subhead bold small>
+                Community
+              </Subhead>
+              <ul class="mt-4 lg:text-sm text-xs leading-7">
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Office Hours</a></li>
+                <li><a href="#">Hackathons</a></li>
+                <li><a href="#">Developer Grants</a></li>
+                <li><a href="#">Accelerators</a></li>
+              </ul>
+            </div>
+            <div>
+              <Subhead bold small>
+                Resources
+              </Subhead>
+              <ul class="mt-4 lg:text-sm text-xs leading-7">
+                <li><a href="#">Specs</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">Research</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <FooterLegal class="mt-4 md:mt-8" />
+      <div class="flex gap-4 justify-end mt-4">
+        <a href="http://twitter.com/ipfs">
+          <img src="/images/social-twitter.svg" alt="Twitter logo" class="w-8">
+        </a>
+        <a href="https://github.com/ipfs">
+          <img src="/images/social-github.svg" alt="Github logo" class="w-8">
+        </a>
+        <a href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
+          <img src="/images/social-youtube.svg" alt="Youtube logo" class="w-8">
+        </a>
+      </div>
     </div>
   </footer>
 </template>
-
-<script>
-import Link from './Link';
-import SocialLinks from './SocialLinks';
-import FooterLegal from './FooterLegal';
-import NewsletterForm from './NewsletterForm';
-
-const footerNavigation = [
-  { text: 'Blog & news', link: 'https://blog.ipfs.tech/' },
-  { text: 'Press', link: '/media' },
-  {
-    text: 'Code of conduct',
-    link: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md',
-  },
-  {
-    text: 'Security',
-    link: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues',
-  },
-];
-
-export default {
-  name: 'Footer',
-  components: { Link, SocialLinks, FooterLegal, NewsletterForm },
-  data: () => ({
-    footerNavigation: footerNavigation,
-  }),
-  methods: {
-    onLinkClick(item) {
-      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-      });
-    },
-  },
-};
-</script>
-
-<style scoped>
-.footer-link {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-}
-</style>
