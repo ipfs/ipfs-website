@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
 interface Props {
-  background?: string
+  background?: 'light' | 'dark'
   center?: boolean
   buttonLabel?: string
   buttonLink?: string
@@ -10,11 +8,14 @@ interface Props {
 const props = defineProps<Props>()
 
 const bgColor = computed(() => {
-  if (props.background === 'light')
-    return 'bg-brand-light'
-  if (props.background === 'blue')
-    return 'bg-brand-blue'
-  return 'bg-white'
+  switch (props.background) {
+    case 'light':
+      return 'bg-brand-light'
+    case 'dark':
+      return 'bg-brand-blue'
+    default:
+      return 'bg-white'
+  }
 })
 </script>
 
