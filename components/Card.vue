@@ -21,7 +21,7 @@ const bgColor = computed(() => {
 
 <template>
   <div class="p-10 rounded-xl flex flex-col justify-between" :class="bgColor">
-    <div :class="props.center ? 'text-center' : ''">
+    <div :class="center ? 'text-center' : ''">
       <slot />
     </div>
     <div class="flex-none" :class="center ? 'mx-auto' : ''">
