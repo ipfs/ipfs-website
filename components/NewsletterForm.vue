@@ -1,14 +1,11 @@
-<script>
-export default {
-  props: {},
-  data: () => ({
-    email: null,
-  }),
-  methods: {
-    onSubmit() {
-      /* this.$countly.trackEvent(this.$countly.events.NEWSLETTER_SUBSCRIBE); */
-    },
-  },
+<script setup lang="ts">
+interface Props {
+  email?: string
+}
+defineProps<Props>()
+
+function onSubmit() {
+  /* this.$countly.trackEvent(this.$countly.events.NEWSLETTER_SUBSCRIBE); */
 }
 </script>
 
@@ -30,7 +27,6 @@ export default {
         <div class="relative mb-3">
           <input
             id="mce-EMAIL"
-            v-model="email"
             required
             type="email"
             aria-label="Email Address"
