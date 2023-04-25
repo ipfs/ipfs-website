@@ -112,6 +112,11 @@
               Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
             </p>
           </ImageSplit>
+          <ListLinks>
+            <ListLink label="Developers Page" link="#" />
+            <ListLink label="Documentation" link="#" />
+            <ListLink label="Read Case Studies" link="#" />
+          </ListLinks>
         </Card>
         <Card>
           <ImageSplit image="constellation-tooling.svg" image-class="mr-6">
@@ -122,6 +127,12 @@
               Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
             </p>
           </ImageSplit>
+          <ListLinks>
+            <ListLink label="Kubo (Go)" link="#" />
+            <ListLink label="Cluster" link="#" />
+            <ListLink label="Iroh (Rust)" link="#" />
+            <ListLink label="Helia (JavaScript)" link="#" />
+          </ListLinks>
         </Card>
         <Card>
           <ImageSplit image="constellation-apps.svg" image-class="mr-6">
@@ -132,6 +143,10 @@
               Store and share files, stream music, publish your website, store NFTs, and more through hundreds of applications built on IPFS.
             </p>
           </ImageSplit>
+          <ListLinks>
+            <ListLink label="Install IPFS Desktop" link="#" />
+            <ListLink label="Browse IPFS Applications" link="#" />
+          </ListLinks>
         </Card>
         <Card>
           <ImageSplit image="constellation-store.svg" image-class="mr-6">
@@ -142,6 +157,12 @@
               Use content addressing to give your data unique identifiers, and use IPFS for large scale data storage and compute.
             </p>
           </ImageSplit>
+          <ListLinks>
+            <ListLink label="Tutorial: Content Addressing" link="#" />
+            <ListLink label="Tutorial: Sturcturing Data" link="#" />
+            <ListLink label="Managing Data" link="#" />
+            <ListLink label="Data Ingestion with Bacalhau" link="#" />
+          </ListLinks>
         </Card>
       </Grid>
     </PageSection>
