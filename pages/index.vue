@@ -14,11 +14,7 @@
       </template>
     </Hero>
     <PageSection>
-<<<<<<< HEAD
-      <ImageSplit image="ipfs-logo.svg">
-=======
       <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
->>>>>>> 545b4f7 (add isExternal fn to AppLink)
         <Heading>
           A Universe Of Uses
         </Heading>
@@ -96,11 +92,7 @@
         </Card>
       </Grid>
       <div class="table mx-auto">
-<<<<<<< HEAD
-        <Btn href="#" primary>
-=======
-        <Btn href="//google.com" primary>
->>>>>>> 545b4f7 (add isExternal fn to AppLink)
+        <Btn href="//ipfs.tech" primary>
           How it works
         </Btn>
       </div>
