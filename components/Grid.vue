@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { NuxtLinkProps } from '#app'
-
-interface Props extends NuxtLinkProps {
+interface Props {
   cols?: string
 }
 defineProps<Props>()
