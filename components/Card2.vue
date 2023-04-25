@@ -4,6 +4,7 @@ interface Props {
   date?: string
   heading?: string
   subhead?: string
+  excerpt?: string
   link?: string
   category?: string
   tags?: string
@@ -26,10 +27,11 @@ defineProps<Props>()
       </p>
     </div>
     <div class="p-6 pt-4">
-      <p class="inline-block text-base">
-        <slot />
-        <a class="text-brand-teal-dark underline" :href="link">... Read more</a>
+      <p v-if="excerpt" class="inline-block text-base">
+        {{ excerpt }}...
+        <a class="text-brand-teal-dark underline" :href="link">Read more</a>
       </p>
+      <slot />
       <div v-if="category || tags" class="flex inline-flex mt-4 gap-1">
         <div v-if="category" class="rounded-sm py-1 px-3 text-xs text-brand-teal-dark bg-brand-teal-light">
           {{ category }}

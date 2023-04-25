@@ -206,28 +206,25 @@
             date="30 January 2023"
             heading="Interplanetary Applications: Disco Chat"
             subhead="Discordian"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             image="blog-2.jpg"
             date="30 January 2023"
             heading="Interplanetary Applications: Disco Chat"
             subhead="Discordian"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             image="blog-3.jpg"
             date="30 January 2023"
             heading="Interplanetary Applications: Disco Chat"
             subhead="Discordian"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
         </Grid>
       </div>
       <div class="mb-12">
@@ -238,24 +235,21 @@
           <Card2
             date="30 January 2023"
             heading="WebTransport in libp2p"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             date="30 January 2023"
             heading="Why the Internet Needs the Interplanetary File System"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             date="30 January 2023"
             heading="Quiet: Free and Open P2P Team Chat built with Tor, libp2p and IPFS"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
         </Grid>
       </div>
       <div class="mb-12">
@@ -267,32 +261,29 @@
             image="video-1.jpg"
             date="30 January 2023"
             heading="Meet the Web3 Builders: Pinata"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
             category="Video"
             tags="#NFTs #pinning #API #community"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             image="video-2.jpg"
             date="30 January 2023"
             heading="Meet the Web3 Builders: Pinata"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
             category="Video"
             tags="#NFTs #pinning #API #community"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
           <Card2
             image="video-3.jpg"
             date="30 January 2023"
             heading="Meet the Web3 Builders: Pinata"
+            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
             link="#"
             category="Video"
             tags="#NFTs #pinning #API #community"
-          >
-            Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other
-          </Card2>
+          />
         </Grid>
       </div>
     </PageSection>
