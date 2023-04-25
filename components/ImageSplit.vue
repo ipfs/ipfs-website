@@ -5,7 +5,16 @@ interface Props {
   image?: string
   imageWidth?: string
 }
-defineProps<Props>()
+const props = defineProps<Props>()
+
+const imageStyle = computed(() => {
+  if (props.imageWidth) {
+    return {
+      width: `${props.imageWidth}px`,
+    }
+  }
+  return ''
+})
 </script>
 
 <template>
@@ -13,6 +22,6 @@ defineProps<Props>()
     <div class="">
       <slot />
     </div>
-    <img class="lg:ml-0 mx-auto" :style="{ width: `${imageWidth}px` }" :src="`./images/${image}`">
+    <img class="lg:ml-0 mx-auto" :style="imageStyle" :src="`./images/${image}`">
   </div>
 </template>
