@@ -1,20 +1,29 @@
 <script setup lang="ts">
 interface Props {
   id?: string
-  backgroundColor?: string
   background?: string
+  darkGradient?: boolean
+  lightGradient?: boolean
   overlay?: string
   overlayPosition?: string
+  textWhite?: boolean
+  contentClasses?: string
+  tight?: boolean
 }
-const props = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
-  <section :id="id" class="relative">
-    <div v-if="props.backgroundColor" :class="`absolute -z-1 w-full h-full ${backgroundColor}`" />
-    <img v-if="props.background" :src="`./images/${background}`" alt="" class="absolute -z-1 w-full h-full object-cover">
-    <img v-if="props.overlay" :src="`./images/${overlay}`" alt="" :class="`absolute ${overlayPosition}`">
-    <div class="max-w-screen-xl mx-auto p-x-32 relative">
+  <section
+    :id="id" class="relative" :class="{ 'text-white': textWhite }"
+  >
+    <div v-if="darkGradient" class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue" />
+    <div v-if="lightGradient" class="absolute -z-1 w-full h-full bg-gradient-to-b from-brand-teal-light to-white" />
+    <img v-if="background" :src="`./images/${background}`" alt="" class="absolute -z-1 w-full h-full object-cover">
+    <div :class="`absolute lg:overflow-visible overflow-x-hidden ${overlayPosition}`">
+      <img v-if="overlay" :src="`./images/${overlay}`" alt="">
+    </div>
+    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7" :class="[tight ? 'lg:py-14 py-6' : 'lg:py-28 py-14']">
       <slot />
     </div>
   </section>
