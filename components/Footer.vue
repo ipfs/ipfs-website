@@ -15,7 +15,9 @@
         <div class="lg:pl-8 pl-0 lg:mt-0 mt-8">
           <div class="flex justify-between gap-4">
             <div>
-              <Subhead bold small>About</Subhead>
+              <Subhead bold small>
+                About
+              </Subhead>
               <ul class="lg:text-sm text-xs leading-7">
                 <li><a href="https://protocol.ai/">About Protocol Labs</a></li>
                 <li><a href="https://blog.ipfs.tech/">Blog &amp; News</a></li>
@@ -26,7 +28,9 @@
               </ul>
             </div>
             <div>
-              <Subhead bold small>Community</Subhead>
+              <Subhead bold small>
+                Community
+              </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">
                 <li><a href="#">Forums</a></li>
                 <li><a href="#">Office Hours</a></li>
@@ -36,7 +40,9 @@
               </ul>
             </div>
             <div>
-              <Subhead bold small>Resources</Subhead>
+              <Subhead bold small>
+                Resources
+              </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">
                 <li><a href="#">Specs</a></li>
                 <li><a href="#">Examples</a></li>
