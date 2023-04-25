@@ -2,11 +2,18 @@
 import type { NuxtLinkProps } from '#app'
 
 interface AppLinkProps extends NuxtLinkProps {}
-defineProps<AppLinkProps>()
+const props = defineProps<AppLinkProps>()
+
+const href = computed(() => {
+  return typeof props.href === 'string' ? props.href : typeof props.to === 'string' ? props.to : undefined
+})
+const isExternal = computed(() => {
+  return props.external || href.value?.startsWith('http') || href.value?.startsWith('//')
+})
 </script>
 
 <template>
-  <NuxtLink target="_blank">
+  <NuxtLink :external="isExternal" :target="isExternal ? '_blank' : undefined">
     <slot />
   </NuxtLink>
 </template>
