@@ -27,7 +27,7 @@
     <PageSection tight>
       <Grid>
         <Card background="light" button-label="Read their story" button-link="#" center>
-          <img src="/images/logo-3s.png" class="mb-8 h-32 w-full object-contain object-center">
+          <img src="/images/logo-3S.png" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="text-xl mb-8">
             Speed up gameplay for your superfans
           </h3>
