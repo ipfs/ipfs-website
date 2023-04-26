@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { NuxtLinkProps } from '#app'
+import type { AppLinkProps } from '@/components/AppLink.vue'
 
-interface Props extends NuxtLinkProps {
+interface Props extends AppLinkProps {
   primary?: boolean
 }
 defineProps<Props>()
