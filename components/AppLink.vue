@@ -5,7 +5,7 @@ export interface AppLinkProps extends NuxtLinkProps { href?: string; to?: string
 defineProps<AppLinkProps>()
 
 function isExternal(href: string | undefined) {
-  return typeof href !== 'string' ? false : (href?.startsWith('http') || href?.startsWith('//'))
+  return typeof href === 'string' ? (href?.startsWith('http') || href?.startsWith('//')) : false
 }
 </script>
 
