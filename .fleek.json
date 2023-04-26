@@ -1,7 +1,7 @@
 {
  "build": {
-   "image": "fleek/nuxtjs",
-   "command": "pnpm install && pnpm generate",
+   "image": "node:current-alpine",
+   "command": "corepack enable && pnpm i && pnpm generate",
    "publicDir": "dist",
    "baseDir": ""
  }
