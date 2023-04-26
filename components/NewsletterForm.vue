@@ -11,7 +11,9 @@ function onSubmit() {
 
 <template>
   <div id="newsletter-form">
-    <Subhead bold small>Stay informed</Subhead>
+    <Subhead bold small>
+      Stay informed
+    </Subhead>
     <p class="text-sm mb-8 ">
       Sign up for the IPFS Weekly newsletter (<a class="text-blueGreenLight hover:underline" href="https://blog.ipfs.tech/?tags=weekly">example</a>) for the latest on releases, upcoming developments, community events, and more.
     </p>
