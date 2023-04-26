@@ -1,7 +1,3 @@
-<template>
-  <span v-if="false" />
-</template>
-
 <script>
 export default {
   props: {
@@ -83,7 +79,11 @@ export default {
           content: this.title,
         },
       ],
-    };
+    }
   },
-};
+}
 </script>
+
+<template>
+  <span v-if="false" />
+</template>

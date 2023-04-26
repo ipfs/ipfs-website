@@ -1,3 +1,101 @@
+<script>
+import throttle from 'lodash/throttle'
+
+import Link from './Link'
+import Icon from './Icon.vue'
+
+const headerLinks = [
+  { text: 'About', link: '/#why' },
+  { text: 'Install', link: '/#install' },
+  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
+  { text: 'Team', link: '/team' },
+  { text: 'Blog', link: 'https://blog.ipfs.tech/' },
+  { text: 'Help', link: '/help' },
+]
+
+export default {
+  name: 'Header',
+  components: { Link, Icon },
+  props: {
+    noHero: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data: () => ({
+    headerLinks,
+    navVisibility: {
+      navVisible: false,
+      navSticky: false,
+    },
+  }),
+  computed: {
+    mobileNavActive: false,
+    navHeight: 100,
+  },
+  mounted() {
+    this.$store.commit(
+      'appState/setNavHeight',
+      this.$refs.header.getBoundingClientRect().height,
+    )
+
+    this.throttledFunction = throttle(this.handleScroll, 100)
+    window.addEventListener('scroll', this.throttledFunction)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.throttledFunction)
+  },
+  methods: {
+    handleScroll() {
+      // responsive force: lower on mobile higher on desktop
+      const SCROLL_FORCE = 20
+
+      const currentScrollPosition
+        = window.pageYOffset || document.documentElement.scrollTop
+
+      // ignore negative calculations on mobile
+      if (currentScrollPosition < 0)
+        return
+
+      // true if scrolling up
+      this.showNav = currentScrollPosition < this.lastScrollPosition
+
+      const isOffset = currentScrollPosition > this.navHeight / 2
+
+      const isScrollThresholdMet
+        = Math.abs(currentScrollPosition - this.lastScrollPosition)
+        > SCROLL_FORCE
+
+      const currentVisiblity = this.navVisibility.navVisible
+
+      this.navVisibility = {
+        ...this.navVisibility,
+        ...{
+          navVisible: isOffset
+            ? isScrollThresholdMet
+              ? this.showNav
+              : currentVisiblity
+            : false,
+          navSticky: isOffset && !this.mobileNavActive,
+        },
+      }
+
+      this.lastScrollPosition = currentScrollPosition
+    },
+    toggleMobileMenu() {
+      this.$store.commit('appState/toggleMobileNav', !this.mobileNavActive)
+    },
+    onLinkClick(item) {
+      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
+        path: this.$route.path,
+        text: item.text,
+        href: item.link,
+      })
+    },
+  },
+}
+</script>
+
 <template>
   <header
     ref="header"
@@ -14,12 +112,12 @@
     :class="[
       {
         '-translate-y-full': navVisibility.navSticky,
-        fixed: !noHero,
-        static: noHero,
+        'fixed': !noHero,
+        'static': noHero,
         'bg-gradient-6': noHero,
-        navVisible: navVisibility.navVisible,
-        navSticky: navVisibility.navSticky && !mobileNavActive,
-        mobileNavOpen: mobileNavActive,
+        'navVisible': navVisibility.navVisible,
+        'navSticky': navVisibility.navSticky && !mobileNavActive,
+        'mobileNavOpen': mobileNavActive,
       },
     ]"
   >
@@ -63,110 +161,11 @@
         class="sm:visible md:hidden mobile-nav-link"
         @click="toggleMobileMenu"
       >
-        <div class="hamburger-icon w-8 h-8"></div>
+        <div class="hamburger-icon w-8 h-8" />
       </button>
     </div>
   </header>
 </template>
-
-<script>
-import throttle from 'lodash/throttle';
-
-import Link from './Link';
-import Icon from './Icon.vue';
-
-const headerLinks = [
-  { text: 'About', link: '/#why' },
-  { text: 'Install', link: '/#install' },
-  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
-  { text: 'Team', link: '/team' },
-  { text: 'Blog', link: 'https://blog.ipfs.tech/' },
-  { text: 'Help', link: '/help' },
-];
-
-export default {
-  name: 'Header',
-  components: { Link, Icon },
-  props: {
-    noHero: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  data: () => ({
-    headerLinks: headerLinks,
-    navVisibility: {
-      navVisible: false,
-      navSticky: false,
-    },
-  }),
-  computed: {
-   mobileNavActive: false,
-   navHeight: 100
-  },
-  mounted() {
-    this.$store.commit(
-      'appState/setNavHeight',
-      this.$refs.header.getBoundingClientRect().height
-    );
-
-    this.throttledFunction = throttle(this.handleScroll, 100);
-    window.addEventListener('scroll', this.throttledFunction);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.throttledFunction);
-  },
-  methods: {
-    handleScroll() {
-      // responsive force: lower on mobile higher on desktop
-      const SCROLL_FORCE = 20;
-
-      const currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
-
-      // ignore negative calculations on mobile
-      if (currentScrollPosition < 0) {
-        return;
-      }
-
-      // true if scrolling up
-      this.showNav = currentScrollPosition < this.lastScrollPosition;
-
-      const isOffset = currentScrollPosition > this.navHeight / 2;
-
-      const isScrollThresholdMet =
-        Math.abs(currentScrollPosition - this.lastScrollPosition) >
-        SCROLL_FORCE;
-
-      const currentVisiblity = this.navVisibility.navVisible;
-
-      this.navVisibility = {
-        ...this.navVisibility,
-        ...{
-          navVisible: isOffset
-            ? isScrollThresholdMet
-              ? this.showNav
-              : currentVisiblity
-            : false,
-          navSticky: isOffset && !this.mobileNavActive,
-        },
-      };
-
-      this.lastScrollPosition = currentScrollPosition;
-    },
-    toggleMobileMenu() {
-      this.$store.commit('appState/toggleMobileNav', !this.mobileNavActive);
-    },
-    onLinkClick(item) {
-      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-      });
-    },
-  },
-};
-</script>
 
 <style scoped lang="postcss">
 .navVisible {

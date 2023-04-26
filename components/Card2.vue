@@ -37,7 +37,7 @@ defineProps<Props>()
           {{ category }}
         </div>
         <div v-if="tags" class="py-1 text-xs">
-          <span class="pl-2">{{  tags }}</span>
+          <span class="pl-2">{{ tags }}</span>
         </div>
       </div>
     </div>
