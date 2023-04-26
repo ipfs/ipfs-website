@@ -172,10 +172,6 @@ export default {
   @apply translate-y-0;
 }
 
-.navSticky {
-  @apply bg-gradient-6;
-}
-
 .mobileNavOpen {
   @apply bg-transparent;
   @apply text-white;
