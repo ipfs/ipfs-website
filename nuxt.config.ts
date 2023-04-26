@@ -3,7 +3,6 @@
 const CDOMAIN = 'ipfs.tech'
 
 export default defineNuxtConfig({
-  ssr: false,
   nitro: {
     prerender: {
       ignore: ['/help', '/legal', '/media', '/privacy'],
