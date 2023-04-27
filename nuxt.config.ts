@@ -3,8 +3,11 @@
 const CDOMAIN = 'ipfs.tech'
 
 export default defineNuxtConfig({
-  generate: {
-    routes: ['ipfs-404.html'],
+  nitro: {
+    prerender: {
+      ignore: ['/help', '/legal', '/media', '/privacy'],
+      routes: ['/ipfs-404.html'],
+    },
   },
   app: {
     head: {

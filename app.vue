@@ -18,7 +18,6 @@ useSeoMeta({
   ogImage: '',
   twitterCard: 'summary_large_image',
 })
-
 </script>
 
 <template>

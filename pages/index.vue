@@ -1,6 +1,6 @@
 <template>
   <div>
-    <seo-tags
+    <seoTags
       title="IPFS Powers the Distributed Web"
       description="The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity's knowledge by making the web upgradeable, resilient, and more open."
     />
@@ -27,7 +27,7 @@
     <PageSection tight>
       <Grid>
         <Card background="light" button-label="Read their story" button-link="#" center>
-          <img src="/images/logo-3s.png" class="mb-8 h-32 w-full object-contain object-center">
+          <img src="/images/logo-3S.png" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="text-xl mb-8">
             Speed up gameplay for your superfans
           </h3>
