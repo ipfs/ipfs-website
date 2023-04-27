@@ -26,7 +26,7 @@
     </PageSection>
     <PageSection tight>
       <Grid>
-        <Card background="light" button-label="Read their story" button-link="#" center>
+        <Card background="light" button-label="Read their story" button-link="https://blog.ipfs.tech/2022-11-15-3s-studio/" center>
           <img src="/images/logo-3S.png" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="text-xl mb-8">
             Speed up gameplay for your superfans
@@ -35,19 +35,19 @@
             3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
           </p>
         </Card>
-        <Card background="light" button-label="Read their story" button-link="#" center>
+        <Card background="light" button-label="Read their story" button-link="https://youtu.be/K2zVNcn6CIU" center>
           <img src="/images/portrait-nancy-baker.png" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="text-xl mb-8">
-            Speed up gameplay for your superfans
+            Guarantee a permanent home for your digital art
           </h3>
           <p class="text-xl mb-8">
             Digital artist Nancy Baker Cahill stores all of her full-resolution art assets using IPFS through NFT.storage
           </p>
         </Card>
-        <Card background="light" button-label="Read their story" button-link="#" center>
+        <Card background="light" button-label="Read their story" button-link="https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that" center>
           <img src="/images/logo-anytype.png" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="text-xl mb-8">
-            Speed up gameplay for your superfans
+            Develop offline-native productivity tools
           </h3>
           <p class="text-xl mb-8">
             Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
@@ -92,7 +92,7 @@
         </Card>
       </Grid>
       <div class="table mx-auto">
-        <Btn href="//ipfs.tech" primary>
+        <Btn href="/developers" primary>
           How it works
         </Btn>
       </div>
@@ -116,8 +116,8 @@
           </ImageSplit>
           <ListLinks>
             <ListLink label="Developers Page" link="#" />
-            <ListLink label="Documentation" link="#" />
-            <ListLink label="Read Case Studies" link="#" />
+            <ListLink label="Documentation" link="https://docs.ipfs.tech/" />
+            <ListLink label="Read Case Studies" link="https://docs.ipfs.tech/case-studies/arbol/" />
           </ListLinks>
         </Card>
         <Card>
@@ -147,7 +147,7 @@
           </ImageSplit>
           <ListLinks>
             <ListLink label="Install IPFS Desktop" link="#" />
-            <ListLink label="Browse IPFS Applications" link="#" />
+            <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
           </ListLinks>
         </Card>
         <Card>
@@ -160,10 +160,10 @@
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Tutorial: Content Addressing" link="#" />
-            <ListLink label="Tutorial: Sturcturing Data" link="#" />
+            <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
+            <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
             <ListLink label="Managing Data" link="#" />
-            <ListLink label="Data Ingestion with Bacalhau" link="#" />
+            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/examples/data-ingestion/" />
           </ListLinks>
         </Card>
       </Grid>
@@ -179,7 +179,7 @@
         <p class="text-xl mb-8">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
         </p>
-        <Btn href="#" primary>
+        <Btn href="/community" primary>
           Join Our Community
         </Btn>
       </div>
