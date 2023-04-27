@@ -4,6 +4,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^0.38.5
     version: 0.38.5(eslint@8.39.0)(typescript@5.0.4)
+  '@iconify-json/carbon':
+    specifier: ^1.1.16
+    version: 1.1.16
   '@nuxt/content':
     specifier: ^2.6.0
     version: 2.6.0
@@ -13,6 +16,9 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.51.8
     version: 0.51.8(postcss@8.4.23)(vite@4.3.1)(webpack@5.80.0)
+  '@unocss/preset-icons':
+    specifier: ^0.51.8
+    version: 0.51.8
   '@vueuse/nuxt':
     specifier: ^10.1.0
     version: 10.1.0(nuxt@3.4.2)(vue@3.2.47)
@@ -707,6 +713,12 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/carbon@1.1.16:
+    resolution: {integrity: sha512-AD8bcnRSGA0WfcGEass2FbA0sagrUzrpFx5WchuDy3uf7yKBWumdypdQK121DH321fQDl5+zZQ26T6gC9knwUQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:
