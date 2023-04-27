@@ -13,26 +13,28 @@
       </template>
     </Hero>
     <PageSection>
-      <Heading center>
+      <Heading center tight>
         How It Works
       </Heading>
       <Subhead center>
         IPFS advances the design of the internet ahead by light years
       </Subhead>
-      <p class="text-xl">
+      <p class="text-2xl">
         Unlike HTTP which loads files from one server at a time, content addressing decouples data from its location. IPFS retrieves files from multiple sources at once in a peer-to-peer fashion so you can:
       </p>
-      <div class="flex flex-col gap-8 px-20 mt-10">
+      <div class="flex flex-col lg:gap-8 gap-20 lg:px-20 mt-10 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
-          <Subhead tight>
+          <Subhead tight bold small>
             "Fingerprinting"
           </Subhead>
           <p class="text-xl">
-            Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can “pin” to keep
+            Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can <AppLink href="https://docs.ipfs.tech/concepts/persistence/">
+              “pin”
+            </AppLink> to keep
           </p>
         </ImageSplit>
         <ImageSplit flip image="constellation-store-distribute.svg">
-          <Subhead tight>
+          <Subhead tight bold small>
             Store &amp; distribute content freely
           </Subhead>
           <p class="text-xl">
@@ -40,7 +42,7 @@
           </p>
         </ImageSplit>
         <ImageSplit flip image="constellation-optimize-delivery.svg">
-          <Subhead tight>
+          <Subhead tight bold small>
             Optimize content delivery
           </Subhead>
           <p class="text-xl">
@@ -58,7 +60,7 @@
       </Subhead>
     </PageSection>
     <PageSection dark-gradient>
-      <div class="text-white">
+      <div class="text-white mb-20">
         <Heading center>
           Orient Your Project Around IPFS
         </Heading>
@@ -73,13 +75,23 @@
               Host and Publish Data and Websites on IPFS
             </Subhead>
           </ImageSplit>
-          <p class="mb-4">
+          <p>
             Content identifiers (CIDs) on IPFS offer one permanent address retrievable from multiple locations, resistant to outages or censorship.
           </p>
-          <p class="mb-4">
-            The Distributed Wikipedia Mirror Project captures Wikipedia snapshots on IPFS that can never be taken down.
+          <p>
+            The <AppLink href="https://github.com/ipfs/distributed-wikipedia-mirror#readme">
+              Distributed Wikipedia Mirror Project
+            </AppLink> captures Wikipedia snapshots on IPFS that can never be taken down.
           </p>
-          <p><b>Get Started:</b> Deploy your site to IPFS through hosting with Fleek, a pinning service or run your own node for more customization.</p>
+          <p>
+            <b>Get Started:</b> Deploy your site to IPFS through <AppLink href="https://docs.ipfs.tech/how-to/websites-on-ipfs/introducing-fleek/#host-a-site">
+              hosting with Fleek
+            </AppLink>, a <AppLink href="https://docs.ipfs.tech/concepts/persistence/#pinning-services">
+              pinning service
+            </AppLink> or <AppLink href="https://docs.ipfs.tech/install/">
+              run your own node
+            </AppLink> for more customization.
+          </p>
         </Card>
         <Card>
           <ImageSplit gap="0" image="constellation-archives-home.svg">
@@ -87,13 +99,21 @@
               Give Your Archives a Permanent Home
             </Subhead>
           </ImageSplit>
-          <p class="mb-4">
-            Content identifiers (CIDs) on IPFS offer one permanent address retrievable from multiple locations, resistant to outages or censorship.
+          <p>
+            Content addressing lets you replicate CIDs while retaining a permanent address so you can store data with long time horizons with freedom from vendor lock-in.
           </p>
-          <p class="mb-4">
-            The Distributed Wikipedia Mirror Project captures Wikipedia snapshots on IPFS that can never be taken down.
+          <p>
+            From scientific data to open public datasets like <AppLink href="https://opendata.cityofnewyork.us/">
+              NYC Open Data
+            </AppLink>, dozens of projects use <AppLink href="https://estuary.tech/">
+              Estuary
+            </AppLink> to capture public data on IPFS.
           </p>
-          <p><b>Get Started:</b> Deploy your site to IPFS through hosting with Fleek, a pinning service or run your own node for more customization.</p>
+          <p>
+            <b>Get started:</b> Learn how hashing and content addressing enable verifiable data sharing through <AppLink href="https://proto.school/content-addressing">
+              this ProtoSchool tutorial
+            </AppLink>.
+          </p>
         </Card>
         <Card>
           <ImageSplit gap="0" image="constellation-off-chain.svg">
@@ -101,13 +121,20 @@
               Store Off-Chain Data in a Decentralized Way
             </Subhead>
           </ImageSplit>
-          <p class="mb-4">
-            Content identifiers (CIDs) on IPFS offer one permanent address retrievable from multiple locations, resistant to outages or censorship.
+          <p>
+            Keep the promise of data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
           </p>
-          <p class="mb-4">
-            The Distributed Wikipedia Mirror Project captures Wikipedia snapshots on IPFS that can never be taken down.
+          <p>
+            Alternative: Explore the possibilities hybrid apps that combine smart contracts and verifiable off-chain storage on IPFS.
           </p>
-          <p><b>Get Started:</b> Deploy your site to IPFS through hosting with Fleek, a pinning service or run your own node for more customization.</p>
+          <p>
+            <AppLink href="https://docs.ipfs.tech/case-studies/snapshot/">
+              Snapshot uses IPFS
+            </AppLink> to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs.
+          </p>
+          <p>
+            <b>Get Started:</b> Read <AppLink>how content addressing and CIDs work</AppLink>.
+          </p>
         </Card>
         <Card>
           <ImageSplit gap="0" image="constellation-human-agency.svg">
@@ -115,13 +142,22 @@
               Build Distributed Apps that bring back human agency
             </Subhead>
           </ImageSplit>
-          <p class="mb-4">
-            Content identifiers (CIDs) on IPFS offer one permanent address retrievable from multiple locations, resistant to outages or censorship.
+          <p>
+            Build apps that put user agency at the front by composing IPFS into novel app architectures.
           </p>
-          <p class="mb-4">
-            The Distributed Wikipedia Mirror Project captures Wikipedia snapshots on IPFS that can never be taken down.
+          <p>
+            Push the web's boundaries by build how information is linked and routed online by composing IPFS subsystems into novel app architectures.
           </p>
-          <p><b>Get Started:</b> Deploy your site to IPFS through hosting with Fleek, a pinning service or run your own node for more customization.</p>
+          <p>
+            <AppLink href="https://blog.ipfs.tech/2021-11-15-Skiff-Integrates-IPFS/">
+              Skiff uses IPFS
+            </AppLink> to build a privacy-first workplace with secure, persistent, and decentralized storage.
+          </p>
+          <p>
+            <b>Get Started:</b> Get connected with the <AppLink href="https://docs.ipfs.tech/how-to/">
+              guides and tutorials
+            </AppLink> to jumpstart your work with IPLD and libp2p.
+          </p>
         </Card>
       </Grid>
     </PageSection>
@@ -138,22 +174,54 @@
             Popular Implementations
           </Subhead>
           <ul class="list-xl">
-            <li>Helia (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)</li>
-            <li>Kubo (Go)The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.</li>
-            <li>Elastic IPFS (Go) A new, cloud-native IPFS implementation</li>
-            <li>Iroh (Rust) A new, efficiency-focused implementation of IPFS</li>
-            <li>IPFS Desktop Use IPFS on your desktop, with no need to touch the terminal.</li>
+            <li>
+              <AppLink href="https://github.com/ipfs/helia">
+                Helia
+              </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
+            </li>
+            <li>
+              <AppLink href="https://github.com/ipfs/kubo">
+                Kubo
+              </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+            </li>
+            <li>
+              <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
+                Elastic IPFS
+              </AppLink> (Go) A new, cloud-native IPFS implementation
+            </li>
+            <li>
+              <AppLink href="https://github.com/n0-computer/iroh">
+                Iroh
+              </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
+            </li>
+            <li>
+              <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
+                IPFS Desktop
+              </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+            </li>
           </ul>
         </div>
       </Card>
-      <div class="mx-10 my-16">
+      <div class="lg:mx-10 my-16">
         <Subhead bold>
           Lite or Experimental
         </Subhead>
         <ul class="list-xl">
-          <li>ipfs-embed (Rust) For hardware devices (low power consumption, more limited utility and functionality)</li>
-          <li>ipfs-lite (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.</li>
-          <li>gomobile-ipfs (Go) Experimental mobile implementation of IPFS</li>
+          <li>
+            <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
+              ipfs-embed
+            </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
+          </li>
+          <li>
+            <AppLink href="https://github.com/hsanjuan/ipfs-lite">
+              ipfs-lite
+            </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
+          </li>
+          <li>
+            <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
+              gomobile-ipfs
+            </AppLink> (Go) Experimental mobile implementation of IPFS
+          </li>
           <li>DuriniOS and Android app with support for aching gateway & uploads to pinning services</li>
         </ul>
       </div>

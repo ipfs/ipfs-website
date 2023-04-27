@@ -19,12 +19,36 @@
                 About
               </Subhead>
               <ul class="lg:text-sm text-xs leading-7">
-                <li><a href="https://protocol.ai/">About Protocol Labs</a></li>
-                <li><a href="https://blog.ipfs.tech/">Blog &amp; News</a></li>
-                <li><a href="https://ipfs.tech/media">Press</a></li>
-                <li><a href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">Code of conduct</a></li>
-                <li><a href="https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues">Security</a></li>
-                <li><a href="#">Browsers</a></li>
+                <li>
+                  <AppLink href="https://protocol.ai/">
+                    About Protocol Labs
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://blog.ipfs.tech/">
+                    Blog &amp; News
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://ipfs.tech/media">
+                    Press
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">
+                    Code of conduct
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues">
+                    Security
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="#">
+                    Browsers
+                  </AppLink>
+                </li>
               </ul>
             </div>
             <div>
@@ -32,11 +56,31 @@
                 Community
               </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">
-                <li><a href="#">Forums</a></li>
-                <li><a href="#">Office Hours</a></li>
-                <li><a href="#">Hackathons</a></li>
-                <li><a href="#">Developer Grants</a></li>
-                <li><a href="#">Accelerators</a></li>
+                <li>
+                  <AppLink href="#">
+                    Forums
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="#">
+                    Office Hours
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="#">
+                    Hackathons
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="#">
+                    Developer Grants
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="#">
+                    Accelerators
+                  </AppLink>
+                </li>
               </ul>
             </div>
             <div>
@@ -44,24 +88,36 @@
                 Resources
               </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">
-                <li><a href="#">Specs</a></li>
-                <li><a href="#">Examples</a></li>
-                <li><a href="#">Research</a></li>
+                <li>
+                  <AppLink href="">
+                    Specs
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="">
+                    Examples
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="">
+                    Research
+                  </AppLink>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div class="flex gap-4 justify-end mt-4">
-        <a href="http://twitter.com/ipfs">
+        <AppLink href="http://twitter.com/ipfs">
           <img src="/images/social-twitter.svg" alt="Twitter logo" class="w-8">
-        </a>
-        <a href="https://github.com/ipfs">
+        </AppLink>
+        <AppLink href="https://github.com/ipfs">
           <img src="/images/social-github.svg" alt="Github logo" class="w-8">
-        </a>
-        <a href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
+        </AppLink>
+        <AppLink href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
           <img src="/images/social-youtube.svg" alt="Youtube logo" class="w-8">
-        </a>
+        </AppLink>
       </div>
     </div>
   </footer>

@@ -64,7 +64,9 @@
               Discuss Open Problems
             </Subhead>
             <p class="text-xl text-black">
-              Check out the <AppLink>IPFS Forums</AppLink> to discuss open problems, share ideas, and get help from the
+              Check out the <AppLink href="https://discuss.ipfs.tech/">
+                IPFS Forums
+              </AppLink> to discuss open problems, share ideas, and get help from the
               community.
             </p>
           </ImageSplit>
@@ -75,7 +77,9 @@
           </Subhead>
           <img src="/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
-            <AppLink>Subscribe</AppLink> to our community calendar to attend an upcoming event.
+            <AppLink href="https://lu.ma/ipfs">
+              Subscribe
+            </AppLink> to our community calendar to attend an upcoming event.
           </p>
         </Card>
         <Card background="light">
