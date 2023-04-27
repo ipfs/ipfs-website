@@ -29,7 +29,9 @@ defineProps<Props>()
     <div class="p-6 pt-4">
       <p v-if="excerpt" class="inline-block text-base">
         {{ excerpt }}...
-        <span class="text-brand-teal-dark underline"><AppLink :href="link">Read more</AppLink></span>
+        <AppLink class="text-brand-teal-dark underline" :href="link">
+          Read more
+        </AppLink>
       </p>
       <slot />
       <div v-if="category || tags" class="flex inline-flex mt-4 gap-1">
