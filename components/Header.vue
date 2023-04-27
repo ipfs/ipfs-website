@@ -65,20 +65,14 @@ function toggleMobileMenu() {
         "
         href="/" title="IPFS.tech"
       >
-        <!--
-          The onclick handler is in the svg because for some reason in this
-          particular link the handler gets called AFTER the routes changes,
-          which does not allow us to track the originating path to countly.
-          We could parse document.referrer but this works also.
-        -->
-        <img class="w-32 h-20 fill-current" src="/images/ipfs-icon.svg">
+        <img class="w-32 h-12 fill-current" src="/images/ipfs-icon.svg">
       </AppLink>
       <nav class="hidden md:flex justify-between w-full max-w-lg">
         <AppLink
           v-for="link in headerLinks"
           :key="link.text"
           :href="link.link"
-          class="nav-link font-display font-medium relative"
+          class="nav-link display relative"
         >
           {{ link.text }}
         </AppLink>
@@ -99,7 +93,7 @@ function toggleMobileMenu() {
   @apply translate-y-0;
 }
 .navSticky {
-  @apply bg-black;
+  @apply bg-transparent;
 }
 
 .mobileNavOpen {
