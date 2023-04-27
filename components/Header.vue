@@ -1,98 +1,28 @@
-<script>
-import throttle from 'lodash/throttle'
-
-import Link from './Link'
-import Icon from './Icon.vue'
+<script setup lang='ts'>
+defineProps({
+  noHero: Boolean,
+})
 
 const headerLinks = [
-  { text: 'About', link: '/#why' },
-  { text: 'Install', link: '/#install' },
+  { text: 'Community', link: '/community' },
+  { text: 'Developers', link: '/developers' },
   { text: 'Docs', link: 'https://docs.ipfs.tech/' },
-  { text: 'Team', link: '/team' },
   { text: 'Blog', link: 'https://blog.ipfs.tech/' },
-  { text: 'Help', link: '/help' },
 ]
 
-export default {
-  name: 'Header',
-  components: { Link, Icon },
-  props: {
-    noHero: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  data: () => ({
-    headerLinks,
-    navVisibility: {
-      navVisible: false,
-      navSticky: false,
-    },
-  }),
-  computed: {
-    mobileNavActive: false,
-    navHeight: 100,
-  },
-  mounted() {
-    this.$store.commit(
-      'appState/setNavHeight',
-      this.$refs.header.getBoundingClientRect().height,
-    )
+// reactive state
+const header = ref('header')
+const navVisibility = reactive({
+  navVisible: true,
+  navSticky: true,
+})
+const mobileNavActive = ref(false)
 
-    this.throttledFunction = throttle(this.handleScroll, 100)
-    window.addEventListener('scroll', this.throttledFunction)
-  },
-  unmounted() {
-    window.removeEventListener('scroll', this.throttledFunction)
-  },
-  methods: {
-    handleScroll() {
-      // responsive force: lower on mobile higher on desktop
-      const SCROLL_FORCE = 20
+function onLinkClick(link: any) {}
 
-      const currentScrollPosition
-        = window.pageYOffset || document.documentElement.scrollTop
-
-      // ignore negative calculations on mobile
-      if (currentScrollPosition < 0)
-        return
-
-      // true if scrolling up
-      this.showNav = currentScrollPosition < this.lastScrollPosition
-
-      const isOffset = currentScrollPosition > this.navHeight / 2
-
-      const isScrollThresholdMet
-        = Math.abs(currentScrollPosition - this.lastScrollPosition)
-        > SCROLL_FORCE
-
-      const currentVisiblity = this.navVisibility.navVisible
-
-      this.navVisibility = {
-        ...this.navVisibility,
-        ...{
-          navVisible: isOffset
-            ? isScrollThresholdMet
-              ? this.showNav
-              : currentVisiblity
-            : false,
-          navSticky: isOffset && !this.mobileNavActive,
-        },
-      }
-
-      this.lastScrollPosition = currentScrollPosition
-    },
-    toggleMobileMenu() {
-      this.$store.commit('appState/toggleMobileNav', !this.mobileNavActive)
-    },
-    onLinkClick(item) {
-      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_NAV, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-      })
-    },
-  },
+function toggleMobileMenu() {
+  // header.value.classList.toggle('navVisible')
+  // header.value.classList.toggle('mobileNavOpen')
 }
 </script>
 
@@ -125,7 +55,7 @@ export default {
       💡 Read more about the state of IPFS in JS in 2022 & 2023
     </Banner> -->
     <div class="grid-margins flex justify-between items-center h-20">
-      <Link
+      <AppLink
         class="
           hover:opacity-75
           transition-opacity
@@ -133,7 +63,7 @@ export default {
           ease-in-out
           mobile-nav-link
         "
-        :item="{ link: '/', text: 'Homepage (logo)' }"
+        href="/" title="IPFS.tech"
       >
         <!--
           The onclick handler is in the svg because for some reason in this
@@ -141,20 +71,17 @@ export default {
           which does not allow us to track the originating path to countly.
           We could parse document.referrer but this works also.
         -->
-        <Icon
-          name="ipfs-logo"
-          class="w-32 h-20 fill-current"
-          @click="() => onLinkClick({ link: '/', text: 'Homepage (logo)' })"
-        />
-      </Link>
+        <img class="w-32 h-20 fill-current" src="/images/ipfs-icon.svg">
+      </AppLink>
       <nav class="hidden md:flex justify-between w-full max-w-lg">
-        <Link
+        <AppLink
           v-for="link in headerLinks"
           :key="link.text"
-          :item="{ link: link.link, text: link.text }"
+          :href="link.link"
           class="nav-link font-display font-medium relative"
-          :on-click="onLinkClick"
-        />
+        >
+          {{ link.text }}
+        </AppLink>
       </nav>
       <button
         aria-label="Toggle Mobile Menu"
@@ -170,6 +97,9 @@ export default {
 <style scoped lang="postcss">
 .navVisible {
   @apply translate-y-0;
+}
+.navSticky {
+  @apply bg-black;
 }
 
 .mobileNavOpen {
