@@ -15,7 +15,7 @@
         <div class="lg:pl-8 pl-0 lg:mt-0 mt-8">
           <div class="flex justify-between gap-4">
             <div>
-              <Subhead bold small>
+              <Subhead bold small tight>
                 About
               </Subhead>
               <ul class="lg:text-sm text-xs leading-7">
@@ -28,7 +28,7 @@
               </ul>
             </div>
             <div>
-              <Subhead bold small>
+              <Subhead bold small tight>
                 Community
               </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">
@@ -40,7 +40,7 @@
               </ul>
             </div>
             <div>
-              <Subhead bold small>
+              <Subhead bold small tight>
                 Resources
               </Subhead>
               <ul class="mt-4 lg:text-sm text-xs leading-7">

@@ -8,3 +8,13 @@ p {
 main a:not(.btn) {
   @apply underline;
 }
+
+.list-xl {
+  @apply text-xl list-disc pl-4 ml-8;
+}
+.list-xl li {
+  @apply mb-8;
+}
+.list-xl li::marker {
+  @apply text-brand-teal;
+}
