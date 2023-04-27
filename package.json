@@ -12,6 +12,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "dependencies": {
+    "@vueuse/core": "^10.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
     "@iconify-json/carbon": "^1.1.16",
