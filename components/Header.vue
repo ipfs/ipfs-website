@@ -29,16 +29,7 @@ function toggleMobileMenu() {
 <template>
   <header
     ref="header"
-    class="
-      top-0
-      w-full
-      text-white
-      transition
-      duration-300
-      ease-out
-      transform
-      z-50
-    "
+    class="top-0 z-50 w-full transform text-white transition duration-300 ease-out"
     :class="[
       {
         '-translate-y-full': navVisibility.navSticky,
@@ -54,20 +45,14 @@ function toggleMobileMenu() {
     <!-- <Banner cta="https://blog.ipfs.tech/state-of-ipfs-in-js/">
       💡 Read more about the state of IPFS in JS in 2022 & 2023
     </Banner> -->
-    <div class="grid-margins flex justify-between items-center h-20">
+    <div class="h-20 flex items-center justify-between grid-margins">
       <AppLink
-        class="
-          hover:opacity-75
-          transition-opacity
-          duration-300
-          ease-in-out
-          mobile-nav-link
-        "
+        class="mobile-nav-link transition-opacity duration-300 ease-in-out hover:opacity-75"
         href="/" title="IPFS.tech"
       >
-        <img class="w-32 h-12 fill-current" src="/images/ipfs-icon.svg">
+        <img class="h-12 w-32 fill-current" src="/images/ipfs-icon.svg">
       </AppLink>
-      <nav class="hidden md:flex justify-between w-full max-w-lg">
+      <nav class="hidden max-w-lg w-full justify-between md:flex">
         <AppLink
           v-for="link in headerLinks"
           :key="link.text"
@@ -79,10 +64,10 @@ function toggleMobileMenu() {
       </nav>
       <button
         aria-label="Toggle Mobile Menu"
-        class="sm:visible md:hidden mobile-nav-link"
+        class="mobile-nav-link sm:visible md:hidden"
         @click="toggleMobileMenu"
       >
-        <div class="hamburger-icon w-8 h-8" />
+        <div class="hamburger-icon h-8 w-8" />
       </button>
     </div>
   </header>
