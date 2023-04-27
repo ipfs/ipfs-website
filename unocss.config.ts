@@ -28,6 +28,12 @@ export default defineConfig({
     fontSize: {
       '4xl': '2.5rem',
     },
+    extend: {
+      spacing: {
+        112: '28rem',
+        384: '96rem',
+      },
+    },
   },
   shortcuts: [
     ['btn', 'py-2 px-8 whitespace-nowrap bg-brand-teal text-white text-base font-semibold rounded-full cursor-pointer inline-block focus:outline-none scale-[0.99] hover:scale-100 active:scale-[0.98] transition duration-150'],
