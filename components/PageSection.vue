@@ -24,7 +24,7 @@ defineProps<Props>()
     <div v-if="overlay" class="absolute inset-0 lg:overflow-visible overflow-x-hidden">
       <img :src="`./images/${overlay}`" :class="`absolute ${overlayPosition}`">
     </div>
-    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7" :class="[tight ? 'lg:py-14 py-6' : 'lg:py-28 py-14', bottomTight ? 'lg:pb-0 pb-0' : 'lg:pb-28 pb-14']">
+    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7" :class="[tight ? 'lg:py-14 py-6' : 'lg:py-20 py-14', bottomTight ? 'lg:pb-0 pb-0' : 'lg:pb-28 pb-14']">
       <slot />
     </div>
   </section>
