@@ -2,7 +2,9 @@
   <div class="flex flex-col min-h-screen font-sans">
     <Header />
     <MobileMenu />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </div>
 </template>

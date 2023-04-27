@@ -1,6 +1,6 @@
 <template>
   <footer class="relative">
-    <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue" />
+    <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue-dark" />
     <div class="absolute lg:overflow-visible overflow-x-hidden bottom-0 right-0">
       <img src="/images/constellations-footer.svg" alt="">
     </div>

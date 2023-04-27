@@ -9,16 +9,20 @@
         Community: Get in Orbit
       </template>
       <template #subtitle>
-        IPFS is made of you – our open source ecosystem of nearly 2,000 active contributors and many more developers and users.
+        IPFS is made of you – our open source ecosystem of nearly 2,000 active contributors and many more developers and
+        users.
       </template>
     </Hero>
     <PageSection>
       <Heading center>
         Connect
       </Heading>
-      <p class="text-xl mb-12">
-        From the annual IPFS Camp and IPFS Thing conferences to working groups and online forums, our community creates out-of-this-world ideas right here on Earth. Join us!
-      </p>
+      <Subhead center>
+        From the annual IPFS Camp and <AppLink href="https://2023.ipfs-thing.io/">
+          IPFS Thing
+        </AppLink> conferences to
+        working groups and online forums, our community creates out-of-this-world ideas right here on Earth. Join us!
+      </Subhead>
       <Grid cols="2">
         <Card background="light">
           <Subhead bold tight>
@@ -29,21 +33,27 @@
           </p>
           <div class="grid grid-cols-3 mx-auto max-w-xs">
             <div>
-              <img src="/images/circle-star.svg" class="mx-auto my-4">
+              <AppLink>
+                <img src="/images/circle-slack.svg" class="mx-auto my-4">
+              </AppLink>
               <p class="text-xl text-black text-center">
-                Slack
+                <AppLink>Slack</AppLink>
               </p>
             </div>
             <div>
-              <img src="/images/circle-star.svg" class="mx-auto my-4">
+              <AppLink>
+                <img src="/images/circle-discord.svg" class="mx-auto my-4">
+              </AppLink>
               <p class="text-xl text-black text-center">
-                Slack
+                <AppLink>Discord</AppLink>
               </p>
             </div>
             <div>
-              <img src="/images/circle-star.svg" class="mx-auto my-4">
+              <AppLink>
+                <img src="/images/circle-matrix.svg" class="mx-auto my-4">
+              </AppLink>
               <p class="text-xl text-black text-center">
-                Slack
+                <AppLink>Matrix</AppLink>
               </p>
             </div>
           </div>
@@ -54,7 +64,8 @@
               Discuss Open Problems
             </Subhead>
             <p class="text-xl text-black">
-              Check out the IPFS Forums to discuss open problems, share ideas, and get help from the community.
+              Check out the <AppLink>IPFS Forums</AppLink> to discuss open problems, share ideas, and get help from the
+              community.
             </p>
           </ImageSplit>
         </Card>
@@ -64,7 +75,7 @@
           </Subhead>
           <img src="/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
-            Subscribe to our community calendar to attend an upcoming event.
+            <AppLink>Subscribe</AppLink> to our community calendar to attend an upcoming event.
           </p>
         </Card>
         <Card background="light">
@@ -72,10 +83,168 @@
             Tune In To What's New
           </Subhead>
           <p class="text-xl text-black">
-            Get the latest on news in the IPFS ecosystem by subscribing to our newsletter  or watching This Month in IPFS livestream.
+            Get the latest on news in the IPFS ecosystem by subscribing to <AppLink>our newsletter</AppLink> or watching
+            This Month in <AppLink>IPFS livestream</AppLink>.
           </p>
         </Card>
       </Grid>
+    </PageSection>
+    <PageSection dark-gradient>
+      <div class="text-white">
+        <Heading center>
+          Meetups And Working Groups
+        </Heading>
+        <Subhead center>
+          Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
+        </Subhead>
+        <Grid>
+          <ZebraCard>
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                Interplanetary Office Hours
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                IPFS Implementers
+              </h3>
+              <p>
+                Biweekly working group for people who create and maintain different IPFS implementations
+              </p>
+            </ImageSplit>
+            <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                libp2p Implementers
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                IPLD Working Group
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                WNFS Working Group
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                IPVM Working Group
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                Move the Bytes Working Group
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                Content Routing Working Group
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+          <ZebraCard button-label="Meeting Calendar" button-link="#">
+            <ImageSplit gap="0" image="constellation-office-hours.svg">
+              <h3>
+                ProbeLab Office Hours - IPFS Network Measurements
+              </h3>
+              <p>
+                Join a working group to help us untangle the thorniest problems facing the distributed web.
+              </p>
+            </ImageSplit>
+            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p><b>Next meeting:</b> date</p>
+          </ZebraCard>
+        </Grid>
+      </div>
+    </PageSection>
+    <PageSection>
+      <Heading center>
+        Community Voices
+      </Heading>
+    </PageSection>
+    <PageSection dark-gradient bottom-tight overlay="constellations-telescope.svg" overlay-position="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div class="text-white">
+        <Heading center>
+          The Next Frontiers
+        </Heading>
+        <Subhead center>
+          We're shooting for the stars, and we can't do it without your help. Here are some
+          of the unknowns we've yet to discover:
+        </Subhead>
+        <div class="telescope relative mb-16 mt-30">
+          <img src="/images/constellation-telescope.svg" class="mx-auto py-10">
+          <div class="absolute inset-0">
+            <p class="text-xl w-64 absolute top-0">
+              How can we introduce privacy and encryption functionality to IPFS?
+            </p>
+            <p class="text-xl w-80 absolute top-0 right-0">
+              How do we enable connectivity between every platform IPFS runs on, from satellites to lower powered IoT devices?
+            </p>
+            <p class="text-xl w-80 absolute top-60">
+              What data structures and recommendations can we create to help other developers?
+            </p>
+            <p class="text-xl w-56 absolute top-60 right-0">
+              How can we invent a more efficient peer-to-peer data transfer protocol?
+            </p>
+          </div>
+        </div>
+        <Card background="dark">
+          <Subhead center tight>
+            Interested in solving these challenges together? Join a community event, a working group, or forum discussion.
+          </Subhead>
+        </Card>
+      </div>
     </PageSection>
   </div>
 </template>
