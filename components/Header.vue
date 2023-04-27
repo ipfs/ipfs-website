@@ -10,12 +10,25 @@ const headerLinks = [
   { text: 'Blog', link: 'https://blog.ipfs.tech/' },
 ]
 
-// reactive state
+// state
+const { x, y } = useWindowScroll()
 const header = ref('header')
+const threshold = 100
 const navVisibility = reactive({
   navVisible: true,
   navSticky: true,
 })
+
+// watch scroll position and update nav visibility state (throttled)
+watch([x, y], useThrottleFn(([x, y], [px, py]) => {
+  if (y > threshold && y > py)
+    navVisibility.navVisible = false
+  else if (y <= threshold)
+    navVisibility.navVisible = true
+  else if (y < py - threshold)
+    navVisibility.navVisible = true
+}, 50))
+
 const mobileNavActive = ref(false)
 
 function onLinkClick(link: any) {}
