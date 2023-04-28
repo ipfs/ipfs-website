@@ -24,20 +24,19 @@ const nav = reactive({
 
 // watch scroll position and update nav visibility state (throttled)
 watch([x, y], useThrottleFn(([x, y], [px, py]) => {
+  // set nav transparency
   if (y > nav.threshold)
     nav.isTransparent = false
   else if (y <= nav.offset)
     nav.isTransparent = true
-
+  // set nav sticky
   if (y > nav.offset && y > py + nav.threshold)
     nav.isVisible = false
   else if (y <= nav.offset)
     nav.isVisible = true
   else if (y < py - nav.threshold)
     nav.isVisible = true
-}, 100))
-
-function onLinkClick(link: any) {}
+}, 30))
 
 function toggleMobileMenu() {
   nav.mobileActive = !nav.mobileActive
@@ -73,7 +72,7 @@ function toggleMobileMenu() {
           v-for="link in headerLinks"
           :key="link.text"
           :href="link.link"
-          class="nav-link display relative"
+          class="nav-link relative text-sm font-semibold tracking-wide"
         >
           {{ link.text }}
         </AppLink>
@@ -98,31 +97,9 @@ function toggleMobileMenu() {
   @apply text-white;
 }
 
-.nav-link::after {
-  content: '';
-  height: 1px;
-  bottom: -7px;
-  background-color: currentColor;
-  @apply absolute;
-  @apply w-full;
-  @apply left-0;
-  @apply opacity-0;
-  @apply transition-opacity;
-  @apply duration-200;
-}
-
-.nav-link:hover::after {
-  @apply opacity-100;
-}
-
-.nav-link.nuxt-link-active::after {
-  @apply opacity-100;
-}
-
 .hamburger-icon {
   @apply relative;
 }
-
 .hamburger-icon::before,
 .hamburger-icon::after {
   content: '';
