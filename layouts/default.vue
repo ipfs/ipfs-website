@@ -52,6 +52,7 @@ export default {
 
 <template>
   <div class="flex flex-col min-h-screen font-sans">
+    <Header />
     <main>
       <slot />
     </main>
