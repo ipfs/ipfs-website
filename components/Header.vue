@@ -50,11 +50,9 @@ function toggleMobileMenu() {
     class="top-0 z-50 w-full transform text-white transition duration-300 ease-out"
     :class="[
       nav.isTransparent ? 'bg-transparent' : 'bg-brand-blueDark/90 backdrop-blur-md',
+      noHero ? 'static !bg-brand-blueDark' : 'fixed ',
       {
         '-translate-y-full': nav.isSticky,
-        'fixed': !noHero,
-        'static': noHero,
-        'bg-transparent': nav.isTransparent,
         'isVisible': nav.isVisible,
         'mobileNavOpen': nav.mobileActive,
       },
