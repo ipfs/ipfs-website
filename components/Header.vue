@@ -52,8 +52,8 @@ function toggleMobileMenu() {
       noHero ? 'static !bg-brand-blueDark' : 'fixed ',
       {
         '-translate-y-full': nav.isSticky,
-        'isVisible': nav.isVisible,
-        'mobileNavOpen': nav.mobileActive,
+        'is-visible': nav.isVisible,
+        'mobile-nav-open': nav.mobileActive,
       },
     ]"
   >
@@ -89,11 +89,11 @@ function toggleMobileMenu() {
 </template>
 
 <style scoped lang="postcss">
-.isVisible {
+.is-visible {
   @apply translate-y-0;
 }
 
-.mobileNavOpen {
+.mobile-nav-open {
   @apply text-white;
 }
 
@@ -122,16 +122,16 @@ function toggleMobileMenu() {
   top: 20px;
 }
 
-.mobileNavOpen .hamburger-icon::before,
-.mobileNavOpen .hamburger-icon::after {
+.mobile-nav-open .hamburger-icon::before,
+.mobile-nav-open .hamburger-icon::after {
   top: 15px;
 }
 
-.mobileNavOpen .hamburger-icon::before {
+.mobile-nav-open .hamburger-icon::before {
   @apply rotate-45;
 }
 
-.mobileNavOpen .hamburger-icon::after {
+.mobile-nav-open .hamburger-icon::after {
   @apply -rotate-45;
 }
 </style>
