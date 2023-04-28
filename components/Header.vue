@@ -13,29 +13,34 @@ const headerLinks = [
 // state
 const { x, y } = useWindowScroll()
 const header = ref('header')
-const threshold = 100
-const navVisibility = reactive({
-  navVisible: true,
-  navSticky: true,
+const nav = reactive({
+  isVisible: true,
+  isSticky: true,
+  isTransparent: true,
+  threshold: 10,
+  offset: 300,
+  mobileActive: false,
 })
 
 // watch scroll position and update nav visibility state (throttled)
 watch([x, y], useThrottleFn(([x, y], [px, py]) => {
-  if (y > threshold && y > py)
-    navVisibility.navVisible = false
-  else if (y <= threshold)
-    navVisibility.navVisible = true
-  else if (y < py - threshold)
-    navVisibility.navVisible = true
-}, 50))
+  if (y > nav.threshold)
+    nav.isTransparent = false
+  else if (y <= nav.offset)
+    nav.isTransparent = true
 
-const mobileNavActive = ref(false)
+  if (y > nav.offset && y > py + nav.threshold)
+    nav.isVisible = false
+  else if (y <= nav.offset)
+    nav.isVisible = true
+  else if (y < py - nav.threshold)
+    nav.isVisible = true
+}, 100))
 
 function onLinkClick(link: any) {}
 
 function toggleMobileMenu() {
-  // header.value.classList.toggle('navVisible')
-  // header.value.classList.toggle('mobileNavOpen')
+  nav.mobileActive = !nav.mobileActive
 }
 </script>
 
@@ -44,14 +49,14 @@ function toggleMobileMenu() {
     ref="header"
     class="top-0 z-50 w-full transform text-white transition duration-300 ease-out"
     :class="[
+      nav.isTransparent ? 'bg-transparent' : 'bg-brand-blueDark/90 backdrop-blur-md',
       {
-        '-translate-y-full': navVisibility.navSticky,
+        '-translate-y-full': nav.isSticky,
         'fixed': !noHero,
         'static': noHero,
-        'bg-gradient-6': noHero,
-        'navVisible': navVisibility.navVisible,
-        'navSticky': navVisibility.navSticky && !mobileNavActive,
-        'mobileNavOpen': mobileNavActive,
+        'bg-transparent': nav.isTransparent,
+        'isVisible': nav.isVisible,
+        'mobileNavOpen': nav.mobileActive,
       },
     ]"
   >
@@ -87,15 +92,11 @@ function toggleMobileMenu() {
 </template>
 
 <style scoped lang="postcss">
-.navVisible {
+.isVisible {
   @apply translate-y-0;
-}
-.navSticky {
-  @apply bg-transparent;
 }
 
 .mobileNavOpen {
-  @apply bg-transparent;
   @apply text-white;
 }
 
