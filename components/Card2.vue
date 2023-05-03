@@ -14,15 +14,15 @@ defineProps<Props>()
 
 <template>
   <div class="rounded-lg bg-brand-light">
-    <img v-if="image" class="w-full h-40 object-cover" :src="`./images/${image}`">
+    <UnLazyImage v-if="image" class="h-40 w-full object-cover" :src="`./images/${image}`" />
     <div class="p-6 pb-0">
-      <p v-if="date" class="text-xs text-gray-400 mb-1">
+      <p v-if="date" class="mb-1 text-xs text-gray-400">
         {{ date }}
       </p>
-      <h3 v-if="heading" class="text-xl text-black mb-1">
+      <h3 v-if="heading" class="mb-1 text-xl text-black">
         {{ heading }}
       </h3>
-      <p v-if="subhead" class="text-xs text-gray-400 mb-1">
+      <p v-if="subhead" class="mb-1 text-xs text-gray-400">
         {{ subhead }}
       </p>
     </div>
@@ -34,8 +34,8 @@ defineProps<Props>()
         </AppLink>
       </p>
       <slot />
-      <div v-if="category || tags" class="flex inline-flex mt-4 gap-1">
-        <div v-if="category" class="rounded-sm py-1 px-3 text-xs text-brand-teal-dark bg-brand-teal-light">
+      <div v-if="category || tags" class="mt-4 flex inline-flex gap-1">
+        <div v-if="category" class="rounded-sm bg-brand-teal-light px-3 py-1 text-xs text-brand-teal-dark">
           {{ category }}
         </div>
         <div v-if="tags" class="py-1 text-xs">

@@ -18,10 +18,10 @@ const imageStyle = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col-reverse lg:text-left text-center items-center" :class="[flip ? 'lg:flex-row-reverse' : 'lg:flex-row', tight ? 'gap-4' : 'gap-12']">
+  <div class="flex flex-col-reverse items-center text-center lg:text-left" :class="[flip ? 'lg:flex-row-reverse' : 'lg:flex-row', tight ? 'gap-4' : 'gap-12']">
     <div class="">
       <slot />
     </div>
-    <img class="lg:ml-0 mx-auto" :style="imageStyle" :src="`./images/${image}`">
+    <UnLazyImage class="mx-auto lg:ml-0" :style="imageStyle" :src="`./images/${image}`" />
   </div>
 </template>
