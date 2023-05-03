@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
+    '@unlazy/nuxt',
     '@nuxtjs/plausible',
   ],
   experimental: {
