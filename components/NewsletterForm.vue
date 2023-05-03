@@ -15,7 +15,7 @@ function onSubmit() {
       Stay informed
     </Subhead>
     <p class="mb-8 text-sm">
-      Sign up for the IPFS Weekly newsletter
+      Sign up for the IPFS newsletter
       (<AppLink class="text-brand-teal underline" href="https://blog.ipfs.tech/?tags=weekly">
         example
       </AppLink>) for the latest on releases, upcoming developments, community events, and more.

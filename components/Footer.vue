@@ -20,23 +20,18 @@
               </Subhead>
               <ul class="text-xs leading-7 lg:text-sm">
                 <li>
-                  <AppLink href="https://protocol.ai/">
-                    About Protocol Labs
-                  </AppLink>
-                </li>
-                <li>
                   <AppLink href="https://blog.ipfs.tech/">
                     Blog &amp; News
                   </AppLink>
                 </li>
                 <li>
                   <AppLink href="https://ipfs.tech/media">
-                    Press
+                    Press Kit
                   </AppLink>
                 </li>
                 <li>
                   <AppLink href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">
-                    Code of conduct
+                    Code of Conduct
                   </AppLink>
                 </li>
                 <li>
@@ -89,17 +84,17 @@
               </Subhead>
               <ul class="mt-4 text-xs leading-7 lg:text-sm">
                 <li>
-                  <AppLink href="">
+                  <AppLink href="https://specs.ipfs.tech/">
                     Specs
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="">
-                    Examples
+                  <AppLink href="https://docs.ipfs.tech/case-studies/arbol/">
+                    Case Studies
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="">
+                  <AppLink href="https://docs.ipfs.tech/concepts/further-reading/academic-papers/">
                     Research
                   </AppLink>
                 </li>
