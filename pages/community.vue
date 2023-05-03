@@ -28,7 +28,7 @@
           <Subhead bold tight>
             Contribute
           </Subhead>
-          <p class="text-xl text-black text-center">
+          <p class="text-center text-xl text-black">
             Join the conversation
           </p>
           <div class="grid grid-cols-3 mx-auto max-w-xs">
@@ -36,7 +36,7 @@
               <AppLink>
                 <img src="/images/circle-slack.svg" class="mx-auto my-4">
               </AppLink>
-              <p class="text-xl text-black text-center">
+              <p class="text-center text-xl text-black">
                 <AppLink>Slack</AppLink>
               </p>
             </div>
@@ -44,7 +44,7 @@
               <AppLink>
                 <img src="/images/circle-discord.svg" class="mx-auto my-4">
               </AppLink>
-              <p class="text-xl text-black text-center">
+              <p class="text-center text-xl text-black">
                 <AppLink>Discord</AppLink>
               </p>
             </div>
@@ -52,7 +52,7 @@
               <AppLink>
                 <img src="/images/circle-matrix.svg" class="mx-auto my-4">
               </AppLink>
-              <p class="text-xl text-black text-center">
+              <p class="text-center text-xl text-black">
                 <AppLink>Matrix</AppLink>
               </p>
             </div>
@@ -229,16 +229,16 @@
         <div class="telescope relative mb-16 mt-30">
           <img src="/images/constellation-telescope.svg" class="mx-auto py-10">
           <div class="absolute inset-0">
-            <p class="text-xl w-64 absolute top-0">
+            <p class="absolute top-0 w-64 text-xl">
               How can we introduce privacy and encryption functionality to IPFS?
             </p>
-            <p class="text-xl w-80 absolute top-0 right-0">
+            <p class="absolute right-0 top-0 w-80 text-xl">
               How do we enable connectivity between every platform IPFS runs on, from satellites to lower powered IoT devices?
             </p>
-            <p class="text-xl w-80 absolute top-60">
+            <p class="absolute top-60 w-80 text-xl">
               What data structures and recommendations can we create to help other developers?
             </p>
-            <p class="text-xl w-56 absolute top-60 right-0">
+            <p class="absolute right-0 top-60 w-56 text-xl">
               How can we invent a more efficient peer-to-peer data transfer protocol?
             </p>
           </div>

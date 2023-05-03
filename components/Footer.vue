@@ -1,24 +1,24 @@
 <template>
   <footer class="relative">
-    <div class="absolute -z-1 w-full h-full bg-gradient-to-r from-brand-dark to-brand-blue-dark" />
-    <div class="absolute lg:overflow-visible overflow-x-hidden bottom-0 right-0">
+    <div class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
+    <div class="absolute bottom-0 right-0 overflow-x-hidden lg:overflow-visible">
       <img src="/images/constellations-footer.svg" alt="">
     </div>
-    <div class="relative max-w-screen-xl mx-auto lg:p-x-32 px-7 lg:py-32 py-16">
-      <div class="grid lg:grid-cols-2 grid-cols-1 text-white">
-        <div class="flex lg:flex-row flex-col">
-          <img src="/images/ipfs-logo.svg" alt="IPFS logo" class="w-28 mr-8 lg:mb-0 mb-8">
+    <div class="relative mx-auto max-w-screen-xl px-7 py-16 lg:p-x-32 lg:py-32">
+      <div class="grid grid-cols-1 text-white lg:grid-cols-2">
+        <div class="flex flex-col lg:flex-row">
+          <img src="/images/ipfs-logo.svg" alt="IPFS logo" class="mb-8 mr-8 w-28 lg:mb-0">
           <div class="text-white">
             <NewsletterForm />
           </div>
         </div>
-        <div class="lg:pl-8 pl-0 lg:mt-0 mt-8">
+        <div class="mt-8 pl-0 lg:mt-0 lg:pl-8">
           <div class="flex justify-between gap-4">
             <div>
               <Subhead bold small tight>
                 About
               </Subhead>
-              <ul class="lg:text-sm text-xs leading-7">
+              <ul class="text-xs leading-7 lg:text-sm">
                 <li>
                   <AppLink href="https://protocol.ai/">
                     About Protocol Labs
@@ -55,7 +55,7 @@
               <Subhead bold small tight>
                 Community
               </Subhead>
-              <ul class="mt-4 lg:text-sm text-xs leading-7">
+              <ul class="mt-4 text-xs leading-7 lg:text-sm">
                 <li>
                   <AppLink href="#">
                     Forums
@@ -87,7 +87,7 @@
               <Subhead bold small tight>
                 Resources
               </Subhead>
-              <ul class="mt-4 lg:text-sm text-xs leading-7">
+              <ul class="mt-4 text-xs leading-7 lg:text-sm">
                 <li>
                   <AppLink href="">
                     Specs
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="flex gap-4 justify-end mt-4">
+      <div class="mt-4 flex justify-end gap-4">
         <AppLink href="http://twitter.com/ipfs">
           <img src="/images/social-twitter.svg" alt="Twitter logo" class="w-8">
         </AppLink>

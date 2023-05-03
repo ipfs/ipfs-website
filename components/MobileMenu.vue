@@ -84,20 +84,10 @@ export default {
   <transition name="transition-content" @after-enter="afterEnter">
     <div
       v-if="mobileNavActive"
-      class="
-        mobile-nav
-        bg-gradient-6
-        grid grid-cols-12
-        fixed
-        h-full
-        top-0
-        inset-x-0
-        text-white
-        z-40
-      "
+      class="mobile-nav bg-gradient-6 fixed inset-x-0 top-0 z-40 grid grid-cols-12 h-full text-white"
     >
       <div class="col-span-10 col-start-2 flex flex-col py-8">
-        <div class="flex-grow justify-center flex flex-col">
+        <div class="flex flex-grow flex-col justify-center">
           <nav>
             <h1 v-for="page in mobileNavLinks" :key="page.text" class="mb-3">
               <Link

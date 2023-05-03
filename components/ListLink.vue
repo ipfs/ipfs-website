@@ -7,7 +7,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <li class="inline-block text-sm font-bold text-brand-teal-dark border-brand-teal-dark border-r-2 last:border-r-0 pr-3 mr-3 last:pr-0 last:mr-0">
+  <li class="mr-3 inline-block border-r-2 border-brand-teal-dark pr-3 text-sm font-bold text-brand-teal-dark last:mr-0 last:border-r-0 last:pr-0">
     <AppLink :href="link">
       {{ label }}
     </AppLink>

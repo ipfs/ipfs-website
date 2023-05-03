@@ -8,7 +8,7 @@ defineProps<Props>()
 
 <template>
   <div class="text-center">
-    <h3 class="text-6xl text-brand-teal-dark inline-block pb-4 mb-4 border-b-1 border-brand-teal-transparent">
+    <h3 class="mb-4 inline-block border-b-1 border-brand-teal-transparent pb-4 text-6xl text-brand-teal-dark">
       {{ number }}
     </h3>
     <p class="text-xl">

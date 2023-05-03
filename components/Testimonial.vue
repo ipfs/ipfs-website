@@ -11,7 +11,7 @@ defineProps<Props>()
     <Heading>
       Testimonials
     </Heading>
-    <p class="text-xl mb-6">
+    <p class="mb-6 text-xl">
       <slot />
     </p>
     <p class="text-xl font-bold">
