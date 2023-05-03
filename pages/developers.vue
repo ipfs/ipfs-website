@@ -84,7 +84,8 @@
             </AppLink> captures Wikipedia snapshots on IPFS that can never be taken down.
           </p>
           <p>
-            <b>Get Started:</b> Deploy your site to IPFS through <AppLink href="https://docs.ipfs.tech/how-to/websites-on-ipfs/introducing-fleek/#host-a-site">
+            <b>Get Started:</b> Deploy your site to IPFS through
+            <AppLink href="https://docs.ipfs.tech/how-to/websites-on-ipfs/introducing-fleek/#host-a-site">
               hosting with Fleek
             </AppLink>, a <AppLink href="https://docs.ipfs.tech/concepts/persistence/#pinning-services">
               pinning service
