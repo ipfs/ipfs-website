@@ -8,7 +8,6 @@
       <div class="grid grid-cols-1 text-white lg:grid-cols-2">
         <div class="flex flex-col lg:flex-row">
           <UnLazyImage src="/images/ipfs-logo.svg" alt="IPFS logo" class="mb-8 mr-8 w-28 lg:mb-0" />
-          />
           <div class="text-white">
             <NewsletterForm />
           </div>
