@@ -22,7 +22,7 @@
       <p class="text-2xl">
         Unlike HTTP which loads files from one server at a time, content addressing decouples data from its location. IPFS retrieves files from multiple sources at once in a peer-to-peer fashion so you can:
       </p>
-      <div class="flex flex-col lg:gap-8 gap-20 lg:px-20 mt-10 lg:text-center">
+      <div class="mt-10 flex flex-col gap-20 lg:gap-8 lg:px-20 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
           <Subhead tight bold small>
             "Fingerprinting"
@@ -60,7 +60,7 @@
       </Subhead>
     </PageSection>
     <PageSection dark-gradient>
-      <div class="text-white mb-20">
+      <div class="mb-20 text-white">
         <Heading center>
           Orient Your Project Around IPFS
         </Heading>
@@ -202,7 +202,7 @@
           </ul>
         </div>
       </Card>
-      <div class="lg:mx-10 my-16">
+      <div class="my-16 lg:mx-10">
         <Subhead bold>
           Lite or Experimental
         </Subhead>
@@ -242,7 +242,7 @@
           </Subhead>
         </Card>
       </div>
-      <div class="text-white my-16">
+      <div class="my-16 text-white">
         <ImageSplit flip image="constellation-ipfs-gateway.svg">
           <Subhead bold tight>
             Fetch IPFS data through a gateway
@@ -250,7 +250,7 @@
           <Subhead tight>
             The most common way to locate and retrieve files stored through IPFS is by using an IPFS Gateway
           </Subhead>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
           </p>
           <Btn primary href="#">
@@ -258,12 +258,12 @@
           </Btn>
         </ImageSplit>
       </div>
-      <div class="text-white my-16">
+      <div class="my-16 text-white">
         <ImageSplit flip image="constellation-pinning-service.svg">
           <Subhead bold tight>
             Publish through a pinning service
           </Subhead>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             To keep your data available via IPFS, you can choose a pinning service (which will run a node for you) or run your own node(s) with one of our implementations above.
           </p>
           <Btn primary href="#">
@@ -282,28 +282,28 @@
       <Grid>
         <Card background="light" button-label="Check it out" button-link="#" center>
           <img src="/images/logo-opera.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Opera
           </h3>
-          <p class="text-2xl mb-8">
+          <p class="mb-8 text-2xl">
             Supports IPFS and IPNS schemes
           </p>
         </Card>
         <Card background="light" button-label="Check it out" button-link="#" center>
           <img src="/images/logo-chrome.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Chromium Extensions
           </h3>
-          <p class="text-2xl mb-8">
+          <p class="mb-8 text-2xl">
             IPFS browser extension
           </p>
         </Card>
         <Card background="light" button-label="Check it out" button-link="#" center>
           <img src="/images/logo-firefox.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Firefox Extension
           </h3>
-          <p class="text-2xl mb-8">
+          <p class="mb-8 text-2xl">
             IPFS browser extension
           </p>
         </Card>

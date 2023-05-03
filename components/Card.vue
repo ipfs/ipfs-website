@@ -20,7 +20,7 @@ const bgColor = computed(() => {
 </script>
 
 <template>
-  <div class="p-10 rounded-xl flex flex-col justify-between" :class="bgColor">
+  <div class="flex flex-col justify-between rounded-xl p-10" :class="bgColor">
     <div
       :class="{ 'text-center': center }"
     >
