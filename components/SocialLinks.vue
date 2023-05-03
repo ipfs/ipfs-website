@@ -64,15 +64,7 @@ export default {
     >
       <Icon
         :name="link.icon"
-        class="
-          w-8
-          h-8
-          fill-current
-          hover:opacity-75
-          transition
-          duration-300
-          ease-in-out
-        "
+        class="h-8 w-8 fill-current transition duration-300 ease-in-out hover:opacity-75"
         :title="link.text"
       />
     </a>

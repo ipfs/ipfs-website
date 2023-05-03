@@ -52,28 +52,17 @@ export default {
 
 <template>
   <transition name="fade">
-    <div v-if="show" class="fixed top-0 right-0 bottom-0 left-0 z-50">
+    <div v-if="show" class="fixed bottom-0 left-0 right-0 top-0 z-50">
       <div
-        class="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-25"
+        class="fixed bottom-0 left-0 right-0 top-0 bg-black bg-opacity-25"
         @click="closeModal()"
       />
       <div
         role="dialog"
         aria-modal="true"
-        class="
-          modal-content
-          absolute
-          bg-white
-          rounded
-          w-11/12
-          md:w-4/5
-          max-w-screen-lg max-h-screen
-          overflow-y-auto
-          p-4
-          lg:p-8
-        "
+        class="modal-content absolute max-h-screen w-11/12 max-w-screen-lg overflow-y-auto rounded bg-white p-4 md:w-4/5 lg:p-8"
       >
-        <h1 class="type-h5 font-semibold text-xl text-primary mr-4">
+        <h1 class="type-h5 text-primary mr-4 text-xl font-semibold">
           <Link
             :item="{ link: video.url, text: video.title }"
             class="clamp-3 hover:underline"
@@ -90,17 +79,7 @@ export default {
         </div>
         <button
           type="button"
-          class="
-            absolute
-            top-0
-            right-0
-            mt-4
-            mr-4
-            text-blueGreen
-            hover:underline
-            font-bold
-            text-xl
-          "
+          class="text-blueGreen absolute right-0 top-0 mr-4 mt-4 text-xl font-bold hover:underline"
           @click="closeModal()"
         >
           X

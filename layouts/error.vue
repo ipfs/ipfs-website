@@ -29,7 +29,7 @@ export default {
 
 <template>
   <main>
-    <div class="grid-margins pt-12 pb-16 px-2 sm:px-0">
+    <div class="px-2 pb-16 pt-12 grid-margins sm:px-0">
       <h1 v-if="error.statusCode === 404" class="mb-8">
         Page not found
       </h1>

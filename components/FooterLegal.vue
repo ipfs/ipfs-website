@@ -44,7 +44,7 @@ export default {
       <Icon
         name="protocol-labs-icon"
         title="Protocol Labs"
-        class="w-4 h-4 fill-current"
+        class="h-4 w-4 fill-current"
       />
     </a>
     <span>

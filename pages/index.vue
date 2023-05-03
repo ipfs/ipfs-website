@@ -28,28 +28,28 @@
       <Grid>
         <Card background="light" button-label="Read their story" button-link="https://blog.ipfs.tech/2022-11-15-3s-studio/" center>
           <img src="/images/logo-3S.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Speed up gameplay for your superfans
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
           </p>
         </Card>
         <Card background="light" button-label="Read their story" button-link="https://youtu.be/K2zVNcn6CIU" center>
           <img src="/images/portrait-nancy-baker.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Guarantee a permanent home for your digital art
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             Digital artist Nancy Baker Cahill stores all of her full-resolution art assets using IPFS through NFT.storage
           </p>
         </Card>
         <Card background="light" button-label="Read their story" button-link="https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that" center>
           <img src="/images/logo-anytype.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="text-xl mb-8">
+          <h3 class="mb-8 text-xl">
             Develop offline-native productivity tools
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
           </p>
         </Card>
@@ -59,39 +59,39 @@
       <Heading center>
         Why IPFS?
       </Heading>
-      <p class="text-xl mb-12">
+      <p class="mb-12 text-xl">
         Our peer-to-peer content delivery network is built around content addressing: Store, retrieve, and locate data based on the guts of its content vs. its name or location.
       </p>
       <Grid>
         <Card center>
-          <img src="/images/constellation-open.svg" class="mb-8 mx-auto">
-          <h3 class="text-2xl text-brand-teal-dark mb-4">
+          <img src="/images/constellation-open.svg" class="mx-auto mb-8">
+          <h3 class="mb-4 text-2xl text-brand-teal-dark">
             Open
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             The IPFS network is distributed and participatory, which reduces data silos from central servers.
           </p>
         </Card>
         <Card center>
-          <img src="/images/constellation-verifiable.svg" class="mb-8 mx-auto">
-          <h3 class="text-2xl text-brand-teal-dark mb-4">
+          <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
+          <h3 class="mb-4 text-2xl text-brand-teal-dark">
             Verifiable
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             The integrity of all data is verified using hash functions, so you can trust that you always get the data you’re looking for.
           </p>
         </Card>
         <Card center>
-          <img src="/images/constellation-resilient.svg" class="mb-8 mx-auto">
-          <h3 class="text-2xl text-brand-teal-dark mb-4">
+          <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
+          <h3 class="mb-4 text-2xl text-brand-teal-dark">
             Resilient
           </h3>
-          <p class="text-xl mb-8">
+          <p class="mb-8 text-xl">
             Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages
           </p>
         </Card>
       </Grid>
-      <div class="table mx-auto">
+      <div class="mx-auto table">
         <Btn href="/developers" primary>
           How it works
         </Btn>
@@ -107,7 +107,7 @@
       <Grid cols="2">
         <Card>
           <ImageSplit image="constellation-peer.svg" tight>
-            <h3 class="text-xl text-black mb-4">
+            <h3 class="mb-4 text-xl text-black">
               Build peer-to-peer apps with IPFS
             </h3>
             <p class="text-lg text-black">
@@ -122,7 +122,7 @@
         </Card>
         <Card>
           <ImageSplit image="constellation-tooling.svg" tight>
-            <h3 class="text-xl text-black mb-4">
+            <h3 class="mb-4 text-xl text-black">
               Build tooling for IPFS
             </h3>
             <p class="text-lg text-black">
@@ -138,7 +138,7 @@
         </Card>
         <Card>
           <ImageSplit image="constellation-apps.svg" tight>
-            <h3 class="text-xl text-black mb-4">
+            <h3 class="mb-4 text-xl text-black">
               Use IPFS apps
             </h3>
             <p class="text-lg text-black">
@@ -152,7 +152,7 @@
         </Card>
         <Card>
           <ImageSplit image="constellation-store.svg" tight>
-            <h3 class="text-xl text-black mb-4">
+            <h3 class="mb-4 text-xl text-black">
               Store and manage your data on IPFS
             </h3>
             <p class="text-lg text-black">
@@ -173,10 +173,10 @@
         Connect Through Community
       </Heading>
       <div class="text-center">
-        <p class="text-xl mb-8">
+        <p class="mb-8 text-xl">
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
         </p>
-        <p class="text-xl mb-8">
+        <p class="mb-8 text-xl">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
         </p>
         <Btn href="/community" primary>
