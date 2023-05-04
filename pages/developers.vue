@@ -58,6 +58,31 @@
       <Subhead center>
         IPFS is a modular suite of protocols and standards for organizing and moving data, designed from the ground up with the principles of content addressing and peer-to-peer networking.
       </Subhead>
+      <ResponsiveTable
+        :col-labels="['System', 'Responsible for']"
+        :rows="[
+          {
+            heading: 'Transferring the data',
+            cols: [
+              ['IPFS*', 'Data routing and transfer'],
+              ['Libp2p**', 'Peer-to-peer network connectivity'],
+              ['IPFS gateways', 'Interoperability with http'],
+            ],
+          },
+          {
+            heading: 'Defining the data',
+            cols: [
+              ['IPNS, DNSLink', 'Dynamic naming'],
+              ['IPLD**', 'Define and organize data'],
+              ['Multiformats**', 'Universal addressing for data and peers'],
+            ],
+          },
+        ]"
+      />
+      <ul class="mt-10 text-brand-teal-dark">
+        <li>* Including its various subsystems and specs</li>
+        <li>** Essential components for IPFS (can also be used independently of IPFS)</li>
+      </ul>
     </PageSection>
     <PageSection dark-gradient>
       <div class="mb-20 text-white">
