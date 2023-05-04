@@ -14,7 +14,7 @@ defineProps<Props>()
 
 <template>
   <div class="rounded-lg bg-brand-light">
-    <img v-if="image" class="h-40 w-full object-cover" :src="`./images/${image}`">
+    <img v-if="image" class="h-40 w-full object-cover" :src="`/images/${image}`">
     <div class="p-6 pb-0">
       <p v-if="date" class="mb-1 text-xs text-gray-400">
         {{ date }}
