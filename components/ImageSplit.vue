@@ -22,6 +22,6 @@ const imageStyle = computed(() => {
     <div class="">
       <slot />
     </div>
-    <img class="mx-auto lg:ml-0" :style="imageStyle" :src="`./images/${image}`">
+    <img class="mx-auto lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
   </div>
 </template>
