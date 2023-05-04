@@ -39,6 +39,7 @@ export default defineConfig({
     ['btn', 'py-2 px-8 whitespace-nowrap bg-brand-teal text-white text-base font-semibold rounded-full cursor-pointer inline-block focus:outline-none scale-[0.99] hover:scale-100 active:scale-[0.98] transition duration-150'],
     ['btn-primary', 'bg-brand-orange text-black'],
     ['btn-outline', 'bg-transparent text-brand-teal border border-brand-teal'],
+    ['grid-margins', 'max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'],
   ],
   presets: [
     presetUno(),

@@ -7,12 +7,12 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="zebra-card p-6 rounded-xl flex flex-col justify-between odd:bg-brand-blue even:border-1">
+  <div class="zebra-card flex flex-col justify-between rounded-xl p-6 even:border-1 odd:bg-brand-blue">
     <div>
       <slot />
     </div>
     <div class="flex-none pt-4">
-      <Btn v-if="buttonLabel" :href="buttonLink" outline full>
+      <Btn v-if="buttonLabel" :href="buttonLink" full outline>
         {{ buttonLabel }}
       </Btn>
     </div>

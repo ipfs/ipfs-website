@@ -14,8 +14,8 @@ function onSubmit() {
     <Subhead bold small tight>
       Stay informed
     </Subhead>
-    <p class="text-sm mb-8 ">
-      Sign up for the IPFS Weekly newsletter
+    <p class="mb-8 text-sm">
+      Sign up for the IPFS newsletter
       (<AppLink class="text-brand-teal underline" href="https://blog.ipfs.tech/?tags=weekly">
         example
       </AppLink>) for the latest on releases, upcoming developments, community events, and more.
@@ -35,7 +35,7 @@ function onSubmit() {
             required
             type="email"
             aria-label="Email Address"
-            class="text-black rounded-full w-full h-8 pr-36 pl-3 py-2"
+            class="h-8 w-full rounded-full py-2 pl-3 pr-36 text-black"
             placeholder="email@your.domain"
             name="EMAIL"
           >
@@ -45,11 +45,11 @@ function onSubmit() {
               type="submit"
               value="Subscribe"
               name="subscribe"
-              class="btn btn-primary absolute -right-px top-0 h-8 py-0 opacity-90"
+              class="absolute top-0 h-8 btn-primary py-0 opacity-90 -right-px btn"
             >
           </div>
         </div>
-        <label class="pt-2 col-start-1 col-span-2" for="gdpr_28879">
+        <label class="col-span-2 col-start-1 pt-2" for="gdpr_28879">
           <input
             id="gdpr_28879"
             type="checkbox"

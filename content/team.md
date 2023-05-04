@@ -16,7 +16,7 @@ As an [open-source project](https://github.com/ipfs/ipfs), anyone can [contribut
 - [Visual and user experience design](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#design)
 - [Building apps and services](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#applications) that use IPFS
 
-There's never been a more exciting time to be part of the global IPFS community, so if you'd like to make a difference and help shape the future of the internet, there's a place for you to jump in! The IPFS community is an engaged, inquisitive, and helpful collective with a [code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md) intended to create an environment that is friendly, safe, and accepting, and free from intimidation or harassment.
+There's never been a more exciting time to be part of the global IPFS community, so if you'd like to make a difference and help shape the future of the internet, there's a place for you to jump in! The IPFS community is an engaged, inquisitive, and helpful collective with a [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md) intended to create an environment that is friendly, safe, and accepting, and free from intimidation or harassment.
 
 If you'd like to start by dipping your toes in the water, [IPFS meetups](https://www.meetup.com/pro/ipfs/) are a great place to begin. Local community meetups happen worldwide, and there's also a well-attended monthly virtual meetup showcasing the latest community projects, current IPFS news and events, and more.
 
@@ -36,6 +36,6 @@ The IPFS core team strictly adheres to a policy of _public discussion and commun
 
 ## Jobs working with IPFS
 
-The simplest way to search for jobs building on or working with IPFS is to [subscribe to the IPFS Weekly newsletter](https://ipfs.us4.list-manage.com/subscribe?u=25473244c7d18b897f5a1ff6b&id=cad54b2230) — each week's edition includes new job postings from a wide variety of companies and organizations looking for talented individuals interested in building the decentralized web.
+The simplest way to search for jobs building on or working with IPFS is to [subscribe to the IPFS newsletter](https://ipfs.us4.list-manage.com/subscribe?u=25473244c7d18b897f5a1ff6b&id=cad54b2230) — each week's edition includes new job postings from a wide variety of companies and organizations looking for talented individuals interested in building the decentralized web.
 
 Additionally, open positions to work on the IPFS core team can be found [here](https://protocol.ai/join/).
