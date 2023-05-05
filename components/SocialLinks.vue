@@ -1,4 +1,5 @@
 <script setup lang="ts">
+defineEmits(['navigate'])
 const socialLinks = [
   {
     text: 'Github',
@@ -25,6 +26,7 @@ const socialLinks = [
       :key="icon"
       class="mr-5 last:mr-0"
       :href="link"
+      @click="$emit('navigate')"
     >
       <div
         :name="icon"
