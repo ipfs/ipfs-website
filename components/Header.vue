@@ -10,6 +10,11 @@ const headerLinks = [
   { text: 'Blog', link: 'https://blog.ipfs.tech/' },
 ]
 
+const mobileLinks = [
+  { text: 'About', link: '/' },
+  ...headerLinks,
+]
+
 // state
 const { x, y } = useWindowScroll()
 const header = ref('header')
@@ -86,6 +91,7 @@ function toggleMobileMenu() {
       </button>
     </div>
   </header>
+  <MobileMenu :active="nav.mobileActive" :links="mobileLinks" class="bg-brand-blueDark/90 text-white backdrop-blur-md" @navigate="nav.mobileActive = false" />
 </template>
 
 <style scoped lang="postcss">
