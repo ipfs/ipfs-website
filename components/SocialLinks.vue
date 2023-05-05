@@ -1,72 +1,39 @@
-<script>
-import Icon from './Icon'
-
+<script setup lang="ts">
+defineEmits(['navigate'])
 const socialLinks = [
   {
     text: 'Github',
     link: 'https://github.com/ipfs',
-    icon: 'github-icon',
+    icon: 'i-carbon-logo-github',
   },
   {
     text: 'YouTube',
     link: 'https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew',
-    icon: 'youtube-icon',
+    icon: 'i-carbon-logo-youtube',
   },
   {
     text: 'Twitter',
     link: 'http://twitter.com/ipfs',
-    icon: 'twitter-icon',
-  },
-  {
-    text: 'LinkedIn',
-    link: 'https://www.linkedin.com/company/protocollabs/',
-    icon: 'linkedin-icon',
+    icon: 'i-carbon-logo-twitter',
   },
 ]
-
-export default {
-  name: 'SocialLinks',
-  components: {
-    Icon,
-  },
-  props: {
-    tracking: {
-      type: String,
-      default: '',
-    },
-  },
-  data: () => ({
-    socialLinks,
-  }),
-  methods: {
-    onClick(item) {
-      this.$countly.trackEvent(this.$countly.events.SOCIAL_MEDIA_OUTBOUNDS, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-        ui: this.tracking,
-      })
-    },
-  },
-}
 </script>
 
 <template>
   <div>
-    <a
-      v-for="(link, index) in socialLinks"
-      :key="index"
+    <AppLink
+      v-for="{ link, text, icon } in socialLinks"
+      :key="icon"
       class="mr-5 last:mr-0"
-      :href="link.link"
-      target="_blank"
-      rel="noopener noreferrer"
-      @click="() => onClick(link)"
+      :href="link"
+      @click="$emit('navigate')"
     >
-      <Icon
-        :name="link.icon"
+      <div
+        :name="icon"
+        :class="icon"
         class="h-8 w-8 fill-current transition duration-300 ease-in-out hover:opacity-75"
-        :title="link.text"
+        :title="text"
       />
-    </a>
+    </AppLink>
   </div>
 </template>
