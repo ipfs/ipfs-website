@@ -13,7 +13,9 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/core": "^10.1.2"
+    "@types/marked": "^4.3.0",
+    "@vueuse/core": "^10.1.2",
+    "marked": "^5.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
