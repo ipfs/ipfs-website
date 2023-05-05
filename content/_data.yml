@@ -1,4 +1,3 @@
----
 testing: "hello world"
 twitterCards:
   - name: Horacio Herrera
@@ -94,4 +93,3 @@ twitterCards:
     image: twitter-protocol-2.jpg
     time: 1:23 PM
     date: Oct 25, 2022
----
