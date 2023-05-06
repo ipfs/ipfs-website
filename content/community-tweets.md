@@ -17,11 +17,7 @@ image: twitter-protocol.jpg
 time: '2:30 PM'
 date: Oct 29, 2022
 ---
-Scenes from Day 1 of [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp) at [#LabWeek](https://twitter.com/hashtag/LabWeek).
-
-Head to Convento do Beato for another day of talks, workshops, connection & more for the IPFS
-
-Community. Happening all day.
+Scenes from Day 1 of [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp) at [#LabWeek](https://twitter.com/hashtag/LabWeek). Head to Convento do Beato for another day of talks, workshops, connection & more for the IPFS Community. Happening all day.
 
 Details
 [https://2022.ipfs.camp](https://2022.ipfs.camp)
