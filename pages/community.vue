@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+
 </script>
 
 <template>
@@ -221,11 +221,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         Community Voices
       </Heading>
       <div class="columns-2 gap-8 md:columns-3">
-        <TwitterCard
-          v-for="(card, index) in data?.twitterCards"
-          :key="index"
-          :card="card"
-        />
+        <ContentDoc path="/community-tweets" />
       </div>
     </PageSection>
     <PageSection dark-gradient bottom-tight overlay="constellations-telescope.svg" overlay-position="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
