@@ -18,15 +18,15 @@ defineProps<Props>()
 const breakpoints = {
   500: { itemsToShow: 1.25 },
   650: { itemsToShow: 2 },
-  900: { itemsToShow: 2.5 },
-  1150: { itemsToShow: 3.5 },
+  800: { itemsToShow: 2.5 },
+  1000: { itemsToShow: 3.5 },
 }
 </script>
 
 <template>
   <div class="carousel-wrap relative">
-    <div class="absolute left-0 z-2 h-full w-32 from-white from-30% bg-gradient-to-r" />
-    <div class="absolute right-0 z-2 h-full w-32 from-white from-30% bg-gradient-to-l" />
+    <div class="absolute left-0 z-2 h-full w-20 from-white from-30% bg-gradient-to-r md:w-32" />
+    <div class="absolute right-0 z-2 h-full w-20 from-white from-30% bg-gradient-to-l md:w-32" />
     <Carousel
       :autoplay="6000"
       :pause-autoplay-on-hover="true"
@@ -57,6 +57,6 @@ const breakpoints = {
 
 <style lang="postcss">
   .carousel__slide > div {
-    @apply h-full mx-4;
+    @apply h-full w-full mx-4;
   }
 </style>
