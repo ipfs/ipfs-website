@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+</script>
+
 <template>
   <div>
     <seoTags
@@ -24,36 +28,8 @@
         </p>
       </ImageSplit>
     </PageSection>
-    <PageSection tight>
-      <Grid>
-        <Card background="light" button-label="Read their story" button-link="https://blog.ipfs.tech/2022-11-15-3s-studio/" center>
-          <img src="/images/logo-3S.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Speed up gameplay for your superfans
-          </h3>
-          <p class="mb-8 text-xl">
-            3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
-          </p>
-        </Card>
-        <Card background="light" button-label="Read their story" button-link="https://youtu.be/K2zVNcn6CIU" center>
-          <img src="/images/portrait-nancy-baker.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Guarantee a permanent home for your digital art
-          </h3>
-          <p class="mb-8 text-xl">
-            Digital artist Nancy Baker Cahill stores all of her full-resolution art assets using IPFS through NFT.storage
-          </p>
-        </Card>
-        <Card background="light" button-label="Read their story" button-link="https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that" center>
-          <img src="/images/logo-anytype.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Develop offline-native productivity tools
-          </h3>
-          <p class="mb-8 text-xl">
-            Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
-          </p>
-        </Card>
-      </Grid>
+    <PageSection tight full-width>
+      <CarouselCards :items="data?.useCards" button-label="Read their story" />
     </PageSection>
     <PageSection>
       <Heading center>

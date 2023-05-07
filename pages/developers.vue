@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+</script>
+
 <template>
   <div>
     <seo-tags
@@ -298,42 +302,16 @@
         </ImageSplit>
       </div>
     </PageSection>
-    <PageSection>
+    <PageSection bottom-tight>
       <Heading center>
         Browsers
       </Heading>
       <Subhead center>
         Access IPFS apps directly through your browser with one of these extensions.
       </Subhead>
-      <Grid>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-opera.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Opera
-          </h3>
-          <p class="mb-8 text-2xl">
-            Supports IPFS and IPNS schemes
-          </p>
-        </Card>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-chrome.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Chromium Extensions
-          </h3>
-          <p class="mb-8 text-2xl">
-            IPFS browser extension
-          </p>
-        </Card>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-firefox.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Firefox Extension
-          </h3>
-          <p class="mb-8 text-2xl">
-            IPFS browser extension
-          </p>
-        </Card>
-      </Grid>
+    </PageSection>
+    <PageSection tight full-width>
+      <CarouselCards :items="data?.browserCards" button-label="Read their story" />
     </PageSection>
   </div>
 </template>
