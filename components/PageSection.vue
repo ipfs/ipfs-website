@@ -10,6 +10,7 @@ interface Props {
   contentClasses?: string
   tight?: boolean
   bottomTight?: boolean
+  fullWidth?: boolean
 }
 defineProps<Props>()
 </script>
@@ -24,7 +25,10 @@ defineProps<Props>()
     <div v-if="overlay" class="absolute inset-0 overflow-x-hidden lg:overflow-visible">
       <img :src="`/images/${overlay}`" :class="`absolute ${overlayPosition}`">
     </div>
-    <div class="relative mx-auto max-w-screen-xl px-7 lg:p-x-32" :class="[tight ? 'lg:py-14 py-6' : 'lg:py-20 py-14', bottomTight ? 'lg:pb-0 pb-0' : 'lg:pb-28 pb-14']">
+    <div
+      class="relative mx-auto max-w-screen-xl"
+      :class="[tight ? 'lg:py-14 py-6' : 'lg:py-20 py-14', bottomTight ? 'lg:pb-0 pb-0' : 'lg:pb-28 pb-14', fullWidth ? '' : 'px-7 lg:p-x-32']"
+    >
       <slot />
     </div>
   </section>
