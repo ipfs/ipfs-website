@@ -224,7 +224,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         <TwitterCard
           v-for="(card, index) in data?.twitterCards"
           :key="index"
-          :card="card"
+          v-bind="card"
         />
       </div>
     </PageSection>
