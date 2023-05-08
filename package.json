@@ -31,7 +31,7 @@
     "nuxt": "^2.15.4",
     "nuxt-canonical": "^1.0.6",
     "nuxt-mq": "^2.0.2",
-    "pixi.js": "^4.8.8"
+    "pixi.js": "^7.2.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",
