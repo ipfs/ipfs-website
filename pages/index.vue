@@ -28,7 +28,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         </p>
       </ImageSplit>
     </PageSection>
-    <PageSection tight full-width>
+    <PageSection tight full-width class="min-h-96">
       <CarouselCards :items="data?.useCards" button-label="Read their story" />
     </PageSection>
     <PageSection>

@@ -28,9 +28,8 @@ const breakpoints = {
     <div class="absolute left-0 z-2 h-full w-20 from-white from-30% bg-gradient-to-r md:w-32" />
     <div class="absolute right-0 z-2 h-full w-20 from-white from-30% bg-gradient-to-l md:w-32" />
     <Carousel
-      :autoplay="6000"
+      :autoplay="4000"
       :pause-autoplay-on-hover="true"
-      :items-to-show="3.5"
       :wrap-around="true"
       :breakpoints="breakpoints"
     >

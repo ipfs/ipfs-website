@@ -310,7 +310,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         Access IPFS apps directly through your browser with one of these extensions.
       </Subhead>
     </PageSection>
-    <PageSection tight full-width>
+    <PageSection tight full-width class="min-h-96">
       <CarouselCards :items="data?.browserCards" button-label="Read their story" />
     </PageSection>
   </div>
