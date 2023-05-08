@@ -30,7 +30,7 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.15.4",
     "nuxt-canonical": "^1.0.6",
-    "nuxt-mq": "^2.0.2",
+    "nuxt-mq": "^3.0.0",
     "pixi.js": "^4.8.8"
   },
   "devDependencies": {
