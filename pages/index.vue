@@ -32,7 +32,7 @@
       <div class="text-center mb-8 sm:mb-20">
         <h2 class="font-display mb-3">The web of tomorrow needs IPFS today</h2>
         <p class="text-base sm:text-lg">
-          IPFS aims to surpass HTTP in order to build a better web for all of
+          IPFS aims to complement HTTP in order to build a better web for all of
           us.
         </p>
       </div>
@@ -47,17 +47,7 @@
           <p>
             HTTP downloads files from one server at a time — but peer-to-peer
             IPFS retrieves pieces from multiple nodes at once, enabling
-            substantial bandwidth savings. With
-            <Link
-              class="text-blueGreen font-bold hover:underline"
-              :item="{
-                link: 'https://math.oregonstate.edu/~kovchegy/web/papers/p2p-vdn.pdf',
-                text: 'up to 60% savings for video,',
-              }"
-              :on-click="
-                (item) => onCTAClick({ ui: 'why/1-performance', ...item })
-              "
-            />
+            substantial bandwidth savings.
             IPFS makes it possible to efficiently distribute high volumes of
             data without duplication.
           </p>
@@ -169,7 +159,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://docs.ipfs.io/install/ipfs-desktop/"
+                href="https://docs.ipfs.tech/install/ipfs-desktop/"
                 target="_blank"
                 rel="noopener"
                 text="Install IPFS Desktop"
@@ -198,7 +188,7 @@
               <Link
                 class="text-blueGreenLight font-display hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/how-to/command-line-quick-start',
+                  link: 'https://docs.ipfs.tech/how-to/command-line-quick-start',
                   text: 'Command-line install',
                 }"
                 :on-click="
@@ -217,7 +207,7 @@
             </p>
             <div class="flex justify-center sm:justify-start">
               <Button
-                href="https://docs.ipfs.io/how-to/command-line-quick-start"
+                href="https://docs.ipfs.tech/how-to/command-line-quick-start"
                 target="_blank"
                 rel="noopener"
                 text="Install the IPFS CLI"
@@ -267,7 +257,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://docs.ipfs.io/install/ipfs-companion/"
+                  href="https://docs.ipfs.tech/install/ipfs-companion/"
                   target="_blank"
                   rel="noopener"
                   text="Get IPFS Companion"
@@ -296,7 +286,7 @@
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
-                    link: 'https://cluster.ipfs.io/',
+                    link: 'https://ipfscluster.io/',
                     text: 'IPFS Cluster',
                   }"
                   :on-click="
@@ -314,7 +304,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://cluster.ipfs.io/"
+                  href="https://ipfscluster.io/"
                   target="_blank"
                   rel="noopener"
                   text="Get IPFS Cluster"
@@ -337,7 +327,7 @@
             <div class="col-span-12 sm:col-span-2 mb-2 sm:mb-0">
               <img
                 class="max-h-24 sm:max-h-36 mx-auto"
-                :src="$relativity('/images/go-ipfs-hex-logo.png')"
+                :src="$relativity('/images/kubo-hex-logo.png')"
                 alt="IPFS icon with a superimposed Go logo"
               />
             </div>
@@ -354,11 +344,11 @@
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
-                    link: 'https://github.com/ipfs/go-ipfs',
+                    link: 'https://github.com/ipfs/kubo',
                     text: 'Go implementation',
                   }"
                   :on-click="
-                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                    (item) => onCTAClick({ ui: 'install/kubo', ...item })
                   "
                 />
               </h4>
@@ -368,12 +358,12 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://github.com/ipfs/go-ipfs"
+                  href="https://github.com/ipfs/kubo"
                   target="_blank"
                   rel="noopener"
-                  text="Get go-ipfs"
+                  text="Get Kubo"
                   :on-click="
-                    (item) => onCTAClick({ ui: 'install/go-ipfs', ...item })
+                    (item) => onCTAClick({ ui: 'install/kubo', ...item })
                   "
                 />
               </div>
@@ -402,7 +392,7 @@
                 <Link
                   class="text-blueGreenLight font-display hover:underline"
                   :item="{
-                    link: 'https://js.ipfs.io',
+                    link: 'https://js.ipfs.tech',
                     text: 'JS implementation',
                   }"
                   :on-click="
@@ -416,7 +406,7 @@
               </p>
               <div class="flex justify-center sm:justify-start">
                 <Button
-                  href="https://js.ipfs.io"
+                  href="https://js.ipfs.tech"
                   target="_blank"
                   rel="noopener"
                   text="Get js-ipfs"
@@ -513,7 +503,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/persistence/',
+                  link: 'https://docs.ipfs.tech/concepts/persistence/',
                   text: 'pin content',
                 }"
                 :on-click="
@@ -576,7 +566,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/ipns/',
+                  link: 'https://docs.ipfs.tech/concepts/ipns/',
                   text: 'IPNS',
                 }"
                 :on-click="
@@ -587,7 +577,7 @@
               <Link
                 class="text-blueGreen font-bold hover:underline"
                 :item="{
-                  link: 'https://docs.ipfs.io/concepts/dnslink/',
+                  link: 'https://docs.ipfs.tech/concepts/dnslink/',
                   text: 'DNSLink',
                 }"
                 :on-click="
@@ -610,7 +600,7 @@
           </h4>
           <Button
             type="primary"
-            href="https://docs.ipfs.io/"
+            href="https://docs.ipfs.tech/"
             target="_blank"
             text="Check out the docs"
             :on-click="(item) => onCTAClick({ ui: 'how/docs', ...item })"
@@ -834,7 +824,7 @@
           </p>
           <Button
             type="primary"
-            href="https://ecosystem.ipfs.io"
+            href="https://ecosystem.ipfs.tech"
             text="View the ecosystem directory"
             :on-click="(item) => onCTAClick({ ui: 'who/ecosystem', ...item })"
           />
@@ -965,7 +955,7 @@
           </div>
           <Button
             type="primary"
-            href="https://blog.ipfs.io/?category=Video"
+            href="https://blog.ipfs.tech/?category=Video"
             text="More videos"
             target="_blank"
             :on-click="
@@ -996,13 +986,13 @@ export default {
   },
   async fetch() {
     const [latestPosts, latestNews, latestVideos] = await Promise.allSettled([
-      fetch('https://blog.ipfs.io/index.json')
+      fetch('https://blog.ipfs.tech/index.json')
         .then((res) => res.json())
         .then((data) => data.posts),
-      fetch('https://blog.ipfs.io/news.json')
+      fetch('https://blog.ipfs.tech/news.json')
         .then((res) => res.json())
         .then((data) => data.news),
-      fetch('https://blog.ipfs.io/videos.json')
+      fetch('https://blog.ipfs.tech/videos.json')
         .then((res) => res.json())
         .then((data) => data.videos),
     ]);

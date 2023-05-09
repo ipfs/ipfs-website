@@ -7,14 +7,14 @@ IPFS is the collective work of thousands of contributors from multiple geographi
 
 ## Open-source community
 
-As an [open-source project](https://github.com/ipfs/ipfs), anyone can [contribute to IPFS](https://docs.ipfs.io/community/contribute/ways-to-contribute/) and help make an impact on the future of the web – regardless of areas of interest or specialty. IPFS open-source contributors bring a broad range of valuable skills to the project, making tangible differences in a wide variety of areas:
+As an [open-source project](https://github.com/ipfs/ipfs), anyone can [contribute to IPFS](https://docs.ipfs.tech/community/contribute/ways-to-contribute/) and help make an impact on the future of the web – regardless of areas of interest or specialty. IPFS open-source contributors bring a broad range of valuable skills to the project, making tangible differences in a wide variety of areas:
 
-- [Protocol design](https://docs.ipfs.io/community/contribute/ways-to-contribute/#protocol-design) and [implementation](https://docs.ipfs.io/community/contribute/ways-to-contribute/#code)
-- [Documentation](https://docs.ipfs.io/community/contribute/ways-to-contribute/#documentation)
-- [Community outreach](https://docs.ipfs.io/community/contribute/ways-to-contribute/#community) and [support](https://docs.ipfs.io/community/contribute/ways-to-contribute/#support)
-- [Functional testing](https://docs.ipfs.io/community/contribute/ways-to-contribute/#testing) and user testing
-- [Visual and user experience design](https://docs.ipfs.io/community/contribute/ways-to-contribute/#design)
-- [Building apps and services](https://docs.ipfs.io/community/contribute/ways-to-contribute/#applications) that use IPFS
+- [Protocol design](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#protocol-design) and [implementation](https://docs.ipfs.io/community/contribute/ways-to-contribute/#code)
+- [Documentation](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#documentation)
+- [Community outreach](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#community) and [support](https://docs.ipfs.io/community/contribute/ways-to-contribute/#support)
+- [Functional testing](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#testing) and user testing
+- [Visual and user experience design](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#design)
+- [Building apps and services](https://docs.ipfs.tech/community/contribute/ways-to-contribute/#applications) that use IPFS
 
 There's never been a more exciting time to be part of the global IPFS community, so if you'd like to make a difference and help shape the future of the internet, there's a place for you to jump in! The IPFS community is an engaged, inquisitive, and helpful collective with a [code of conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md) intended to create an environment that is friendly, safe, and accepting, and free from intimidation or harassment.
 
@@ -32,7 +32,7 @@ The IPFS core team is organized flexibly and responsively to nimbly adjust to sh
 - **Ecosystem:** Seeding the long-term growth of the decentralized web by fostering relationships with a wide variety of developers and other stakeholders who are using IPFS and related protocols and tools in the web3 stack.
 - **Stewards:** Ensuring the existing IPFS codebase and related tools are well maintained and iteratively improved upon in response to community needs and future goals.
 
-The IPFS core team strictly adheres to a policy of _public discussion and communication by default_ in order to maximize opportunities for community involvement and feedback. This means a commitment to communicating and discussing strategic direction and other high-level decisionmaking in public-facing, async-friendly channels such as [GitHub](https://github.com/ipfs) and the [official IPFS forums](https://discuss.ipfs.io). For example, calls to participate in roadmapping and similar strategic activities will be announced on the [IPFS Blog & News](https://blog.ipfs.io/), and proposals and discussions regarding future strategic work can be found in the [IPFS Roadmap repo](https://github.com/ipfs/roadmap/issues).
+The IPFS core team strictly adheres to a policy of _public discussion and communication by default_ in order to maximize opportunities for community involvement and feedback. This means a commitment to communicating and discussing strategic direction and other high-level decisionmaking in public-facing, async-friendly channels such as [GitHub](https://github.com/ipfs) and the [official IPFS forums](https://discuss.ipfs.tech). For example, calls to participate in roadmapping and similar strategic activities will be announced on the [IPFS Blog & News](https://blog.ipfs.tech/), and proposals and discussions regarding future strategic work can be found in the [IPFS Roadmap repo](https://github.com/ipfs/roadmap/issues).
 
 ## Jobs working with IPFS
 

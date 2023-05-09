@@ -23,6 +23,9 @@
       },
     ]"
   >
+    <!-- <Banner cta="https://blog.ipfs.tech/state-of-ipfs-in-js/">
+      💡 Read more about the state of IPFS in JS in 2022 & 2023
+    </Banner> -->
     <div class="grid-margins flex justify-between items-center h-20">
       <Link
         class="
@@ -76,9 +79,9 @@ import Icon from './Icon.vue';
 const headerLinks = [
   { text: 'About', link: '/#why' },
   { text: 'Install', link: '/#install' },
-  { text: 'Docs', link: 'https://docs.ipfs.io/' },
+  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
   { text: 'Team', link: '/team' },
-  { text: 'Blog', link: 'https://blog.ipfs.io/' },
+  { text: 'Blog', link: 'https://blog.ipfs.tech/' },
   { text: 'Help', link: '/help' },
 ];
 
@@ -165,7 +168,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .navVisible {
   @apply translate-y-0;
 }

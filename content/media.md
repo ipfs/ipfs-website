@@ -28,29 +28,29 @@ IPFS is made up of a large number of individuals and teams contributing to the p
 
 #### Core team
 
-The IPFS project is made up of a series of working groups, populated by many full-time and part-time contributors to core project needs. Learn about current team structure and roles [here](https://github.com/ipfs/team-mgmt/blob/master/TEAMS_ROLES_STRUCTURES.md), or read the [history of the IPFS project](https://docs.ipfs.io/project/history/).
+The IPFS project is made up of a series of working groups, populated by many full-time and part-time contributors to core project needs. Learn about current team structure and roles [here](https://github.com/ipfs/team-mgmt/blob/master/TEAMS_ROLES_STRUCTURES.md), or read the [history of the IPFS project](https://docs.ipfs.tech/project/history/).
 
 #### Open-source community
 
-As an open-source project, IPFS is home to a vibrant, diverse community of thousands of contributors and participants from all over the globe! Learn more about who they are and where to find them [in the Community section of the IPFS docs](https://docs.ipfs.io/community/).
+As an open-source project, IPFS is home to a vibrant, diverse community of thousands of contributors and participants from all over the globe! Learn more about who they are and where to find them [in the Community section of the IPFS docs](https://docs.ipfs.tech/community/).
 
 #### Projects using IPFS
 
 A vast variety of commercial and non-profit projects alike are incorporating IPFS as critical to their goals and success. Many are amenable to talking to the media. Find out more about existing success stories at the following resources:
 
-- [Case studies](https://docs.ipfs.io/concepts/#examples-and-case-studies) for IPFS success stories in a variety of industries.
+- [Case studies](https://docs.ipfs.tech/concepts/#examples-and-case-studies) for IPFS success stories in a variety of industries.
 - Video presentations and demos from IPFS builders and collaborators in our [YouTube channel](https://www.youtube.com/c/IPFSbot/videos).
-- Interactive [IPFS ecosystem directory](https://ecosystem.ipfs.io) of companies and organizations worldwide building apps, services, and developer tools on IPFS.
+- Interactive [IPFS ecosystem directory](https://ecosystem.ipfs.tech) of companies and organizations worldwide building apps, services, and developer tools on IPFS.
 
 ### Logos
 To request official IPFS logos and other graphic elements, please [email](mailto:press@protocol.ai).
 
 ### Featured news
-All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.io) page. Items can be filtered by topic for easy access:
+All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.tech) page. Items can be filtered by topic for easy access:
 
-- [Blog posts](http://blog.ipfs.io/?category=Blog%20post)
-- [Video content](http://blog.ipfs.io/?category=Video)
-- [News coverage](http://blog.ipfs.io/?category=News%20coverage)
-- [Events](http://blog.ipfs.io/?category=Event)
+- [Blog posts](http://blog.ipfs.tech/?category=Blog%20post)
+- [Video content](http://blog.ipfs.tech/?category=Video)
+- [News coverage](http://blog.ipfs.tech/?category=News%20coverage)
+- [Events](http://blog.ipfs.tech/?category=Event)
 
 Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew) channels.
