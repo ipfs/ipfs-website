@@ -1,6 +1,4 @@
 <script>
-import MarkdownContent from '../components/MarkdownContent'
-
 export default {
   components: {
     MarkdownContent,

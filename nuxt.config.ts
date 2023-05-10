@@ -32,6 +32,7 @@ export default defineNuxtConfig({
   ],
   experimental: {
     inlineSSRStyles: false,
+    componentIslands: true,
   },
   runtimeConfig: {
     public: {

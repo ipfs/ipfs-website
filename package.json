@@ -2,7 +2,7 @@
   "name": "ipfs-website",
   "version": "3.0.0",
   "private": true,
-  "packageManager": "pnpm@8.4.0",
+  "packageManager": "pnpm@8.5.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
