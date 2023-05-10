@@ -1,3 +1,60 @@
+useCards:
+  - image: logo-3s.png
+    title: Speed up gameplay for your superfans
+    description: |
+      3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
+    link: https://blog.ipfs.tech/2022-11-15-3s-studio/
+  - image: portrait-nancy-baker.png
+    title: Guarantee a permanent home for your digital art
+    description: |
+      Digital artist Nancy Baker Cahill stores all of her full-resolution art assets using IPFS through NFT.storage
+    link: https://youtu.be/K2zVNcn6CIU
+  - image: logo-anytype.png
+    title: Develop offline-native productivity tools
+    description: |
+      Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
+    link: https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that
+  - image: logo-anytype.png
+    title: Publish scientific research that invites global collaboration
+    description: |
+      WeatherXM configured thousands of smart weather vanes with IPFS client functionality to collaboratively share weather patterns from around the world- image: logo-anytype.png
+    link: link
+  - image: logo-anytype.png
+    title: Store archives and content libraries permanently
+    description: |
+      When the government of Turkey blocked access to Wikipedia, a copy of the site was posted to IPFS, restoring visibility to millions of people
+    link: link
+  - image: logo-anytype.png
+    title: Keep the promise of data transparency in web3
+    description: |
+      Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs 
+    link: link
+  - image: logo-anytype.png
+    title: Literally store your data out of this world
+    description: |
+      Lockheed Martin is launching an IPFS node into orbit in 2023 to demonstrate more efficient interplanetary communication
+    link: link
+  - image: logo-anytype.png
+    title: Expand our universe
+    description: |
+      We're reimagining the structure of the traditional web so we're ready for what's next - we need you to help us discover what's possible
+    link: link
+browserCards:
+  - image: logo-opera.png
+    title: Opera
+    description: |
+      Supports IPFS and IPNS schemes
+    link: https://www.protocol.ai
+  - image: logo-chrome.png
+    title: Chromium Extensions
+    description: |
+      IPFS browser extension
+    link: https://www.protocol.ai
+  - image: logo-firefox.png
+    title: Firefox Extension
+    description: |
+      IPFS browser extension
+    link: https://www.protocol.ai
 twitterCards:
   - name: Horacio Herrera
     handle: hhg2288
