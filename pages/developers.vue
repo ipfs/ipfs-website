@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+</script>
+
 <template>
   <div>
     <seo-tags
@@ -58,6 +62,31 @@
       <Subhead center>
         IPFS is a modular suite of protocols and standards for organizing and moving data, designed from the ground up with the principles of content addressing and peer-to-peer networking.
       </Subhead>
+      <ResponsiveTable
+        :col-labels="['System', 'Responsible for']"
+        :rows="[
+          {
+            heading: 'Transferring the data',
+            cols: [
+              ['IPFS*', 'Data routing and transfer'],
+              ['Libp2p**', 'Peer-to-peer network connectivity'],
+              ['IPFS gateways', 'Interoperability with http'],
+            ],
+          },
+          {
+            heading: 'Defining the data',
+            cols: [
+              ['IPNS, DNSLink', 'Dynamic naming'],
+              ['IPLD**', 'Define and organize data'],
+              ['Multiformats**', 'Universal addressing for data and peers'],
+            ],
+          },
+        ]"
+      />
+      <ul class="mt-10 text-brand-teal-dark">
+        <li>* Including its various subsystems and specs</li>
+        <li>** Essential components for IPFS (can also be used independently of IPFS)</li>
+      </ul>
     </PageSection>
     <PageSection dark-gradient>
       <div class="mb-20 text-white">
@@ -273,42 +302,16 @@
         </ImageSplit>
       </div>
     </PageSection>
-    <PageSection>
+    <PageSection bottom-tight>
       <Heading center>
         Browsers
       </Heading>
       <Subhead center>
         Access IPFS apps directly through your browser with one of these extensions.
       </Subhead>
-      <Grid>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-opera.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Opera
-          </h3>
-          <p class="mb-8 text-2xl">
-            Supports IPFS and IPNS schemes
-          </p>
-        </Card>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-chrome.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Chromium Extensions
-          </h3>
-          <p class="mb-8 text-2xl">
-            IPFS browser extension
-          </p>
-        </Card>
-        <Card background="light" button-label="Check it out" button-link="#" center>
-          <img src="/images/logo-firefox.png" class="mb-8 h-32 w-full object-contain object-center">
-          <h3 class="mb-8 text-xl">
-            Firefox Extension
-          </h3>
-          <p class="mb-8 text-2xl">
-            IPFS browser extension
-          </p>
-        </Card>
-      </Grid>
+    </PageSection>
+    <PageSection tight full-width class="min-h-96">
+      <CarouselCards :items="data?.browserCards" button-label="Read their story" />
     </PageSection>
   </div>
 </template>

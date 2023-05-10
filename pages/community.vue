@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+</script>
+
 <template>
   <div>
     <seo-tags
@@ -230,6 +234,13 @@
       <Heading center>
         Community Voices
       </Heading>
+      <div class="columns-2 gap-8 md:columns-3">
+        <TwitterCard
+          v-for="(card, index) in data?.twitterCards"
+          :key="index"
+          v-bind="card"
+        />
+      </div>
     </PageSection>
     <PageSection dark-gradient bottom-tight overlay="constellations-telescope.svg" overlay-position="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div class="text-white">
@@ -240,19 +251,19 @@
           We're shooting for the stars, and we can't do it without your help. Here are some
           of the unknowns we've yet to discover:
         </Subhead>
-        <div class="telescope relative mb-16 mt-30">
+        <div class="telescope relative mb-16 lg:mt-30">
           <img src="/images/constellation-telescope.svg" class="mx-auto py-10">
-          <div class="absolute inset-0">
-            <p class="absolute top-0 w-64 text-xl">
+          <div class="relative inset-0 lg:absolute">
+            <p class="text-xl lg:absolute lg:top-0 lg:w-64">
               How can we introduce privacy and encryption functionality to IPFS?
             </p>
-            <p class="absolute right-0 top-0 w-80 text-xl">
+            <p class="text-xl lg:absolute lg:right-0 lg:top-0 lg:w-80">
               How do we enable connectivity between every platform IPFS runs on, from satellites to lower powered IoT devices?
             </p>
-            <p class="absolute top-60 w-80 text-xl">
+            <p class="text-xl lg:absolute lg:top-60 lg:w-80">
               What data structures and recommendations can we create to help other developers?
             </p>
-            <p class="absolute right-0 top-60 w-56 text-xl">
+            <p class="text-xl lg:absolute lg:right-0 lg:top-60 lg:w-56">
               How can we invent a more efficient peer-to-peer data transfer protocol?
             </p>
           </div>
