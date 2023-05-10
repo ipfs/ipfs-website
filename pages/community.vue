@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+</script>
+
 <template>
   <div>
     <seo-tags
@@ -216,6 +220,13 @@
       <Heading center>
         Community Voices
       </Heading>
+      <div class="columns-2 gap-8 md:columns-3">
+        <TwitterCard
+          v-for="(card, index) in data?.twitterCards"
+          :key="index"
+          v-bind="card"
+        />
+      </div>
     </PageSection>
     <PageSection dark-gradient bottom-tight overlay="constellations-telescope.svg" overlay-position="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <div class="text-white">
