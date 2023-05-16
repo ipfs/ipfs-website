@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { AppLinkProps } from '@/components/AppLink.vue'
-
-interface Props extends AppLinkProps {
+interface Props {
   primary?: boolean
   outline?: boolean
   full?: boolean

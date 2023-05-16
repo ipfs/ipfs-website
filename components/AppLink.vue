@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import type { NuxtLinkProps } from '#app'
-
-export interface AppLinkProps extends NuxtLinkProps { href?: string; to?: string }
+export interface AppLinkProps { href?: string; to?: string }
 defineProps<AppLinkProps>()
 
 function isExternal(href: string | undefined) {
