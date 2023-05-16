@@ -8,20 +8,11 @@ useHead({
     },
   },
 })
-
-useSeoMeta({
-  charset: 'utf-8',
-  description: '',
-  ogLocale: 'en-US',
-  ogDescription: '',
-  ogTitle: '',
-  ogImage: '',
-  twitterCard: 'summary_large_image',
-})
 </script>
 
 <template>
   <NuxtLayout>
+    <SeoKit />
     <NuxtPage />
   </NuxtLayout>
 </template>
