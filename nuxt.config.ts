@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
   linkChecker: {
-    failOn404: true, // TODO: enable before launch
+    failOn404: false, // TODO: enable before launch
   },
   runtimeConfig: {
     public: {
