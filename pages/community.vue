@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
-useSeoMeta({
+definePageMeta({
   title: 'Community',
 })
 </script>

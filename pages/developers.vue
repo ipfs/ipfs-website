@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+definePageMeta({
+  title: 'Developers',
+})
 </script>
 
 <template>
