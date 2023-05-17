@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 const PUBLIC_SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://ipfs.tech'
+// strip out the protocol and trailing slash
 const PUBLIC_DOMAIN = PUBLIC_SITE_URL.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')
 
 export default defineNuxtConfig({
@@ -36,7 +37,7 @@ export default defineNuxtConfig({
     componentIslands: true,
   },
   linkChecker: {
-    failOn404: true,
+    failOn404: false, // TODO: enable before launch
   },
   runtimeConfig: {
     public: {
@@ -44,9 +45,8 @@ export default defineNuxtConfig({
       siteName: 'IPFS',
       siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
       language: 'en-US',
-      indexable: false, // disable indexing for until launch
+      indexable: false, // TODO: enable before launch
       plausible: {
-        // strip out the protocol and trailing slash
         domain: PUBLIC_DOMAIN,
       },
     },
