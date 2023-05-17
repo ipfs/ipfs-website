@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const isDev = import.meta.env.DEV
 
 useHead({
@@ -7,6 +7,9 @@ useHead({
       'mode-dev': isDev,
     },
   },
+})
+useSeoMeta({
+  title: 'IPFS Powers the Distributed Web',
 })
 </script>
 
