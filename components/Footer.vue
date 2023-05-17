@@ -25,7 +25,7 @@
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="https://ipfs.tech/media">
+                  <AppLink href="/media">
                     Press Kit
                   </AppLink>
                 </li>

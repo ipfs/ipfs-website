@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const isDev = import.meta.env.DEV
 
 useHead({
@@ -8,20 +8,16 @@ useHead({
     },
   },
 })
-
 useSeoMeta({
-  charset: 'utf-8',
-  description: '',
-  ogLocale: 'en-US',
-  ogDescription: '',
-  ogTitle: '',
-  ogImage: '',
-  twitterCard: 'summary_large_image',
+  title: 'IPFS Powers the Distributed Web',
+  ogImage: 'https://ipfs.tech/images/social-card.png',
+  twitterSite: '@ipfs',
 })
 </script>
 
 <template>
   <NuxtLayout>
+    <SeoKit />
     <NuxtPage />
   </NuxtLayout>
 </template>
