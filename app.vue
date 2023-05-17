@@ -10,6 +10,8 @@ useHead({
 })
 useSeoMeta({
   title: 'IPFS Powers the Distributed Web',
+  ogImage: 'https://ipfs.tech/images/social-card.png',
+  twitterSite: '@ipfs',
 })
 </script>
 
