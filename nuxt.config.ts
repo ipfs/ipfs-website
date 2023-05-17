@@ -13,9 +13,6 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'IPFS Powers the Distributed Web',
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
@@ -42,7 +39,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: PUBLIC_SITE_URL,
-      siteName: 'IPFS',
+      siteName: 'IPFS Powers the Distributed Web',
       siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
       language: 'en-US',
       indexable: false, // TODO: enable before launch
