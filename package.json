@@ -17,16 +17,16 @@
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.6",
+    "@antfu/eslint-config": "^0.39.1",
     "@iconify-json/carbon": "^1.1.16",
     "@nuxt/content": "^2.6.0",
     "@nuxtjs/plausible": "^0.2.1",
-    "@unocss/eslint-config": "^0.51.13",
-    "@unocss/nuxt": "^0.51.13",
-    "@unocss/preset-icons": "^0.51.13",
+    "@unocss/eslint-config": "^0.52.0",
+    "@unocss/nuxt": "^0.52.0",
+    "@unocss/preset-icons": "^0.52.0",
     "@vueuse/nuxt": "^10.1.2",
-    "eslint": "^8.40.0",
-    "nuxt": "^3.5.0",
+    "eslint": "^8.41.0",
+    "nuxt": "^3.5.1",
     "nuxt-seo-kit": "^1.3.8",
     "typescript": "^5.0.4"
   }
