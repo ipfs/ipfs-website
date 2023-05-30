@@ -18,13 +18,14 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css',
-    '@/assets/css/fonts.css',
+    '@/assets/css/index.css',
   ],
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@nuxtjs/plausible',
+    '@vueuse/motion/nuxt',
   ],
   extends: [
     'nuxt-seo-kit',
