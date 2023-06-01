@@ -2,7 +2,7 @@
   "name": "ipfs-website",
   "version": "3.0.0",
   "private": true,
-  "packageManager": "pnpm@8.5.1",
+  "packageManager": "pnpm@8.6.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,19 +14,20 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.1.2",
+    "@vueuse/motion": "2.0.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.1",
-    "@iconify-json/carbon": "^1.1.16",
+    "@antfu/eslint-config": "^0.39.4",
+    "@iconify-json/carbon": "^1.1.17",
     "@nuxt/content": "^2.6.0",
     "@nuxtjs/plausible": "^0.2.1",
-    "@unocss/eslint-config": "^0.52.0",
-    "@unocss/nuxt": "^0.52.0",
-    "@unocss/preset-icons": "^0.52.0",
+    "@unocss/eslint-config": "^0.52.7",
+    "@unocss/nuxt": "^0.52.7",
+    "@unocss/preset-icons": "^0.52.7",
     "@vueuse/nuxt": "^10.1.2",
     "eslint": "^8.41.0",
-    "nuxt": "^3.5.1",
+    "nuxt": "^3.5.2",
     "nuxt-seo-kit": "^1.3.8",
     "typescript": "^5.0.4"
   }
