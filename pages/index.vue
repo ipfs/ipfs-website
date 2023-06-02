@@ -148,7 +148,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         <p class="text-xl mb-8">
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
         </p>
-        <div class="ribbon-wrap py-56">
+        <div class="ribbon-wrap py-12 lg:py-56">
           <RibbonAnnotations
             :annotations="[
               'Application-Developers',
