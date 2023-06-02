@@ -16,7 +16,7 @@ definePageMeta({
         users.
       </template>
     </Hero>
-    <PageSection>
+    <PageSection bottom-tight>
       <Heading center>
         Connect
       </Heading>
