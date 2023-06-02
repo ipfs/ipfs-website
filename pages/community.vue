@@ -95,6 +95,20 @@ definePageMeta({
           </p>
         </Card>
       </Grid>
+      <div class="mt-28">
+        <Ribbon
+          :images="[
+            'ribbon-community-1.jpg',
+            'ribbon-community-2.jpg',
+            'ribbon-community-3.jpg',
+            'ribbon-community-4.jpg',
+            'ribbon-community-5.jpg',
+            'ribbon-community-6.jpg',
+            'ribbon-community-7.jpg',
+            'ribbon-community-8.jpg',
+          ]"
+        />
+      </div>
     </PageSection>
     <PageSection dark-gradient>
       <div class="text-white">
