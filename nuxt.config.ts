@@ -11,15 +11,18 @@ export default defineNuxtConfig({
       routes: ['/ipfs-404.html'],
     },
   },
+
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
   },
+
   css: [
     '@unocss/reset/tailwind.css',
     '@/assets/css/index.css',
   ],
+
   modules: [
     '@nuxt/content',
     '@vueuse/nuxt',
@@ -27,16 +30,20 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@vueuse/motion/nuxt',
   ],
+
   extends: [
     'nuxt-seo-kit',
   ],
+
   experimental: {
     inlineSSRStyles: false,
     componentIslands: true,
   },
+
   linkChecker: {
     failOn404: false, // TODO: enable before launch
   },
+
   runtimeConfig: {
     public: {
       siteUrl: PUBLIC_SITE_URL,
@@ -49,5 +56,9 @@ export default defineNuxtConfig({
         domain: PUBLIC_DOMAIN,
       },
     },
+  },
+
+  devtools: {
+    enabled: true,
   },
 })

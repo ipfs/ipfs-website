@@ -21,6 +21,7 @@
     "@antfu/eslint-config": "^0.39.4",
     "@iconify-json/carbon": "^1.1.17",
     "@nuxt/content": "^2.6.0",
+    "@nuxt/devtools": "^0.5.5",
     "@nuxtjs/plausible": "^0.2.1",
     "@unocss/eslint-config": "^0.52.7",
     "@unocss/nuxt": "^0.52.7",
