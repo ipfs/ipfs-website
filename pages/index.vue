@@ -145,7 +145,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         Connect Through Community
       </Heading>
       <div class="text-center">
-        <p class="text-xl mb-8">
+        <p class="mb-8 text-xl">
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
         </p>
         <div class="ribbon-wrap py-12 lg:py-56">
@@ -174,7 +174,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
             ]"
           />
         </div>
-        <p class="text-xl mb-8">
+        <p class="mb-8 text-xl">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
         </p>
         <Btn href="/community" primary>

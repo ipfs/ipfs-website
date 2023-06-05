@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  images: Array<string>
+  images: string[]
 }
 defineProps<Props>()
 </script>
@@ -8,36 +8,36 @@ defineProps<Props>()
 <template>
   <div class="relative h-112 -ml-56">
     <div class="h-56">
-      <div class="absolute -left-384 w-384 flex -ml-4">
+      <div class="absolute w-384 flex -left-384 -ml-4">
         <div v-for="image in images.slice(0, 4)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
       <div class="absolute left-0 w-384 flex -ml-4">
         <div v-for="image in images.slice(0, 4)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
       <div class="absolute left-384 w-384 flex -ml-4">
         <div v-for="image in images.slice(0, 4)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
     </div>
     <div class="h-56">
-      <div class="absolute -left-384 w-384 flex">
+      <div class="absolute w-384 flex -left-384">
         <div v-for="image in images.slice(4, 8)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
       <div class="absolute left-0 w-384 flex">
         <div v-for="image in images.slice(4, 8)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
       <div class="absolute left-384 w-384 flex">
         <div v-for="image in images.slice(4, 8)" :key="image" class="h-56 w-96">
-          <img :src="`/images/${image}`" class="w-full h-full object-cover">
+          <img :src="`/images/${image}`" class="h-full w-full object-cover">
         </div>
       </div>
     </div>
