@@ -148,6 +148,32 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         <p class="mb-8 text-xl">
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
         </p>
+        <div class="ribbon-wrap py-12 lg:py-56">
+          <RibbonAnnotations
+            :annotations="[
+              'Application-Developers',
+              'Scientists',
+              'Infrastructure Developers',
+              'Researchers',
+              'Designers',
+              'Archivists',
+              'Yes, Even the occasional Astronaut',
+              'Artists',
+            ]"
+          />
+          <Ribbon
+            :images="[
+              'ribbon-home-1.jpg',
+              'ribbon-home-2.jpg',
+              'ribbon-home-3.jpg',
+              'ribbon-home-4.jpg',
+              'ribbon-home-5.jpg',
+              'ribbon-home-6.jpg',
+              'ribbon-home-7.jpg',
+              'ribbon-home-8.jpg',
+            ]"
+          />
+        </div>
         <p class="mb-8 text-xl">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
         </p>

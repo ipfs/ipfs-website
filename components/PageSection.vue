@@ -18,7 +18,7 @@ defineProps<Props>()
 <template>
   <section
     :id="id"
-    v-motion-fade-visible-once class="relative" :class="{ 'text-white': textWhite }"
+    v-motion-fade-visible-once class="relative overflow-visible" :class="{ 'text-white': textWhite }"
   >
     <div v-if="darkGradient" class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
     <div v-if="lightGradient" class="absolute h-full w-full from-brand-teal-light to-white bg-gradient-to-b -z-1" />

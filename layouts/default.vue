@@ -53,7 +53,7 @@ export default {
 <template>
   <div class="min-h-screen flex flex-col font-sans">
     <Header />
-    <main>
+    <main class="overflow-x-hidden">
       <slot />
     </main>
     <Footer />
