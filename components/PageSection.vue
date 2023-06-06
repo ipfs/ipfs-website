@@ -16,10 +16,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <section
-    :id="id"
-    v-motion-fade-visible-once class="relative overflow-visible" :class="{ 'text-white': textWhite }"
-  >
+  <section :id="id" class="relative overflow-visible" :class="{ 'text-white': textWhite }">
     <div v-if="darkGradient" class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
     <div v-if="lightGradient" class="absolute h-full w-full from-brand-teal-light to-white bg-gradient-to-b -z-1" />
     <img v-if="background" :src="`/images/${background}`" alt="" class="absolute h-full w-full object-cover -z-1">
