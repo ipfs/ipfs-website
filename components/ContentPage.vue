@@ -3,10 +3,10 @@
     <ContentDoc>
       <template #default="{ doc }">
         <Hero background="community-hero.jpg">
-          <template #title>
+          <template v-if="doc.title" #title>
             {{ doc.title }}
           </template>
-          <template #subtitle>
+          <template v-if="doc.description" #subtitle>
             {{ doc.description }}
           </template>
         </Hero>
