@@ -1,5 +1,5 @@
 ---
-title: IPFS press kit
+title: IPFS Press Kit
 description: Resources for the media, including explainers, logos, and more.
 ---
 
