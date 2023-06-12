@@ -1,5 +1,5 @@
 ---
-title: The IPFS team
+title: The IPFS Team
 description: Learn how the global IPFS community asynchronously collaborates to decentralize the web.
 ---
 
