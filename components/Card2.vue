@@ -9,12 +9,13 @@ interface Props {
   category?: string
   tags?: string
 }
-defineProps<Props>()
+const props = defineProps<Props>()
+const image = props.image?.startsWith('http') ? props.image : `/images/${props.image}`
 </script>
 
 <template>
   <div class="rounded-lg bg-brand-light">
-    <img v-if="image" class="h-40 w-full object-cover" :src="`/images/${image}`">
+    <img v-if="props.image" class="h-40 w-full object-cover" :src="image">
     <div class="p-6 pb-0">
       <p v-if="date" class="mb-1 text-xs text-gray-400">
         {{ date }}
