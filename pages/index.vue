@@ -1,9 +1,32 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
-// fetch blog content
-const { data: latestBlogs } = await useFetch('https://blog.ipfs.tech/index.json')
-const { data: latestNews } = await useFetch('https://blog.ipfs.tech/news.json')
-const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.json')
+
+// blog/news/video content
+interface Post {
+  title: string
+  date: string
+  excerpt?: string
+  url: string
+  author?: string
+  category?: string
+  tags?: string
+  image?: string
+  thumbnail?: string
+}
+
+interface BlogItems { posts: Post[] }
+interface NewsItems { news: Post[] }
+interface VideoItems { videos: Post[] }
+
+const { data: latestBlogs } = await useFetch('https://blog.ipfs.tech/index.json', {
+  transform: (data: BlogItems) => data.posts,
+})
+const { data: latestNews } = await useFetch('https://blog.ipfs.tech/news.json', {
+  transform: (data: NewsItems) => data.news,
+})
+const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.json', {
+  transform: (data: VideoItems) => data.videos,
+})
 </script>
 
 <template>
@@ -208,7 +231,7 @@ const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.jso
         </Subhead>
         <Grid>
           <Card2
-            v-for="item in latestBlogs?.posts"
+            v-for="item in latestBlogs"
             :key="item.title"
             :date="item.date"
             :image="item.image || 'blog-1.jpg'"
@@ -224,7 +247,7 @@ const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.jso
         </Subhead>
         <Grid>
           <Card2
-            v-for="item in latestNews?.news"
+            v-for="item in latestNews"
             :key="item.title"
             :date="item.date"
             :heading="item.title"
@@ -239,7 +262,7 @@ const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.jso
         </Subhead>
         <Grid>
           <Card2
-            v-for="item in latestVideos?.videos"
+            v-for="item in latestVideos"
             :key="item.title"
             :date="item.date"
             :image="item.thumbnail"
