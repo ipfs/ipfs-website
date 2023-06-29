@@ -13,12 +13,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/core": "^10.2.0",
+    "@vueuse/core": "^10.2.1",
     "@vueuse/motion": "2.0.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.5",
+    "@antfu/eslint-config": "^0.39.6",
     "@iconify-json/carbon": "^1.1.18",
     "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "^0.6.4",
@@ -26,10 +26,10 @@
     "@unocss/eslint-config": "^0.53.4",
     "@unocss/nuxt": "^0.53.4",
     "@unocss/preset-icons": "^0.53.4",
-    "@vueuse/nuxt": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.1",
     "eslint": "^8.43.0",
     "nuxt": "^3.6.1",
     "nuxt-seo-kit": "^1.3.9",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.6"
   }
 }
