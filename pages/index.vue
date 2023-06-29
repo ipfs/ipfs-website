@@ -290,9 +290,7 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
       </div>
     </PageSection>
     <PageSection light-gradient>
-      <Testimonial image="portrait-mauve-signweaver.png" name="Mauve Signweaver, Agregore">
-        “IPFS gives us a set of flexible building blocks for connecting devices and exchanging data. The plethora of IPFS documentation and community members contributes toward our goal at Agregore of making peer-to-peer web apps easy to use.”
-      </Testimonial>
+      <CarouselTestimonials :items="data?.testimonialCards" />
     </PageSection>
   </div>
 </template>
