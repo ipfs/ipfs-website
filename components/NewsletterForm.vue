@@ -20,7 +20,10 @@ function onSubmit() {
         example
       </AppLink>) for the latest on releases, upcoming developments, community events, and more.
     </p>
-    <form
+    <Btn target="_blank" href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw" primary>
+      Signup
+    </Btn>
+    <!-- <form
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
       action="https://ipfs.us4.list-manage.com/subscribe/post?u=25473244c7d18b897f5a1ff6b&amp;id=cad54b2230"
@@ -65,6 +68,6 @@ function onSubmit() {
           <input type="text" name="b_25473244c7d18b897f5a1ff6b_cad54b2230" tabindex="-1" value="">
         </div>
       </div>
-    </form>
+    </form> -->
   </div>
 </template>
