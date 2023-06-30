@@ -55,6 +55,39 @@ browserCards:
     description: |
       IPFS browser extension
     link: https://www.protocol.ai
+testimonialCards:
+  - image: portrait-mauve-signweaver-agregore.webp
+    title: Mauve Signweaver, Founder - Agregore
+    description: |
+      IPFS gives us a set of flexible building blocks for connecting devices and exchanging data. The plethora of IPFS documentation and community members contributes toward our goal at Agregore of making peer-to-peer web apps easy to use.
+  - image: portrait-gabo-h-beaumont-mintter.webp
+    title: Gabo H Beaumont, Co-Founder - Mintter inc
+    description: |
+      It's crucially important to have a distributed file system in our open hypertext system. IPFS is the missing piece that allows for a truly decentralized and open web.
+  - image: portrait-wes-floyd-bacalhau.webp
+    title: Wes Floyd, Bacalhau
+    description: |
+      As people learn about IPFS, they also get a view of IPFS as a component in a broader ecosystem. It's not an island. It's not a technology that lives entirely on its own, it's a piece of a broader stack of something. We see it as an onramp to broader decentralization.
+  - image: portrait-nancy-baker-cahill-artist.webp
+    title: Nancy Baker Cahill, Artist
+    description: |
+      I use NFT.storage for my digital art. It was such a relief to know that I could store my videos in one place—each one with its own IPFS URL and CID. Resilience is important to me and having the work backed up to Filecoin means they'll be around for a long time.
+  - image: portrait-joel-thorstensson-3box-labs.webp
+    title: Joel Thorstenssen, Co-founder - 3Box Labs
+    description: |
+      ​At 3box labs, we are using IPFS as the storage layer. If you want to build full decentralized applications, you need data integrity. IPFS guarantees integrity by providing a framework for merkelized data.
+  - image: portrait-boris-mann-fission.webp
+    title: Boris Mann, Co-founder - Fission
+    description: |
+      IPFS and content addressing give us the opportunity to work towards having every human be able to put data online effectively for free, and effectively forever.
+  - image: portrait-thibault-meunier-cloudflare.webp
+    title: Thibault Meunier, Research Engineer - Cloudflare
+    description: |
+      At Cloudflare, we offer to make content available to every user of the Internet. By removing lock-in to any single data storage provider, IPFS really allows our customers to choose a storage provider they are comfortable with.
+  - image: portrait-roland-kuhn-actyx.webp
+    title: Roland Kuhn, Actyx
+    description: |
+      By using IPFS private swarms, we were able to deploy a fleet of devices communicating mission critical data in a factory without any central infrastructure, which has allowed us to move much faster.
 twitterCards:
   - name: Horacio Herrera
     handle: hhg2288

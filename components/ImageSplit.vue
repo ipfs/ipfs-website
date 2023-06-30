@@ -4,6 +4,8 @@ interface Props {
   tight?: boolean
   image?: string
   imageWidth?: string
+  imageRounded?: boolean
+  fullHeight?: boolean
 }
 const props = defineProps<Props>()
 
@@ -18,10 +20,17 @@ const imageStyle = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col-reverse items-center text-center lg:text-left" :class="[flip ? 'lg:flex-row-reverse' : 'lg:flex-row', tight ? 'gap-4' : 'gap-12']">
-    <div class="">
+  <div class="flex flex-col-reverse items-center text-center lg:text-left" :class="[flip ? 'lg:flex-row-reverse' : 'lg:flex-row', tight ? 'gap-4' : 'gap-12', fullHeight ? 'lg:h-full' : '']">
+    <div>
       <slot />
     </div>
-    <img class="mx-auto lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
+    <img v-if="imageRounded" class="tinted mx-auto rounded-full lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
+    <img v-else class="mx-auto lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
   </div>
 </template>
+
+<style scoped>
+  .tinted {
+    filter: sepia(100%) saturate(50%) brightness(90%) hue-rotate(125deg);
+  }
+</style>
