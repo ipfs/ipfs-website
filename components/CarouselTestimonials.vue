@@ -12,13 +12,6 @@ interface Props {
   ]
 }
 defineProps<Props>()
-
-const breakpoints = {
-  500: { itemsToShow: 1 },
-  650: { itemsToShow: 1 },
-  800: { itemsToShow: 1 },
-  1000: { itemsToShow: 1 },
-}
 </script>
 
 <template>
@@ -27,7 +20,6 @@ const breakpoints = {
       :autoplay="12000"
       :pause-autoplay-on-hover="true"
       :wrap-around="true"
-      :breakpoints="breakpoints"
     >
       <Slide
         v-for="(item, index) in items"
