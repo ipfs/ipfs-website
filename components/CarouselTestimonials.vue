@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import { Carousel, Pagination, Slide } from 'vue3-carousel'
 
 interface Props {
   items?: [
@@ -35,12 +35,12 @@ const breakpoints = {
       >
         <div class="px-10">
           <Testimonial :image="item.image" :name="item.title">
-            "{{ item.description }}"
+            &ldquo;{{ item.description?.trim() }}&rdquo;
           </Testimonial>
         </div>
       </Slide>
       <template #addons>
-        <Navigation class="z-3" />
+        <Pagination />
       </template>
     </Carousel>
   </div>
