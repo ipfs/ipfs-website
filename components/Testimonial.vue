@@ -8,9 +8,6 @@ defineProps<Props>()
 
 <template>
   <ImageSplit :image="image" image-width="260" flip image-rounded full-height>
-    <Heading>
-      Testimonials
-    </Heading>
     <p class="mb-6 text-xl">
       <slot />
     </p>

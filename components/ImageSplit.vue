@@ -24,13 +24,13 @@ const imageStyle = computed(() => {
     <div>
       <slot />
     </div>
-    <img v-if="imageRounded" class="mx-auto lg:ml-0 rounded-full tinted" :style="imageStyle" :src="`/images/${image}`">
+    <img v-if="imageRounded" class="tinted mx-auto rounded-full lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
     <img v-else class="mx-auto lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
   </div>
 </template>
 
 <style scoped>
   .tinted {
-    filter: sepia(100%) saturate(100%) brightness(90%) hue-rotate(125deg);
+    filter: sepia(100%) saturate(50%) brightness(90%) hue-rotate(125deg);
   }
 </style>

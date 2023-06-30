@@ -48,6 +48,6 @@ const breakpoints = {
 
 <style lang="postcss">
   .carousel__slide > div {
-    @apply h-full w-full mx-4;
+    @apply h-full w-full mx-4 cursor-grab;
   }
 </style>

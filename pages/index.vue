@@ -290,6 +290,9 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
       </div>
     </PageSection>
     <PageSection light-gradient>
+      <Heading center>
+        Testimonials
+      </Heading>
       <CarouselTestimonials :items="data?.testimonialCards" />
     </PageSection>
   </div>
