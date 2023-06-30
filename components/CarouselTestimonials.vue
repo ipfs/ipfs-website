@@ -40,7 +40,7 @@ const breakpoints = {
         </div>
       </Slide>
       <template #addons>
-        <Pagination />
+        <Pagination class="py-4" />
       </template>
     </Carousel>
   </div>
