@@ -99,7 +99,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </Grid>
       <div class="mx-auto table">
         <Btn href="/developers" primary>
-          How it works
+          Learn how it works
         </Btn>
       </div>
     </PageSection>
@@ -148,7 +148,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Use IPFS apps
             </h3>
             <p class="text-lg text-black">
-              Store and share files, stream music, publish your website, store NFTs, and more through hundreds of applications built on IPFS.
+              Share files, stream music, publish your website, store NFTs, and much more through hundreds of applications built on IPFS.
             </p>
           </ImageSplit>
           <ListLinks>
