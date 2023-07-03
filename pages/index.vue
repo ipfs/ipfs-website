@@ -218,7 +218,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
     </PageSection>
     <PageSection dark-gradient text-white overlay="constellations-home-by-the-numbers.svg" overlay-position="right-0 top-16">
       <Heading center>
-        IPFS By The Numbers
+        IPFS by the Numbers
       </Heading>
       <div class="mt-16">
         <Grid>
