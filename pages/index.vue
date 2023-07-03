@@ -1,5 +1,39 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+const config = useRuntimeConfig()
+
+// TODO: temporary until we have meta images included in the feed
+const blogPlaceholderImage = `${config.public.blogUrl}/assets/img/blog-post-placeholder.af417eb0.png`
+
+// blog/news/video content
+interface Post {
+  title: string
+  date: string
+  excerpt?: string
+  url: string
+  author?: string
+  category?: string
+  tags?: string
+  image?: string
+  thumbnail?: string
+}
+
+interface BlogItems { posts: Post[] }
+interface NewsItems { news: Post[] }
+interface VideoItems { videos: Post[] }
+
+const { data: latestBlogs } = await useFetch('/index.json', {
+  baseURL: config.public.blogUrl,
+  transform: (data: BlogItems) => data.posts,
+})
+const { data: latestNews } = await useFetch('/news.json', {
+  baseURL: config.public.blogUrl,
+  transform: (data: NewsItems) => data.news,
+})
+const { data: latestVideos } = await useFetch('/videos.json', {
+  baseURL: config.public.blogUrl,
+  transform: (data: VideoItems) => data.videos,
+})
 </script>
 
 <template>
@@ -204,28 +238,13 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         </Subhead>
         <Grid>
           <Card2
-            image="blog-1.jpg"
-            date="30 January 2023"
-            heading="Interplanetary Applications: Disco Chat"
-            subhead="Discordian"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-          />
-          <Card2
-            image="blog-2.jpg"
-            date="30 January 2023"
-            heading="Interplanetary Applications: Disco Chat"
-            subhead="Discordian"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-          />
-          <Card2
-            image="blog-3.jpg"
-            date="30 January 2023"
-            heading="Interplanetary Applications: Disco Chat"
-            subhead="Discordian"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
+            v-for="item in latestBlogs"
+            :key="item.title"
+            :date="item.date"
+            :image="item.image || blogPlaceholderImage"
+            :heading="item.title"
+            :subhead="item.author"
+            :link="item.url"
           />
         </Grid>
       </div>
@@ -235,22 +254,12 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         </Subhead>
         <Grid>
           <Card2
-            date="30 January 2023"
-            heading="WebTransport in libp2p"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-          />
-          <Card2
-            date="30 January 2023"
-            heading="Why the Internet Needs the Interplanetary File System"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-          />
-          <Card2
-            date="30 January 2023"
-            heading="Quiet: Free and Open P2P Team Chat built with Tor, libp2p and IPFS"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
+            v-for="item in latestNews"
+            :key="item.title"
+            :date="item.date"
+            :heading="item.title"
+            :subhead="item.author"
+            :link="item.url"
           />
         </Grid>
       </div>
@@ -260,31 +269,14 @@ const { data } = await useAsyncData('data', () => queryContent('_data').findOne(
         </Subhead>
         <Grid>
           <Card2
-            image="video-1.jpg"
-            date="30 January 2023"
-            heading="Meet the Web3 Builders: Pinata"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
+            v-for="item in latestVideos"
+            :key="item.title"
+            :date="item.date"
+            :image="item.thumbnail"
+            :heading="item.title"
+            :subhead="item.author"
+            :link="item.url"
             category="Video"
-            tags="#NFTs #pinning #API #community"
-          />
-          <Card2
-            image="video-2.jpg"
-            date="30 January 2023"
-            heading="Meet the Web3 Builders: Pinata"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-            category="Video"
-            tags="#NFTs #pinning #API #community"
-          />
-          <Card2
-            image="video-3.jpg"
-            date="30 January 2023"
-            heading="Meet the Web3 Builders: Pinata"
-            excerpt="Check out Disco Chat, a peer-to-peer chat application built to demonstrate the power of peer-to-peer while enabling other"
-            link="#"
-            category="Video"
-            tags="#NFTs #pinning #API #community"
           />
         </Grid>
       </div>

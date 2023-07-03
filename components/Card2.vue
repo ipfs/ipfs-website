@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AppLink from './AppLink.vue'
+
 interface Props {
   image?: string
   date?: string
@@ -9,12 +11,13 @@ interface Props {
   category?: string
   tags?: string
 }
-defineProps<Props>()
+const props = defineProps<Props>()
+const image = props.image?.startsWith('http') ? props.image : `/images/${props.image}`
 </script>
 
 <template>
-  <div class="rounded-lg bg-brand-light">
-    <img v-if="image" class="h-40 w-full object-cover" :src="`/images/${image}`">
+  <component :is="link ? AppLink : 'div'" class="card rounded-lg bg-brand-light" :href="link">
+    <img v-if="props.image" class="aspect-video w-full object-cover" :src="image">
     <div class="p-6 pb-0">
       <p v-if="date" class="mb-1 text-xs text-gray-400">
         {{ date }}
@@ -29,9 +32,6 @@ defineProps<Props>()
     <div class="p-6 pt-4">
       <p v-if="excerpt" class="inline-block text-base">
         {{ excerpt }}...
-        <AppLink class="text-brand-teal-dark underline" :href="link">
-          Read more
-        </AppLink>
       </p>
       <slot />
       <div v-if="category || tags" class="mt-4 flex inline-flex gap-1">
@@ -43,5 +43,5 @@ defineProps<Props>()
         </div>
       </div>
     </div>
-  </div>
+  </component>
 </template>
