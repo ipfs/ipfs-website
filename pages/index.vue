@@ -269,6 +269,7 @@ const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.jso
             :heading="item.title"
             :subhead="item.author"
             :link="item.url"
+            category="Video"
           />
         </Grid>
       </div>
