@@ -127,19 +127,19 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-tooling.svg" tight>
+          <ImageSplit image="constellation-store.svg" tight>
             <h3 class="mb-4 text-xl text-black">
-              Develop tooling for IPFS
+              Store and manage your data on IPFS
             </h3>
             <p class="text-lg text-black">
-              Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+              Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Kubo (Go)" link="#" />
-            <ListLink label="Cluster" link="#" />
-            <ListLink label="Iroh (Rust)" link="#" />
-            <ListLink label="Helia (JavaScript)" link="#" />
+            <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
+            <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
+            <ListLink label="Managing Data" link="#" />
+            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/examples/data-ingestion/" />
           </ListLinks>
         </Card>
         <Card>
@@ -157,19 +157,19 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-store.svg" tight>
+          <ImageSplit image="constellation-tooling.svg" tight>
             <h3 class="mb-4 text-xl text-black">
-              Store and manage your data on IPFS
+              Develop tooling for IPFS
             </h3>
             <p class="text-lg text-black">
-              Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
+              Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
-            <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
-            <ListLink label="Managing Data" link="#" />
-            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/examples/data-ingestion/" />
+            <ListLink label="Kubo (Go)" link="#" />
+            <ListLink label="Cluster" link="#" />
+            <ListLink label="Iroh (Rust)" link="#" />
+            <ListLink label="Helia (JavaScript)" link="#" />
           </ListLinks>
         </Card>
       </Grid>
