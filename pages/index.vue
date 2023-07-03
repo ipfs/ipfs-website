@@ -121,7 +121,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Developers Page" link="#" />
+            <ListLink label="Developers Page" link="/developers" />
             <ListLink label="Documentation" link="https://docs.ipfs.tech/" />
             <ListLink label="Read Case Studies" link="https://docs.ipfs.tech/case-studies/arbol/" />
           </ListLinks>
