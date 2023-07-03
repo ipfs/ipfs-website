@@ -129,7 +129,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         <Card>
           <ImageSplit image="constellation-tooling.svg" tight>
             <h3 class="mb-4 text-xl text-black">
-              Build tooling for IPFS
+              Develop tooling for IPFS
             </h3>
             <p class="text-lg text-black">
               Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
