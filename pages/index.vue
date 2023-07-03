@@ -66,7 +66,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Why IPFS?
       </Heading>
       <p class="mb-12 text-xl">
-        Our peer-to-peer content delivery network is built around content addressing: Store, retrieve, and locate data based on the guts of its content vs. its name or location.
+        Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
       </p>
       <Grid>
         <Card center>
