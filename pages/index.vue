@@ -2,6 +2,9 @@
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
 const config = useRuntimeConfig()
 
+// TODO: temporary until we have a meta images included in the feed
+const blogPlaceholderImage = `${config.public.blogUrl}/assets/img/blog-post-placeholder.af417eb0.png`
+
 // blog/news/video content
 interface Post {
   title: string
@@ -238,7 +241,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             v-for="item in latestBlogs"
             :key="item.title"
             :date="item.date"
-            :image="item.image || `${config.public.blogUrl}/assets/img/blog-post-placeholder.af417eb0.png`"
+            :image="item.image || blogPlaceholderImage"
             :heading="item.title"
             :subhead="item.author"
             :link="item.url"
