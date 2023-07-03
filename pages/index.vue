@@ -117,7 +117,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Build peer-to-peer apps with IPFS
             </h3>
             <p class="text-lg text-black">
-              Join thousands of developers who choose IPFS to build software that's open, verifiable, and resilient.
+              Our most popular implementations are written in Go, Rust, and JavaScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
             </p>
           </ImageSplit>
           <ListLinks>
