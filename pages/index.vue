@@ -108,7 +108,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Get Started
       </Heading>
       <p class="mb-16">
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.
+        Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
       </p>
       <Grid cols="2">
         <Card>
