@@ -75,7 +75,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             Open
           </h3>
           <p class="mb-8 text-xl">
-            The IPFS network is distributed and participatory, which reduces data silos from central servers.
+            The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
           </p>
         </Card>
         <Card center>
