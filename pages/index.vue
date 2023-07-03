@@ -93,7 +93,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             Resilient
           </h3>
           <p class="mb-8 text-xl">
-            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages
+            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
           </p>
         </Card>
       </Grid>
