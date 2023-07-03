@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
+const config = useRuntimeConfig()
 
 // blog/news/video content
 interface Post {
@@ -18,13 +19,16 @@ interface BlogItems { posts: Post[] }
 interface NewsItems { news: Post[] }
 interface VideoItems { videos: Post[] }
 
-const { data: latestBlogs } = await useFetch('https://blog.ipfs.tech/index.json', {
+const { data: latestBlogs } = await useFetch('/index.json', {
+  baseURL: config.public.blogUrl,
   transform: (data: BlogItems) => data.posts,
 })
-const { data: latestNews } = await useFetch('https://blog.ipfs.tech/news.json', {
+const { data: latestNews } = await useFetch('/news.json', {
+  baseURL: config.public.blogUrl,
   transform: (data: NewsItems) => data.news,
 })
-const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.json', {
+const { data: latestVideos } = await useFetch('/videos.json', {
+  baseURL: config.public.blogUrl,
   transform: (data: VideoItems) => data.videos,
 })
 </script>
@@ -234,7 +238,7 @@ const { data: latestVideos } = await useFetch('https://blog.ipfs.tech/videos.jso
             v-for="item in latestBlogs"
             :key="item.title"
             :date="item.date"
-            :image="item.image || 'https://blog.ipfs.tech/assets/img/blog-post-placeholder.af417eb0.png'"
+            :image="item.image || `${config.public.blogURL}/assets/img/blog-post-placeholder.af417eb0.png`"
             :heading="item.title"
             :subhead="item.author"
             :link="item.url"

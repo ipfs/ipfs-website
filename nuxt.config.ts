@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 const PUBLIC_SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://ipfs.tech'
+const PUBLIC_BLOG_URL = 'https://blog.ipfs.tech'
 // strip out the protocol and trailing slash
 const PUBLIC_DOMAIN = PUBLIC_SITE_URL.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')
 
@@ -50,6 +51,7 @@ export default defineNuxtConfig({
       siteName: 'IPFS Powers the Distributed Web',
       siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
       siteImage: '/images/ipfs-social-card.png',
+      blogUrl: PUBLIC_BLOG_URL,
       language: 'en-US',
       indexable: false, // TODO: enable before launch
       plausible: {
