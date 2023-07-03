@@ -162,7 +162,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Store and manage your data on IPFS
             </h3>
             <p class="text-lg text-black">
-              Use content addressing to give your data unique identifiers, and use IPFS for large scale data storage and compute.
+              Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
             </p>
           </ImageSplit>
           <ListLinks>
