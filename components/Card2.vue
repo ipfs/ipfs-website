@@ -17,7 +17,7 @@ const image = props.image?.startsWith('http') ? props.image : `/images/${props.i
 
 <template>
   <component :is="link ? AppLink : 'div'" class="card rounded-lg bg-brand-light" :href="link">
-    <img v-if="props.image" class="h-40 w-full object-cover" :src="image">
+    <img v-if="props.image" class="aspect-video w-full object-cover" :src="image">
     <div class="p-6 pb-0">
       <p v-if="date" class="mb-1 text-xs text-gray-400">
         {{ date }}
