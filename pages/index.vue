@@ -50,7 +50,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
     <PageSection>
       <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
         <Heading>
-          A Universe Of Uses
+          A Universe of Uses
         </Heading>
         <Subhead>How IPFS is Used in Production</Subhead>
         <p class="text-xl">
