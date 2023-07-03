@@ -212,7 +212,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Each new node that joins IPFS makes the network stronger for everyone.
         </p>
         <Btn href="/community" primary>
-          Join Our Community
+          Join the Community
         </Btn>
       </div>
     </PageSection>
