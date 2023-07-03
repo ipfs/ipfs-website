@@ -132,7 +132,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Develop tooling for IPFS
             </h3>
             <p class="text-lg text-black">
-              Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+              Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
             </p>
           </ImageSplit>
           <ListLinks>
