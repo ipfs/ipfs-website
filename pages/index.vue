@@ -2,7 +2,7 @@
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
 const config = useRuntimeConfig()
 
-// TODO: temporary until we have a meta images included in the feed
+// TODO: temporary until we have meta images included in the feed
 const blogPlaceholderImage = `${config.public.blogUrl}/assets/img/blog-post-placeholder.af417eb0.png`
 
 // blog/news/video content
