@@ -47,13 +47,13 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         IPFS is an open system to manage data without a central server
       </template>
     </Hero>
-    <PageSection>
+    <PageSection bottom-tight>
       <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
         <Heading>
           A Universe of Uses
         </Heading>
         <Subhead>How IPFS is Used in Production</Subhead>
-        <p class="text-xl">
+        <p class="pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
         </p>
       </ImageSplit>
