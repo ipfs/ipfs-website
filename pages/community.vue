@@ -29,11 +29,8 @@ definePageMeta({
       <Grid cols="2">
         <Card background="light">
           <Subhead bold tight>
-            Contribute
-          </Subhead>
-          <p class="text-center text-xl text-black">
             Join the conversation
-          </p>
+          </Subhead>
           <div class="mx-auto max-w-xs flex justify-between">
             <div>
               <AppLink>
@@ -64,7 +61,7 @@ definePageMeta({
         <Card background="light">
           <ImageSplit image="ipfs-logo.svg" image-width="140" tight>
             <Subhead bold tight>
-              Discuss Open Problems
+              Discuss topics in-depth
             </Subhead>
             <p class="text-xl text-black">
               Check out the <AppLink href="https://discuss.ipfs.tech/">
@@ -80,18 +77,22 @@ definePageMeta({
           </Subhead>
           <img src="/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
-            <AppLink href="https://lu.ma/ipfs">
-              Subscribe
-            </AppLink> to our community calendar to attend an upcoming event.
+            Meet other members of the community virtually or in-person by <AppLink href="https://lu.ma/ipfs">
+              subscribing
+            </AppLink> to our event calendar.
           </p>
         </Card>
         <Card background="light">
           <Subhead bold tight>
-            Tune In To What's New
+            Keep up with what's new
           </Subhead>
           <p class="text-xl text-black">
-            Get the latest on news in the IPFS ecosystem by subscribing to <AppLink>our newsletter</AppLink> or watching
-            This Month in <AppLink>IPFS livestream</AppLink>.
+            Get the latest on news about what's happening in the IPFS ecosystem by <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
+              subscribing to our newsletter
+            </AppLink> or watching
+            This Month in <AppLink href="https://www.youtube.com/@IPFSbot/videos">
+              IPFS livestream
+            </AppLink>.
           </p>
         </Card>
       </Grid>
