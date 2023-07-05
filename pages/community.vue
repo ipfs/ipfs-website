@@ -34,30 +34,30 @@ definePageMeta({
           <p class="text-center text-xl text-black">
             Join the conversation
           </p>
-          <div class="grid grid-cols-3 mx-auto max-w-xs">
+          <div class="mx-auto max-w-xs flex justify-between">
             <div>
               <AppLink>
-                <img src="/images/circle-slack.svg" class="mx-auto my-4">
+                <img src="/images/circle-slack.svg" class="mx-auto my-4 block">
+                <p class="text-center text-xl text-black">
+                  Slack
+                </p>
               </AppLink>
-              <p class="text-center text-xl text-black">
-                <AppLink>Slack</AppLink>
-              </p>
             </div>
             <div>
               <AppLink>
                 <img src="/images/circle-discord.svg" class="mx-auto my-4">
+                <p class="text-center text-xl text-black">
+                  Discord
+                </p>
               </AppLink>
-              <p class="text-center text-xl text-black">
-                <AppLink>Discord</AppLink>
-              </p>
             </div>
             <div>
               <AppLink>
                 <img src="/images/circle-matrix.svg" class="mx-auto my-4">
+                <p class="text-center text-xl text-black">
+                  Matrix
+                </p>
               </AppLink>
-              <p class="text-center text-xl text-black">
-                <AppLink>Matrix</AppLink>
-              </p>
             </div>
           </div>
         </Card>
