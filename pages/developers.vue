@@ -162,7 +162,9 @@ definePageMeta({
             </AppLink> to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs.
           </p>
           <p>
-            <b>Get Started:</b> Read <AppLink>how content addressing and CIDs work</AppLink>.
+            <b>Get Started:</b> learn <AppLink href="https://docs.ipfs.tech/concepts/content-addressing/">
+              how content addressing and CIDs work
+            </AppLink>.
           </p>
         </Card>
         <Card>
