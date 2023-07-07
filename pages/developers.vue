@@ -284,7 +284,7 @@ definePageMeta({
           <p class="mb-8 text-xl">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
           </p>
-          <Btn primary href="#">
+          <Btn primary href="https://docs.ipfs.tech/concepts/content-addressing/">
             View all public IPFS Gateways here
           </Btn>
         </ImageSplit>
@@ -297,7 +297,7 @@ definePageMeta({
           <p class="mb-8 text-xl">
             To keep your data available via IPFS, you can choose a pinning service (which will run a node for you) or run your own node(s) with one of our implementations above.
           </p>
-          <Btn primary href="#">
+          <Btn primary href="https://blog.ipfs.tech/2022-06-09-practical-explainer-ipfs-gateways-1/">
             Learn more about how they work
           </Btn>
         </ImageSplit>

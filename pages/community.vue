@@ -163,7 +163,7 @@ definePageMeta({
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
-          <ZebraCard cta-label="Lear more" cta-link="https://github.com/wnfs-wg">
+          <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 WNFS Working Group
