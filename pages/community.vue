@@ -33,7 +33,7 @@ definePageMeta({
           </Subhead>
           <div class="mx-auto max-w-xs flex justify-between">
             <div>
-              <AppLink>
+              <AppLink href="https://filecoin.io/slack">
                 <img src="/images/circle-slack.svg" class="mx-auto my-4 block">
                 <p class="text-center text-xl text-black">
                   Slack
@@ -41,7 +41,7 @@ definePageMeta({
               </AppLink>
             </div>
             <div>
-              <AppLink>
+              <AppLink href="https://discord.gg/vj7qWuAyHY">
                 <img src="/images/circle-discord.svg" class="mx-auto my-4">
                 <p class="text-center text-xl text-black">
                   Discord
@@ -49,7 +49,7 @@ definePageMeta({
               </AppLink>
             </div>
             <div>
-              <AppLink>
+              <AppLink href="https://matrix.to/#/#lobby:ipfs.io">
                 <img src="/images/circle-matrix.svg" class="mx-auto my-4">
                 <p class="text-center text-xl text-black">
                   Matrix
@@ -120,7 +120,7 @@ definePageMeta({
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
         </Subhead>
         <Grid>
-          <ZebraCard>
+          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 Interplanetary Office Hours
@@ -130,9 +130,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 IPFS Implementers
@@ -143,7 +142,7 @@ definePageMeta({
             </ImageSplit>
             <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 libp2p Implementers
@@ -153,9 +152,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 IPLD Working Group
@@ -165,9 +163,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 WNFS Working Group
@@ -177,9 +174,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 IPVM Working Group
@@ -189,9 +185,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 Move the Bytes Working Group
@@ -201,9 +196,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 Content Routing Working Group
@@ -213,9 +207,8 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
-          <ZebraCard button-label="Meeting Calendar" button-link="#">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="#">
             <ImageSplit gap="0" image="constellation-office-hours.svg">
               <h3>
                 ProbeLab Office Hours - IPFS Network Measurements
@@ -225,7 +218,6 @@ definePageMeta({
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-            <p><b>Next meeting:</b> date</p>
           </ZebraCard>
         </Grid>
       </div>
