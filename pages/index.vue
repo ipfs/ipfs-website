@@ -65,7 +65,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Why IPFS?
       </Heading>
-      <p class="mb-12 text-xl">
+      <p class="mb-8 text-center text-xl">
         Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
       </p>
       <Grid>
@@ -107,7 +107,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Get Started
       </Heading>
-      <p class="mx-auto text-center">
+      <p class="mx-auto mb-8 text-center">
         Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
       </p>
       <Grid cols="2">
