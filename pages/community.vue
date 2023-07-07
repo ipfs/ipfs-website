@@ -12,8 +12,7 @@ definePageMeta({
         Community: Get in Orbit
       </template>
       <template #subtitle>
-        IPFS is made of you – our open source ecosystem of nearly 2,000 active contributors and many more developers and
-        users.
+        Join our open source ecosystem of ~2,000 active contributors, plus many more developers and users.
       </template>
     </Hero>
     <PageSection bottom-tight>
@@ -111,7 +110,7 @@ definePageMeta({
         />
       </div>
     </PageSection>
-    <PageSection dark-gradient>
+    <PageSection id="meetups-wgs" dark-gradient>
       <div class="text-white">
         <Heading center>
           Meetups And Working Groups
@@ -262,7 +261,13 @@ definePageMeta({
         </div>
         <Card background="dark">
           <Subhead center tight>
-            Interested in solving these challenges together? Join a community event, a working group, or forum discussion.
+            Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/8kk9i628">
+              community event
+            </AppLink>, a <AppLink to="#meetups-wgs">
+              working group
+            </AppLink>, or <AppLink href="https://discuss.ipfs.tech">
+              forum
+            </AppLink> discussion.
           </Subhead>
         </Card>
       </div>
