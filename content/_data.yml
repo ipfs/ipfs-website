@@ -13,7 +13,7 @@ useCards:
     title: Develop offline-native productivity tools
     description: |
       Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
-    link: https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that
+    link: https://doc.anytype.io/d/data-and-security/data-storage-and-deletion#storage
   - image: logo-anytype.png
     title: Publish scientific research that invites global collaboration
     description: |
