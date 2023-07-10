@@ -151,7 +151,7 @@ definePageMeta({
             </Subhead>
           </ImageSplit>
           <p>
-            Keep the promise of data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
+            Enable data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
           </p>
           <p>
             Alternative: Explore the possibilities hybrid apps that combine smart contracts and verifiable off-chain storage on IPFS.
