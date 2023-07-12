@@ -39,11 +39,6 @@
                     Security
                   </AppLink>
                 </li>
-                <li>
-                  <AppLink href="#">
-                    Browsers
-                  </AppLink>
-                </li>
               </ul>
             </div>
             <div>
