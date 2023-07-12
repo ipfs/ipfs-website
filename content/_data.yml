@@ -27,7 +27,7 @@ useCards:
   - image: logo-anytype.png
     title: Enable data transparency in Web3
     description: |
-      Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs 
+      Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs
     link: link
   - image: logo-anytype.png
     title: Literally store your data out of this world
@@ -124,7 +124,7 @@ twitterCards:
       handle: IPFS
       post: |
         Ready for round 2?
-        
+
         Join us for [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp) tomorrow, kicking off at 10am for a full day of talks, workshops, hacking, and more.
       image: twitter-shann.jpg
       date: Oct 28, 2022
@@ -172,7 +172,7 @@ twitterCards:
       handle: protocollabs
       post: |
         Only two weeks until we're together in Lisbon for [LabWeek22](https://twitter.com/hashtag/LabWeek22)! Events are filling up fast [http://22.labweek.io](http://22.labweek.io) for the latest news and to reserve your spot!
-        
+
         Lisbon, Portugal<br>
         Oct 24 - Nov 4, 2022<br>
         [http://22.labweek.io](http://22.labweek.io)
