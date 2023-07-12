@@ -31,7 +31,7 @@ const bgColor = computed(() => {
 </template>
 
 <style scoped lang="postcss">
-:deep(.card p) {
+.card :deep(p) {
   @apply mb-4 text-lg;
 }
 </style>
