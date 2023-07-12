@@ -5,7 +5,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLayout>
+  <NuxtLayout class="antialiased">
     <SeoKit />
     <NuxtPage />
   </NuxtLayout>
