@@ -253,7 +253,7 @@ definePageMeta({
               gomobile-ipfs
             </AppLink> (Go) Experimental mobile implementation of IPFS
           </li>
-          <li>DuriniOS and Android app with support for aching gateway & uploads to pinning services</li>
+          {{/*  <li>DuriniOS and Android app with support for aching gateway & uploads to pinning services</li>  */}}
         </ul>
       </div>
       <Card background="light">
@@ -284,8 +284,8 @@ definePageMeta({
           <p class="mb-8 text-xl">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
           </p>
-          <Btn primary href="https://docs.ipfs.tech/concepts/content-addressing/">
-            View all public IPFS Gateways here
+          <Btn primary href="https://ipfs.github.io/public-gateway-checker/">
+            View all public IPFS Gateways
           </Btn>
         </ImageSplit>
       </div>

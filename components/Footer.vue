@@ -52,27 +52,27 @@
               </Subhead>
               <ul class="mt-4 text-xs leading-7 lg:text-sm">
                 <li>
-                  <AppLink href="#">
+                  <AppLink href="https://discuss.ipfs.tech/">
                     Forums
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="#">
+                  <AppLink href="https://ipfs.fyi/office">
                     Office Hours
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="#">
+                  <AppLink href="https://hackathons.filecoin.io/">
                     Hackathons
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="#">
+                  <AppLink href="https://github.com/ipfs/devgrants">
                     Developer Grants
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="#">
+                  <AppLink href="https://ipfs.fyi/accelerators">
                     Accelerators
                   </AppLink>
                 </li>
