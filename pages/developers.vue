@@ -237,7 +237,7 @@ definePageMeta({
         <Subhead bold>
           Lite or Experimental
         </Subhead>
-        <ul class="list-xl">
+        <ul class="list-lg">
           <li>
             <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
               ipfs-embed
