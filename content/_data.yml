@@ -33,7 +33,7 @@ useCards:
     title: Enable data transparency in Web3
     description: |
       Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs
-    link: https://docs.ipfs.tech/concepts/case-study-snapshot/
+    link: https://docs.ipfs.tech/case-studies/snapshot/
     label: Read the case study
   - image: logo-anytype.png
     title: Literally store your data out of this world
