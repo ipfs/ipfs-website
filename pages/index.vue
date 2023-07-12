@@ -59,7 +59,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </ImageSplit>
     </PageSection>
     <PageSection tight full-width class="min-h-96">
-      <CarouselCards :items="data?.useCards" button-label="Read their story" />
+      <CarouselCards :items="data?.useCards" />
     </PageSection>
     <PageSection>
       <Heading center>
