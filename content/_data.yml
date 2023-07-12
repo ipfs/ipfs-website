@@ -44,17 +44,20 @@ browserCards:
     title: Opera
     description: |
       Supports IPFS and IPNS schemes
-    link: https://www.protocol.ai
+    link: https://blogs.opera.com/tips-and-tricks/2021/02/opera-crypto-files-for-keeps-ipfs-unstoppable-domains/
+    label: Learn more
   - image: logo-chrome.png
     title: Chromium Extensions
     description: |
       IPFS browser extension
-    link: https://www.protocol.ai
+    link: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
+    label: Install
   - image: logo-firefox.png
     title: Firefox Extension
     description: |
       IPFS browser extension
-    link: https://www.protocol.ai
+    link: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
+    label: Install
 testimonialCards:
   - image: portrait-mauve-signweaver-agregore.webp
     title: Mauve Signweaver, Founder - Agregore
