@@ -253,7 +253,6 @@ definePageMeta({
               gomobile-ipfs
             </AppLink> (Go) Experimental mobile implementation of IPFS
           </li>
-          {{/*  <li>DuriniOS and Android app with support for aching gateway & uploads to pinning services</li>  */}}
         </ul>
       </div>
       <Card background="light">
