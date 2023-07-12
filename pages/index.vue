@@ -65,9 +65,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Why IPFS?
       </Heading>
-      <p class="mb-8 text-center text-xl">
+      <Subhead class="text-xl" center>
         Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
-      </p>
+      </Subhead>
       <Grid>
         <Card center>
           <img src="/images/constellation-open.svg" class="mx-auto mb-8">
@@ -107,15 +107,15 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Get Started
       </Heading>
-      <p class="mx-auto mb-8 text-center">
+      <Subhead center>
         Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
-      </p>
+      </Subhead>
       <Grid cols="2">
         <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Build peer-to-peer apps with IPFS
+          </h3>
           <ImageSplit class="flex flex-auto" image="constellation-peer.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Build peer-to-peer apps with IPFS
-            </h3>
             <p class="text-lg text-black">
               Our most popular implementations are written in Go, Rust, and JavaScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
             </p>
@@ -127,10 +127,10 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ListLinks>
         </Card>
         <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Store and manage your data on IPFS
+          </h3>
           <ImageSplit image="constellation-store.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Store and manage your data on IPFS
-            </h3>
             <p class="text-lg text-black">
               Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
             </p>
@@ -138,15 +138,14 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           <ListLinks>
             <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
             <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
-            <ListLink label="Managing Data" link="#" />
             <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/data-ingestion/" />
           </ListLinks>
         </Card>
         <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Use IPFS apps
+          </h3>
           <ImageSplit image="constellation-apps.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Use IPFS apps
-            </h3>
             <p class="text-lg text-black">
               Share files, stream music, publish your website, store NFTs, and much more through hundreds of applications built on IPFS.
             </p>
@@ -157,10 +156,10 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ListLinks>
         </Card>
         <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Develop tooling for IPFS
+          </h3>
           <ImageSplit image="constellation-tooling.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Develop tooling for IPFS
-            </h3>
             <p class="text-lg text-black">
               Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
             </p>
@@ -179,9 +178,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Connect Through Community
       </Heading>
       <div class="text-center">
-        <p class="mb-8 text-xl">
+        <Subhead center>
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-        </p>
+        </Subhead>
         <div class="ribbon-wrap py-12 lg:py-56">
           <RibbonAnnotations
             :annotations="[

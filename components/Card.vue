@@ -20,7 +20,7 @@ const bgColor = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-between rounded-xl p-10" :class="[{ 'text-center': center }, bgColor]">
+  <div class="card flex flex-col justify-between rounded-xl p-10 text-center sm:text-left" :class="[{ 'text-center': center }, bgColor]">
     <slot />
     <div v-if="buttonLabel" class="flex-none" :class="{ 'mx-auto': center }">
       <Btn :href="buttonLink">
@@ -29,3 +29,9 @@ const bgColor = computed(() => {
     </div>
   </div>
 </template>
+
+<style scoped lang="postcss">
+.card:deep p {
+  @apply mb-4 text-lg;
+}
+</style>

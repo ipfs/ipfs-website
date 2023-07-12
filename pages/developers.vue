@@ -22,15 +22,15 @@ definePageMeta({
       <Subhead center>
         IPFS advances the design of the internet ahead by light years
       </Subhead>
-      <p class="text-2xl">
+      <Subhead center>
         Unlike HTTP which loads files from one server at a time, content addressing decouples data from its location. IPFS retrieves files from multiple sources at once in a peer-to-peer fashion so you can:
-      </p>
+      </Subhead>
       <div class="mt-10 flex flex-col gap-20 lg:gap-8 lg:px-20 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
           <Subhead tight bold small>
             "Fingerprinting"
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can <AppLink href="https://docs.ipfs.tech/concepts/persistence/">
               “pin”
             </AppLink> to keep
@@ -40,7 +40,7 @@ definePageMeta({
           <Subhead tight bold small>
             Store &amp; distribute content freely
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             Our peer-to-peer network joins thousands of nodes so you can find all nodes with the content you want and help others discover the content you have
           </p>
         </ImageSplit>
@@ -48,7 +48,7 @@ definePageMeta({
           <Subhead tight bold small>
             Optimize content delivery
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             IPFS caches and stores data on local servers, saving bandwidth via more efficient distribution and delivery
           </p>
         </ImageSplit>
@@ -98,7 +98,7 @@ definePageMeta({
       </div>
       <Grid cols="2">
         <Card>
-          <ImageSplit gap="0" image="constellation-host-publish.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-host-publish.svg">
             <Subhead tight bold>
               Host and Publish Data and Websites on IPFS
             </Subhead>
@@ -123,7 +123,7 @@ definePageMeta({
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-archives-home.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-archives-home.svg">
             <Subhead tight bold>
               Give Your Archives a Permanent Home
             </Subhead>
@@ -145,7 +145,7 @@ definePageMeta({
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-off-chain.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-off-chain.svg">
             <Subhead tight bold>
               Store Off-Chain Data in a Decentralized Way
             </Subhead>
@@ -168,7 +168,7 @@ definePageMeta({
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-human-agency.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-human-agency.svg">
             <Subhead tight bold>
               Build Distributed Apps that bring back human agency
             </Subhead>
@@ -204,7 +204,7 @@ definePageMeta({
           <Subhead bold>
             Popular Implementations
           </Subhead>
-          <ul class="list-xl">
+          <ul class="list-lg">
             <li>
               <AppLink href="https://github.com/ipfs/helia">
                 Helia
@@ -284,10 +284,10 @@ definePageMeta({
           <Subhead bold tight>
             Fetch IPFS data through a gateway
           </Subhead>
-          <Subhead tight>
+          <p class="mb-4 text-lg">
             The most common way to locate and retrieve files stored through IPFS is by using an IPFS Gateway
-          </Subhead>
-          <p class="mb-8 text-xl">
+          </p>
+          <p class="mb-8 text-lg">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
           </p>
           <Btn primary href="https://ipfs.github.io/public-gateway-checker/">
@@ -300,7 +300,7 @@ definePageMeta({
           <Subhead bold tight>
             Publish through a pinning service
           </Subhead>
-          <p class="mb-8 text-xl">
+          <p class="mb-8 text-lg">
             To keep your data available via IPFS, you can choose a pinning service (which will run a node for you) or run your own node(s) with one of our implementations above.
           </p>
           <Btn primary href="https://blog.ipfs.tech/2022-06-09-practical-explainer-ipfs-gateways-1/">
