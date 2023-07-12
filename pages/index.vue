@@ -139,7 +139,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
             <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
             <ListLink label="Managing Data" link="#" />
-            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/examples/data-ingestion/" />
+            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/data-ingestion/" />
           </ListLinks>
         </Card>
         <Card>
@@ -152,7 +152,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Install IPFS Desktop" link="#" />
+            <ListLink label="Install IPFS Desktop" link="https://docs.ipfs.tech/install/ipfs-desktop" />
             <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
           </ListLinks>
         </Card>
@@ -166,10 +166,10 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Kubo (Go)" link="#" />
-            <ListLink label="Cluster" link="#" />
-            <ListLink label="Iroh (Rust)" link="#" />
-            <ListLink label="Helia (JavaScript)" link="#" />
+            <ListLink label="Kubo (Go)" link="https://github.com/ipfs/kubo" />
+            <ListLink label="Cluster" link="https://github.com/ipfs-cluster/ipfs-cluster" />
+            <ListLink label="Iroh (Rust)" link="https://github.com/n0-computer/iroh" />
+            <ListLink label="Helia (JavaScript)" link="https://github.com/ipfs/helia" />
           </ListLinks>
         </Card>
       </Grid>
