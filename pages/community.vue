@@ -30,7 +30,7 @@ definePageMeta({
           <Subhead bold tight>
             Join the conversation
           </Subhead>
-          <div class="mx-auto max-w-xs flex justify-between">
+          <div class="mx-auto flex justify-between gap-8">
             <div>
               <AppLink href="https://filecoin.io/slack">
                 <img src="/images/circle-slack.svg" class="mx-auto my-4 block">

@@ -20,14 +20,10 @@ const bgColor = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col justify-between rounded-xl p-10" :class="bgColor">
-    <div
-      :class="{ 'text-center': center }"
-    >
-      <slot />
-    </div>
-    <div class="flex-none" :class="{ 'mx-auto': center }">
-      <Btn v-if="buttonLabel" :href="buttonLink">
+  <div class="flex flex-col justify-between rounded-xl p-10" :class="[{ 'text-center': center }, bgColor]">
+    <slot />
+    <div v-if="buttonLabel" class="flex-none" :class="{ 'mx-auto': center }">
+      <Btn :href="buttonLink">
         {{ buttonLabel }}
       </Btn>
     </div>

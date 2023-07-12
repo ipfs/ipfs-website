@@ -112,7 +112,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </p>
       <Grid cols="2">
         <Card>
-          <ImageSplit image="constellation-peer.svg" tight>
+          <ImageSplit class="flex flex-auto" image="constellation-peer.svg" tight>
             <h3 class="mb-4 text-xl text-black">
               Build peer-to-peer apps with IPFS
             </h3>
