@@ -72,7 +72,7 @@ definePageMeta({
         </Card>
         <Card background="light">
           <Subhead bold tight>
-            Meet the Community
+            Join a community event
           </Subhead>
           <img src="/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
