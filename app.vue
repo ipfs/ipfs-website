@@ -5,14 +5,15 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLayout class="antialiased">
+  <NuxtLayout>
     <SeoKit />
     <NuxtPage />
   </NuxtLayout>
 </template>
 
-<style>
+<style lang="postcss">
 html {
   scroll-behavior: smooth;
+  @apply antialiased;
 }
 </style>
