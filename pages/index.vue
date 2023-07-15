@@ -232,9 +232,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         What's Happening
       </Heading>
       <div class="mb-12">
-        <h3 class="mb-8 block h2">
+        <Subhead bold>
           On Our Blog
-        </h3>
+        </Subhead>
         <Grid>
           <Card2
             v-for="item in latestBlogs"
@@ -248,9 +248,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <h3 class="mb-8 block h2">
+        <Subhead bold>
           In The Media
-        </h3>
+        </Subhead>
         <Grid>
           <Card2
             v-for="item in latestNews"
@@ -263,9 +263,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <h3 class="mb-8 block h2">
+        <Subhead bold>
           Recent Videos
-        </h3>
+        </Subhead>
         <Grid>
           <Card2
             v-for="item in latestVideos"

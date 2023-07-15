@@ -6,7 +6,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <ul class="annotations absolute left-1/2 top-1/2 z-1 hidden text-xl lg:block -translate-x-1/2 -translate-y-1/2">
+  <ul class="annotations absolute left-1/2 top-1/2 z-1 hidden text-sm lg:block -translate-x-1/2 -translate-y-1/2">
     <li v-for="(annotation, index) in annotations" :key="index" :class="`annotation annotation${index + 1}`">
       {{ annotation }}
       <img :src="`/images/ribbon-annotation-${index + 1}.svg`" class="absolute">
@@ -69,12 +69,12 @@ defineProps<Props>()
 
 .annotation3 img {
   top: 30px;
-  left: 185px;
+  left: 125px;
 }
 
 .annotation4 img {
   top: 30px;
-  left: -65px;
+  left: -95px;
 }
 
 .annotation5 img {
@@ -84,16 +84,16 @@ defineProps<Props>()
 
 .annotation6 img {
   bottom: 30px;
-  left: -90px;
+  left: -130px;
 }
 
 .annotation7 img {
-  bottom: 60px;
+  bottom: 35px;
   left: 0px;
 }
 
 .annotation8 img {
   bottom: 30px;
-  left: -85px;
+  left: -105px;
 }
 </style>

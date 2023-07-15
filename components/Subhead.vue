@@ -10,7 +10,7 @@ defineProps<Props>()
 
 <template>
   <h3
-    class="mx-a max-w-prose" :class="[bold ? 'font-bold' : 'font-normal', small ? 'text-lg' : 'text-xl', tight ? 'mb-4' : 'mb-10', { 'text-center': center }]"
+    class="max-w-prose" :class="[bold ? 'font-bold' : 'font-normal', small ? 'text-lg' : 'text-xl', tight ? 'mb-4' : 'mb-10', { 'text-center': center }, { 'm-a': center }]"
   >
     <slot />
   </h3>

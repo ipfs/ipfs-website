@@ -199,68 +199,70 @@ definePageMeta({
       <Subhead center>
         To achieve our goal of IPFS running everywhere and be available to every networked device, our community keeps up active work across a variety of implementations.
       </Subhead>
-      <Card background="dark">
-        <div class="text-white">
+      <div class="m-a max-w-4xl">
+        <Card background="dark">
+          <div class="text-white">
+            <Subhead bold>
+              Popular Implementations
+            </Subhead>
+            <ul class="list-lg">
+              <li>
+                <AppLink href="https://github.com/ipfs/helia">
+                  Helia
+                </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
+              </li>
+              <li>
+                <AppLink href="https://github.com/ipfs/kubo">
+                  Kubo
+                </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+              </li>
+              <li>
+                <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
+                  Elastic IPFS
+                </AppLink> (Go) A new, cloud-native IPFS implementation
+              </li>
+              <li>
+                <AppLink href="https://github.com/n0-computer/iroh">
+                  Iroh
+                </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
+              </li>
+              <li>
+                <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
+                  IPFS Desktop
+                </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+              </li>
+            </ul>
+          </div>
+        </Card>
+        <div class="my-16 lg:mx-10">
           <Subhead bold>
-            Popular Implementations
+            Lite or Experimental
           </Subhead>
           <ul class="list-lg">
             <li>
-              <AppLink href="https://github.com/ipfs/helia">
-                Helia
-              </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
+              <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
+                ipfs-embed
+              </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
             </li>
             <li>
-              <AppLink href="https://github.com/ipfs/kubo">
-                Kubo
-              </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+              <AppLink href="https://github.com/hsanjuan/ipfs-lite">
+                ipfs-lite
+              </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
             </li>
             <li>
-              <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
-                Elastic IPFS
-              </AppLink> (Go) A new, cloud-native IPFS implementation
+              <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
+                gomobile-ipfs
+              </AppLink> (Go) Experimental mobile implementation of IPFS
             </li>
             <li>
-              <AppLink href="https://github.com/n0-computer/iroh">
-                Iroh
-              </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
-            </li>
-            <li>
-              <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
-                IPFS Desktop
-              </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+              Durin <AppLink href="https://apps.apple.com/us/app/durin/id1613391995">
+                iOS
+              </AppLink> and <AppLink href="https://play.google.com/store/apps/details?id=ai.protocol.durin&pli=1">
+                Android
+              </AppLink> Apps with support for aching gateway & uploads to pinning services
             </li>
           </ul>
         </div>
-      </Card>
-      <div class="my-16 lg:mx-10">
-        <Subhead bold>
-          Lite or Experimental
-        </Subhead>
-        <ul class="list-lg">
-          <li>
-            <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
-              ipfs-embed
-            </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
-          </li>
-          <li>
-            <AppLink href="https://github.com/hsanjuan/ipfs-lite">
-              ipfs-lite
-            </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
-          </li>
-          <li>
-            <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
-              gomobile-ipfs
-            </AppLink> (Go) Experimental mobile implementation of IPFS
-          </li>
-          <li>
-            Durin <AppLink href="https://apps.apple.com/us/app/durin/id1613391995">
-              iOS
-            </AppLink> and <AppLink href="https://play.google.com/store/apps/details?id=ai.protocol.durin&pli=1">
-              Android
-            </AppLink> Apps with support for aching gateway & uploads to pinning services
-          </li>
-        </ul>
       </div>
       <Card background="light">
         <Subhead tight center bold>
