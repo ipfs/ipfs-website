@@ -58,7 +58,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </p>
       </ImageSplit>
     </PageSection>
-    <PageSection tight full-width class="min-h-96">
+    <PageSection bottom-tight full-width class="mb-4 min-h-128">
       <CarouselCards :items="data?.useCards" />
     </PageSection>
     <PageSection>
