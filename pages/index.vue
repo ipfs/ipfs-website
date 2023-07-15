@@ -53,7 +53,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           A Universe of Uses
         </Heading>
         <Subhead>How IPFS is Used in Production</Subhead>
-        <p class="pb-10 text-xl">
+        <p class="max-w-xl pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
         </p>
       </ImageSplit>
@@ -65,7 +65,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Why IPFS?
       </Heading>
-      <Subhead class="text-xl" center>
+      <Subhead center>
         Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
       </Subhead>
       <Grid>
@@ -232,9 +232,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         What's Happening
       </Heading>
       <div class="mb-12">
-        <Subhead>
+        <h3 class="mb-8 block h2">
           On Our Blog
-        </Subhead>
+        </h3>
         <Grid>
           <Card2
             v-for="item in latestBlogs"
@@ -248,9 +248,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <Subhead>
+        <h3 class="mb-8 block h2">
           In The Media
-        </Subhead>
+        </h3>
         <Grid>
           <Card2
             v-for="item in latestNews"
@@ -263,9 +263,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <Subhead>
+        <h3 class="mb-8 block h2">
           Recent Videos
-        </Subhead>
+        </h3>
         <Grid>
           <Card2
             v-for="item in latestVideos"
