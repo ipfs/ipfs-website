@@ -36,7 +36,7 @@ defineEmits(['navigate'])
 <style lang="postcss" scoped>
 .mobile-nav-link {
   position: relative;
-  @apply text-4xl leading-normal font-sans;
+  @apply text-3xl leading-normal font-sans;
 }
 
 .transition-content-enter-active,

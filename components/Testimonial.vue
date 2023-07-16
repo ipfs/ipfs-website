@@ -8,10 +8,10 @@ defineProps<Props>()
 
 <template>
   <ImageSplit :image="image" image-width="260" flip image-rounded full-height>
-    <p class="mb-6 text-xl">
+    <p class="mb-6 sm:text-xl">
       <slot />
     </p>
-    <p class="text-xl font-bold">
+    <p class="font-bold sm:text-xl">
       {{ name }}
     </p>
   </ImageSplit>
