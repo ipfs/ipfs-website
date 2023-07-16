@@ -68,7 +68,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Subhead center>
         Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
       </Subhead>
-      <Grid>
+      <Grid class="gap-0">
         <Card center>
           <img src="/images/constellation-open.svg" class="mx-auto mb-8">
           <h3 class="mb-4 text-2xl text-brand-teal-dark">

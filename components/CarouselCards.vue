@@ -42,7 +42,7 @@ const breakpoints = {
           <h3 class="mb-8 text-xl">
             {{ item.title }}
           </h3>
-          <p class="mb-8 text-xl">
+          <p class="text-xl">
             {{ item.description }}
           </p>
         </Card>
