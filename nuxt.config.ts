@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import process from 'node:process'
+
 const PUBLIC_SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://ipfs.tech'
 const PUBLIC_BLOG_URL = 'https://blog.ipfs.tech'
 // strip out the protocol and trailing slash
