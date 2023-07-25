@@ -52,7 +52,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         <Heading>
           A Universe of Uses
         </Heading>
-        <Subhead>How IPFS is Used in Production</Subhead>
+        <Subhead>How IPFS is used in production</Subhead>
         <p class="max-w-xl pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
         </p>
