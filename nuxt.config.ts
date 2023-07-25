@@ -8,13 +8,9 @@ const PUBLIC_BLOG_URL = 'https://blog.ipfs.tech'
 const PUBLIC_DOMAIN = PUBLIC_SITE_URL.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')
 
 export default defineNuxtConfig({
-  nitro: {
-    prerender: {
-      ignore: ['/help', '/legal', '/media', '/privacy'],
-      routes: ['/ipfs-404.html'],
-    },
+  routeRules: {
+    '/ipfs-404.html': { prerender: true },
   },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
