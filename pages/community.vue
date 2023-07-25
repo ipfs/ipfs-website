@@ -120,7 +120,7 @@ definePageMeta({
         </Subhead>
         <Grid>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 Interplanetary Office Hours
               </h3>
@@ -131,7 +131,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-implementers">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 IPFS Implementers
               </h3>
@@ -142,7 +142,7 @@ definePageMeta({
             <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://calendar.google.com/calendar/u/0/embed?src=libp2p.io_0q9682i3te7eanhe9q7ae1c58g@group.calendar.google.com">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 libp2p Implementers
               </h3>
@@ -153,7 +153,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://ipld.io/docs/intro/community/">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 IPLD Working Group
               </h3>
@@ -164,7 +164,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 WNFS Working Group
               </h3>
@@ -175,7 +175,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipvm">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 IPVM Working Group
               </h3>
@@ -186,7 +186,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 Move the Bytes Working Group
               </h3>
@@ -197,7 +197,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-routing-wg">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 Content Routing Working Group
               </h3>
@@ -208,7 +208,7 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-network-measurements">
-            <ImageSplit gap="0" image="constellation-office-hours.svg">
+            <ImageSplit tight image="constellation-office-hours.svg">
               <h3>
                 ProbeLab Office Hours - IPFS Network Measurements
               </h3>
