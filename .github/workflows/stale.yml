@@ -3,6 +3,10 @@ name: Close and mark stale issue
 on:
   schedule:
     - cron: '0 0 * * *'
+    
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
   stale:
