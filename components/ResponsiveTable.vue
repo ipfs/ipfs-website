@@ -46,7 +46,7 @@ thead tr {
   @apply bg-brand-teal-dark/70 text-white;
 }
 thead tr th {
-  @apply py-3.5 px-6 text-xl text-left;
+  @apply py-3.5 px-6 text-lg text-left;
 }
 thead tr th:first-child {
   @apply hidden sm:block;
@@ -55,7 +55,7 @@ tbody {
   @apply border-b border-brand-teal-dark;
 }
 tbody td {
-  @apply lg:py-4 py-3 px-6 text-xl;
+  @apply lg:py-4 py-3 px-6 text-lg;
 }
 tbody td:first-child {
   @apply font-bold;

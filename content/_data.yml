@@ -1,60 +1,71 @@
 useCards:
-  - image: logo-3s.png
+  - image: logo-anytype.png
+    title: Develop offline-native productivity tools
+    description: |
+      Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
+    link: https://doc.anytype.io/d/data-and-security/data-storage-and-deletion#storage
+    label: Read how they do it
+  - image: logo-wiki.png
+    title: Make archives and content libraries censorship resistant
+    description: |
+      When the government of Turkey blocked access to Wikipedia, a copy of the site was posted to IPFS, restoring visibility to millions of people
+    link: https://observer.com/2017/05/turkey-wikipedia-ipfs/
+    label: Read the story
+  - image: logo-3S.png
     title: Speed up gameplay for your superfans
     description: |
       3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
     link: https://blog.ipfs.tech/2022-11-15-3s-studio/
+    label: Read the their story
   - image: portrait-nancy-baker.png
     title: Guarantee a permanent home for your digital art
     description: |
       Digital artist Nancy Baker Cahill stores all of her full-resolution art assets using IPFS through NFT.storage
     link: https://youtu.be/K2zVNcn6CIU
-  - image: logo-anytype.png
-    title: Develop offline-native productivity tools
-    description: |
-      Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
-    link: https://doc.anytype.io/d/faqs/we-are-using-ipfs.-what-is-that
-  - image: logo-anytype.png
+    label: Watch her presentation
+  - image: logo-weather.png
     title: Publish scientific research that invites global collaboration
     description: |
-      WeatherXM configured thousands of smart weather vanes with IPFS client functionality to collaboratively share weather patterns from around the world- image: logo-anytype.png
-    link: link
-  - image: logo-anytype.png
-    title: Store archives and content libraries permanently
+      WeatherXM configured thousands of smart weather vanes with IPFS client functionality to collaboratively share weather patterns from around the world
+    link: https://www.youtube.com/watch?v=J7aDajwBSic
+    label: Watch the presentation
+  - image: logo-snapshot.png
+    title: Enable data transparency in Web3
     description: |
-      When the government of Turkey blocked access to Wikipedia, a copy of the site was posted to IPFS, restoring visibility to millions of people
-    link: link
-  - image: logo-anytype.png
-    title: Keep the promise of data transparency in web3
-    description: |
-      Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs 
-    link: link
-  - image: logo-anytype.png
-    title: Literally store your data out of this world
-    description: |
-      Lockheed Martin is launching an IPFS node into orbit in 2023 to demonstrate more efficient interplanetary communication
-    link: link
-  - image: logo-anytype.png
+      Snapshot uses IPFS to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs
+    link: https://docs.ipfs.tech/case-studies/snapshot/
+    label: Read the case study
+  - image: logo-ipfs.png
     title: Expand our universe
     description: |
       We're reimagining the structure of the traditional web so we're ready for what's next - we need you to help us discover what's possible
-    link: link
+    link: /community
+    label: Join the community
+  - image: logo-lockheed.png
+    title: Literally store your data out of this world
+    description: |
+      Lockheed Martin is launching an IPFS node into orbit in 2023 to demonstrate more efficient interplanetary communication
+    link: https://thedefiant.io/filecoin-ipfs-space
+    label: Learn more
 browserCards:
   - image: logo-opera.png
     title: Opera
     description: |
       Supports IPFS and IPNS schemes
-    link: https://www.protocol.ai
+    link: https://blogs.opera.com/tips-and-tricks/2021/02/opera-crypto-files-for-keeps-ipfs-unstoppable-domains/
+    label: Learn more
   - image: logo-chrome.png
     title: Chromium Extensions
     description: |
       IPFS browser extension
-    link: https://www.protocol.ai
+    link: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
+    label: Install
   - image: logo-firefox.png
     title: Firefox Extension
     description: |
       IPFS browser extension
-    link: https://www.protocol.ai
+    link: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
+    label: Install
 testimonialCards:
   - image: portrait-mauve-signweaver-agregore.webp
     title: Mauve Signweaver, Founder - Agregore
@@ -121,7 +132,7 @@ twitterCards:
       handle: IPFS
       post: |
         Ready for round 2?
-        
+
         Join us for [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp) tomorrow, kicking off at 10am for a full day of talks, workshops, hacking, and more.
       image: twitter-shann.jpg
       date: Oct 28, 2022
@@ -169,7 +180,7 @@ twitterCards:
       handle: protocollabs
       post: |
         Only two weeks until we're together in Lisbon for [LabWeek22](https://twitter.com/hashtag/LabWeek22)! Events are filling up fast [http://22.labweek.io](http://22.labweek.io) for the latest news and to reserve your spot!
-        
+
         Lisbon, Portugal<br>
         Oct 24 - Nov 4, 2022<br>
         [http://22.labweek.io](http://22.labweek.io)
@@ -178,7 +189,7 @@ twitterCards:
   - name: Satellite_im
     handle: satellite_im
     post: |
-      Satellite's [@weveloper](weveloper) is up front now showing off our Iridium project, which is the special sauce that powers Satellite Core's messaging platform. [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp)
+      Satellite's [@weveloper](https://twitter.com/weveloper) is up front now showing off our Iridium project, which is the special sauce that powers Satellite Core's messaging platform. [#IPFSCamp](https://twitter.com/hashtag/IPFSCamp)
     image: twitter-satelliteim.jpg
     time: 3:57 PM
     date: Oct 30, 2022

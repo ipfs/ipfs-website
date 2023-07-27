@@ -25,7 +25,7 @@ const imageStyle = computed(() => {
       <slot />
     </div>
     <img v-if="imageRounded" class="tinted mx-auto rounded-full lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
-    <img v-else class="mx-auto lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
+    <img v-else class="mx-auto" :style="imageStyle" :src="`/images/${image}`">
   </div>
 </template>
 

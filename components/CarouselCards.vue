@@ -9,9 +9,9 @@ interface Props {
       description?: string
       image?: string
       link?: string
+      label?: string
     },
   ]
-  buttonLabel?: string
 }
 defineProps<Props>()
 
@@ -37,12 +37,12 @@ const breakpoints = {
         v-for="(item, index) in items"
         :key="index"
       >
-        <Card background="light" :button-label="buttonLabel" :button-link="item.link" center>
+        <Card background="light" :button-label="item.label || 'Learn more'" :button-link="item.link" center>
           <img :src="`/images/${item.image}`" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="mb-8 text-xl">
             {{ item.title }}
           </h3>
-          <p class="mb-8 text-xl">
+          <p class="text-xl">
             {{ item.description }}
           </p>
         </Card>

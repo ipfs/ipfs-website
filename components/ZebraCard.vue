@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
-  buttonLabel?: string
-  buttonLink?: string
+  ctaLabel?: string
+  ctaLink?: string
 }
 defineProps<Props>()
 </script>
@@ -11,9 +11,9 @@ defineProps<Props>()
     <div>
       <slot />
     </div>
-    <div class="flex-none pt-4">
-      <Btn v-if="buttonLabel" :href="buttonLink" full outline>
-        {{ buttonLabel }}
+    <div v-if="ctaLabel" class="flex-none pt-4">
+      <Btn :href="ctaLink" full outline>
+        {{ ctaLabel }}
       </Btn>
     </div>
   </div>

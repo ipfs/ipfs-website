@@ -1,32 +1,17 @@
-html, body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-}
-p {
-  @apply text-lg;
-}
-p:not(:last-child) {
-  @apply mb-4;
 }
 
 main a:not(.btn,.card) {
   @apply underline;
 }
 
-.list-xl {
-  @apply text-xl list-disc pl-4;
+.list-lg {
+  @apply text-lg list-disc pl-4;
 }
-.list-xl li {
+.list-lg li {
   @apply mb-8;
 }
-.list-xl li::marker {
+.list-lg li::marker {
   @apply text-brand-teal;
-}
-
-@screen lg {
-  @apply ml-8;
 }

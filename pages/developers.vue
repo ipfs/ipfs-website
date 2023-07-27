@@ -22,15 +22,15 @@ definePageMeta({
       <Subhead center>
         IPFS advances the design of the internet ahead by light years
       </Subhead>
-      <p class="text-2xl">
+      <Subhead center>
         Unlike HTTP which loads files from one server at a time, content addressing decouples data from its location. IPFS retrieves files from multiple sources at once in a peer-to-peer fashion so you can:
-      </p>
+      </Subhead>
       <div class="mt-10 flex flex-col gap-20 lg:gap-8 lg:px-20 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
           <Subhead tight bold small>
             "Fingerprinting"
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can <AppLink href="https://docs.ipfs.tech/concepts/persistence/">
               “pin”
             </AppLink> to keep
@@ -40,7 +40,7 @@ definePageMeta({
           <Subhead tight bold small>
             Store &amp; distribute content freely
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             Our peer-to-peer network joins thousands of nodes so you can find all nodes with the content you want and help others discover the content you have
           </p>
         </ImageSplit>
@@ -48,7 +48,7 @@ definePageMeta({
           <Subhead tight bold small>
             Optimize content delivery
           </Subhead>
-          <p class="text-xl">
+          <p class="text-lg">
             IPFS caches and stores data on local servers, saving bandwidth via more efficient distribution and delivery
           </p>
         </ImageSplit>
@@ -98,7 +98,7 @@ definePageMeta({
       </div>
       <Grid cols="2">
         <Card>
-          <ImageSplit gap="0" image="constellation-host-publish.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-host-publish.svg">
             <Subhead tight bold>
               Host and Publish Data and Websites on IPFS
             </Subhead>
@@ -123,7 +123,7 @@ definePageMeta({
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-archives-home.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-archives-home.svg">
             <Subhead tight bold>
               Give Your Archives a Permanent Home
             </Subhead>
@@ -145,13 +145,13 @@ definePageMeta({
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-off-chain.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-off-chain.svg">
             <Subhead tight bold>
               Store Off-Chain Data in a Decentralized Way
             </Subhead>
           </ImageSplit>
           <p>
-            Keep the promise of data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
+            Enable data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
           </p>
           <p>
             Alternative: Explore the possibilities hybrid apps that combine smart contracts and verifiable off-chain storage on IPFS.
@@ -162,11 +162,13 @@ definePageMeta({
             </AppLink> to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs.
           </p>
           <p>
-            <b>Get Started:</b> Read <AppLink>how content addressing and CIDs work</AppLink>.
+            <b>Get Started:</b> learn <AppLink href="https://docs.ipfs.tech/concepts/content-addressing/">
+              how content addressing and CIDs work
+            </AppLink>.
           </p>
         </Card>
         <Card>
-          <ImageSplit gap="0" image="constellation-human-agency.svg">
+          <ImageSplit class="gap-2 md:min-h-48" image="constellation-human-agency.svg">
             <Subhead tight bold>
               Build Distributed Apps that bring back human agency
             </Subhead>
@@ -197,62 +199,70 @@ definePageMeta({
       <Subhead center>
         To achieve our goal of IPFS running everywhere and be available to every networked device, our community keeps up active work across a variety of implementations.
       </Subhead>
-      <Card background="dark">
-        <div class="text-white">
+      <div class="m-a max-w-4xl">
+        <Card background="dark">
+          <div class="text-white">
+            <Subhead bold>
+              Popular Implementations
+            </Subhead>
+            <ul class="list-lg">
+              <li>
+                <AppLink href="https://github.com/ipfs/helia">
+                  Helia
+                </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
+              </li>
+              <li>
+                <AppLink href="https://github.com/ipfs/kubo">
+                  Kubo
+                </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+              </li>
+              <li>
+                <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
+                  Elastic IPFS
+                </AppLink> (Go) A new, cloud-native IPFS implementation
+              </li>
+              <li>
+                <AppLink href="https://github.com/n0-computer/iroh">
+                  Iroh
+                </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
+              </li>
+              <li>
+                <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
+                  IPFS Desktop
+                </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+              </li>
+            </ul>
+          </div>
+        </Card>
+        <div class="my-16 lg:mx-10">
           <Subhead bold>
-            Popular Implementations
+            Lite or Experimental
           </Subhead>
-          <ul class="list-xl">
+          <ul class="list-lg">
             <li>
-              <AppLink href="https://github.com/ipfs/helia">
-                Helia
-              </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
+              <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
+                ipfs-embed
+              </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
             </li>
             <li>
-              <AppLink href="https://github.com/ipfs/kubo">
-                Kubo
-              </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+              <AppLink href="https://github.com/hsanjuan/ipfs-lite">
+                ipfs-lite
+              </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
             </li>
             <li>
-              <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
-                Elastic IPFS
-              </AppLink> (Go) A new, cloud-native IPFS implementation
+              <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
+                gomobile-ipfs
+              </AppLink> (Go) Experimental mobile implementation of IPFS
             </li>
             <li>
-              <AppLink href="https://github.com/n0-computer/iroh">
-                Iroh
-              </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
-            </li>
-            <li>
-              <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
-                IPFS Desktop
-              </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+              Durin <AppLink href="https://apps.apple.com/us/app/durin/id1613391995">
+                iOS
+              </AppLink> and <AppLink href="https://play.google.com/store/apps/details?id=ai.protocol.durin&pli=1">
+                Android
+              </AppLink> Apps with support for aching gateway & uploads to pinning services
             </li>
           </ul>
         </div>
-      </Card>
-      <div class="my-16 lg:mx-10">
-        <Subhead bold>
-          Lite or Experimental
-        </Subhead>
-        <ul class="list-xl">
-          <li>
-            <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
-              ipfs-embed
-            </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
-          </li>
-          <li>
-            <AppLink href="https://github.com/hsanjuan/ipfs-lite">
-              ipfs-lite
-            </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
-          </li>
-          <li>
-            <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
-              gomobile-ipfs
-            </AppLink> (Go) Experimental mobile implementation of IPFS
-          </li>
-          <li>DuriniOS and Android app with support for aching gateway & uploads to pinning services</li>
-        </ul>
       </div>
       <Card background="light">
         <Subhead tight center bold>
@@ -276,14 +286,14 @@ definePageMeta({
           <Subhead bold tight>
             Fetch IPFS data through a gateway
           </Subhead>
-          <Subhead tight>
+          <p class="mb-4 text-lg">
             The most common way to locate and retrieve files stored through IPFS is by using an IPFS Gateway
-          </Subhead>
-          <p class="mb-8 text-xl">
+          </p>
+          <p class="mb-8 text-lg">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
           </p>
-          <Btn primary href="#">
-            View all public IPFS Gateways here
+          <Btn primary href="https://ipfs.github.io/public-gateway-checker/">
+            View all public IPFS Gateways
           </Btn>
         </ImageSplit>
       </div>
@@ -292,10 +302,10 @@ definePageMeta({
           <Subhead bold tight>
             Publish through a pinning service
           </Subhead>
-          <p class="mb-8 text-xl">
+          <p class="mb-8 text-lg">
             To keep your data available via IPFS, you can choose a pinning service (which will run a node for you) or run your own node(s) with one of our implementations above.
           </p>
-          <Btn primary href="#">
+          <Btn primary href="https://blog.ipfs.tech/2022-06-09-practical-explainer-ipfs-gateways-1/">
             Learn more about how they work
           </Btn>
         </ImageSplit>

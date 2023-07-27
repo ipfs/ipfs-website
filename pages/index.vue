@@ -47,35 +47,35 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         IPFS is an open system to manage data without a central server
       </template>
     </Hero>
-    <PageSection>
+    <PageSection bottom-tight>
       <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
         <Heading>
-          A Universe Of Uses
+          A Universe of Uses
         </Heading>
-        <Subhead>How IPFS is Used in Production</Subhead>
-        <p class="text-xl">
+        <Subhead>How IPFS is used in production</Subhead>
+        <p class="max-w-xl pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
         </p>
       </ImageSplit>
     </PageSection>
-    <PageSection tight full-width class="min-h-96">
-      <CarouselCards :items="data?.useCards" button-label="Read their story" />
+    <PageSection bottom-tight full-width class="mb-4 min-h-128">
+      <CarouselCards :items="data?.useCards" />
     </PageSection>
     <PageSection>
       <Heading center>
         Why IPFS?
       </Heading>
-      <p class="mb-12 text-xl">
-        Our peer-to-peer content delivery network is built around content addressing: Store, retrieve, and locate data based on the guts of its content vs. its name or location.
-      </p>
-      <Grid>
+      <Subhead center>
+        Our peer-to-peer content delivery network is built around the innovation of content addressing: store, retrieve, and locate data based on the fingerprint of its actual content rather than its name or location.
+      </Subhead>
+      <Grid class="gap-0">
         <Card center>
           <img src="/images/constellation-open.svg" class="mx-auto mb-8">
           <h3 class="mb-4 text-2xl text-brand-teal-dark">
             Open
           </h3>
           <p class="mb-8 text-xl">
-            The IPFS network is distributed and participatory, which reduces data silos from central servers.
+            The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
           </p>
         </Card>
         <Card center>
@@ -93,13 +93,13 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             Resilient
           </h3>
           <p class="mb-8 text-xl">
-            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages
+            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
           </p>
         </Card>
       </Grid>
       <div class="mx-auto table">
         <Btn href="/developers" primary>
-          How it works
+          Learn how it works
         </Btn>
       </div>
     </PageSection>
@@ -107,69 +107,68 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Get Started
       </Heading>
-      <p class="mb-16">
-        Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.
-      </p>
+      <Subhead center>
+        Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+      </Subhead>
       <Grid cols="2">
         <Card>
-          <ImageSplit image="constellation-peer.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Build peer-to-peer apps with IPFS
-            </h3>
+          <h3 class="mb-4 text-xl text-black">
+            Build peer-to-peer apps with IPFS
+          </h3>
+          <ImageSplit class="flex flex-auto" image="constellation-peer.svg" tight>
             <p class="text-lg text-black">
-              Join thousands of developers who choose IPFS to build software that's open, verifiable, and resilient.
+              Our most popular implementations are written in Go, Rust, and JavaScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Developers Page" link="#" />
+            <ListLink label="Developers" link="/developers" />
             <ListLink label="Documentation" link="https://docs.ipfs.tech/" />
             <ListLink label="Read Case Studies" link="https://docs.ipfs.tech/case-studies/arbol/" />
           </ListLinks>
         </Card>
         <Card>
-          <ImageSplit image="constellation-tooling.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Build tooling for IPFS
-            </h3>
-            <p class="text-lg text-black">
-              Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-            </p>
-          </ImageSplit>
-          <ListLinks>
-            <ListLink label="Kubo (Go)" link="#" />
-            <ListLink label="Cluster" link="#" />
-            <ListLink label="Iroh (Rust)" link="#" />
-            <ListLink label="Helia (JavaScript)" link="#" />
-          </ListLinks>
-        </Card>
-        <Card>
-          <ImageSplit image="constellation-apps.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Use IPFS apps
-            </h3>
-            <p class="text-lg text-black">
-              Store and share files, stream music, publish your website, store NFTs, and more through hundreds of applications built on IPFS.
-            </p>
-          </ImageSplit>
-          <ListLinks>
-            <ListLink label="Install IPFS Desktop" link="#" />
-            <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
-          </ListLinks>
-        </Card>
-        <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Store and manage your data on IPFS
+          </h3>
           <ImageSplit image="constellation-store.svg" tight>
-            <h3 class="mb-4 text-xl text-black">
-              Store and manage your data on IPFS
-            </h3>
             <p class="text-lg text-black">
-              Use content addressing to give your data unique identifiers, and use IPFS for large scale data storage and compute.
+              Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
             </p>
           </ImageSplit>
           <ListLinks>
             <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
             <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
-            <ListLink label="Managing Data" link="#" />
-            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/examples/data-ingestion/" />
+            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/data-ingestion/" />
+          </ListLinks>
+        </Card>
+        <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Use IPFS apps
+          </h3>
+          <ImageSplit image="constellation-apps.svg" tight>
+            <p class="text-lg text-black">
+              Share files, stream music, publish your website, store NFTs, and much more through hundreds of applications built on IPFS.
+            </p>
+          </ImageSplit>
+          <ListLinks>
+            <ListLink label="Install IPFS Desktop" link="https://docs.ipfs.tech/install/ipfs-desktop" />
+            <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
+          </ListLinks>
+        </Card>
+        <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Develop tooling for IPFS
+          </h3>
+          <ImageSplit image="constellation-tooling.svg" tight>
+            <p class="text-lg text-black">
+              Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+            </p>
+          </ImageSplit>
+          <ListLinks>
+            <ListLink label="Kubo (Go)" link="https://github.com/ipfs/kubo" />
+            <ListLink label="Cluster" link="https://github.com/ipfs-cluster/ipfs-cluster" />
+            <ListLink label="Iroh (Rust)" link="https://github.com/n0-computer/iroh" />
+            <ListLink label="Helia (JavaScript)" link="https://github.com/ipfs/helia" />
           </ListLinks>
         </Card>
       </Grid>
@@ -179,9 +178,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Connect Through Community
       </Heading>
       <div class="text-center">
-        <p class="mb-8 text-xl">
+        <Subhead center>
           Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-        </p>
+        </Subhead>
         <div class="ribbon-wrap py-12 lg:py-56">
           <RibbonAnnotations
             :annotations="[
@@ -209,16 +208,16 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           />
         </div>
         <p class="mb-8 text-xl">
-          <b>Our protocol's success hinges on participation from all of our neighbors:</b> Every new node that joins IPFS makes our network stronger for everyone else.
+          <b>Our protocol's success hinges on participation from all of our neighbors:</b> Each new node that joins IPFS makes the network stronger for everyone.
         </p>
         <Btn href="/community" primary>
-          Join Our Community
+          Join the Community
         </Btn>
       </div>
     </PageSection>
     <PageSection dark-gradient text-white overlay="constellations-home-by-the-numbers.svg" overlay-position="right-0 top-16">
       <Heading center>
-        IPFS By The Numbers
+        IPFS by the Numbers
       </Heading>
       <div class="mt-16">
         <Grid>
@@ -233,7 +232,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         What's Happening
       </Heading>
       <div class="mb-12">
-        <Subhead>
+        <Subhead bold>
           On Our Blog
         </Subhead>
         <Grid>
@@ -249,7 +248,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <Subhead>
+        <Subhead bold>
           In The Media
         </Subhead>
         <Grid>
@@ -264,7 +263,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Grid>
       </div>
       <div class="mb-12">
-        <Subhead>
+        <Subhead bold>
           Recent Videos
         </Subhead>
         <Grid>

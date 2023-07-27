@@ -1,18 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
+import process from 'node:process'
+
 const PUBLIC_SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://ipfs.tech'
 const PUBLIC_BLOG_URL = 'https://blog.ipfs.tech'
 // strip out the protocol and trailing slash
 const PUBLIC_DOMAIN = PUBLIC_SITE_URL.replace(/(^\w+:|^)\/\//, '').replace(/\/$/, '')
 
 export default defineNuxtConfig({
-  nitro: {
-    prerender: {
-      ignore: ['/help', '/legal', '/media', '/privacy'],
-      routes: ['/ipfs-404.html'],
-    },
+  routeRules: {
+    '/ipfs-404.html': { prerender: true },
   },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

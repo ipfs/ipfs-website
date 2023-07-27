@@ -1,13 +1,4 @@
 <script setup lang="ts">
-const isDev = import.meta.env.DEV
-
-useHead({
-  htmlAttrs: {
-    class: {
-      'mode-dev': isDev,
-    },
-  },
-})
 useSeoMeta({
   twitterSite: '@ipfs',
 })
@@ -20,17 +11,9 @@ useSeoMeta({
   </NuxtLayout>
 </template>
 
-<style>
+<style lang="postcss">
 html {
   scroll-behavior: smooth;
-}
-
-/* debug mode */
-.mode-dev *:hover {
-  outline: 1px solid red
-}
-
-.mode-dev .setup {
-  display: block;
+  @apply antialiased;
 }
 </style>
