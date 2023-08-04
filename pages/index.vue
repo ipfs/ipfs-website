@@ -48,14 +48,13 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </template>
     </Hero>
     <PageSection bottom-tight>
-      <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
-        <Heading tight>
+      <ImageSplit image="ipfs-logo.svg" image-class="max-w-40">
+        <Heading>
           A Universe of Uses
         </Heading>
-        <Subhead>How IPFS is used in production</Subhead>
-        <p class="max-w-xl pb-10 text-xl">
+        <Subhead class="max-w-xl pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
-        </p>
+        </Subhead>
       </ImageSplit>
     </PageSection>
     <PageSection bottom-tight full-width class="mb-4 min-h-128">
@@ -177,39 +176,39 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Connect Through Community
       </Heading>
+      <Subhead center>
+        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+      </Subhead>
+      <div class="ribbon-wrap relative my-12 lg:my-44">
+        <RibbonAnnotations
+          :annotations="[
+            'Application-Developers',
+            'Scientists',
+            'Infrastructure Developers',
+            'Researchers',
+            'Designers',
+            'Archivists',
+            'Yes, Even the occasional Astronaut',
+            'Artists',
+          ]"
+        />
+        <Ribbon
+          :images="[
+            'ribbon-home-1.jpg',
+            'ribbon-home-2.jpg',
+            'ribbon-home-3.jpg',
+            'ribbon-home-4.jpg',
+            'ribbon-home-5.jpg',
+            'ribbon-home-6.jpg',
+            'ribbon-home-7.jpg',
+            'ribbon-home-8.jpg',
+          ]"
+        />
+      </div>
       <div class="text-center">
         <Subhead center>
-          Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-        </Subhead>
-        <div class="ribbon-wrap py-12 lg:py-56">
-          <RibbonAnnotations
-            :annotations="[
-              'Application-Developers',
-              'Scientists',
-              'Infrastructure Developers',
-              'Researchers',
-              'Designers',
-              'Archivists',
-              'Yes, Even the occasional Astronaut',
-              'Artists',
-            ]"
-          />
-          <Ribbon
-            :images="[
-              'ribbon-home-1.jpg',
-              'ribbon-home-2.jpg',
-              'ribbon-home-3.jpg',
-              'ribbon-home-4.jpg',
-              'ribbon-home-5.jpg',
-              'ribbon-home-6.jpg',
-              'ribbon-home-7.jpg',
-              'ribbon-home-8.jpg',
-            ]"
-          />
-        </div>
-        <p class="mb-8 text-xl">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Each new node that joins IPFS makes the network stronger for everyone.
-        </p>
+        </Subhead>
         <Btn href="/community" primary>
           Join the Community
         </Btn>
