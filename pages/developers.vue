@@ -28,7 +28,7 @@ definePageMeta({
       <div class="mt-10 flex flex-col gap-20 lg:gap-8 lg:px-20 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
           <Subhead tight bold small>
-            "Fingerprinting"
+            Fingerprint your data
           </Subhead>
           <p class="text-lg">
             Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can <AppLink href="https://docs.ipfs.tech/concepts/persistence/">
