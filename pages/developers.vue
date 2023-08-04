@@ -191,7 +191,7 @@ definePageMeta({
         Implementations
       </Heading>
       <Subhead center>
-        To achieve our goal of IPFS running everywhere and be available to every networked device, our community keeps up active work across a variety of implementations.
+        To achieve our goal of IPFS running everywhere and being available to every networked device, our community keeps up active work across a variety of implementations.
       </Subhead>
       <div class="m-a max-w-4xl">
         <Card background="dark">

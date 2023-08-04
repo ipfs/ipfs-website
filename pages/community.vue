@@ -261,7 +261,7 @@ definePageMeta({
         </div>
         <Card background="dark">
           <Subhead center tight>
-            Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/8kk9i628">
+            Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/ipfs">
               community event
             </AppLink>, a <AppLink to="#meetups-wgs">
               working group

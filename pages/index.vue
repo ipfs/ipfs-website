@@ -49,7 +49,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
     </Hero>
     <PageSection bottom-tight>
       <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
-        <Heading>
+        <Heading tight>
           A Universe of Uses
         </Heading>
         <Subhead>How IPFS is used in production</Subhead>
@@ -108,7 +108,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Get Started
       </Heading>
       <Subhead center>
-        Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
       </Subhead>
       <Grid cols="2">
         <Card>
