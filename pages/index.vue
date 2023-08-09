@@ -183,7 +183,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Connect Through Community
       </Heading>
       <Subhead center>
-        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+        We've sparked the most robust open-source ecosystem on Earth, and together we're achieving interplanetary aspirations.
       </Subhead>
       <div class="ribbon-wrap relative my-12 lg:my-44">
         <RibbonAnnotations
