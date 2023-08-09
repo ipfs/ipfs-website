@@ -118,23 +118,23 @@ definePageMeta({
         <Subhead center>
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
         </Subhead>
-        <Grid>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                Interplanetary Office Hours
-              </h3>
+        <Grid class="text-center lg:text-left">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours" image-class="max-w-30% py-4">
+            <h3>
+              Interplanetary Office Hours
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Virtual office hours for anyone in the community to bring your questions, show off your projects, and connect with IPFS developer advocates.
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-implementers">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPFS Implementers
-              </h3>
+            <h3>
+              IPFS Implementers
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
                 Biweekly working group for people who create and maintain different IPFS implementations
               </p>
@@ -142,81 +142,83 @@ definePageMeta({
             <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://calendar.google.com/calendar/u/0/embed?src=libp2p.io_0q9682i3te7eanhe9q7ae1c58g@group.calendar.google.com">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                libp2p Implementers
-              </h3>
+            <h3>
+              libp2p Implementers
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Open-source community for maintainers and users of libp2p, the networking layer of IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Community events, roadmap, new features, triage, and performance issues.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://ipld.io/docs/intro/community/">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPLD Working Group
-              </h3>
+            <h3>
+              IPLD Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Collaborative community for IPLD (InterPlanetary Linked Data), a data model for the content-addressable web.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Developer resourcing needed for new implementations & libraries, standardization, changes to IPLD.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                WNFS Working Group
-              </h3>
+            <h3>
+              WNFS Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Collaborative community for WNFS (Web Native File System), a file system built on top of IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Public roadmap, use cases, public & private WNFS features.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipvm">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPVM Working Group
-              </h3>
+            <h3>
+              IPVM Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Monthly working group for IPVM (InterPlanetary Virtual Machine), an effort to add content-addressed computation to IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Web assembly (Wasm) models, roadmap, community events, feedback.</p>
           </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                Move the Bytes Working Group
-              </h3>
+          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628" image-class="max-w-30% my-4">
+            <h3>
+              Move the Bytes Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                A working group dedicated to shipping a production-ready data transfer protocol that can replace Bitswap in IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Roadmap updates, testing, documentation, and tracking metrics.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-routing-wg">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                Content Routing Working Group
-              </h3>
+            <h3>
+              Content Routing Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Working group to introduce alternative content routing options to IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-network-measurements">
-            <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                ProbeLab Office Hours - IPFS Network Measurements
-              </h3>
+            <h3>
+              ProbeLab Office Hours - IPFS Network Measurements
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Open office hours are for anyone interested in network measurements in the IPFS network. Hosted by the <AppLink href="https://ipfs.fyi/probelab">
+                  ProbeLab team.
+                </AppLink>
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
         </Grid>
       </div>
@@ -244,24 +246,24 @@ definePageMeta({
         </Subhead>
         <div class="telescope relative mb-16 lg:mt-30">
           <img src="/images/constellation-telescope.svg" class="mx-auto py-10">
-          <div class="relative inset-0 lg:absolute">
-            <p class="text-xl lg:absolute lg:top-0 lg:w-64">
+          <div class="relative inset-0 flex flex-col gap-4 lg:absolute">
+            <p class="lg:absolute lg:top-0 lg:w-64">
               How can we introduce privacy and encryption functionality to IPFS?
             </p>
-            <p class="text-xl lg:absolute lg:right-0 lg:top-0 lg:w-80">
+            <p class="lg:absolute lg:right-0 lg:top-0 lg:w-80">
               How do we enable connectivity between every platform IPFS runs on, from satellites to lower powered IoT devices?
             </p>
-            <p class="text-xl lg:absolute lg:top-60 lg:w-80">
+            <p class="lg:absolute lg:top-60 lg:w-80">
               What data structures and recommendations can we create to help other developers?
             </p>
-            <p class="text-xl lg:absolute lg:right-0 lg:top-60 lg:w-56">
+            <p class="lg:absolute lg:right-0 lg:top-60 lg:w-56">
               How can we invent a more efficient peer-to-peer data transfer protocol?
             </p>
           </div>
         </div>
         <Card background="dark">
           <Subhead center tight>
-            Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/8kk9i628">
+            Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/ipfs">
               community event
             </AppLink>, a <AppLink to="#meetups-wgs">
               working group

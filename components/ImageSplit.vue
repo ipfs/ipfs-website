@@ -5,6 +5,7 @@ interface Props {
   image?: string
   imageWidth?: string
   imageRounded?: boolean
+  imageClass?: string
   fullHeight?: boolean
 }
 const props = defineProps<Props>()
@@ -24,8 +25,8 @@ const imageStyle = computed(() => {
     <div>
       <slot />
     </div>
-    <img v-if="imageRounded" class="tinted mx-auto rounded-full lg:ml-0" :style="imageStyle" :src="`/images/${image}`">
-    <img v-else class="mx-auto" :style="imageStyle" :src="`/images/${image}`">
+    <img v-if="imageRounded" class="tinted mx-auto rounded-full lg:ml-0" :style="imageStyle" :class="imageClass" :src="`/images/${image}`">
+    <img v-else class="mx-auto" :style="imageStyle" :class="imageClass" :src="`/images/${image}`">
   </div>
 </template>
 

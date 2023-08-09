@@ -48,14 +48,13 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </template>
     </Hero>
     <PageSection bottom-tight>
-      <ImageSplit image="ipfs-logo.svg" image-class="w-80 pl-12">
+      <ImageSplit image="ipfs-logo.svg" image-class="max-w-40">
         <Heading>
           A Universe of Uses
         </Heading>
-        <Subhead>How IPFS is used in production</Subhead>
-        <p class="max-w-xl pb-10 text-xl">
+        <Subhead class="max-w-xl pb-10 text-xl">
           IPFS's versatility shines across different industries – making it the multi-purpose tool for the decentralized age.
-        </p>
+        </Subhead>
       </ImageSplit>
     </PageSection>
     <PageSection bottom-tight full-width class="mb-4 min-h-128">
@@ -70,31 +69,37 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </Subhead>
       <Grid class="gap-0">
         <Card center>
-          <img src="/images/constellation-open.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Open
-          </h3>
-          <p class="mb-8 text-xl">
-            The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
-          </p>
+          <div>
+            <img src="/images/constellation-open.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Open
+            </h3>
+            <p class="mb-8">
+              The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
+            </p>
+          </div>
         </Card>
         <Card center>
-          <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Verifiable
-          </h3>
-          <p class="mb-8 text-xl">
-            The integrity of all data is verified using hash functions, so you can trust that you always get the data you’re looking for.
-          </p>
+          <div>
+            <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Verifiable
+            </h3>
+            <p class="mb-8">
+              The integrity of all data is verified using hash functions, so you can trust that you always get the data you’re looking for.
+            </p>
+          </div>
         </Card>
         <Card center>
-          <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Resilient
-          </h3>
-          <p class="mb-8 text-xl">
-            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
-          </p>
+          <div>
+            <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Resilient
+            </h3>
+            <p class="mb-8">
+              Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
+            </p>
+          </div>
         </Card>
       </Grid>
       <div class="mx-auto table">
@@ -108,7 +113,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         Get Started
       </Heading>
       <Subhead center>
-        Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
       </Subhead>
       <Grid cols="2">
         <Card>
@@ -177,39 +182,39 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Heading center>
         Connect Through Community
       </Heading>
+      <Subhead center>
+        Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
+      </Subhead>
+      <div class="ribbon-wrap relative my-12 lg:my-44">
+        <RibbonAnnotations
+          :annotations="[
+            'Application-Developers',
+            'Scientists',
+            'Infrastructure Developers',
+            'Researchers',
+            'Designers',
+            'Archivists',
+            'Yes, Even the occasional Astronaut',
+            'Artists',
+          ]"
+        />
+        <Ribbon
+          :images="[
+            'ribbon-home-1.jpg',
+            'ribbon-home-2.jpg',
+            'ribbon-home-3.jpg',
+            'ribbon-home-4.jpg',
+            'ribbon-home-5.jpg',
+            'ribbon-home-6.jpg',
+            'ribbon-home-7.jpg',
+            'ribbon-home-8.jpg',
+          ]"
+        />
+      </div>
       <div class="text-center">
         <Subhead center>
-          Join thousands of developers who choose IPFS to build software that’s open, verifiable, and resilient.
-        </Subhead>
-        <div class="ribbon-wrap py-12 lg:py-56">
-          <RibbonAnnotations
-            :annotations="[
-              'Application-Developers',
-              'Scientists',
-              'Infrastructure Developers',
-              'Researchers',
-              'Designers',
-              'Archivists',
-              'Yes, Even the occasional Astronaut',
-              'Artists',
-            ]"
-          />
-          <Ribbon
-            :images="[
-              'ribbon-home-1.jpg',
-              'ribbon-home-2.jpg',
-              'ribbon-home-3.jpg',
-              'ribbon-home-4.jpg',
-              'ribbon-home-5.jpg',
-              'ribbon-home-6.jpg',
-              'ribbon-home-7.jpg',
-              'ribbon-home-8.jpg',
-            ]"
-          />
-        </div>
-        <p class="mb-8 text-xl">
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Each new node that joins IPFS makes the network stronger for everyone.
-        </p>
+        </Subhead>
         <Btn href="/community" primary>
           Join the Community
         </Btn>

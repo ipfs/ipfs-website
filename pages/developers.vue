@@ -28,7 +28,7 @@ definePageMeta({
       <div class="mt-10 flex flex-col gap-20 lg:gap-8 lg:px-20 lg:text-center">
         <ImageSplit flip image="constellation-fingerprinting.svg">
           <Subhead tight bold small>
-            "Fingerprinting"
+            Fingerprint your data
           </Subhead>
           <p class="text-lg">
             Content identifiers (CIDs) give every piece of content, data, or file a permanent hash address that you can <AppLink href="https://docs.ipfs.tech/concepts/persistence/">
@@ -100,7 +100,7 @@ definePageMeta({
         <Card>
           <ImageSplit class="gap-2 md:min-h-48" image="constellation-host-publish.svg">
             <Subhead tight bold>
-              Host and Publish Data and Websites on IPFS
+              Host Data and Websites on IPFS
             </Subhead>
           </ImageSplit>
           <p>
@@ -119,7 +119,7 @@ definePageMeta({
               pinning service
             </AppLink> or <AppLink href="https://docs.ipfs.tech/install/">
               run your own node
-            </AppLink> for more customization.
+            </AppLink> for even more customization.
           </p>
         </Card>
         <Card>
@@ -129,7 +129,7 @@ definePageMeta({
             </Subhead>
           </ImageSplit>
           <p>
-            Content addressing lets you replicate CIDs while retaining a permanent address so you can store data with long time horizons with freedom from vendor lock-in.
+            Content addressing lets you replicate CIDs while retaining a permanent address. It enables you to store data with long-time horizons without having to succumb to vendor lock-in.
           </p>
           <p>
             From scientific data to open public datasets like <AppLink href="https://opendata.cityofnewyork.us/">
@@ -154,15 +154,12 @@ definePageMeta({
             Enable data transparency without the storage constraints of a blockchain in web3 through distributed storage space, where CIDs act as permanent addresses for anything from voting data to NFT art.
           </p>
           <p>
-            Alternative: Explore the possibilities hybrid apps that combine smart contracts and verifiable off-chain storage on IPFS.
-          </p>
-          <p>
             <AppLink href="https://docs.ipfs.tech/case-studies/snapshot/">
               Snapshot uses IPFS
             </AppLink> to publicly record all proposals, votes, and data for more than 9,000 web3 projects & DAOs.
           </p>
           <p>
-            <b>Get Started:</b> learn <AppLink href="https://docs.ipfs.tech/concepts/content-addressing/">
+            <b>Get Started:</b> Learn <AppLink href="https://docs.ipfs.tech/concepts/content-addressing/">
               how content addressing and CIDs work
             </AppLink>.
           </p>
@@ -170,14 +167,11 @@ definePageMeta({
         <Card>
           <ImageSplit class="gap-2 md:min-h-48" image="constellation-human-agency.svg">
             <Subhead tight bold>
-              Build Distributed Apps that bring back human agency
+              Build Distributed Apps that Bring Back Human Agency
             </Subhead>
           </ImageSplit>
           <p>
             Build apps that put user agency at the front by composing IPFS into novel app architectures.
-          </p>
-          <p>
-            Push the web's boundaries by build how information is linked and routed online by composing IPFS subsystems into novel app architectures.
           </p>
           <p>
             <AppLink href="https://blog.ipfs.tech/2021-11-15-Skiff-Integrates-IPFS/">
@@ -197,7 +191,7 @@ definePageMeta({
         Implementations
       </Heading>
       <Subhead center>
-        To achieve our goal of IPFS running everywhere and be available to every networked device, our community keeps up active work across a variety of implementations.
+        To achieve our goal of IPFS running everywhere and being available to every networked device, our community keeps up active work across a variety of implementations.
       </Subhead>
       <div class="m-a max-w-4xl">
         <Card background="dark">
@@ -277,7 +271,7 @@ definePageMeta({
         </Heading>
         <Card background="dark">
           <Subhead tight center>
-            Weather you're looking to access IPFS-hosted content or publish your own, Gateways, Pinning Services, and Browsers are the best ways to get started.
+            Whether you're looking to access IPFS-hosted content or publish your own, Gateways, Pinning Services, and Browsers are the best ways to get started.
           </Subhead>
         </Card>
       </div>
@@ -287,7 +281,7 @@ definePageMeta({
             Fetch IPFS data through a gateway
           </Subhead>
           <p class="mb-4 text-lg">
-            The most common way to locate and retrieve files stored through IPFS is by using an IPFS Gateway
+            The most common way to locate and retrieve files stored through IPFS is by using an IPFS Gateway.
           </p>
           <p class="mb-8 text-lg">
             Every piece of content on IPFS is hashed with a content address, which we call a content identifier, or CID. Even if you’re not running your own IPFS node, gateways give you access to that content through the usual web (HTTP).
