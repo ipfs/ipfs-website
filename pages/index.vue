@@ -69,31 +69,37 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       </Subhead>
       <Grid class="gap-0">
         <Card center>
-          <img src="/images/constellation-open.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Open
-          </h3>
-          <p class="mb-8 text-xl">
-            The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
-          </p>
+          <div>
+            <img src="/images/constellation-open.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Open
+            </h3>
+            <p class="mb-8">
+              The IPFS network is distributed and participatory, which reduces the problem of data silos that plague central servers.
+            </p>
+          </div>
         </Card>
         <Card center>
-          <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Verifiable
-          </h3>
-          <p class="mb-8 text-xl">
-            The integrity of all data is verified using hash functions, so you can trust that you always get the data you’re looking for.
-          </p>
+          <div>
+            <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Verifiable
+            </h3>
+            <p class="mb-8">
+              The integrity of all data is verified using hash functions, so you can trust that you always get the data you’re looking for.
+            </p>
+          </div>
         </Card>
         <Card center>
-          <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
-          <h3 class="mb-4 text-2xl text-brand-teal-dark">
-            Resilient
-          </h3>
-          <p class="mb-8 text-xl">
-            Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
-          </p>
+          <div>
+            <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
+            <h3 class="mb-4 text-2xl text-brand-teal-dark">
+              Resilient
+            </h3>
+            <p class="mb-8">
+              Files and data can be stored across multiple nodes, which keeps content at the ready even during critical outages.
+            </p>
+          </div>
         </Card>
       </Grid>
       <div class="mx-auto table">
