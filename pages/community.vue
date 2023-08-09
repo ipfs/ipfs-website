@@ -120,10 +120,10 @@ definePageMeta({
         </Subhead>
         <Grid>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours">
+            <h3>
+              Interplanetary Office Hours
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                Interplanetary Office Hours
-              </h3>
               <p>
                 Virtual office hours for anyone in the community to bring your questions, show off your projects, and connect with IPFS developer advocates.
               </p>
@@ -131,10 +131,10 @@ definePageMeta({
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-implementers">
+            <h3>
+              IPFS Implementers
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPFS Implementers
-              </h3>
               <p>
                 Biweekly working group for people who create and maintain different IPFS implementations
               </p>
@@ -142,10 +142,10 @@ definePageMeta({
             <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://calendar.google.com/calendar/u/0/embed?src=libp2p.io_0q9682i3te7eanhe9q7ae1c58g@group.calendar.google.com">
+            <h3>
+              libp2p Implementers
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                libp2p Implementers
-              </h3>
               <p>
                 Open-source community for maintainers and users of libp2p, the networking layer of IPFS.
               </p>
@@ -153,10 +153,10 @@ definePageMeta({
             <p>What's covered: Community events, roadmap, new features, triage, and performance issues.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://ipld.io/docs/intro/community/">
+            <h3>
+              IPLD Working Group
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPLD Working Group
-              </h3>
               <p>
                 Collaborative community for IPLD (InterPlanetary Linked Data), a data model for the content-addressable web.
               </p>
@@ -164,10 +164,10 @@ definePageMeta({
             <p>What's covered: Developer resourcing needed for new implementations & libraries, standardization, changes to IPLD.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
+            <h3>
+              WNFS Working Group
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                WNFS Working Group
-              </h3>
               <p>
                 Collaborative community for WNFS (Web Native File System), a file system built on top of IPFS.
               </p>
@@ -175,10 +175,10 @@ definePageMeta({
             <p>What's covered: Public roadmap, use cases, public & private WNFS features.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipvm">
+            <h3>
+              IPVM Working Group
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                IPVM Working Group
-              </h3>
               <p>
                 Monthly working group for IPVM (InterPlanetary Virtual Machine), an effort to add content-addressed computation to IPFS.
               </p>
@@ -186,10 +186,10 @@ definePageMeta({
             <p>What's covered: Web assembly (Wasm) models, roadmap, community events, feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628">
+            <h3>
+              Move the Bytes Working Group
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                Move the Bytes Working Group
-              </h3>
               <p>
                 A working group dedicated to shipping a production-ready data transfer protocol that can replace Bitswap in IPFS.
               </p>
@@ -208,10 +208,10 @@ definePageMeta({
             <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-network-measurements">
+            <h3>
+              ProbeLab Office Hours - IPFS Network Measurements
+            </h3>
             <ImageSplit tight image="constellation-office-hours.svg">
-              <h3>
-                ProbeLab Office Hours - IPFS Network Measurements
-              </h3>
               <p>
                 Open office hours are for anyone interested in network measurements in the IPFS network. Hosted by the <AppLink href="https://ipfs.fyi/probelab">
                   ProbeLab team
