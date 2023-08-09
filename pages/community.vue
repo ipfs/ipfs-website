@@ -125,7 +125,7 @@ definePageMeta({
                 Interplanetary Office Hours
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Virtual office hours for anyone in the community to bring your questions, show off your projects, and connect with IPFS developer advocates.
               </p>
             </ImageSplit>
             <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
@@ -147,10 +147,10 @@ definePageMeta({
                 libp2p Implementers
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Open-source community for maintainers and users of libp2p, the networking layer of IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Community events, roadmap, new features, triage, and performance issues.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://ipld.io/docs/intro/community/">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -158,10 +158,10 @@ definePageMeta({
                 IPLD Working Group
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Collaborative community for IPLD (InterPlanetary Linked Data), a data model for the content-addressable web.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Developer resourcing needed for new implementations & libraries, standardization, changes to IPLD.</p>
           </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -169,10 +169,10 @@ definePageMeta({
                 WNFS Working Group
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Collaborative community for WNFS (Web Native File System), a file system built on top of IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Public roadmap, use cases, public & private WNFS features.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipvm">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -180,10 +180,10 @@ definePageMeta({
                 IPVM Working Group
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Monthly working group for IPVM (InterPlanetary Virtual Machine), an effort to add content-addressed computation to IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Web assembly (Wasm) models, roadmap, community events, feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -191,10 +191,10 @@ definePageMeta({
                 Move the Bytes Working Group
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                A working group dedicated to shipping a production-ready data transfer protocol that can replace Bitswap in IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Roadmap updates, testing, documentation, and tracking metrics.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-routing-wg">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -202,10 +202,10 @@ definePageMeta({
                 Content Routing Working Group
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Working group to introduce alternative content routing options to IPFS.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-network-measurements">
             <ImageSplit tight image="constellation-office-hours.svg">
@@ -213,10 +213,12 @@ definePageMeta({
                 ProbeLab Office Hours - IPFS Network Measurements
               </h3>
               <p>
-                Join a working group to help us untangle the thorniest problems facing the distributed web.
+                Open office hours are for anyone interested in network measurements in the IPFS network. Hosted by the <AppLink href="https://ipfs.fyi/probelab">
+                  ProbeLab team
+                </AppLink>.
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
         </Grid>
       </div>
