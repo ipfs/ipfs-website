@@ -20,7 +20,7 @@ definePageMeta({
         How It Works
       </Heading>
       <Subhead center>
-        IPFS advances the design of the internet ahead by light years
+        IPFS advances the design of the internet ahead by light years.
       </Subhead>
       <Subhead center>
         Unlike HTTP which loads files from one server at a time, content addressing decouples data from its location. IPFS retrieves files from multiple sources at once in a peer-to-peer fashion so you can:
