@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     '/ipfs-404.html': { prerender: true },
   },
   app: {
+    // TODO: fix relative and dynamic base paths for IPFS hosting
+    // baseURL: process.env.NODE_ENV === 'production' ? './' : '/',
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
@@ -36,6 +38,9 @@ export default defineNuxtConfig({
 
   experimental: {
     inlineSSRStyles: false,
+    // TODO: fix payload extraction for IPFS hosting
+    // see: https://github.com/nuxt/nuxt/issues/19478
+    // payloadExtraction: false,
     componentIslands: true,
   },
 
