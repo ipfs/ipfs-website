@@ -11,6 +11,9 @@ dependencies:
   '@vueuse/motion':
     specifier: 2.0.0
     version: 2.0.0(vue@3.3.4)
+  ipfs-base:
+    specifier: ^1.1.0
+    version: 1.1.0
   vue3-carousel:
     specifier: ^0.3.1
     version: 0.3.1(vue@3.3.4)
@@ -5441,6 +5444,10 @@ packages:
   /ip@2.0.0:
     resolution: {integrity: sha512-WKa+XuLG1A1R0UWhl2+1XQSi+fZWMsYKffMZTTYsiZaUD8k2yDAj5atimTUD2TZkyCkNEeYE5NhFZmupOGtjYQ==}
     dev: true
+
+  /ipfs-base@1.1.0:
+    resolution: {integrity: sha512-J6IqEY9DJaEd1sFIp0uweZ5orTHnRDsi95BtkwFAHu06yuTNxQr2ov8aK25tyhY7JNRfbMwqKypsF0rI/DkEyA==}
+    dev: false
 
   /iron-webcrypto@0.8.0:
     resolution: {integrity: sha512-gScdcWHjTGclCU15CIv2r069NoQrys1UeUFFfaO1hL++ytLHkVw7N5nXJmFf3J2LEDMz1PkrvC0m62JEeu1axQ==}

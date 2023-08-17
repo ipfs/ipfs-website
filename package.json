@@ -15,6 +15,7 @@
   "dependencies": {
     "@vueuse/core": "^10.3.0",
     "@vueuse/motion": "2.0.0",
+    "ipfs-base": "^1.1.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {

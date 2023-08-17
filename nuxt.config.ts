@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
   app: {
     // TODO: fix relative and dynamic base paths for IPFS hosting
-    // baseURL: process.env.NODE_ENV === 'production' ? './' : '/',
+    baseURL: process.env.NODE_ENV === 'production' ? './' : '/',
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
