@@ -1,4 +1,20 @@
 <script setup lang="ts">
+const route = useRoute()
+
+function relative(r: string) {
+  let path = ''
+  const nodes = r.split('/')
+  for (let index = 0; index < nodes.length - 3; index++)
+    path += '../'
+  return path
+}
+
+useHead({
+  base: {
+    href: relative(route.path) || './',
+  },
+})
+
 onMounted(() => {
   // !window safety
   if (typeof window === 'undefined')
