@@ -33,7 +33,7 @@ definePageMeta({
           <div class="mx-auto flex justify-between gap-8">
             <div>
               <AppLink href="https://filecoin.io/slack">
-                <img src="/images/circle-slack.svg" class="mx-auto my-4 block">
+                <img src="~/assets/images/circle-slack.svg" class="mx-auto my-4 block">
                 <p class="text-center text-xl text-black">
                   Slack
                 </p>
@@ -41,7 +41,7 @@ definePageMeta({
             </div>
             <div>
               <AppLink href="https://discord.gg/vj7qWuAyHY">
-                <img src="/images/circle-discord.svg" class="mx-auto my-4">
+                <img src="~/assets/images/circle-discord.svg" class="mx-auto my-4">
                 <p class="text-center text-xl text-black">
                   Discord
                 </p>
@@ -49,7 +49,7 @@ definePageMeta({
             </div>
             <div>
               <AppLink href="https://matrix.to/#/#lobby:ipfs.io">
-                <img src="/images/circle-matrix.svg" class="mx-auto my-4">
+                <img src="~/assets/images/circle-matrix.svg" class="mx-auto my-4">
                 <p class="text-center text-xl text-black">
                   Matrix
                 </p>
@@ -74,7 +74,7 @@ definePageMeta({
           <Subhead bold tight>
             Join a community event
           </Subhead>
-          <img src="/images/circle-star.svg" class="mx-auto my-6">
+          <img src="~/assets/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
             Meet other members of the community virtually or in-person by <AppLink href="https://lu.ma/ipfs">
               subscribing
@@ -245,7 +245,7 @@ definePageMeta({
           of the unknowns we've yet to discover:
         </Subhead>
         <div class="telescope relative mb-16 lg:mt-30">
-          <img src="/images/constellation-telescope.svg" class="mx-auto py-10">
+          <img src="~/assets/images/constellation-telescope.svg" class="mx-auto py-10">
           <div class="relative inset-0 flex flex-col gap-4 lg:absolute">
             <p class="lg:absolute lg:top-0 lg:w-64">
               How can we introduce privacy and encryption functionality to IPFS?

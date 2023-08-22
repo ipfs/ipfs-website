@@ -38,7 +38,7 @@ const breakpoints = {
         :key="index"
       >
         <Card background="light" :button-label="item.label || 'Learn more'" :button-link="item.link" center>
-          <img :src="`/images/${item.image}`" class="mb-8 h-32 w-full object-contain object-center">
+          <img :src="`~/assets/images/${item.image}`" class="mb-8 h-32 w-full object-contain object-center">
           <h3 class="mb-8 text-xl">
             {{ item.title }}
           </h3>

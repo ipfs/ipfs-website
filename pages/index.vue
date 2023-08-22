@@ -70,7 +70,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Grid class="gap-0">
         <Card center>
           <div>
-            <img src="/images/constellation-open.svg" class="mx-auto mb-8">
+            <img src="~/assets/images/constellation-open.svg" class="mx-auto mb-8">
             <h3 class="mb-4 text-2xl text-brand-teal-dark">
               Open
             </h3>
@@ -81,7 +81,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Card>
         <Card center>
           <div>
-            <img src="/images/constellation-verifiable.svg" class="mx-auto mb-8">
+            <img src="~/assets/images/constellation-verifiable.svg" class="mx-auto mb-8">
             <h3 class="mb-4 text-2xl text-brand-teal-dark">
               Verifiable
             </h3>
@@ -92,7 +92,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Card>
         <Card center>
           <div>
-            <img src="/images/constellation-resilient.svg" class="mx-auto mb-8">
+            <img src="~/assets/images/constellation-resilient.svg" class="mx-auto mb-8">
             <h3 class="mb-4 text-2xl text-brand-teal-dark">
               Resilient
             </h3>

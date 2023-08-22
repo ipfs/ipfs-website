@@ -70,7 +70,7 @@ function toggleMobileMenu() {
         class="mobile-nav-link transition-opacity duration-300 ease-in-out hover:opacity-75"
         href="/" title="IPFS.tech"
       >
-        <img class="h-12 w-32 fill-current" src="/images/ipfs-icon.svg">
+        <img class="h-12 w-32 fill-current" src="~/assets/images/ipfs-icon.svg">
       </AppLink>
       <nav class="hidden max-w-lg w-full justify-between md:flex">
         <AppLink
