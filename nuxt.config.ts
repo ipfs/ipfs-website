@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     '/ipfs-404.html': { prerender: true },
   },
   app: {
+    // TODO: fix relative and dynamic base paths for IPFS hosting
+    // baseURL: process.env.NODE_ENV === 'production' ? './' : '/',
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
@@ -36,6 +38,9 @@ export default defineNuxtConfig({
 
   experimental: {
     inlineSSRStyles: false,
+    // TODO: fix payload extraction for IPFS hosting
+    // see: https://github.com/nuxt/nuxt/issues/19478
+    // payloadExtraction: false,
     componentIslands: true,
   },
 
@@ -43,12 +48,23 @@ export default defineNuxtConfig({
     failOn404: false, // TODO: enable before launch
   },
 
+  sitemap: {
+    exclude: [
+      '/__nuxt_island/**',
+      '/help',
+      '/team',
+      '/docs/**',
+      '/privacy',
+      '/companion-privacy',
+    ],
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: PUBLIC_SITE_URL,
       siteName: 'IPFS Powers the Distributed Web',
       siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
-      siteImage: '/images/ipfs-social-card.png',
+      siteImage: '/images/social-card.png',
       blogUrl: PUBLIC_BLOG_URL,
       language: 'en-US',
       indexable: false, // TODO: enable before launch

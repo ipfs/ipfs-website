@@ -21,7 +21,7 @@ defineProps<Props>()
 <template>
   <div class="twitter-card mb-8 break-inside-avoid rounded-xl bg-brand-light p-4">
     <div class="mb-4 w-full flex items-center gap-2">
-      <img :src="`/images/twitter-profile-${handle}.jpg`" :alt="handle" class="h-9 w-9 flex-none rounded-full">
+      <img :src="useAsset(`images/twitter-profile-${handle}.jpg`)" :alt="handle" class="h-9 w-9 flex-none rounded-full">
       <div class="flex-1">
         <p class="font-bold">
           {{ name }}
@@ -33,10 +33,10 @@ defineProps<Props>()
     <div class="twitter-post mb-4">
       <MarkdownContent v-if="post" :content="post" />
     </div>
-    <img v-if="image" :src="`/images/${image}`" class="mb-4 w-full">
+    <img v-if="image" :src="useAsset(`images/${image}`)" class="mb-4 w-full">
     <div v-if="retweet" class="mb-4 border rounded-md p-3">
       <div class="mb-2 w-full flex items-center gap-1">
-        <img :src="`/images/twitter-profile-${handle}.jpg`" :alt="handle" class="h-5 w-5 flex-none rounded-full">
+        <img :src="useAsset(`images/twitter-profile-${handle}.jpg`)" :alt="handle" class="h-5 w-5 flex-none rounded-full">
         <p class="flex-1">
           <span class="font-bold">{{ retweet.name }}</span> @{{ retweet.handle }}, {{ retweet.date }}
         </p>
@@ -44,7 +44,7 @@ defineProps<Props>()
       <div class="twitter-post">
         <MarkdownContent v-if="retweet.post" :content="retweet.post" />
       </div>
-      <img v-if="retweet.image" :src="`/images/${retweet.image}`" class="mt-4 w-full">
+      <img v-if="retweet.image" :src="useAsset(`images/${retweet.image}`)" class="mt-4 w-full">
     </div>
     <p>
       {{ time }} • {{ date }}

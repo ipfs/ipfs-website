@@ -1,0 +1,4 @@
+/docs/* https://docs.ipfs.tech/
+/blog/* http://blog.ipfs.tech/:splat
+/companion-privacy/ https://github.com/ipfs-shipyard/ipfs-companion/blob/master/PRIVACY-POLICY.md
+/privacy/ https://protocol.ai/legal/#privacy-policy

@@ -2,12 +2,12 @@
   <footer class="relative">
     <div class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
     <div class="absolute bottom-0 right-0 overflow-x-hidden lg:overflow-visible">
-      <img src="/images/constellations-footer.svg" alt="">
+      <img src="~/assets/images/constellations-footer.svg" alt="">
     </div>
     <div class="relative mx-auto max-w-screen-xl px-7 py-16 lg:p-x-32 lg:py-32">
       <div class="grid grid-cols-1 text-white lg:grid-cols-2">
         <div class="flex flex-col lg:flex-row">
-          <img src="/images/ipfs-logo.svg" alt="IPFS logo" class="mb-8 mr-8 w-28 lg:mb-0">
+          <img src="~/assets/images/ipfs-logo.svg" alt="IPFS logo" class="mb-8 mr-8 w-28 lg:mb-0">
           <div class="text-white">
             <NewsletterForm />
           </div>
@@ -100,13 +100,13 @@
       </div>
       <div class="mt-4 flex justify-end gap-4">
         <AppLink href="http://twitter.com/ipfs">
-          <img src="/images/social-twitter.svg" alt="Twitter logo" class="w-8">
+          <img src="~/assets/images/social-twitter.svg" alt="Twitter logo" class="w-8">
         </AppLink>
         <AppLink href="https://github.com/ipfs">
-          <img src="/images/social-github.svg" alt="Github logo" class="w-8">
+          <img src="~/assets/images/social-github.svg" alt="Github logo" class="w-8">
         </AppLink>
         <AppLink href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
-          <img src="/images/social-youtube.svg" alt="Youtube logo" class="w-8">
+          <img src="~/assets/images/social-youtube.svg" alt="Youtube logo" class="w-8">
         </AppLink>
       </div>
     </div>
