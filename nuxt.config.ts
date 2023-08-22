@@ -48,6 +48,17 @@ export default defineNuxtConfig({
     failOn404: false, // TODO: enable before launch
   },
 
+  sitemap: {
+    exclude: [
+      '/__nuxt_island/**',
+      '/help',
+      '/team',
+      '/docs/**',
+      '/privacy',
+      '/companion-privacy',
+    ],
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: PUBLIC_SITE_URL,
