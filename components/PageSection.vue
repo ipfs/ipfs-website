@@ -19,9 +19,9 @@ defineProps<Props>()
   <section :id="id" class="relative overflow-visible" :class="{ 'text-white': textWhite }">
     <div v-if="darkGradient" class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
     <div v-if="lightGradient" class="absolute h-full w-full from-brand-teal-light to-white bg-gradient-to-b -z-1" />
-    <img v-if="background" :src="`~/assets/images/${background}`" alt="" class="absolute h-full w-full object-cover -z-1">
+    <img v-if="background" :src="useAsset(`images/${background}`)" alt="" class="absolute h-full w-full object-cover -z-1">
     <div v-if="overlay" class="absolute inset-0 overflow-x-hidden lg:overflow-visible">
-      <img :src="`~/assets/images/${overlay}`" :class="`absolute ${overlayPosition}`">
+      <img :src="useAsset(`images/${overlay}`)" :class="`absolute ${overlayPosition}`">
     </div>
     <div
       class="relative mx-auto max-w-screen-xl"

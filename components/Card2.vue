@@ -12,7 +12,7 @@ interface Props {
   tags?: string
 }
 const props = defineProps<Props>()
-const image = props.image?.startsWith('http') ? props.image : `~/assets/images/${props.image}`
+const image = props.image?.startsWith('http') ? props.image : useAsset(`images/${props.image}`)
 </script>
 
 <template>

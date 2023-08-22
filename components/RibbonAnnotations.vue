@@ -9,7 +9,7 @@ defineProps<Props>()
   <ul class="annotations absolute left-1/2 top-1/2 z-1 hidden text-sm lg:block -translate-x-1/2 -translate-y-1/2">
     <li v-for="(annotation, index) in annotations" :key="index" :class="`annotation annotation${index + 1}`">
       {{ annotation }}
-      <img :src="`~/assets/images/ribbon-annotation-${index + 1}.svg`" class="absolute">
+      <img :src="useAsset(`images/ribbon-annotation-${index + 1}.svg`)" class="absolute">
     </li>
   </ul>
 </template>
