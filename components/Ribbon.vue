@@ -4,7 +4,6 @@ interface Props {
 }
 const props = defineProps<Props>()
 const pImages = computed(() => props.images.map(img => useAsset(`images/${img}`)))
-console.log(pImages.value)
 </script>
 
 <template>
