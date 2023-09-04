@@ -48,7 +48,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.1",
-    "postcss": "^8.3.3",
+    "postcss": "^8.4.29",
     "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
