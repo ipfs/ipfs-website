@@ -76,9 +76,11 @@ definePageMeta({
           </Subhead>
           <img src="~/assets/images/circle-star.svg" class="mx-auto my-6">
           <p class="text-xl text-black">
-            Meet other members of the community virtually or in-person by <AppLink href="https://lu.ma/ipfs">
-              subscribing
-            </AppLink> to our event calendar.
+            Meet other members of the community virtually or in-person by
+            subscribing
+            to our <AppLink href="https://lu.ma/ipfs">
+              event calendar
+            </AppLink>.
           </p>
         </Card>
         <Card background="light">
@@ -86,8 +88,9 @@ definePageMeta({
             Keep up with what's new
           </Subhead>
           <p class="text-xl text-black">
-            Get the latest on news about what's happening in the IPFS ecosystem by <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
-              subscribing to our newsletter
+            Get the latest on news about what's happening in the IPFS ecosystem by
+            subscribing to our <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
+              newsletter
             </AppLink> or watching
             <AppLink href="https://www.youtube.com/@IPFSbot/videos">
               This Month in IPFS
