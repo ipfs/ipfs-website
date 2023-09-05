@@ -70,7 +70,6 @@ export default defineNuxtConfig({
       siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
       trailingSlash: true,
       siteImage: '/images/social-card.png',
-      indexable: false, // TODO: enable before launch
       language: 'en-US',
       // seoKit
       blogUrl: PUBLIC_BLOG_URL,
