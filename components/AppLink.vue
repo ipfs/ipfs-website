@@ -8,7 +8,7 @@ function isExternal(href: string | undefined) {
 </script>
 
 <template>
-  <NuxtLink class="pointer inline-block" :href="href || to" :target="isExternal(href || to) ? '_blank' : undefined">
+  <NuxtLink class="inline-block cursor-pointer" :href="href || to" :target="isExternal(href || to) ? '_blank' : undefined">
     <slot />
   </NuxtLink>
 </template>

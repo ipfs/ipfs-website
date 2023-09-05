@@ -39,7 +39,7 @@ useCards:
     title: Expand our universe
     description: |
       We're reimagining the structure of the traditional web so we're ready for what's next - we need you to help us discover what's possible
-    link: /community
+    link: /community/
     label: Join the community
   - image: logo-lockheed.png
     title: Literally store your data out of this world

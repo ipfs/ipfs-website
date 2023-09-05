@@ -45,29 +45,36 @@ export default defineNuxtConfig({
   },
 
   linkChecker: {
-    failOn404: false, // TODO: enable before launch
+    // TODO: enable once these issues are resolved
+    // https://github.com/harlan-zw/nuxt-link-checker/issues/2
+    // https://github.com/harlan-zw/nuxt-link-checker/issues/13
+    failOn404: false,
+  },
+
+  site: {
+    siteUrl: PUBLIC_SITE_URL,
+    siteName: 'IPFS Powers the Distributed Web',
+    siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
+    trailingSlash: true,
+    siteImage: '/images/social-card.png',
+    indexable: false, // TODO: enable before launch
+    language: 'en-US',
   },
 
   sitemap: {
     exclude: [
       '/__nuxt_island/**',
-      '/help',
-      '/team',
+      '/help/',
+      '/team/',
       '/docs/**',
-      '/privacy',
-      '/companion-privacy',
+      '/privacy/',
+      '/companion-privacy/',
     ],
   },
 
   runtimeConfig: {
     public: {
-      siteUrl: PUBLIC_SITE_URL,
-      siteName: 'IPFS Powers the Distributed Web',
-      siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
-      siteImage: '/images/social-card.png',
       blogUrl: PUBLIC_BLOG_URL,
-      language: 'en-US',
-      indexable: false, // TODO: enable before launch
       plausible: {
         domain: PUBLIC_DOMAIN,
       },
