@@ -4,10 +4,10 @@ defineProps({
 })
 
 const headerLinks = [
-  { text: 'Community', link: '/community' },
-  { text: 'Developers', link: '/developers' },
-  { text: 'Docs', link: 'https://docs.ipfs.tech/' },
-  { text: 'Blog', link: 'https://blog.ipfs.tech/' },
+  { text: 'Community', link: '/community/' },
+  { text: 'Developers', link: '/developers/' },
+  { text: 'Docs', link: '//docs.ipfs.tech/' },
+  { text: 'Blog', link: '//blog.ipfs.tech/' },
 ]
 
 const mobileLinks = [

@@ -103,7 +103,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         </Card>
       </Grid>
       <div class="mx-auto table">
-        <Btn href="/developers" primary>
+        <Btn href="/developers/" primary>
           Learn how it works
         </Btn>
       </div>
@@ -126,7 +126,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Developers" link="/developers" />
+            <ListLink label="Developers" link="/developers/" />
             <ListLink label="Documentation" link="https://docs.ipfs.tech/" />
             <ListLink label="Read Case Studies" link="https://docs.ipfs.tech/case-studies/arbol/" />
           </ListLinks>
@@ -215,7 +215,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         <Subhead center>
           <b>Our protocol's success hinges on participation from all of our neighbors:</b> Each new node that joins IPFS makes the network stronger for everyone.
         </Subhead>
-        <Btn href="/community" primary>
+        <Btn href="/community/" primary>
           Join the Community
         </Btn>
       </div>

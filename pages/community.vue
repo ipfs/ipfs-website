@@ -268,7 +268,7 @@ definePageMeta({
           <Subhead center tight>
             Interested in solving these challenges together? Join a <AppLink href="https://lu.ma/ipfs">
               community event
-            </AppLink>, a <AppLink to="#meetups-wgs">
+            </AppLink>, a <AppLink to="./#meetups-wgs">
               working group
             </AppLink>, or <AppLink href="https://discuss.ipfs.tech">
               forum
