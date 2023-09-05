@@ -45,7 +45,10 @@ export default defineNuxtConfig({
   },
 
   linkChecker: {
-    failOn404: false, // TODO: enable before launch
+    // TODO: enable once these issues are resolved
+    // https://github.com/harlan-zw/nuxt-link-checker/issues/2
+    // https://github.com/harlan-zw/nuxt-link-checker/issues/13
+    failOn404: false,
   },
 
   site: {
