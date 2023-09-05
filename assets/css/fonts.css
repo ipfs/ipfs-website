@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+main a:not(.btn,.card) {
+  @apply transition-all;
+  @apply hover:text-brand-teal;
+  @apply underline;
+}
+
+footer a {
+  @apply transition-all;
+  @apply hover:text-brand-teal;
+}
+
+header nav a,
+.mobile-nav a {
+  @apply transition-all;
+  @apply hover:opacity-75;
+}
+
+.list-lg {
+  @apply text-lg list-disc pl-4;
+}
+.list-lg li {
+  @apply mb-8;
+}
+.list-lg li::marker {
+  @apply text-brand-teal;
+}

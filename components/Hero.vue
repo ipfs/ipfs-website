@@ -1,28 +1,22 @@
-<template>
-  <div class="bg-gradient-6 py-28 lg:py-30">
-    <div class="grid-margins pt-4">
-      <div class="max-w-6xl mx-auto">
-        <h1 class="text-white mt-4">{{ title }}</h1>
-        <h2 class="text-white mt-8 max-w-4xl">
-          {{ description }}
-        </h2>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'Hero',
-  props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    description: {
-      type: String,
-      default: '',
-    },
-  },
-};
+<script setup lang="ts">
+interface Props {
+  tall?: boolean
+  background?: string
+  overlay?: string
+  overlayPosition?: string
+}
+defineProps<Props>()
 </script>
+
+<template>
+  <PageSection id="hero" :background="background" :overlay="overlay" overlay-position="top-0 right-0">
+    <div class="m-x-auto max-w-xl" :class="[tall ? 'p-y-16' : 'pt-16']">
+      <h1 class="mb-4 text-center text-2xl text-white lg:text-5xl sm:text-2xl">
+        <slot name="title" />
+      </h1>
+      <h4 class="text-center text-lg font-normal text-gray-400">
+        <slot name="subtitle" />
+      </h4>
+    </div>
+  </PageSection>
+</template>

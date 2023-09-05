@@ -1,81 +1,114 @@
 <template>
-  <footer class="bg-gradient-6 text-white py-8 md:py-16 mt-auto">
-    <div class="grid-margins">
-      <NewsletterForm class="col-start-1 col-span-12 lg:pb-20" />
-      <div class="flex flex-col lg:flex-row lg:items-top lg:justify-between">
-        <div
-          class="flex flex-col lg:flex-row lg:items-center mb-4 md:mb-8 lg:mb-0"
-        >
-          <ul class="flex flex-col sm:flex-row mt-4 md:mt-8 lg:mt-0">
-            <li
-              v-for="(item, index) in footerNavigation"
-              :key="'link-' + index"
-              class="sm:mr-10 last:mr-0"
-              :class="[{ 'mb-4': item.children && item.children.length }]"
-              @click="onLinkClick(item)"
-            >
-              <Link
-                :item="item"
-                class="
-                  footer-link
-                  font-medium
-                  hover:opacity-75
-                  transition-opacity
-                  duration-300
-                  ease-in-out
-                "
-              />
-            </li>
-          </ul>
+  <footer class="relative">
+    <div class="absolute h-full w-full from-brand-dark to-brand-blue-dark bg-gradient-to-r -z-1" />
+    <div class="absolute bottom-0 right-0 overflow-x-hidden lg:overflow-visible">
+      <img src="~/assets/images/constellations-footer.svg" alt="">
+    </div>
+    <div class="relative mx-auto max-w-screen-xl px-7 py-16 lg:p-x-32 lg:py-32">
+      <div class="grid grid-cols-1 text-white lg:grid-cols-2">
+        <div class="flex flex-col lg:flex-row">
+          <img src="~/assets/images/ipfs-logo.svg" alt="IPFS logo" class="mb-8 mr-8 w-28 lg:mb-0">
+          <div class="text-white">
+            <NewsletterForm />
+          </div>
         </div>
-        <SocialLinks class="flex items-center" tracking="footer" />
+        <div class="mt-8 pl-0 lg:mt-0 lg:pl-8">
+          <div class="flex justify-between gap-4">
+            <div>
+              <Subhead bold small tight>
+                About
+              </Subhead>
+              <ul class="text-xs leading-7 lg:text-sm">
+                <li>
+                  <AppLink href="https://blog.ipfs.tech/">
+                    Blog &amp; News
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="/media/">
+                    Press Kit
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://github.com/ipfs/community/blob/master/code-of-conduct.md">
+                    Code of Conduct
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues">
+                    Security
+                  </AppLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <Subhead bold small tight>
+                Community
+              </Subhead>
+              <ul class="mt-4 text-xs leading-7 lg:text-sm">
+                <li>
+                  <AppLink href="https://discuss.ipfs.tech/">
+                    Forums
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://ipfs.fyi/office">
+                    Office Hours
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://hackathons.filecoin.io/">
+                    Hackathons
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://github.com/ipfs/devgrants">
+                    Developer Grants
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://ipfs.fyi/accelerators">
+                    Accelerators
+                  </AppLink>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <Subhead bold small tight>
+                Resources
+              </Subhead>
+              <ul class="mt-4 text-xs leading-7 lg:text-sm">
+                <li>
+                  <AppLink href="https://specs.ipfs.tech/">
+                    Specs
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://docs.ipfs.tech/case-studies/arbol/">
+                    Case Studies
+                  </AppLink>
+                </li>
+                <li>
+                  <AppLink href="https://docs.ipfs.tech/concepts/further-reading/academic-papers/">
+                    Research
+                  </AppLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <FooterLegal class="mt-4 md:mt-8" />
+      <div class="mt-4 flex justify-end gap-4">
+        <AppLink href="http://twitter.com/ipfs">
+          <img src="~/assets/images/social-twitter.svg" alt="Twitter logo" class="w-8">
+        </AppLink>
+        <AppLink href="https://github.com/ipfs">
+          <img src="~/assets/images/social-github.svg" alt="Github logo" class="w-8">
+        </AppLink>
+        <AppLink href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
+          <img src="~/assets/images/social-youtube.svg" alt="Youtube logo" class="w-8">
+        </AppLink>
+      </div>
     </div>
   </footer>
 </template>
-
-<script>
-import Link from './Link';
-import SocialLinks from './SocialLinks';
-import FooterLegal from './FooterLegal';
-import NewsletterForm from './NewsletterForm';
-
-const footerNavigation = [
-  { text: 'Blog & news', link: 'https://blog.ipfs.tech/' },
-  { text: 'Press', link: '/media' },
-  {
-    text: 'Code of conduct',
-    link: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md',
-  },
-  {
-    text: 'Security',
-    link: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues',
-  },
-];
-
-export default {
-  name: 'Footer',
-  components: { Link, SocialLinks, FooterLegal, NewsletterForm },
-  data: () => ({
-    footerNavigation: footerNavigation,
-  }),
-  methods: {
-    onLinkClick(item) {
-      this.$countly.trackEvent(this.$countly.events.LINK_CLICK_FOOTER, {
-        path: this.$route.path,
-        text: item.text,
-        href: item.link,
-      });
-    },
-  },
-};
-</script>
-
-<style scoped>
-.footer-link {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-}
-</style>

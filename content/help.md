@@ -1,5 +1,5 @@
 ---
-title: Getting help
+title: Getting Help
 description: Learn where to get help and support in the extensive, diverse IPFS ecosystem.
 ---
 
