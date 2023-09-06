@@ -8,13 +8,13 @@ main a:not(.btn,.card) {
   @apply underline;
 }
 
-footer a {
+footer a:not(.btn,.card) {
   @apply transition-all;
   @apply hover:text-brand-teal;
 }
 
-header nav a,
-.mobile-nav a {
+header nav a:not(.btn,.card),
+.mobile-nav a:not(.btn,.card) {
   @apply transition-all;
   @apply hover:opacity-75;
 }
