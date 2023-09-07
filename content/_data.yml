@@ -48,20 +48,25 @@ useCards:
     link: https://thedefiant.io/filecoin-ipfs-space
     label: Learn more
 browserCards:
+  - image: logo-brave.svg
+    title: Brave
+    description: |
+      Supports IPFS and IPNS
+    link: https://brave.com/ipfs-support/
   - image: logo-opera.png
     title: Opera
     description: |
-      Supports IPFS and IPNS schemes
+      Supports IPFS and IPNS
     link: https://blogs.opera.com/tips-and-tricks/2021/02/opera-crypto-files-for-keeps-ipfs-unstoppable-domains/
     label: Learn more
   - image: logo-chrome.png
-    title: Chromium Extensions
+    title: Chrome
     description: |
       IPFS browser extension
     link: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
     label: Install
   - image: logo-firefox.png
-    title: Firefox Extension
+    title: Firefox
     description: |
       IPFS browser extension
     link: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
