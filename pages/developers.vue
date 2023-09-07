@@ -307,10 +307,10 @@ definePageMeta({
     </PageSection>
     <PageSection bottom-tight>
       <Heading center>
-        Browsers
+        Web Browsers
       </Heading>
       <Subhead center>
-        Access IPFS apps directly through your browser with one of these extensions.
+        Access IPFS apps natively through your browser or with an extension.
       </Subhead>
     </PageSection>
     <PageSection tight full-width class="min-h-96">
