@@ -22,7 +22,7 @@ const nav = reactive({
   isVisible: true,
   isSticky: true,
   isTransparent: true,
-  threshold: 10,
+  threshold: 5,
   offset: 300,
   mobileActive: false,
 })
