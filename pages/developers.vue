@@ -208,7 +208,12 @@ definePageMeta({
               <li>
                 <AppLink href="https://github.com/ipfs/kubo">
                   Kubo
-                </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple kubo nodes.
+                </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple Kubo nodes.
+              </li>
+              <li>
+                <AppLink href="https://ipfscluster.io">
+                  IPFS Cluster
+                </AppLink> provides data orchestration across a swarm of IPFS daemons by allocating, replicating and tracking a global pinset distributed among multiple Kubo peers.
               </li>
               <li>
                 <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
