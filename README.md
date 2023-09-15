@@ -17,23 +17,37 @@ Please note that some sites closely related to this primary IPFS website have th
 
 ## For site developers
 
-### Build and run locally
+### Pre requisites
+
+```bash
+# install node LTS/Current
+https://nodejs.org/en/download/
+
+# enable corepack in node > v16.17
+corepack enable
+
+# install deps
+pnpm i
+```
+
+### Run developer mode locally
 
 To build a local copy, run the following:
 
 ```bash
-# install dependencies
-$ pnpm install
-
 # serve with hot reload at localhost:3000
-$ pnpm run dev
+pnpm dev
 
-# build for production and launch server
-$ pnpm run build
-$ pnpm run start
+```
 
-# generate static project
-$ pnpm run generate
+### Build for production
+
+```bash
+# build optimised static site
+pnpm generate
+
+# launch a webserver to preview the site
+pnpm preview
 ```
 
 ### PR and preview
