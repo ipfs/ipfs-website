@@ -142,7 +142,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ImageSplit>
           <ListLinks>
             <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
-            <ListLink label="Tutorial: Sturcturing Data" link="https://proto.school/merkle-dags" />
+            <ListLink label="Tutorial: Structuring Data" link="https://proto.school/merkle-dags" />
             <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/data-ingestion/" />
           </ListLinks>
         </Card>
