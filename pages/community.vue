@@ -144,7 +144,7 @@ definePageMeta({
             </ImageSplit>
             <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
           </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://calendar.google.com/calendar/u/0/embed?src=libp2p.io_0q9682i3te7eanhe9q7ae1c58g@group.calendar.google.com">
+          <ZebraCard cta-label="Learn more" cta-link="https://libp2p.io/#community">
             <h3>
               libp2p Implementers
             </h3>
