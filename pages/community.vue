@@ -188,17 +188,6 @@ definePageMeta({
             </ImageSplit>
             <p>What's covered: Web assembly (Wasm) models, roadmap, community events, feedback.</p>
           </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/8kk9i628" image-class="max-w-30% my-4">
-            <h3>
-              Move the Bytes Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                A working group dedicated to shipping a production-ready data transfer protocol that can replace Bitswap in IPFS.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Roadmap updates, testing, documentation, and tracking metrics.</p>
-          </ZebraCard>
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-routing-wg">
             <h3>
               Content Routing Working Group
