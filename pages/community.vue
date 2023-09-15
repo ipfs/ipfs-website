@@ -91,10 +91,10 @@ definePageMeta({
             Get the latest on news about what's happening in the IPFS ecosystem by
             subscribing to our <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
               newsletter
-            </AppLink> or watching
+            </AppLink> and
             <AppLink href="https://www.youtube.com/c/IPFSbot/videos">
-              This Month in IPFS
-            </AppLink> livestream.
+              YouTube channel
+            </AppLink>.
           </p>
         </Card>
       </Grid>
