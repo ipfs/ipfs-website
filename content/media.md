@@ -20,7 +20,12 @@ IPFS (the InterPlanetary File System) is a peer-to-peer network and protocol des
 
 #### IPFS and Filecoin
 
-For details on understanding the relationship between IPFS and Filecoin, please see [this guide in Filecoin documentation](https://docs.filecoin.io/about-filecoin/ipfs-and-filecoin/).
+Filecoin is an independent, complementary protocol that builds on the content addressing of IPFS to add longer term data persistence using cryptoeconomic incentives.
+For details on understanding the relationship between IPFS and Filecoin, please see [this guide in Filecoin documentation (2023)](https://web.archive.org/web/20230223052220/https://docs.filecoin.io/developers/introduction/filecoin-and-ipfs/).
+
+#### Does IPFS have a blockchain?
+
+No, [IPFS does not have a blockchain](https://doesipfshaveablockchain.com/).
 
 ### The IPFS ecosystem
 
@@ -53,4 +58,4 @@ All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.tech) p
 - [News coverage](http://blog.ipfs.tech/?category=News%20coverage)
 - [Events](http://blog.ipfs.tech/?category=Event)
 
-Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew) channels.
+Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/c/IPFSbot) channels.
