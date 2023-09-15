@@ -93,7 +93,7 @@ definePageMeta({
               newsletter
             </AppLink> and
             <AppLink href="https://www.youtube.com/@IPFSbot/videos">
-              video channel
+              YouTube channel
             </AppLink>.
           </p>
         </Card>
