@@ -105,7 +105,7 @@
         <AppLink href="https://github.com/ipfs">
           <img src="~/assets/images/social-github.svg" alt="Github logo" class="w-8">
         </AppLink>
-        <AppLink href="https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew">
+        <AppLink href="https://www.youtube.com/c/IPFSbot">
           <img src="~/assets/images/social-youtube.svg" alt="Youtube logo" class="w-8">
         </AppLink>
       </div>

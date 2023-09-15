@@ -92,7 +92,7 @@ definePageMeta({
             subscribing to our <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
               newsletter
             </AppLink> or watching
-            <AppLink href="https://www.youtube.com/@IPFSbot/videos">
+            <AppLink href="https://www.youtube.com/c/IPFSbot/videos">
               This Month in IPFS
             </AppLink> livestream.
           </p>

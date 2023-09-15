@@ -58,4 +58,4 @@ All IPFS-related news can be found on our [Blog & News](http://blog.ipfs.tech) p
 - [News coverage](http://blog.ipfs.tech/?category=News%20coverage)
 - [Events](http://blog.ipfs.tech/?category=Event)
 
-Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew) channels.
+Additionally, you can get up-to-the minute updates on our [Twitter](https://twitter.com/ipfs) and [YouTube](https://www.youtube.com/c/IPFSbot) channels.

@@ -8,7 +8,7 @@ const socialLinks = [
   },
   {
     text: 'YouTube',
-    link: 'https://www.youtube.com/channel/UCdjsUXJ3QawK4O5L1kqqsew',
+    link: 'https://www.youtube.com/c/IPFSbot',
     icon: 'i-carbon-logo-youtube',
   },
   {
