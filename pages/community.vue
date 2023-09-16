@@ -166,6 +166,17 @@ definePageMeta({
             </ImageSplit>
             <p>What's covered: Developer resourcing needed for new implementations & libraries, standardization, changes to IPLD.</p>
           </ZebraCard>
+          <ZebraCard cta-label="Learn more" cta-link="https://blog.ipfs.tech/2023-introducing-the-ecosystem-working-group/">
+            <h3>
+              IPFS Ecosystem Working Group
+            </h3>
+            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
+              <p>
+                A working group with the explicit purpose of spinning out into our own independent entity over the coming months.
+              </p>
+            </ImageSplit>
+            <p>We believe that this working group and its autonomy will be critical in helping propel IPFS toward a better and even brighter future.</p>
+          </ZebraCard>
           <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
             <h3>
               WNFS Working Group
