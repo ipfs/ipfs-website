@@ -16,7 +16,7 @@ useCards:
     description: |
       3S Studios built an IPFS plugin for Unity that reduced the content size of a game from 2 gigabytes to 40 megabytes
     link: https://blog.ipfs.tech/2022-11-15-3s-studio/
-    label: Read the their story
+    label: Read their story
   - image: portrait-nancy-baker.png
     title: Guarantee a permanent home for your digital art
     description: |
