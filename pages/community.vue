@@ -32,10 +32,10 @@ definePageMeta({
           </Subhead>
           <div class="mx-auto flex justify-between gap-8">
             <div>
-              <AppLink href="https://filecoin.io/slack">
-                <img src="~/assets/images/circle-slack.svg" class="mx-auto my-4 block">
+              <AppLink href="https://matrix.to/#/#ipfs-space:ipfs.io">
+                <img src="~/assets/images/circle-matrix.svg" class="mx-auto my-4">
                 <p class="text-center text-xl text-black">
-                  Slack
+                  Matrix
                 </p>
               </AppLink>
             </div>
@@ -48,10 +48,10 @@ definePageMeta({
               </AppLink>
             </div>
             <div>
-              <AppLink href="https://matrix.to/#/#lobby:ipfs.io">
-                <img src="~/assets/images/circle-matrix.svg" class="mx-auto my-4">
+              <AppLink href="https://filecoin.io/slack">
+                <img src="~/assets/images/circle-slack.svg" class="mx-auto my-4 block">
                 <p class="text-center text-xl text-black">
-                  Matrix
+                  Slack
                 </p>
               </AppLink>
             </div>
