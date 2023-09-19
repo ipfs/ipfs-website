@@ -188,13 +188,13 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <div class="ribbon-wrap relative my-12 lg:my-44">
         <RibbonAnnotations
           :annotations="[
-            'Application-Developers',
+            'Application Developers',
             'Scientists',
             'Infrastructure Developers',
             'Researchers',
             'Designers',
             'Archivists',
-            'Yes, Even the occasional Astronaut',
+            'Yes, Even the Occasional Astronaut',
             'Artists',
           ]"
         />
