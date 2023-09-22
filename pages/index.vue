@@ -141,9 +141,8 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Tutorial: Content Addressing" link="https://proto.school/content-addressing" />
-            <ListLink label="Tutorial: Structuring Data" link="https://proto.school/merkle-dags" />
-            <ListLink label="Data Ingestion with Bacalhau" link="https://docs.bacalhau.org/data-ingestion/" />
+            <ListLink label="Publish with IPFS" link="https://docs.ipfs.tech/quickstart/publish/" />
+            <ListLink label="Retrieve CIDs with IPFS" link="https://docs.ipfs.tech/quickstart/retrieve/" />
           </ListLinks>
         </Card>
         <Card>
@@ -157,6 +156,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ImageSplit>
           <ListLinks>
             <ListLink label="Install IPFS Desktop" link="https://docs.ipfs.tech/install/ipfs-desktop" />
+            <ListLink label="Install IPFS Browser Extension" link="https://docs.ipfs.tech/install/ipfs-companion/" />
             <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
           </ListLinks>
         </Card>
