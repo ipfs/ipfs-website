@@ -66,8 +66,8 @@ export default defineNuxtConfig({
     public: {
       // seoKit
       siteUrl: PUBLIC_SITE_URL,
-      siteName: 'IPFS Powers the Distributed Web',
-      siteDescription: 'The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to preserve and grow humanity\'s knowledge by making the web upgradeable, resilient, and more open.',
+      siteName: 'IPFS is an open system to manage data without a central server',
+      siteDescription: 'IPFS is a modular suite of protocols for addressing, routing, and transferring data, designed from the ground up with the principles of content addressing and peer-to-peer networking.',
       trailingSlash: true,
       siteImage: '/images/social-card.png',
       language: 'en-US',
