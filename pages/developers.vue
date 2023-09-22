@@ -265,7 +265,7 @@ definePageMeta({
       </div>
       <Card background="light">
         <Subhead tight center bold>
-          Don’t see what you're looking for? We encourage you to explore other <AppLink href="https://www.notion.so/IPFS-implementations-a1e52ad7734d4a268c475b95440805c5">
+          Don’t see what you're looking for? We encourage you to explore other <AppLink href="https://docs.ipfs.tech/concepts/ipfs-implementations">
             experimental implementations
           </AppLink> or create your own.
         </Subhead>
