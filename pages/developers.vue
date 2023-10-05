@@ -134,9 +134,9 @@ definePageMeta({
           <p>
             From scientific data to open public datasets like <AppLink href="https://opendata.cityofnewyork.us/">
               NYC Open Data
-            </AppLink>, dozens of projects use <AppLink href="https://estuary.tech/">
-              Estuary
-            </AppLink> to capture public data on IPFS.
+            </AppLink>, dozens of projects use <AppLink href="https://docs.ipfs.tech/concepts/persistence/#pinning-services">
+              pinning services
+            </AppLink> to share public data with IPFS.
           </p>
           <p>
             <b>Get started:</b> Learn how hashing and content addressing enable verifiable data sharing through <AppLink href="https://proto.school/content-addressing">
@@ -265,7 +265,7 @@ definePageMeta({
       </div>
       <Card background="light">
         <Subhead tight center bold>
-          Don’t see what you're looking for? We encourage you to explore other <AppLink href="https://www.notion.so/IPFS-implementations-a1e52ad7734d4a268c475b95440805c5">
+          Don’t see what you're looking for? We encourage you to explore other <AppLink href="https://docs.ipfs.tech/concepts/ipfs-implementations">
             experimental implementations
           </AppLink> or create your own.
         </Subhead>

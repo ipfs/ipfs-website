@@ -16,7 +16,7 @@ function onSubmit() {
     </Subhead>
     <p class="mb-8 text-sm">
       Sign up for the IPFS newsletter
-      (<AppLink class="text-brand-teal underline" href="https://blog.ipfs.tech/?tags=weekly">
+      (<AppLink class="text-brand-teal underline" href="https://blog.ipfs.tech/?tags=newsletter">
         example
       </AppLink>) for the latest on releases, upcoming developments, community events, and more.
     </p>
