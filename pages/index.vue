@@ -2,6 +2,10 @@
 const { data } = await useAsyncData('data', () => queryContent('_data').findOne())
 const config = useRuntimeConfig()
 
+useHead({
+  title: config.public.siteTitle || '',
+})
+
 // TODO: temporary until we have meta images included in the feed
 const blogPlaceholderImage = `${config.public.blogUrl}/assets/img/blog-post-placeholder.af417eb0.png`
 

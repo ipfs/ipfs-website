@@ -66,7 +66,8 @@ export default defineNuxtConfig({
     public: {
       // seoKit
       siteUrl: PUBLIC_SITE_URL,
-      siteName: 'IPFS is an open system to manage data without a central server',
+      siteName: 'IPFS',
+      siteTitle: 'An open system to manage data without a central server',
       siteDescription: 'IPFS is a modular suite of protocols for addressing, routing, and transferring data, designed from the ground up with the principles of content addressing and peer-to-peer networking.',
       trailingSlash: true,
       siteImage: '/images/social-card.png',
