@@ -1,8 +1,8 @@
 {
- "build": {
-   "image": "node:18-alpine",
-   "command": "corepack enable && pnpm i && pnpm generate",
-   "publicDir": ".output/public",
-   "baseDir": ""
- }
+  "build": {
+    "image": "node:18-alpine",
+    "command": "corepack enable && pnpm i && pnpm generate",
+    "publicDir": ".output/public",
+    "baseDir": ""
+  }
 }
