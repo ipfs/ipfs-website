@@ -1,6 +1,10 @@
 /docs https://docs.ipfs.tech/
 /docs/* https://docs.ipfs.tech/
-/blog http://blog.ipfs.tech/
-/blog/* http://blog.ipfs.tech/:splat
-/companion-privacy https://github.com/ipfs-shipyard/ipfs-companion/blob/master/PRIVACY-POLICY.md
+/blog https://blog.ipfs.tech/
+/blog/* https://blog.ipfs.tech/:splat
+/companion-privacy https://github.com/ipfs/ipfs-companion/blob/main/PRIVACY-POLICY.md
 /privacy https://protocol.ai/legal/#privacy-policy
+/ipfs /not-a-gateway-404.html 404
+/ipfs/* /not-a-gateway-404.html 404
+/ipns /not-a-gateway-404.html 404
+/ipns/* /not-a-gateway-404.html 404
