@@ -8,3 +8,4 @@
 /ipfs/* /not-a-gateway-404.html 404
 /ipns /not-a-gateway-404.html 404
 /ipns/* /not-a-gateway-404.html 404
+/routing/v1/* /not-a-gateway-404.html 404
