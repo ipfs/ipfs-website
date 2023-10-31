@@ -20,7 +20,7 @@ function onSubmit() {
         example
       </AppLink>) for the latest on releases, upcoming developments, community events, and more.
     </p>
-    <Btn target="_blank" href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw" primary>
+    <Btn target="_blank" href="https://ipfs.fyi/newsletter" primary>
       Signup
     </Btn>
     <!-- <form
