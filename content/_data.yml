@@ -91,7 +91,7 @@ testimonialCards:
   - image: portrait-joel-thorstensson-3box-labs.webp
     title: Joel Thorstenssen, Co-founder - 3Box Labs
     description: |
-      ​At 3box labs, we are using IPFS as the storage layer. If you want to build full decentralized applications, you need data integrity. IPFS guarantees integrity by providing a framework for merkelized data.
+      At 3box labs, we are using IPFS as the storage layer. If you want to build full decentralized applications, you need data integrity. IPFS guarantees integrity by providing a framework for merkelized data.
   - image: portrait-boris-mann-fission.webp
     title: Boris Mann, Co-founder - Fission
     description: |
