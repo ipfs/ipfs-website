@@ -89,7 +89,7 @@ definePageMeta({
           </Subhead>
           <p class="text-xl text-black">
             Get the latest on news about what's happening in the IPFS ecosystem by
-            subscribing to our <AppLink href="https://share.hsforms.com/1-wT-kbwkRw-4HLsYY3nLIgnkivw">
+            subscribing to our <AppLink href="https://ipfs.fyi/newsletter">
               newsletter
             </AppLink> and
             <AppLink href="https://www.youtube.com/c/IPFSbot/videos">
