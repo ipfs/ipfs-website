@@ -36,6 +36,6 @@ The IPFS core team strictly adheres to a policy of _public discussion and commun
 
 ## Jobs working with IPFS
 
-The simplest way to search for jobs building on or working with IPFS is to [subscribe to the IPFS newsletter](https://ipfs.us4.list-manage.com/subscribe?u=25473244c7d18b897f5a1ff6b&id=cad54b2230) — each week's edition includes new job postings from a wide variety of companies and organizations looking for talented individuals interested in building the decentralized web.
+The simplest way to search for jobs building on or working with IPFS is to [subscribe to the IPFS newsletter](https://ipfs.fyi/newsletter) — each week's edition includes new job postings from a wide variety of companies and organizations looking for talented individuals interested in building the decentralized web.
 
 Additionally, open positions to work on the IPFS core team can be found [here](https://protocol.ai/join/).
