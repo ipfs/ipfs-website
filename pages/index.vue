@@ -26,16 +26,23 @@ interface BlogItems { posts: Post[] }
 interface NewsItems { news: Post[] }
 interface VideoItems { videos: Post[] }
 
-const { data: latestBlogs } = await useFetch('/index.json', {
+// useFetch load after hydration
+const defaultFetchOpts = {
   baseURL: config.public.blogUrl,
+  server: false,
+  lazy: true,
+}
+
+const { data: latestBlogs } = await useFetch('/index.json', {
+  ...defaultFetchOpts,
   transform: (data: BlogItems) => data.posts,
 })
 const { data: latestNews } = await useFetch('/news.json', {
-  baseURL: config.public.blogUrl,
+  ...defaultFetchOpts,
   transform: (data: NewsItems) => data.news,
 })
 const { data: latestVideos } = await useFetch('/videos.json', {
-  baseURL: config.public.blogUrl,
+  ...defaultFetchOpts,
   transform: (data: VideoItems) => data.videos,
 })
 </script>
