@@ -3,7 +3,7 @@ useCards:
     title: Develop offline-native productivity tools
     description: |
       Anytype uses the content addressing on IPFS to empower users to build personal knowledge webs that can be shared with others
-    link: https://doc.anytype.io/d/data-and-security/data-storage-and-deletion#storage
+    link: https://doc.anytype.io/anytype-docs/data-and-security/data-storage-and-deletion
     label: Read how they do it
   - image: logo-wiki.png
     title: Make archives and content libraries censorship resistant
