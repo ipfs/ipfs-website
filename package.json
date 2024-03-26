@@ -3,7 +3,7 @@
   "type": "module",
   "version": "3.0.0",
   "private": true,
-  "packageManager": "pnpm@8.10.3",
+  "packageManager": "pnpm@8.15.5",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,23 +14,23 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@vueuse/core": "^10.6.1",
-    "@vueuse/motion": "2.0.0",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/motion": "2.1.0",
     "vue3-carousel": "^0.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "1.1.1",
-    "@iconify-json/carbon": "^1.1.21",
-    "@nuxt/content": "^2.9.0",
-    "@nuxt/devtools": "1.0.2",
-    "@nuxtjs/plausible": "^0.2.3",
-    "@unocss/eslint-config": "^0.57.3",
-    "@unocss/nuxt": "^0.57.3",
-    "@unocss/preset-icons": "^0.57.3",
-    "@vueuse/nuxt": "^10.6.1",
-    "eslint": "^8.53.0",
-    "nuxt": "^3.8.1",
+    "@antfu/eslint-config": "2.10.1",
+    "@iconify-json/carbon": "^1.1.31",
+    "@nuxt/content": "^2.12.1",
+    "@nuxt/devtools": "1.1.4",
+    "@nuxtjs/plausible": "^0.2.4",
+    "@unocss/eslint-config": "^0.58.7",
+    "@unocss/nuxt": "^0.58.7",
+    "@unocss/preset-icons": "^0.58.7",
+    "@vueuse/nuxt": "^10.9.0",
+    "eslint": "^8.57.0",
+    "nuxt": "^3.11.1",
     "nuxt-seo-kit": "^1.3.13",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.3"
   }
 }

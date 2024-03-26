@@ -36,8 +36,11 @@ export default defineNuxtConfig({
     'nuxt-seo-kit',
   ],
 
+  features: {
+    inlineStyles: false,
+  },
+
   experimental: {
-    inlineSSRStyles: false,
     // TODO: fix payload extraction for IPFS hosting
     // see: https://github.com/nuxt/nuxt/issues/19478
     // payloadExtraction: false,
@@ -80,5 +83,7 @@ export default defineNuxtConfig({
     },
   },
 
-  devtools: true,
+  devtools: {
+    enabled: true,
+  },
 })
