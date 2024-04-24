@@ -116,24 +116,26 @@ definePageMeta({
     <PageSection id="meetups-wgs" dark-gradient>
       <div class="text-white">
         <Heading center>
-          Meetups And Working Groups
+          Events And Working Groups
         </Heading>
         <Subhead center>
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
         </Subhead>
-        <Grid class="text-center lg:text-left">
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours" image-class="max-w-30% py-4">
+        <iframe src="https://lu.ma/embed/calendar/cal-85sH6jbua7BU1uu/events" width="100%" height="600" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+        <!-- <Grid class="text-center lg:text-left">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs?tag=dapps" image-class="max-w-30% py-4">
             <h3>
-              Interplanetary Office Hours
+              IPFS Dapps Working Group
             </h3>
             <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
               <p>
-                Virtual office hours for anyone in the community to bring your questions, show off your projects, and connect with IPFS developer advocates.
+                ​The IPFS Dapps WG aims to improve the experience of Dapps on IPFS with better tooling, both for developers and users
+                in addition to decreasing the reliance on trusted gateways
               </p>
             </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
+            <p>What's covered: technical discussions, status updates, and usage examples.</p>
           </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-implementers">
+          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs">
             <h3>
               IPFS Implementers
             </h3>
@@ -223,7 +225,7 @@ definePageMeta({
             </ImageSplit>
             <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
           </ZebraCard>
-        </Grid>
+        </Grid> -->
       </div>
     </PageSection>
     <PageSection>
