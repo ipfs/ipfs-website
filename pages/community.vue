@@ -120,6 +120,9 @@ definePageMeta({
         </Heading>
         <Subhead center>
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
+          <Btn class="mt-8" target="_blank" href="https://lu.ma/ipfs" primary title="Subscribe to IPFS Community Events on lu.ma">
+            Subscribe to upcoming events
+          </Btn>
         </Subhead>
         <iframe src="https://lu.ma/embed/calendar/cal-85sH6jbua7BU1uu/events" frameborder="0" class="h-80vh max-h-200 w-full rounded-md bg-transparent" allowfullscreen aria-hidden="false" tabindex="0" />
       </div>
