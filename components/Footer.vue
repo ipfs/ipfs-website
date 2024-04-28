@@ -52,11 +52,6 @@
                   </AppLink>
                 </li>
                 <li>
-                  <AppLink href="https://ipfs.fyi/office">
-                    Office Hours
-                  </AppLink>
-                </li>
-                <li>
                   <AppLink href="https://hackathons.filecoin.io/">
                     Hackathons
                   </AppLink>
@@ -64,11 +59,6 @@
                 <li>
                   <AppLink href="https://github.com/ipfs/devgrants">
                     Developer Grants
-                  </AppLink>
-                </li>
-                <li>
-                  <AppLink href="https://ipfs.fyi/accelerators">
-                    Accelerators
                   </AppLink>
                 </li>
               </ul>

@@ -116,114 +116,15 @@ definePageMeta({
     <PageSection id="meetups-wgs" dark-gradient>
       <div class="text-white">
         <Heading center>
-          Meetups And Working Groups
+          Events And Working Groups
         </Heading>
         <Subhead center>
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
+          <Btn class="mt-8" target="_blank" href="https://lu.ma/ipfs" primary title="Subscribe to IPFS Community Events on lu.ma">
+            Subscribe to upcoming events
+          </Btn>
         </Subhead>
-        <Grid class="text-center lg:text-left">
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/IP-Office-Hours" image-class="max-w-30% py-4">
-            <h3>
-              Interplanetary Office Hours
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Virtual office hours for anyone in the community to bring your questions, show off your projects, and connect with IPFS developer advocates.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Demos, new project ideas, and 1-1 time with the Protocol Labs team.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-implementers">
-            <h3>
-              IPFS Implementers
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Biweekly working group for people who create and maintain different IPFS implementations
-              </p>
-            </ImageSplit>
-            <p>What’s covered: IPFS improvement proposals (IPIPS), protocol bugs, feedback.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Learn more" cta-link="https://libp2p.io/#community">
-            <h3>
-              libp2p Implementers
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Open-source community for maintainers and users of libp2p, the networking layer of IPFS.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Community events, roadmap, new features, triage, and performance issues.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Learn more" cta-link="https://ipld.io/docs/intro/community/">
-            <h3>
-              IPLD Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Collaborative community for IPLD (InterPlanetary Linked Data), a data model for the content-addressable web.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Developer resourcing needed for new implementations & libraries, standardization, changes to IPLD.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Learn more" cta-link="https://blog.ipfs.tech/2023-introducing-the-ecosystem-working-group/">
-            <h3>
-              IPFS Ecosystem Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                A working group with the explicit purpose of spinning out into our own independent entity over the coming months.
-              </p>
-            </ImageSplit>
-            <p>We believe that this working group and its autonomy will be critical in helping propel IPFS toward a better and even brighter future.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Learn more" cta-link="https://github.com/wnfs-wg">
-            <h3>
-              WNFS Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Collaborative community for WNFS (Web Native File System), a file system built on top of IPFS.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Public roadmap, use cases, public & private WNFS features.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipvm">
-            <h3>
-              IPVM Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Monthly working group for IPVM (InterPlanetary Virtual Machine), an effort to add content-addressed computation to IPFS.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Web assembly (Wasm) models, roadmap, community events, feedback.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-routing-wg">
-            <h3>
-              Content Routing Working Group
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Working group to introduce alternative content routing options to IPFS.
-              </p>
-            </ImageSplit>
-            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
-          </ZebraCard>
-          <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs-network-measurements">
-            <h3>
-              ProbeLab Office Hours - IPFS Network Measurements
-            </h3>
-            <ImageSplit tight image="constellation-office-hours.svg" image-class="max-w-30% my-4">
-              <p>
-                Open office hours are for anyone interested in network measurements in the IPFS network. Hosted by the <AppLink href="https://ipfs.fyi/probelab">
-                  ProbeLab team.
-                </AppLink>
-              </p>
-            </ImageSplit>
-            <p>What's covered: Decisions regarding content routing, feedback regarding integration of indexer nodes into kubo nodes, design decisions, status updates, and IPIP discussions & feedback.</p>
-          </ZebraCard>
-        </Grid>
+        <iframe src="https://lu.ma/embed/calendar/cal-85sH6jbua7BU1uu/events" frameborder="0" class="h-80vh max-h-200 w-full rounded-md bg-transparent" allowfullscreen aria-hidden="false" tabindex="0" />
       </div>
     </PageSection>
     <PageSection>
