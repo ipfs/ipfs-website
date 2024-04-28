@@ -121,7 +121,7 @@ definePageMeta({
         <Subhead center>
           Help us untangle the thorniest problems facing the distributed web (and meet some bleeding edge thinkers) by joining one of our global working groups.
         </Subhead>
-        <iframe src="https://lu.ma/embed/calendar/cal-85sH6jbua7BU1uu/events" width="100%" height="600" frameborder="0" style="border: 1px solid #bfcbda88; border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+        <iframe src="https://lu.ma/embed/calendar/cal-85sH6jbua7BU1uu/events" width="100%" height="600" frameborder="0" class="rounded-md bg-transparent" allowfullscreen aria-hidden="false" tabindex="0" />
         <!-- <Grid class="text-center lg:text-left">
           <ZebraCard cta-label="Meeting Calendar" cta-link="https://lu.ma/ipfs?tag=dapps" image-class="max-w-30% py-4">
             <h3>
