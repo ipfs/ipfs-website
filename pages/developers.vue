@@ -221,11 +221,6 @@ definePageMeta({
                 </AppLink> (Go) A new, cloud-native IPFS implementation
               </li>
               <li>
-                <AppLink href="https://github.com/n0-computer/iroh">
-                  Iroh
-                </AppLink> (Rust) A new, efficiency-focused implementation of IPFS
-              </li>
-              <li>
                 <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
                   IPFS Desktop
                 </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
