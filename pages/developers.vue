@@ -223,7 +223,7 @@ definePageMeta({
               <li>
                 <AppLink href="https://github.com/n0-computer/iroh">
                   Iroh
-                </AppLink> (Rust) An efficiency-focused system for syncing data with CIDs. IPFS-based, but not fully interoperable (see [Iroh docs](https://iroh.computer/docs/ipfs) for details).
+                </AppLink> (Rust) An efficiency-focused system for syncing data with CIDs. IPFS-based, but not fully interoperable (see <a href="https://iroh.computer/docs/ipfs">Iroh docs</a> for details).
               </li>
               <li>
                 <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
