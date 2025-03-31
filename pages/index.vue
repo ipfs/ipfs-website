@@ -152,7 +152,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Publish with IPFS" link="https://docs.ipfs.tech/quickstart/publish/" />
+            <ListLink label="Deploy Static Apps to IPFS with GitHub Actions" link="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" />
             <ListLink label="Retrieve CIDs with IPFS" link="https://docs.ipfs.tech/quickstart/retrieve/" />
           </ListLinks>
         </Card>
