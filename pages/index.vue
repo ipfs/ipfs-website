@@ -51,11 +51,11 @@ const { data: latestVideos } = await useFetch('/videos.json', {
   <div>
     <Hero background="star-aurora.jpg" overlay="constellations-hero.svg" tall>
       <template #title>
-        Discover What's<br>
-        Out There with IPFS
+        Building Blocks <br>
+        For a Better Web
       </template>
       <template #subtitle>
-        IPFS is an open system to manage data without a central server
+        Open protocols to make your data smarter: content-addressed, verifiable, and unstoppable.
       </template>
     </Hero>
     <PageSection bottom-tight>
