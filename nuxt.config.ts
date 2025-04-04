@@ -71,7 +71,7 @@ export default defineNuxtConfig({
       siteUrl: PUBLIC_SITE_URL,
       siteName: 'IPFS',
       siteTitle: 'IPFS: Building blocks for a better web',
-      siteDescription: 'IPFS is a modular suite of protocols for addressing, routing, and transferring data, designed from the ground up with the principles of content addressing and peer-to-peer networking.',
+      siteDescription: 'Open protocols to store, verify, and share data across distributed networks.',
       trailingSlash: true,
       siteImage: '/images/social-card.png',
       language: 'en-US',

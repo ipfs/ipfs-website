@@ -55,7 +55,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
         For a Better Web
       </template>
       <template #subtitle>
-        Open protocols to make your data smarter: content-addressed, verifiable, and unstoppable.
+        Open protocols to store, verify, and share data across distributed networks.
       </template>
     </Hero>
     <PageSection bottom-tight>

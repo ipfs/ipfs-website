@@ -33,7 +33,9 @@ IPFS is made up of a large number of individuals and teams contributing to the p
 
 #### Core team
 
-The IPFS project is made up of a series of working groups, populated by many full-time and part-time contributors to core project needs. Learn about current team structure and roles [here](https://github.com/ipfs/team-mgmt/blob/master/TEAMS_ROLES_STRUCTURES.md), or read the [history of the IPFS project](https://docs.ipfs.tech/project/history/).
+The IPFS project is made up of a series of working groups, populated by many full-time and part-time contributors to core project needs.
+
+[Interplanetary Shipyard](https://ipshipyard.com/) are the core maintainers of many of the popular IPFS and libp2p implementations.
 
 #### Open-source community
 
