@@ -181,10 +181,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <ListLinks>
-            <ListLink label="Kubo (Go)" link="https://github.com/ipfs/kubo" />
-            <ListLink label="Cluster" link="https://github.com/ipfs-cluster/ipfs-cluster" />
-            <ListLink label="Iroh (Rust)" link="https://github.com/n0-computer/iroh" />
-            <ListLink label="Helia (JavaScript)" link="https://github.com/ipfs/helia" />
+            <ListLink label="Browse all implementations" link="/developers#implementations" />
           </ListLinks>
         </Card>
       </Grid>

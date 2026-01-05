@@ -69,7 +69,7 @@ definePageMeta({
             cols: [
               ['IPFS*', 'Data routing and transfer'],
               ['Libp2p**', 'Peer-to-peer network connectivity'],
-              ['IPFS gateways', 'Interoperability with http'],
+              ['IPFS Gateways', 'Interoperability with HTTP'],
             ],
           },
           {
@@ -112,14 +112,13 @@ definePageMeta({
             </AppLink> captures Wikipedia snapshots on IPFS that can never be taken down.
           </p>
           <p>
-            <b>Get Started:</b> Deploy your site to IPFS through
-            <AppLink href="https://docs.ipfs.tech/how-to/websites-on-ipfs/introducing-fleek/#host-a-site">
-              hosting with Fleek
+            <b>Get Started:</b> Deploy your site to IPFS with a <AppLink href="https://github.com/ipshipyard/ipfs-deploy-action">
+              GitHub Action
             </AppLink>, a <AppLink href="https://docs.ipfs.tech/concepts/persistence/#pinning-services">
               pinning service
-            </AppLink> or <AppLink href="https://docs.ipfs.tech/install/">
+            </AppLink>, or <AppLink href="https://docs.ipfs.tech/install/">
               run your own node
-            </AppLink> for even more customization.
+            </AppLink> for full control.
           </p>
         </Card>
         <Card>
@@ -174,9 +173,9 @@ definePageMeta({
             Build apps that put user agency at the front by composing IPFS into novel app architectures.
           </p>
           <p>
-            <AppLink href="https://blog.ipfs.tech/2021-11-15-Skiff-Integrates-IPFS/">
-              Skiff uses IPFS
-            </AppLink> to build a privacy-first workplace with secure, persistent, and decentralized storage.
+            <AppLink href="https://peergos.org">
+              Peergos
+            </AppLink> uses IPFS to provide private, encrypted file storage and sharing with user-controlled access.
           </p>
           <p>
             <b>Get Started:</b> Get connected with the <AppLink href="https://docs.ipfs.tech/how-to/">
@@ -197,77 +196,98 @@ definePageMeta({
         <Card background="dark">
           <div class="text-white">
             <Subhead bold>
-              Popular Implementations
+              Core Implementations
             </Subhead>
             <ul class="list-lg">
               <li>
-                <AppLink href="https://github.com/ipfs/helia">
-                  Helia
-                </AppLink> (JavaScript) The most popular JavaScript implementation for use as a long-running process in Node.js and in constrained environments like browsers (formerly js-ipfs)
-              </li>
-              <li>
                 <AppLink href="https://github.com/ipfs/kubo">
                   Kubo
-                </AppLink> (Go) The original and most widely used implementation. Also use ipfs-cluster if you’re managing multiple Kubo nodes.
+                </AppLink> (Go) The reference IPFS implementation, most widely deployed for running nodes and infrastructure.
               </li>
               <li>
-                <AppLink href="https://ipfscluster.io">
-                  IPFS Cluster
-                </AppLink> provides data orchestration across a swarm of IPFS daemons by allocating, replicating and tracking a global pinset distributed among multiple Kubo peers.
-              </li>
-              <li>
-                <AppLink href="https://github.com/elastic-ipfs/elastic-ipfs">
-                  Elastic IPFS
-                </AppLink> (Go) A new, cloud-native IPFS implementation
-              </li>
-              <li>
-                <AppLink href="https://github.com/n0-computer/iroh">
-                  Iroh
-                </AppLink> (Rust) An efficiency-focused system for syncing data with CIDs. IPFS-based, but not fully interoperable (see <a href="https://iroh.computer/docs/ipfs">Iroh docs</a> for details).
+                <AppLink href="https://github.com/ipfs/helia-verified-fetch">
+                  Verified Fetch
+                </AppLink> (TypeScript) A fetch-like API for retrieving verified IPFS content in browsers and Node.js.
               </li>
               <li>
                 <AppLink href="https://docs.ipfs.tech/install/ipfs-desktop/">
                   IPFS Desktop
-                </AppLink> Use IPFS on your desktop, with no need to touch the terminal.
+                </AppLink> Use IPFS on your desktop with a friendly GUI, powered by Kubo.
               </li>
             </ul>
           </div>
         </Card>
         <div class="my-16 lg:mx-10">
           <Subhead bold>
-            Lite or Experimental
+            SDKs & Libraries
           </Subhead>
           <ul class="list-lg">
             <li>
-              <AppLink href="https://github.com/ipfs-rust/ipfs-embed">
-                ipfs-embed
-              </AppLink> (Rust) For hardware devices (low power consumption, more limited utility and functionality)
+              <AppLink href="https://github.com/ipfs/helia">
+                Helia
+              </AppLink> (JavaScript) A lean, modular IPFS implementation for Node.js and browsers.
             </li>
+            <li>
+              <AppLink href="https://github.com/ipfs/boxo">
+                Boxo
+              </AppLink> (Go) A component library for building IPFS applications and custom implementations in Go.
+            </li>
+            <li>
+              <AppLink href="https://github.com/peergos/nabu">
+                Nabu
+              </AppLink> (Java) A minimalistic, fast, and embeddable IPFS implementation.
+            </li>
+          </ul>
+        </div>
+        <div class="my-16 lg:mx-10">
+          <Subhead bold>
+            Infrastructure
+          </Subhead>
+          <ul class="list-lg">
+            <li>
+              <AppLink href="https://ipfscluster.io">
+                IPFS Cluster
+              </AppLink> Orchestration for multiple Kubo nodes, managing pinsets across a distributed swarm.
+            </li>
+            <li>
+              <AppLink href="https://github.com/ipfs/rainbow">
+                Rainbow
+              </AppLink> (Go) A specialized, production-ready IPFS HTTP gateway.
+            </li>
+            <li>
+              <AppLink href="https://github.com/ipfs/someguy">
+                Someguy
+              </AppLink> (Go) A delegated Routing V1 HTTP API server for content and peer routing.
+            </li>
+          </ul>
+        </div>
+        <div class="my-16 lg:mx-10">
+          <Subhead bold>
+            Experimental & Mobile
+          </Subhead>
+          <ul class="list-lg">
             <li>
               <AppLink href="https://github.com/hsanjuan/ipfs-lite">
                 ipfs-lite
-              </AppLink> (Go) For short-lived IPFS peers and for embedding IPFS as part of a Go application.
-            </li>
-            <li>
-              <AppLink href="https://github.com/ipfs-shipyard/gomobile-ipfs">
-                gomobile-ipfs
-              </AppLink> (Go) Experimental mobile implementation of IPFS
+              </AppLink> (Go) A minimal library for short-lived IPFS peers and embedding IPFS in Go applications.
             </li>
             <li>
               Durin <AppLink href="https://apps.apple.com/us/app/durin/id1613391995">
                 iOS
               </AppLink> and <AppLink href="https://play.google.com/store/apps/details?id=ai.protocol.durin&pli=1">
                 Android
-              </AppLink> Apps with support for aching gateway & uploads to pinning services
+              </AppLink> apps for exploring IPFS on mobile devices.
             </li>
           </ul>
         </div>
       </div>
       <Card background="light">
         <Subhead tight center bold>
-          Don’t see what you're looking for? We encourage you to explore other <AppLink href="https://docs.ipfs.tech/concepts/ipfs-implementations">
-            experimental implementations
-          </AppLink> or create your own.
+          Don't see what you're looking for? Explore other <AppLink href="https://docs.ipfs.tech/concepts/ipfs-implementations">
+            implementations
+          </AppLink> or dive into the <AppLink href="https://specs.ipfs.tech">
+            IPFS specifications
+          </AppLink> to build your own.
         </Subhead>
       </Card>
     </PageSection>
