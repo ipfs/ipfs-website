@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg)](https://protocol.ai)
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?)](https://ipfs.tech/)
 [![](https://img.shields.io/badge/framework-Nuxt-green.svg)](https://nuxtjs.org/)
-[![](https://img.shields.io/badge/deployed%20on-Fleek-ff69b4.svg)](https://fleek.co/)
+[![](https://img.shields.io/badge/deployed%20on-GitHub%20Pages-blue.svg)](https://ipfs.github.io/ipfs-website/)
 
 ![Image of IPFS website displayed on a laptop](https://user-images.githubusercontent.com/1507828/121082054-c3df1480-c79a-11eb-89f0-681f41ec705c.png)
 
@@ -54,8 +54,7 @@ pnpm preview
 
 Once you're happy with your local changes, please make a PR **against the `main` branch**. Including detailed notes on your PR - particularly screenshots to depict any changes in UI - will help speed up approval and deployment.
 
-All PRs against `main` automatically generate Fleek previews to make it easier to "check your work". You can view your PR's preview by clicking `Details` in the `fleek/build` check at the bottom of your PR page:<br/>
-![image](https://user-images.githubusercontent.com/1507828/110034382-9dbb5b80-7cf7-11eb-89a4-7772970677d3.png)
+All PRs against `main` automatically deploy to IPFS via GitHub Actions, generating preview links. You can view your PR's preview by clicking `Details` in the deploy check at the bottom of your PR page.
 
 A reviewer will be by shortly to have a look!
 
