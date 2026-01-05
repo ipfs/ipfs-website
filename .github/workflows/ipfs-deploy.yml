@@ -57,11 +57,11 @@ jobs:
       url: "https://ipfs-tech.ipns.inbrowser.link/"
     steps:
       - name: Update DNSLink
-        uses: ipshipyard/dnslink-action@v0.1
+        # TODO: switch back to v1 once https://github.com/ipshipyard/dnslink-action/pull/7 is merged
+        uses: ipshipyard/dnslink-action@651a8aea52af7ee59da6ddf987785e22e1a907f5
         with:
           cid: ${{ needs.deploy-ipfs.outputs.cid }}
           dnslink_domain: 'ipfs-tech.dnslinks.ipshipyard.tech'
-          cf_record_id: ${{ secrets.CF_DNS_RECORD_ID }}
           cf_zone_id: ${{ secrets.CF_DNS_ZONE_ID }}
           cf_auth_token: ${{ secrets.CF_DNS_AUTH_TOKEN }}
           github_token: ${{ github.token }}
