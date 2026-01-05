@@ -1,0 +1,57 @@
+# Build workflow - runs for both PRs and main branch pushes
+# This workflow builds the website without access to secrets
+# For PRs: Runs on untrusted fork code safely (using pull_request event, not pull_request_target)
+# For main: Builds and uploads artifacts for deployment
+# Artifacts are passed to the deploy workflow which has access to secrets
+
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BUILD_PATH: '.output/public'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline
+
+      - name: Build project
+        run: pnpm generate
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-build-${{ github.run_id }}
+          path: ${{ env.BUILD_PATH }}
+          include-hidden-files: true
+          retention-days: 90
