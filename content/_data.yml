@@ -29,6 +29,12 @@ useCards:
       WeatherXM configured thousands of smart weather vanes with IPFS client functionality to collaboratively share weather patterns from around the world
     link: https://www.youtube.com/watch?v=J7aDajwBSic
     label: Watch the presentation
+  - image: logo-orcestra.svg
+    title: Share verifiable scientific datasets across institutions
+    description: |
+      The ORCESTRA campaign uses IPFS to advance open scientific research by sharing verifiable, accessible datasets across institutions worldwide
+    link: https://docs.ipfs.tech/case-studies/orcestra/
+    label: Read the case study
   - image: logo-snapshot.png
     title: Enable data transparency in Web3
     description: |
@@ -72,12 +78,16 @@ browserCards:
     link: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
     label: Install
 testimonialCards:
+  - image: portrait-tobias-kolling.webp
+    title: Tobias Kölling, Max Planck Institute for Meteorology
+    description: |
+      During our 2024 ORCESTRA campaign, the planned local data infrastructure was stuck in customs. We set up IPFS on our notebooks and a Raspberry Pi, and suddenly all scientists could sync, share data, and collaborate on a local network, with automatic uploads back to Hamburg during intermittent internet connectivity.
   - image: portrait-mauve-signweaver-agregore.webp
     title: Mauve Signweaver, Founder - Agregore
     description: |
       IPFS gives us a set of flexible building blocks for connecting devices and exchanging data. The plethora of IPFS documentation and community members contributes toward our goal at Agregore of making peer-to-peer web apps easy to use.
   - image: portrait-gabo-h-beaumont-mintter.webp
-    title: Gabo H Beaumont, Co-Founder - Mintter inc
+    title: Gabo H Beaumont, Co-Founder - Seed Hypermedia
     description: |
       It's crucially important to have a distributed file system in our open hypertext system. IPFS is the missing piece that allows for a truly decentralized and open web.
   - image: portrait-wes-floyd-bacalhau.webp
