@@ -129,60 +129,62 @@ const { data: latestVideos } = await useFetch('/videos.json', {
       <Grid cols="2">
         <Card>
           <h3 class="mb-4 text-xl text-black">
-            Build peer-to-peer apps with IPFS
+            Build with IPFS
           </h3>
-          <ImageSplit class="flex flex-auto" image="constellation-peer.svg" tight>
+          <ImageSplit image="constellation-peer.svg" tight>
             <p class="text-lg text-black">
-              Our most popular implementations are written in Go, Rust, and TypeScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
+              Integrate content addressing and peer-to-peer networking into your application. Choose from implementations in Go, Rust, and JavaScript.
             </p>
           </ImageSplit>
           <div class="mt-8 flex flex-wrap gap-2">
-            <Btn href="/developers/" outline>Developers</Btn>
+            <Btn href="/developers/" outline>Developer Resources</Btn>
             <Btn href="https://docs.ipfs.tech/" outline>Documentation</Btn>
-            <Btn href="https://docs.ipfs.tech/case-studies/orcestra/" outline>Read Case Studies</Btn>
+            <Btn href="https://docs.ipfs.tech/concepts/lifecycle/" outline>The Lifecycle of Data in IPFS</Btn>
           </div>
         </Card>
         <Card>
           <h3 class="mb-4 text-xl text-black">
-            Store and manage your data on IPFS
+            Store & Publish Data
           </h3>
           <ImageSplit image="constellation-store.svg" tight>
             <p class="text-lg text-black">
-              Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
+              Use IPFS for large-scale data storage and publishing — from deploying websites to archiving scientific datasets.
             </p>
           </ImageSplit>
           <div class="mt-8 flex flex-wrap gap-2">
-            <Btn href="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" outline>Publish to IPFS with GitHub Actions</Btn>
-            <Btn href="https://docs.ipfs.tech/quickstart/retrieve/" outline>Retrieve CIDs with IPFS</Btn>
-            <Btn href="https://docs.ipfs.tech/how-to/scientific-data/publish-geospatial-zarr-data/" outline>Publish geospatial Zarr data</Btn>
+            <Btn href="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" outline>Publish with GitHub Actions</Btn>
+            <Btn href="https://docs.ipfs.tech/how-to/scientific-data/publish-geospatial-zarr-data/" outline>Publish Geospatial Zarr Data</Btn>
+            <Btn href="https://docs.ipfs.tech/quickstart/retrieve/" outline>Retrieve CIDs</Btn>
           </div>
         </Card>
         <Card>
           <h3 class="mb-4 text-xl text-black">
-            Use IPFS apps
-          </h3>
-          <ImageSplit image="constellation-apps.svg" tight>
-            <p class="text-lg text-black">
-              Share files, stream music, publish your website, store NFTs, and much more through hundreds of applications built on IPFS.
-            </p>
-          </ImageSplit>
-          <div class="mt-8 flex flex-wrap gap-2">
-            <Btn href="https://docs.ipfs.tech/install/ipfs-desktop" outline>Install IPFS Desktop</Btn>
-            <Btn href="https://docs.ipfs.tech/install/ipfs-companion/" outline>Install IPFS Browser Extension</Btn>
-            <Btn href="https://ecosystem.ipfs.tech/" outline>Browse IPFS Applications</Btn>
-          </div>
-        </Card>
-        <Card>
-          <h3 class="mb-4 text-xl text-black">
-            Develop tooling for IPFS
+            Run a Node
           </h3>
           <ImageSplit image="constellation-tooling.svg" tight>
             <p class="text-lg text-black">
-              Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
+              Install IPFS on your machine. IPFS Desktop is a graphical interface built on Kubo, the reference Go implementation. Add the browser extension to access IPFS content from any tab.
             </p>
           </ImageSplit>
           <div class="mt-8 flex flex-wrap gap-2">
-            <Btn href="/developers#implementations" outline>Browse all implementations</Btn>
+            <Btn href="https://docs.ipfs.tech/install/ipfs-desktop/" outline>Install IPFS Desktop</Btn>
+            <Btn href="https://docs.ipfs.tech/install/command-line/" outline>Kubo CLI</Btn>
+            <Btn href="https://docs.ipfs.tech/install/ipfs-companion/" outline>Install Browser Extension</Btn>
+          </div>
+        </Card>
+        <Card>
+          <h3 class="mb-4 text-xl text-black">
+            Explore the Ecosystem
+          </h3>
+          <ImageSplit image="constellation-apps.svg" tight>
+            <p class="text-lg text-black">
+              Browse hundreds of apps, tools, and services built on IPFS — from decentralized file sharing and NFT storage to scientific data archival.
+            </p>
+          </ImageSplit>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <Btn href="https://ecosystem.ipfs.tech/" outline>Browse IPFS Applications</Btn>
+            <Btn href="https://docs.ipfs.tech/concepts/case-study-overview/" outline>Case Studies</Btn>
+            <Btn href="/developers#implementations" outline>Browse Implementations</Btn>
           </div>
         </Card>
       </Grid>
