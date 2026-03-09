@@ -183,6 +183,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </ImageSplit>
           <div class="mt-8 flex flex-wrap gap-2">
             <Btn href="/developers#implementations" outline>Browse all implementations</Btn>
+          </div>
         </Card>
       </Grid>
     </PageSection>
