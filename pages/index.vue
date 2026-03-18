@@ -152,7 +152,7 @@ const { data: latestVideos } = await useFetch('/videos.json', {
             </p>
           </ImageSplit>
           <div class="mt-8 flex flex-wrap gap-2">
-            <Btn href="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" outline>Deploy Static Apps to IPFS with GitHub Actions</Btn>
+            <Btn href="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" outline>Publish to IPFS with GitHub Actions</Btn>
             <Btn href="https://docs.ipfs.tech/quickstart/retrieve/" outline>Retrieve CIDs with IPFS</Btn>
             <Btn href="https://docs.ipfs.tech/how-to/scientific-data/publish-geospatial-zarr-data/" outline>Publish geospatial Zarr data</Btn>
           </div>
