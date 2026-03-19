@@ -133,14 +133,14 @@ const { data: latestVideos } = await useFetch('/videos.json', {
           </h3>
           <ImageSplit class="flex flex-auto" image="constellation-peer.svg" tight>
             <p class="text-lg text-black">
-              Our most popular implementations are written in Go, Rust, and JavaScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
+              Our most popular implementations are written in Go, Rust, and TypeScript – and we also have support for desktop, browsers, mobile, embedded devices, and more.
             </p>
           </ImageSplit>
-          <ListLinks>
-            <ListLink label="Developers" link="/developers/" />
-            <ListLink label="Documentation" link="https://docs.ipfs.tech/" />
-            <ListLink label="Read Case Studies" link="https://docs.ipfs.tech/case-studies/arbol/" />
-          </ListLinks>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <Btn href="/developers/" outline>Developers</Btn>
+            <Btn href="https://docs.ipfs.tech/" outline>Documentation</Btn>
+            <Btn href="https://docs.ipfs.tech/case-studies/orcestra/" outline>Read Case Studies</Btn>
+          </div>
         </Card>
         <Card>
           <h3 class="mb-4 text-xl text-black">
@@ -151,10 +151,11 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Use content addressing to give your data unique identifiers, and use IPFS for large-scale data storage and compute.
             </p>
           </ImageSplit>
-          <ListLinks>
-            <ListLink label="Deploy Static Apps to IPFS with GitHub Actions" link="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" />
-            <ListLink label="Retrieve CIDs with IPFS" link="https://docs.ipfs.tech/quickstart/retrieve/" />
-          </ListLinks>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <Btn href="https://docs.ipfs.tech/how-to/websites-on-ipfs/deploy-github-action/" outline>Publish to IPFS with GitHub Actions</Btn>
+            <Btn href="https://docs.ipfs.tech/quickstart/retrieve/" outline>Retrieve CIDs with IPFS</Btn>
+            <Btn href="https://docs.ipfs.tech/how-to/scientific-data/publish-geospatial-zarr-data/" outline>Publish geospatial Zarr data</Btn>
+          </div>
         </Card>
         <Card>
           <h3 class="mb-4 text-xl text-black">
@@ -165,11 +166,11 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Share files, stream music, publish your website, store NFTs, and much more through hundreds of applications built on IPFS.
             </p>
           </ImageSplit>
-          <ListLinks>
-            <ListLink label="Install IPFS Desktop" link="https://docs.ipfs.tech/install/ipfs-desktop" />
-            <ListLink label="Install IPFS Browser Extension" link="https://docs.ipfs.tech/install/ipfs-companion/" />
-            <ListLink label="Browse IPFS Applications" link="https://ecosystem.ipfs.tech/" />
-          </ListLinks>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <Btn href="https://docs.ipfs.tech/install/ipfs-desktop" outline>Install IPFS Desktop</Btn>
+            <Btn href="https://docs.ipfs.tech/install/ipfs-companion/" outline>Install IPFS Browser Extension</Btn>
+            <Btn href="https://ecosystem.ipfs.tech/" outline>Browse IPFS Applications</Btn>
+          </div>
         </Card>
         <Card>
           <h3 class="mb-4 text-xl text-black">
@@ -180,9 +181,9 @@ const { data: latestVideos } = await useFetch('/videos.json', {
               Design storage, compute, encryption, and implementation layers to optimize the way developers use IPFS.
             </p>
           </ImageSplit>
-          <ListLinks>
-            <ListLink label="Browse all implementations" link="/developers#implementations" />
-          </ListLinks>
+          <div class="mt-8 flex flex-wrap gap-2">
+            <Btn href="/developers#implementations" outline>Browse all implementations</Btn>
+          </div>
         </Card>
       </Grid>
     </PageSection>
