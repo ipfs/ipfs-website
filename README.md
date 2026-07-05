@@ -1,4 +1,6 @@
 # IPFS Website (ipfs.tech)
 
+This repository contains two version of the IPFS website:
 
-**This repository contains code and content for the [official IPFS Project website](https://ipfs.tech)**, located at https://ipfs.tech. This site acts as a high-level overview of the IPFS project, offering valuable introductory information and next-steps pathways for prospective and current IPFS users and developers, members of the press, and more.
+- [v1](./v1/) — old website kept for archiving purposes
+- [v2](./v2/) — new website as of July 2026
