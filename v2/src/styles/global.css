@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Self-hosted Geist Sans (subpath imports, one weight per file) */
+@import "@fontsource/geist-sans/300.css";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/geist-sans/700.css";
+
+/* Workhorse monospace for code, CIDs, terminal-style content. */
+@import "@fontsource/commit-mono/400.css";
+@import "@fontsource/commit-mono/500.css";
+@import "@fontsource/commit-mono/600.css";
+
+/* Geist Mono — used for section labels/eyebrows. */
+@import "@fontsource/geist-mono/400.css";
+@import "@fontsource/geist-mono/500.css";
+
+/* Geist Pixel Circle — display accent only (brand wordmark, hero CTA). */
+@font-face {
+  font-family: 'Geist Pixel Circle';
+  src: url('/fonts/GeistPixelCircle-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* IPFS palette — names match the design source */
+  --color-ink: #0D1644;
+  --color-ink-2: #2D3662;
+  --color-ink-3: #616785;
+  --color-stone: #C4C7D6;
+  --color-pearl: #F5F7FD;
+  --color-paper: #ffffff;
+  --color-navy: #073A53;
+  --color-teal: #6BC4CE;
+  --color-turq: #47AFB4;
+  --color-jade: #3B8C90;
+  --color-yellow: #F39106;
+  --color-carmine: #E9502F;
+
+  --font-sans: 'Geist', system-ui, -apple-system, Segoe UI, sans-serif;
+  --font-mono: 'Commit Mono', ui-monospace, Menlo, monospace;
+  --font-display-mono: 'Geist Pixel Circle', 'Commit Mono', ui-monospace, monospace;
+  /* Geist Mono for section labels/eyebrows. */
+  --font-geist-mono: 'Geist Mono', ui-monospace, Menlo, monospace;
+}
+
+/* Type scale — rem so user font preferences are respected.
+   Headings use clamp() for fluid sizing without breakpoint juggling. */
+:root {
+  --text-2xs:  0.6875rem;                    /* 11px — min floor for labels */
+  --text-xs:   0.75rem;                      /* 12px — captions, meta */
+  --text-sm:   0.8125rem;                    /* 13px — UI chrome, small body */
+  --text-ui:   0.875rem;                     /* 14px — nav, labels */
+  --text-base: 0.9375rem;                    /* 15px — body copy */
+  --text-md:   1rem;                         /* 16px — prominent UI / brand names */
+  --text-lead: 1.0625rem;                    /* 17px — section subheadings */
+  --text-lg:   1.125rem;                     /* 18px — card headings */
+  --text-xl:   1.25rem;                      /* 20px — component headings */
+  --text-2xl:  1.5rem;                       /* 24px */
+  --text-3xl:  1.75rem;                      /* 28px */
+  --text-4xl:  2rem;                         /* 32px */
+  --text-h2:   clamp(2rem, 3.5vw, 2.75rem);  /* 32–44px — section headings */
+  --text-h1:   clamp(2.5rem, 5.2vw, 4.5rem); /* 40–72px — hero */
+}
+
+/* Aliases for prototype-style `var(--ink)` etc. so ported inline styles still work. */
+:root {
+  --ink: var(--color-ink);
+  --ink-2: var(--color-ink-2);
+  --ink-3: var(--color-ink-3);
+  --stone: var(--color-stone);
+  --pearl: var(--color-pearl);
+  --paper: var(--color-paper);
+  --navy: var(--color-navy);
+  /* Fixed dark navy for dark section *surfaces* (footer, CTA, active chips).
+     Stays dark in both themes, unlike --navy which is also used as heading
+     text and goes light in dark mode. */
+  --navy-surface: var(--color-navy);
+  --teal: var(--color-teal);
+  --turq: var(--color-turq);
+  --jade: var(--color-jade);
+  --yellow: var(--color-yellow);
+  --carmine: var(--color-carmine);
+  --line: rgba(13, 22, 68, 0.12);
+  --hair: rgba(13, 22, 68, 0.08);
+  --grad: linear-gradient(135deg, #073A53 0%, #43979B 100%);
+  /* Translucent nav surface; flips in dark mode. */
+  --nav-bg: rgba(255, 255, 255, 0.92);
+}
+
+/* Dark theme: redefine the alias palette so every var(--paper)/var(--ink)
+   surface flips. Brand accents (teal/turq/jade/yellow/carmine) carry over
+   unchanged since they already read well on dark. */
+html[data-theme='dark'] {
+  --ink: #E7EAF3;
+  --ink-2: #B4BAD2;
+  --ink-3: #868CA8;
+  --stone: #3A4263;
+  --pearl: #141B33;
+  --paper: #0B1126;
+  --line: rgba(255, 255, 255, 0.14);
+  --hair: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(11, 17, 38, 0.92);
+  /* Section titles/labels are painted with --navy; lift it to near-white so
+     headings have strong contrast on the dark surfaces. */
+  --navy: #EDF1FA;
+}
+
+html[data-theme='dark'] body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+
+code, pre, kbd, samp, .mono {
+  font-family: var(--font-mono);
+}
+
+/* Reserved for brand/display accents — keep usage minimal. */
+.mono-display {
+  font-family: var(--font-display-mono);
+}
+
+/* Large displays: the 1240px column leaves text feeling small on 1440p+.
+   Scale the whole page up proportionally (layout + type) at wide widths. */
+@media (min-width: 1440px) {
+  html { zoom: 1.1; }
+}
+@media (min-width: 1800px) {
+  html { zoom: 1.2; }
+}
+@media (min-width: 2400px) {
+  html { zoom: 1.4; }
+}
+
+/* Section labels/eyebrows ("running in production at", etc.) in Geist Pixel Circle
+   for a retro pixel-terminal tone. */
+.retro-label {
+  font-family: var(--font-display-mono);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+::selection {
+  background: var(--teal);
+  color: var(--navy);
+}

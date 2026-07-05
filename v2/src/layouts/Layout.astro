@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import geistSans400 from '@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2?url';
+import geistPixelCircle from '/fonts/GeistPixelCircle-Regular.woff2?url';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'IPFS, a constellation of tools for content addressing',
+  description = 'IPFS is a constellation of tools for content addressing. Name data by what it is, not where it lives.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="preload" href={geistSans400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={geistPixelCircle} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    {/* Set the theme before first paint to avoid a flash of the wrong colors. */}
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const theme = stored || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

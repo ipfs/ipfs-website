@@ -1,0 +1,14 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import ToolsProblems from './islands/ToolsProblems.tsx';
+---
+
+<section id="tools" style="padding: 96px 32px; background: var(--paper); border-top: 1px solid var(--hair);">
+  <div class="mx-auto" style="max-width: 1240px;">
+    <SectionHeader
+      title="Pick the tool that fits the job."
+      kicker="Start from the problem. Each row maps a real use case to the tools that solve it. Filter by language to narrow quickly."
+    />
+    <ToolsProblems client:visible />
+  </div>
+</section>

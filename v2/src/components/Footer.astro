@@ -1,0 +1,83 @@
+---
+import Logomark from './Logomark.astro';
+
+const columns: [string, { label: string; href: string }[]][] = [
+  ['Learn', [
+    { label: 'Docs', href: 'https://docs.ipfs.tech/' },
+    { label: 'Specs', href: 'https://specs.ipfs.tech/' },
+    { label: 'Blog', href: 'https://blog.ipfs.tech/' },
+    { label: 'Tutorials', href: 'https://proto.school/' },
+  ]],
+  ['Tools', [
+    { label: 'Kubo', href: 'https://github.com/ipfs/kubo' },
+    { label: 'Helia', href: 'https://helia.io/' },
+    { label: 'DASL', href: 'https://dasl.ing/' },
+    { label: 'IPLD', href: 'https://ipld.io/' },
+  ]],
+  ['Network', [
+    { label: 'Amino', href: 'https://blog.ipfs.tech/2023-09-amino-refactoring/' },
+    { label: 'IPNI', href: 'https://ipni.io/' },
+    { label: 'Gateways', href: 'https://specs.ipfs.tech/http-gateways/' },
+  ]],
+  ['Community', [
+    { label: 'Discuss', href: 'https://discuss.ipfs.tech/' },
+    { label: 'GitHub', href: 'https://github.com/ipfs' },
+    { label: 'Bluesky', href: 'https://bsky.app/profile/ipfs.tech' },
+    { label: 'IPFS Foundation', href: 'https://ipfsfoundation.org/' },
+  ]],
+];
+---
+
+<footer style="background: var(--navy-surface); color: rgba(255,255,255,0.75); padding: 48px 32px; border-top: 1px solid rgba(255,255,255,0.08);">
+  <div class="mx-auto footer-grid" style="max-width: 1240px;">
+    <div>
+      <div class="flex items-center" style="gap: 10px; color: #fff; margin-bottom: 14px;">
+        <Logomark size={22} variant="mono" color="#fff" />
+        <span style="font-weight: 600; font-size: var(--text-md);">IPFS</span>
+      </div>
+      <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; max-width: 320px; color: rgba(255,255,255,0.6);">
+        An open-source project. Specs live at specs.ipfs.tech. The community gathers at discuss.ipfs.tech. Development is supported by the IPFS Foundation.
+      </p>
+    </div>
+    {columns.map(([h, items]) => (
+      <div>
+        <div class="retro-label" style="font-size: var(--text-ui); color: var(--teal); margin-bottom: 14px;">
+          {h}
+        </div>
+        {items.map((i) => (
+          <div style="font-size: var(--text-sm); margin-bottom: 8px;">
+            <a href={i.href} style="color: rgba(255,255,255,0.75); text-decoration: none;">{i.label}</a>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+  <div class="mx-auto" style="max-width: 1240px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: var(--text-xs); color: rgba(255,255,255,0.5);">
+    <span>© IPFS · MIT License</span>
+  </div>
+</footer>
+
+<style>
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid > :first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+</style>

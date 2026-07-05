@@ -1,0 +1,15 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import Constellation from './islands/Constellation.tsx';
+---
+
+<section style="padding: 96px 32px; background: var(--paper);">
+  <div class="mx-auto" style="max-width: 1240px;">
+    <SectionHeader
+      label="the constellation"
+      title="IPFS is not one thing. It's a family."
+      kicker="A family of specifications and implementations, each solving a different part of the problem. Use the parts that fit. Click a node to see what it does."
+    />
+    <Constellation client:visible height={480} />
+  </div>
+</section>

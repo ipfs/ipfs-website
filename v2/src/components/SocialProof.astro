@@ -1,0 +1,272 @@
+---
+import { categories } from '../data/stories';
+
+// Brand logos for the trust strip — the subset of stories that ship a real mark.
+const logos = [
+  { src: '/brands/atproto.png', alt: 'AT Protocol', href: 'https://atproto.com/' },
+  { src: '/brands/wikipedia.png', alt: 'Wikipedia', href: 'https://blog.ipfs.tech/24-uncensorable-wikipedia/' },
+  { src: '/brands/snapshot.png', alt: 'Snapshot', href: 'https://snapshot.org/' },
+  { src: '/brands/orcestra.svg', alt: 'ORCESTRA', href: 'https://orcestra-campaign.org/' },
+  { src: '/brands/anytype.png', alt: 'Anytype', href: 'https://anytype.io/' },
+  { src: '/brands/weatherxm.png', alt: 'WeatherXM', href: 'https://weatherxm.com/' },
+  { src: '/brands/hin.webp', alt: 'HIN', href: 'https://www.hin.ch/' },
+  { src: '/brands/seed-hypermedia.png', alt: 'Seed Hypermedia', href: 'https://seed.hyper.media/' },
+];
+
+// Single source of truth: lift every testimonial out of the use-case data so
+// the cards below stay tight and the quotes live in one prominent place.
+const quotes = categories.flatMap((c) =>
+  c.cases
+    .filter((x) => x.quote)
+    .map((x) => ({ ...x.quote!, brand: x.brand, href: x.href, linkLabel: x.linkLabel })),
+);
+
+const initials = (name: string) =>
+  name.split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+---
+
+<section class="proof-section" data-proof>
+  <div class="proof-inner">
+    <div class="retro-label proof-label">using IPFS in production at</div>
+    <div class="proof-logos">
+      {logos.map((l) => (
+        <a class="proof-logo-link" href={l.href} target="_blank" rel="noopener" aria-label={l.alt}>
+          <img class="proof-logo" src={l.src} alt={l.alt} loading="lazy" />
+        </a>
+      ))}
+    </div>
+
+    <div class="proof-quotes-head">
+      <div class="retro-label proof-quotes-label">what builders say</div>
+      <div class="proof-arrows">
+        <button type="button" class="proof-arrow" data-prev aria-label="Previous testimonials">←</button>
+        <button type="button" class="proof-arrow" data-next aria-label="More testimonials">→</button>
+      </div>
+    </div>
+
+    <div class="proof-track">
+      {quotes.map((q) => (
+        <a class="proof-quote" href={q.href} target="_blank" rel="noopener">
+          <blockquote class="proof-quote-text">“{q.text}”</blockquote>
+          <figcaption class="proof-quote-cap">
+            {q.photo ? (
+              <img class="proof-avatar proof-avatar-photo" src={q.photo} alt={q.who} loading="lazy" />
+            ) : (
+              <div class="proof-avatar">{initials(q.who)}</div>
+            )}
+            <div>
+              <div class="proof-quote-who">{q.who}</div>
+              <div class="proof-quote-role">{q.role}</div>
+            </div>
+            <span class="retro-label proof-quote-brand">{q.brand}</span>
+          </figcaption>
+          <span class="mono proof-quote-link">↗ {q.linkLabel}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Wire the arrow controls to scroll the testimonial row by roughly one card.
+  document.querySelectorAll<HTMLElement>('[data-proof]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('.proof-track');
+    if (!track) return;
+    const step = () => Math.min(track.clientWidth * 0.9, 380);
+    root.querySelector('[data-prev]')?.addEventListener('click', () =>
+      track.scrollBy({ left: -step(), behavior: 'smooth' }),
+    );
+    root.querySelector('[data-next]')?.addEventListener('click', () =>
+      track.scrollBy({ left: step(), behavior: 'smooth' }),
+    );
+  });
+</script>
+
+<style>
+  .proof-section {
+    padding: 48px 32px;
+    background: var(--pearl);
+    border-bottom: 1px solid var(--hair);
+  }
+  .proof-inner {
+    margin: 0 auto;
+    max-width: 1240px;
+  }
+  .proof-label {
+    font-size: var(--text-ui);
+    color: var(--ink-3);
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  /* ── Logo strip ───────────────────────────────────────────────────── */
+  .proof-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px 52px;
+    margin-bottom: 44px;
+  }
+  .proof-logo-link {
+    display: inline-flex;
+    align-items: center;
+  }
+  .proof-logo {
+    height: 28px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    /* Mute to a uniform tone so mismatched marks read as one strip. */
+    filter: grayscale(1);
+    opacity: .55;
+    transition: filter .2s, opacity .2s;
+  }
+  .proof-logo:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  /* Dark mode: invert the muted marks so they read light on the dark surface. */
+  :global(html[data-theme='dark']) .proof-logo {
+    filter: grayscale(1) invert(1) brightness(1.6);
+    opacity: .65;
+  }
+  :global(html[data-theme='dark']) .proof-logo:hover {
+    opacity: 1;
+  }
+
+  /* ── Testimonials: one scrollable row ─────────────────────────────── */
+  .proof-quotes-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .proof-quotes-label {
+    font-size: var(--text-ui);
+    color: var(--ink-3);
+  }
+  .proof-arrows {
+    display: flex;
+    gap: 8px;
+  }
+  .proof-arrow {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--navy);
+    font-size: var(--text-base);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .15s, background .15s;
+  }
+  .proof-arrow:hover {
+    border-color: var(--turq);
+    background: var(--pearl);
+  }
+  .proof-arrow:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+  }
+
+  .proof-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Let cards bleed to the edge so the row reads as scrollable. */
+    margin: 0 -32px;
+    padding: 4px 32px;
+  }
+  .proof-track::-webkit-scrollbar { display: none; }
+
+  .proof-quote {
+    margin: 0;
+    flex: 0 0 340px;
+    max-width: 340px;
+    scroll-snap-align: start;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, transform .15s, box-shadow .15s;
+  }
+  .proof-quote:hover {
+    border-color: var(--turq);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -18px rgba(7, 58, 83, 0.25);
+  }
+  .proof-quote-link {
+    font-size: var(--text-2xs);
+    letter-spacing: .04em;
+    color: var(--turq);
+    font-weight: 600;
+  }
+  .proof-quote-text {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.55;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    flex: 1;
+  }
+  .proof-quote-cap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .proof-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--teal), var(--jade));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 600;
+  }
+  .proof-avatar-photo {
+    object-fit: cover;
+    background: var(--pearl);
+  }
+  .proof-quote-who {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .proof-quote-role {
+    font-size: var(--text-xs);
+    color: var(--ink-3);
+    line-height: 1.3;
+  }
+  .proof-quote-brand {
+    margin-left: auto;
+    align-self: flex-start;
+    font-size: var(--text-xs);
+    color: var(--turq);
+  }
+
+  @media (max-width: 760px) {
+    .proof-section { padding: 40px 24px; }
+    .proof-logos { gap: 24px 32px; margin-bottom: 36px; }
+    .proof-logo { height: 22px; }
+    .proof-track { margin: 0 -24px; padding: 4px 24px; }
+    .proof-quote { flex-basis: 280px; max-width: 280px; }
+  }
+</style>
