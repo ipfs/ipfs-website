@@ -94,7 +94,7 @@ const PROBLEMS: Problem[] = [
     guidance:
       'Publish binaries, model weights, or data sets as signed CIDs bound to their source git commit, seedable over iroh-blobs, HTTP, IPFS, and BitTorrent.',
     tools: [
-      { name: 'radicle-artifact', link: 'https://crates.io/crates/radicle-artifact', lang: 'rust' },
+      { name: 'radicle-artifact', link: 'https://radicle.network/nodes/radicle.norman.life/rad:z4VYyJ9KuwMNkXGQnmKuGPGKw3inv', lang: 'rust' },
     ],
   },
   {
