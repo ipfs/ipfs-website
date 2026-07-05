@@ -1,24 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
+import { CID } from 'multiformats/cid';
+import { sha256 } from 'multiformats/hashes/sha2';
+import * as raw from 'multiformats/codecs/raw';
 
+// Real CIDv1: raw codec (0x55) over a sha2-256 digest, same as `ipfs add --raw-leaves`
+// would produce for a single small block.
 async function computeCid(bytes: Uint8Array): Promise<string> {
-  let hex = '';
-  try {
-    const buf = await crypto.subtle.digest('SHA-256', bytes);
-    hex = Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
-  } catch {
-    // djb2 fallback when SubtleCrypto is unavailable (non-secure contexts)
-    let h = 5381;
-    const s = new TextDecoder().decode(bytes);
-    for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;
-    hex = (h.toString(16) + 'a1b2c3d4e5f6').repeat(8).slice(0, 64);
-  }
-  const alpha = 'abcdefghijklmnopqrstuvwxyz234567';
-  let out = '';
-  for (let i = 0; i < 52; i++) {
-    const byte = parseInt(hex.slice((i * 2) % 64, (i * 2) % 64 + 2), 16);
-    out += alpha[byte % 32];
-  }
-  return 'bafkreic' + out.slice(0, 48);
+  const digest = await sha256.digest(bytes);
+  return CID.create(1, raw.code, digest).toString();
 }
 
 // Detects a pasted CIDv1 (base32, starts with b). CIDv0 (Qm…) is excluded
@@ -26,6 +15,23 @@ async function computeCid(bytes: Uint8Array): Promise<string> {
 function looksLikeCid(s: string): boolean {
   return /^b[a-z2-7]{40,}$/.test(s.trim());
 }
+
+// Common multicodec/multihash names; falls back to the raw hex code for anything else.
+const CODEC_NAMES: Record<number, string> = {
+  0x55: 'raw',
+  0x70: 'dag-pb',
+  0x71: 'dag-cbor',
+  0x72: 'libp2p-key',
+  0x0129: 'dag-json',
+  0x0200: 'json',
+};
+const HASH_NAMES: Record<number, string> = {
+  0x11: 'sha1',
+  0x12: 'sha2-256',
+  0x13: 'sha2-512',
+  0x1e: 'blake3',
+  0xb220: 'blake2b-256',
+};
 
 interface CidPart {
   key: string;
@@ -41,6 +47,22 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
   if (!cid) {
     return <div style={{ height: 64, border: '1.5px dashed var(--stone)', borderRadius: 8, background: 'var(--paper)' }} />;
   }
+
+  // Decode the real CID so the labels below reflect what was actually pasted or
+  // computed, rather than assuming raw+sha2-256. Falls back to that assumption
+  // only if parsing fails (shouldn't happen for anything that reached this point).
+  let parsedCid: CID | null = null;
+  try {
+    parsedCid = CID.parse(cid);
+  } catch {
+    parsedCid = null;
+  }
+  const codecCode = parsedCid?.code ?? raw.code;
+  const codecName = CODEC_NAMES[codecCode] ?? `0x${codecCode.toString(16)}`;
+  const hashCode = parsedCid?.multihash.code ?? sha256.code;
+  const hashName = HASH_NAMES[hashCode] ?? `0x${hashCode.toString(16)}`;
+  const hashLen = parsedCid?.multihash.size ?? 32;
+
   const parts: CidPart[] = [
     { key: 'mb', label: 'multibase', sub: 'base32',
       chars: cid.slice(0, 1), color: 'var(--carmine)',
@@ -48,15 +70,15 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
     { key: 'ver', label: 'version', sub: 'CIDv1',
       chars: cid.slice(1, 2), color: 'var(--yellow)',
       detail: 'Which CID format. "a" here encodes version 1. Self-describing, upgrade-safe.' },
-    { key: 'codec', label: 'multicodec', sub: 'raw · 0x55',
+    { key: 'codec', label: 'multicodec', sub: `${codecName} · 0x${codecCode.toString(16)}`,
       chars: cid.slice(2, 4), color: 'var(--jade)',
-      detail: "What kind of bytes we're naming. Raw, dag-pb, dag-cbor, JSON, etc. Tells you how to interpret the data once you fetch it." },
-    { key: 'hfn', label: 'hash algo', sub: 'sha-256',
+      detail: `What kind of bytes we're naming — ${codecName} here. Raw is just bytes; dag-pb, dag-cbor, and dag-json describe structured/linked data. Tells you how to interpret the data once you fetch it.` },
+    { key: 'hfn', label: 'hash algo', sub: hashName,
       chars: cid.slice(4, 6), color: 'var(--turq)',
-      detail: 'Which hash function was used. sha-256 here; but blake3, sha-512, and others are legal. The CID tells you which.' },
-    { key: 'hlen', label: 'hash length', sub: '32 bytes',
+      detail: `Which hash function was used — ${hashName} here. Others like blake3 or sha2-512 are equally legal; the CID tells you which.` },
+    { key: 'hlen', label: 'hash length', sub: `${hashLen} bytes`,
       chars: cid.slice(6, 8), color: 'var(--navy)',
-      detail: 'How many bytes of digest follow. 32 bytes = 256 bits of sha-256.' },
+      detail: `How many bytes of digest follow — ${hashLen} bytes here (${hashLen * 8} bits).` },
     { key: 'digest', label: 'digest', sub: 'the fingerprint',
       chars: cid.slice(8), color: 'var(--ink)',
       detail: 'The actual hash of the bytes. Change one character of the file and every character here changes.' },
