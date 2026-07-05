@@ -104,7 +104,7 @@ export const categories: UseCaseCategory[] = [
         brand: 'Wikipedia', hue: 220,
         title: 'Restore a censored encyclopedia',
         body: 'When the government of Turkey blocked Wikipedia, a copy was posted to IPFS, restoring access for millions of readers.',
-        linkLabel: 'Read the story', link: 'observer.com', href: 'https://observer.com/2017/05/turkey-blocks-wikipedia-ipfs/',
+        linkLabel: 'Read the story', link: 'observer.com', href: 'https://blog.ipfs.tech/24-uncensorable-wikipedia/',
         logo: '/brands/wikipedia.png',
       },
       {
