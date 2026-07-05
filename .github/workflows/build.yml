@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BUILD_PATH: '.output/public'
+  BUILD_PATH: 'v2/dist'
 
 permissions:
   contents: read
@@ -35,18 +35,23 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: '10'
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'pnpm'
+          cache-dependency-path: v2/pnpm-lock.yaml
 
       - name: Install dependencies
+        working-directory: v2
         run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build project
-        run: pnpm generate
+        working-directory: v2
+        run: pnpm build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
