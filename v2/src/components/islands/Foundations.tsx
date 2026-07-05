@@ -26,9 +26,8 @@ const FOUNDATIONS: Foundation[] = [
     demoHeading: 'Hash around, and find out.',
     demo: <FileDropCID />,
     ctas: [
-      { label: 'CID inspector', hint: 'Inspect any CID', link: 'cid.ipfs.tech' },
-      { label: 'Read the spec', hint: 'CID', link: 'https://github.com/multiformats/cid' },
-      { label: 'Try DASL', hint: 'Minimal subset of the CID spec', link: 'dasl.ing' },
+      { label: 'CID inspector', hint: 'Inspect any CID', link: 'https://cid.ipfs.tech' },
+      { label: 'Read the spec', hint: 'CID', link: 'https://specs.ipfs.tech/cid/' },
     ],
   },
   {
@@ -41,10 +40,7 @@ const FOUNDATIONS: Foundation[] = [
         <LocationVsContent />
       </>
     ),
-    ctas: [
-      { label: 'Pin & retrieve', hint: 'gateways + RASL', link: 'docs.ipfs.tech/concepts/gateways' },
-      { label: 'libp2p transports', hint: 'connect anywhere', link: 'libp2p.io' },
-    ],
+    ctas: [],
   },
 ];
 
@@ -95,18 +91,6 @@ export default function Foundations() {
         </div>
         <div key={active}>{node.demo}</div>
 
-        <div className="foundation-ctas">
-          <div className="retro-label" style={{ fontSize: 'var(--text-ui)', color: 'var(--ink-3)' }}>
-            get started
-          </div>
-          {node.ctas.map((c) => (
-            <a key={c.link} href={`https://${c.link}`} className="foundation-cta">
-              <span style={{ color: 'var(--turq)', fontWeight: 600 }}>↗ {c.label}</span>
-              <span style={{ color: 'var(--ink-3)', fontSize: 'var(--text-2xs)' }}>{c.hint}</span>
-              <span className="mono" style={{ color: 'var(--ink-3)', fontSize: 'var(--text-2xs)', marginLeft: 'auto' }}>{c.link}</span>
-            </a>
-          ))}
-        </div>
       </div>
 
       <style>{`
