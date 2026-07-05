@@ -108,6 +108,17 @@ export const categories: UseCaseCategory[] = [
         logo: '/brands/wikipedia.png',
       },
       {
+        brand: 'SimplePage', hue: 190,
+        title: 'No-code sites that outlive their host',
+        body: 'SimplePage lets anyone build and publish a site on IPFS, so it stays online without depending on a single server, and without the usual decentralization tax on UX.',
+        linkLabel: 'Visit SimplePage', link: 'simplepage.eth.link', href: 'https://simplepage.eth.link/',
+        quote: {
+          who: 'Joel Thorstensson', role: 'SimplePage',
+          text: 'IPFS gave us a content-addressed foundation for publishing to the web, so our users can host and share sites that stay online without depending on any single server, and without the clunky UX that usually comes with decentralization.',
+          photo: '/portraits/joel-thorstensson.webp',
+        },
+      },
+      {
         brand: 'Snapshot', hue: 48,
         title: 'Permanent, public DAO records',
         body: 'Snapshot uses IPFS to publicly record every proposal, vote, and result for more than 9,000 web3 projects and DAOs.',
