@@ -103,8 +103,13 @@ const PROBLEMS: Problem[] = [
       'Fetch and cryptographically verify IPFS content directly in the browser with no trusted gateway required.',
     tools: [
       {
-        name: 'service-worker-gateway',
+        name: 'Service Worker Gateway',
         link: 'https://github.com/ipfs/service-worker-gateway',
+        lang: 'typescript',
+      },
+      {
+        name: 'IPFS Companion',
+        link: 'https://github.com/ipfs/ipfs-companion',
         lang: 'typescript',
       },
       {

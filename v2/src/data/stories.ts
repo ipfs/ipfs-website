@@ -93,7 +93,7 @@ export const categories: UseCaseCategory[] = [
         brand: 'HIN', hue: 270,
         title: 'Secure healthcare messaging for Switzerland',
         body: 'HIN runs the encrypted messaging backbone between Swiss doctors and patients. Every message is sharded into cryptographic fragments and distributed across an IPFS swarm, with no central database to breach. 700,000 messages a month, up from 350,000 last year.',
-        linkLabel: 'Read the case study', link: 'vereign.com/use-cases/hin', href: 'https://docs.ipfs.tech/case-studies/vereign/',
+        linkLabel: 'Read the case study', link: 'docs.ipfs.tech', href: 'https://docs.ipfs.tech/case-studies/vereign/',
         quote: {
           who: 'Georg Greve', role: 'CEO and Co-founder, Vereign',
           text: 'There is no central point of compromise anymore. There is no database that can be hacked, because the data just doesn’t exist, even in encrypted form, in one place anywhere. It only comes together at the edge device of the patient.',
@@ -104,7 +104,7 @@ export const categories: UseCaseCategory[] = [
         brand: 'Wikipedia', hue: 220,
         title: 'Restore a censored encyclopedia',
         body: 'When the government of Turkey blocked Wikipedia, a copy was posted to IPFS, restoring access for millions of readers.',
-        linkLabel: 'Read the story', link: 'observer.com', href: 'https://blog.ipfs.tech/24-uncensorable-wikipedia/',
+        linkLabel: 'Read the story', link: 'blog.ipfs.tech', href: 'https://blog.ipfs.tech/24-uncensorable-wikipedia/',
         logo: '/brands/wikipedia.png',
       },
       {
