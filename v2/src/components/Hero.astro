@@ -128,7 +128,9 @@ for (let i = 0; i < nodes.length; i++) {
     </p>
     <div class="flex flex-wrap items-center" style="gap: 12px;">
       <!-- <button class="mono-display" style="background: var(--teal); color: var(--navy); border: none; padding: 14px 22px; border-radius: 8px; font-size: 14px; font-weight: 400; cursor: pointer; letter-spacing: .01em;">$ npm install helia</button> -->
-      <a href="#tools" style="background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); padding: 13px 22px; border-radius: 8px; font-size: var(--text-ui); font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block;">Pick the tool that fits the job →</a>
+      <a href="#tools" class="hero-cta">
+        Pick the tool that fits the job
+      </a>
       <span class="mono" style="font-size: var(--text-xs); color: rgba(255,255,255,0.6); margin-left: 6px;">
         open-source
       </span>
@@ -139,6 +141,35 @@ for (let i = 0; i < nodes.length; i++) {
 <style>
   .hero-h1 {
     font-size: var(--text-h1);
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: var(--text-ui);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .15s, border-color .15s, transform .15s;
+  }
+  .hero-cta:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--teal);
+  }
+  .hero-cta:active {
+    transform: translateY(1px);
+  }
+  .hero-cta-arrow {
+    display: inline-block;
+    transition: transform .15s;
+  }
+  .hero-cta:hover .hero-cta-arrow {
+    transform: translateX(3px);
   }
   .mesh {
     transform-box: fill-box;
