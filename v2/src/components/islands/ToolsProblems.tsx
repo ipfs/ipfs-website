@@ -15,7 +15,7 @@ interface Problem {
 }
 
 const LANG_META: Record<Lang, { label: string; color: string }> = {
-  all: { label: 'All', color: 'var(--navy)' },
+  all: { label: 'All', color: 'var(--navy-surface)' },
   node: { label: 'Node', color: '#64748B' },
   cli: { label: 'CLI', color: '#9333EA' },
   go: { label: 'Go', color: '#00ADD8' },

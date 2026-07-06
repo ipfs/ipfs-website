@@ -39,6 +39,10 @@ interface CidPart {
   sub: string;
   chars: string;
   color: string;
+  // Hover-fill background behind white text. Defaults to `color`; set only for
+  // chunks whose color (--navy/--ink) flips to near-white in dark mode, which
+  // would otherwise leave white text on a white fill.
+  fill?: string;
   detail: string;
 }
 
@@ -77,10 +81,10 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
       chars: cid.slice(4, 6), color: 'var(--turq)',
       detail: `Which hash function was used — ${hashName} here. Others like blake3 or sha2-512 are equally legal; the CID tells you which.` },
     { key: 'hlen', label: 'hash length', sub: `${hashLen} bytes`,
-      chars: cid.slice(6, 8), color: 'var(--navy)',
+      chars: cid.slice(6, 8), color: 'var(--navy)', fill: 'var(--navy-surface)',
       detail: `How many bytes of digest follow — ${hashLen} bytes here (${hashLen * 8} bits).` },
     { key: 'digest', label: 'digest', sub: 'the fingerprint',
-      chars: cid.slice(8), color: 'var(--ink)',
+      chars: cid.slice(8), color: 'var(--ink)', fill: 'var(--navy-surface)',
       detail: 'The actual hash of the bytes. Change one character of the file and every character here changes.' },
   ];
 
@@ -101,7 +105,7 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
               onMouseLeave={() => setHover(null)}
               style={{
                 padding: '2px 1px',
-                background: isHovered ? p.color : 'transparent',
+                background: isHovered ? (p.fill ?? p.color) : 'transparent',
                 color: isHovered ? '#fff' : (isDim ? 'var(--ink-3)' : p.color),
                 fontWeight: p.key === 'digest' ? 400 : 600,
                 cursor: 'help',
@@ -127,7 +131,7 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
               onMouseLeave={() => setHover(null)}
               style={{
                 cursor: 'help', padding: '8px 10px', borderRadius: 6,
-                background: isHovered ? p.color : 'var(--pearl)',
+                background: isHovered ? (p.fill ?? p.color) : 'var(--pearl)',
                 color: isHovered ? '#fff' : 'var(--ink-2)',
                 transition: 'all .12s', minWidth: 0,
                 borderLeft: `3px solid ${p.color}`,
