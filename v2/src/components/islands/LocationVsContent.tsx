@@ -3,7 +3,7 @@ import { useState } from 'react';
 const btnGhost: React.CSSProperties = {
   border: '1px solid var(--line)', background: 'var(--paper)', color: 'var(--ink-2)',
   padding: '6px 10px', borderRadius: 5, fontSize: 'var(--text-2xs)', cursor: 'pointer',
-  fontFamily: "var(--font-mono)",
+  fontFamily: "var(--font-display-mono)",
 };
 
 export default function LocationVsContent() {

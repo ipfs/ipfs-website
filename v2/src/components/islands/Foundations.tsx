@@ -71,7 +71,7 @@ export default function Foundations() {
                 opacity: isActive ? 1 : 0.4,
               }} />
               <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'baseline', marginBottom: 16 }}>
-                <span style={{ fontFamily: 'var(--font-geist-mono)', fontSize: 'var(--text-2xs)', color: isActive ? 'var(--turq)' : 'var(--ink-3)', letterSpacing: '.12em', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                <span style={{ fontFamily: 'var(--font-display-mono)', fontSize: 'var(--text-2xs)', color: isActive ? 'var(--turq)' : 'var(--ink-3)', letterSpacing: '.12em', fontWeight: 600, whiteSpace: 'nowrap' }}>
                   {isActive ? '◉ live demo ↓' : '○ try demo'}
                 </span>
               </div>
@@ -87,7 +87,6 @@ export default function Foundations() {
           <div>
             <h3 style={{ margin: 0, fontSize: 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.015em', color: 'var(--navy)' }}>{node.demoHeading}</h3>
           </div>
-          <div style={{ fontSize: 'var(--text-ui)', color: 'var(--ink-3)', maxWidth: 380, textAlign: 'right' }}>{node.demoSub}</div>
         </div>
         <div key={active}>{node.demo}</div>
 

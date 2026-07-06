@@ -12,10 +12,6 @@
 @import "@fontsource/commit-mono/500.css";
 @import "@fontsource/commit-mono/600.css";
 
-/* Geist Mono — used for section labels/eyebrows. */
-@import "@fontsource/geist-mono/400.css";
-@import "@fontsource/geist-mono/500.css";
-
 /* Geist Pixel Circle — display accent only (brand wordmark, hero CTA). */
 @font-face {
   font-family: 'Geist Pixel Circle';
@@ -43,8 +39,6 @@
   --font-sans: 'Geist', system-ui, -apple-system, Segoe UI, sans-serif;
   --font-mono: 'Commit Mono', ui-monospace, Menlo, monospace;
   --font-display-mono: 'Geist Pixel Circle', 'Commit Mono', ui-monospace, monospace;
-  /* Geist Mono for section labels/eyebrows. */
-  --font-geist-mono: 'Geist Mono', ui-monospace, Menlo, monospace;
 }
 
 /* Type scale — rem so user font preferences are respected.

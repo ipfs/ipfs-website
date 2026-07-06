@@ -14,9 +14,6 @@ importers:
       '@fontsource/commit-mono':
         specifier: ^5.2.5
         version: 5.2.5
-      '@fontsource/geist-mono':
-        specifier: ^5.2.7
-        version: 5.2.8
       '@fontsource/geist-sans':
         specifier: ^5.2.5
         version: 5.2.5
@@ -485,9 +482,6 @@ packages:
 
   '@fontsource/commit-mono@5.2.5':
     resolution: {integrity: sha512-htX8yQWtiPt5L1Hzh4sirvfUJT2+KYiquDB/Q2sY2tWQYplpBUOD5zHnIM3k36Hnm4V+JIIqA/wmwupSQ68WjA==}
-
-  '@fontsource/geist-mono@5.2.8':
-    resolution: {integrity: sha512-YqZUb3X42GjRaHkibUNyE8K4Rk9A6I9Ez81YpJYiuJN4ggmTW2ixoQpa9EWCPfXZtIsCQJTyrDoV9OJOZO/UcA==}
 
   '@fontsource/geist-sans@5.2.5':
     resolution: {integrity: sha512-anllOHyJbElRs9fV15TeDRqAeb1IKm4bSknPl6ZMoyPTx1BBy7logudcUwpNjmQLkzn4Q0JGQLRCUKJYoyST6A==}
@@ -2337,8 +2331,6 @@ snapshots:
     optional: true
 
   '@fontsource/commit-mono@5.2.5': {}
-
-  '@fontsource/geist-mono@5.2.8': {}
 
   '@fontsource/geist-sans@5.2.5': {}
 

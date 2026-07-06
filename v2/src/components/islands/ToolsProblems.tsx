@@ -326,7 +326,7 @@ export default function ToolsProblems() {
           background: var(--pearl);
           border: 1px solid var(--line);
           border-radius: 6px;
-          font-family: var(--font-mono);
+          font-family: var(--font-display-mono);
           font-size: var(--text-xs);
           font-weight: 600;
           color: var(--cc, var(--turq));
