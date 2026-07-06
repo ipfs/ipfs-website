@@ -62,8 +62,7 @@ export default function LocationVsContent() {
         </div>
         <div className="mono" style={{ fontSize: 'var(--text-sm)', marginBottom: 12, wordBreak: 'break-all', color: 'var(--ink-2)' }}>
           <span style={{ color: 'var(--ink-3)' }}>ipfs://</span>
-          <span style={{ color: 'var(--turq)', fontWeight: 600 }}>bafkreic</span>
-          <span>7p4kehu3mqj2s5a8wrx9m3q2f6t8y4c</span>
+          <span>bafybeiafsjtkdgom7wrxljoctcw2ztilby7f7bpaduvyrx7tgxoil3fmti</span>
         </div>
         <div style={{ minHeight: 40, display: 'flex', alignItems: 'center', padding: '6px 0', fontSize: 'var(--text-xs)', color: 'var(--jade)', fontWeight: 500 }}>
           ✓ verified from any peer
