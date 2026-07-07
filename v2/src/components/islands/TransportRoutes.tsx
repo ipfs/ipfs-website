@@ -22,7 +22,7 @@ export default function TransportRoutes() {
 
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 14 }}>
         <span className="retro-label" style={{ fontSize: 'var(--text-xs)', color: 'var(--teal)', flexShrink: 0 }}>cid</span>
-        <span className="mono" style={{ fontSize: 'var(--text-xs)', color: 'var(--ink-2)', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', minWidth: 0 }}>
+        <span className="mono" title={CID} style={{ fontSize: 'var(--text-xs)', color: 'var(--ink-2)', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', minWidth: 0 }}>
           {CID}
         </span>
       </div>
@@ -36,7 +36,7 @@ export default function TransportRoutes() {
           }}>
             <span className="mono" style={{ color: l.color, fontWeight: 600, fontSize: 'var(--text-sm)', width: 14, textAlign: 'center', flexShrink: 0 }}>{l.icon}</span>
             <span style={{ fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--navy)', whiteSpace: 'nowrap' }}>{l.name}</span>
-            <span className="mono" style={{ fontSize: 'var(--text-2xs)', color: 'var(--ink-3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{l.hint}</span>
+            <span className="mono" style={{ fontSize: 'var(--text-2xs)', color: 'var(--ink-3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={l.hint}>{l.hint}</span>
           </div>
         ))}
       </div>
