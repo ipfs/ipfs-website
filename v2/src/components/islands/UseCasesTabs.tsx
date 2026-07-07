@@ -10,6 +10,25 @@ export default function UseCasesTabs() {
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
   const railRef = useRef<HTMLDivElement>(null);
 
+  // Sync active tab with the URL hash so tabs are deep-linkable.
+  useEffect(() => {
+    const fromHash = () => {
+      const h = window.location.hash.slice(1);
+      const idx = categories.findIndex((c) => c.id === h);
+      if (idx >= 0) setActive(idx);
+    };
+    fromHash();
+    window.addEventListener('hashchange', fromHash);
+    return () => window.removeEventListener('hashchange', fromHash);
+  }, []);
+
+  const selectTab = (i: number) => {
+    setActive(i);
+    const url = new URL(window.location.href);
+    url.hash = categories[i].id;
+    window.history.replaceState(null, '', url);
+  };
+
   // Measure the active tab so the underline indicator matches its width.
   useEffect(() => {
     const measure = () => {
@@ -46,18 +65,19 @@ export default function UseCasesTabs() {
   }, [active, hydrated]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    // selectTab handles both state and URL; no separate setActive needed.
     if (e.key === 'ArrowRight') {
       e.preventDefault();
-      setActive((a) => (a + 1) % categories.length);
+      selectTab((active + 1) % categories.length);
     } else if (e.key === 'ArrowLeft') {
       e.preventDefault();
-      setActive((a) => (a - 1 + categories.length) % categories.length);
+      selectTab((active - 1 + categories.length) % categories.length);
     } else if (e.key === 'Home') {
       e.preventDefault();
-      setActive(0);
+      selectTab(0);
     } else if (e.key === 'End') {
       e.preventDefault();
-      setActive(categories.length - 1);
+      selectTab(categories.length - 1);
     }
   };
 
@@ -85,7 +105,7 @@ export default function UseCasesTabs() {
               aria-controls={`uc-panel-${c.id}`}
               tabIndex={isActive ? 0 : -1}
               className={`uc-tab${isActive ? ' is-active' : ''}`}
-              onClick={() => setActive(i)}
+              onClick={() => selectTab(i)}
             >
               <span className="uc-tab-label">{c.label}</span>
             </button>
@@ -144,7 +164,7 @@ function Card({ card, index }: { card: UseCase; index: number }) {
       <div className="story-card-head">
         {card.logo ? (
           <div className="story-card-mark story-card-mark-logo" style={logoStyle}>
-            <img src={card.logo} alt={`${card.brand} logo`} loading="lazy" />
+            <img src={card.logo} alt={`${card.brand} logo`} width="56" height="56" loading="lazy" />
           </div>
         ) : (
           <div className="story-card-mark" style={gradientStyle}>

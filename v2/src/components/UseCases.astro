@@ -18,6 +18,8 @@ import UseCasesTabs from './islands/UseCasesTabs.tsx';
 </section>
 
 <style is:global>
+  /* is:global: these styles target elements rendered by the UseCasesTabs
+     React island, which doesn't carry Astro's data-astro-cid scoping attr. */
   .usecases-section {
     padding: 96px 32px;
     background: var(--paper);
@@ -184,6 +186,10 @@ import UseCasesTabs from './islands/UseCasesTabs.tsx';
     transform: translateY(-2px);
     box-shadow: 0 10px 30px -18px rgba(7, 58, 83, 0.25);
     border-color: var(--turq);
+  }
+  .story-card:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 3px;
   }
   @keyframes uc-card-in {
     from { opacity: 0; transform: translateY(12px); }
