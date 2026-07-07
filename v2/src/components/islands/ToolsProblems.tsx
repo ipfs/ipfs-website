@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type Lang = 'all' | 'node' | 'cli' | 'go' | 'typescript' | 'rust' | 'python' | 'java' | 'http' | 'other'
 
@@ -191,6 +191,29 @@ function rowOpacity(tools: ToolChip[], active: Lang): number {
 export default function ToolsProblems() {
   const [active, setActive] = useState<Lang>('all')
 
+  // Sync active filter with the URL query param ?lang= so it's deep-linkable.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const lang = params.get('lang') as Lang | null
+    if (lang && lang in LANG_META) setActive(lang)
+    const onPop = () => {
+      const p = new URLSearchParams(window.location.search)
+      const l = p.get('lang') as Lang | null
+      setActive(l && l in LANG_META ? l : 'all')
+    }
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
+  }, [])
+
+  const selectLang = (lang: Lang) => {
+    const next = active === lang && lang !== 'all' ? 'all' : lang
+    setActive(next)
+    const url = new URL(window.location.href)
+    if (next === 'all') url.searchParams.delete('lang')
+    else url.searchParams.set('lang', next)
+    window.history.replaceState(null, '', url)
+  }
+
   return (
     <>
       <div className="lf-bar" role="group" aria-label="Filter by language">
@@ -201,7 +224,8 @@ export default function ToolsProblems() {
               key={id}
               className={`lf-btn${isActive ? ' is-active' : ''}`}
               style={{ '--lc': meta.color } as React.CSSProperties}
-              onClick={() => setActive(isActive && id !== 'all' ? 'all' : id)}
+              aria-pressed={isActive}
+              onClick={() => selectLang(id)}
             >
               {id !== 'all' && <span className="lf-dot" aria-hidden="true" />}
               {meta.label}
@@ -269,6 +293,10 @@ export default function ToolsProblems() {
           transition: border-color .15s, background .15s, color .15s;
         }
         .lf-btn:hover { border-color: var(--lc, var(--turq)); color: var(--navy); }
+        .lf-btn:focus-visible {
+          outline: 2px solid var(--turq);
+          outline-offset: 2px;
+        }
         .lf-btn.is-active {
           background: var(--lc, var(--navy-surface));
           border-color: var(--lc, var(--navy-surface));
@@ -336,6 +364,10 @@ export default function ToolsProblems() {
           border-color: var(--cc, var(--turq));
           background: var(--paper);
           transform: translateY(-1px);
+        }
+        .tp-chip:focus-visible {
+          outline: 2px solid var(--cc, var(--turq));
+          outline-offset: 2px;
         }
       `}</style>
     </>
