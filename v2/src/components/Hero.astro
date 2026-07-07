@@ -127,13 +127,9 @@ for (let i = 0; i < nodes.length; i++) {
       IPFS is a constellation of open-source tools for <strong>content addressing</strong>.
     </p>
     <div class="flex flex-wrap items-center" style="gap: 12px;">
-      <!-- <button class="mono-display" style="background: var(--teal); color: var(--navy); border: none; padding: 14px 22px; border-radius: 8px; font-size: 14px; font-weight: 400; cursor: pointer; letter-spacing: .01em;">$ npm install helia</button> -->
       <a href="#tools" class="hero-cta">
         Pick the tool that fits the job
       </a>
-      <span class="mono" style="font-size: var(--text-xs); color: rgba(255,255,255,0.6); margin-left: 6px;">
-        open-source
-      </span>
     </div>
   </div>
 </section>
@@ -163,6 +159,10 @@ for (let i = 0; i < nodes.length; i++) {
   }
   .hero-cta:active {
     transform: translateY(1px);
+  }
+  .hero-cta:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
   }
   .hero-cta-arrow {
     display: inline-block;
