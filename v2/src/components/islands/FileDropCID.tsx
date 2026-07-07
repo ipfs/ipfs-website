@@ -101,15 +101,19 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
           const isDim = !!hover && !isHovered;
           return (
             <span key={p.key}
+              tabIndex={0}
               onMouseEnter={() => setHover(p.key)}
               onMouseLeave={() => setHover(null)}
+              onFocus={() => setHover(p.key)}
+              onBlur={() => setHover(null)}
               style={{
                 padding: '2px 1px',
                 background: isHovered ? (p.fill ?? p.color) : 'transparent',
                 color: isHovered ? '#fff' : (isDim ? 'var(--ink-3)' : p.color),
                 fontWeight: p.key === 'digest' ? 400 : 600,
                 cursor: 'help',
-                transition: 'all .12s',
+                borderRadius: 2,
+                transition: 'background .12s, color .12s, border-color .12s',
                 borderBottom: `2px solid ${isDim ? 'transparent' : p.color}`,
               }}>
               {p.chars}
@@ -133,7 +137,7 @@ function CIDAnatomy({ cid, pulse }: { cid: string; pulse: boolean }) {
                 cursor: 'help', padding: '8px 10px', borderRadius: 6,
                 background: isHovered ? (p.fill ?? p.color) : 'var(--pearl)',
                 color: isHovered ? '#fff' : 'var(--ink-2)',
-                transition: 'all .12s', minWidth: 0,
+                transition: 'background .12s, color .12s', minWidth: 0,
                 borderLeft: `3px solid ${p.color}`,
               }}>
               <div className="retro-label" style={{
@@ -183,6 +187,7 @@ export default function FileDropCID() {
   // with the pasted one. `editNonce` lets us recompute from text on returning to edit.
   const [showInput, setShowInput] = useState(true);
   const [editNonce, setEditNonce] = useState(0);
+  const [truncated, setTruncated] = useState(false);
   const liveRef = useRef(true);
 
   useEffect(() => {
@@ -205,11 +210,13 @@ export default function FileDropCID() {
     };
   }, [text, editNonce]);
 
+  // Detect a pasted CIDv1 without blocking the paste. We read the clipboard
+  // data, and if it looks like a CID, we swap to inspect mode after letting the
+  // paste land normally — no preventDefault, so users can paste freely.
   const onPaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     const pasted = e.clipboardData.getData('text');
     if (!looksLikeCid(pasted)) return;
-    e.preventDefault();
-    liveRef.current = false; // cancel any pending compute from the textarea
+    liveRef.current = false;
     setShowInput(false);
     setComputing(false);
     setCid(pasted.trim());
@@ -229,9 +236,12 @@ export default function FileDropCID() {
     if (!f) return;
     const buf = await f.arrayBuffer();
     try {
-      const t = new TextDecoder('utf-8', { fatal: false }).decode(buf);
-      setText(t.slice(0, 4000));
+      const decoded = new TextDecoder('utf-8', { fatal: false }).decode(buf);
+      const sliced = decoded.slice(0, 4000);
+      setTruncated(decoded.length > 4000);
+      setText(sliced);
     } catch {
+      setTruncated(false);
       setText(`[binary · ${f.size} bytes]`);
     }
   };
@@ -255,14 +265,19 @@ export default function FileDropCID() {
             border: `1.5px dashed ${dragOver ? 'var(--turq)' : 'var(--stone)'}`,
             borderRadius: 8, padding: 12, marginBottom: 12,
             background: dragOver ? 'rgba(107,196,206,0.08)' : 'var(--pearl)',
-            transition: 'all .15s',
+            transition: 'border-color .15s, background .15s',
           }}
         >
           <textarea
+            id="cid-input"
             value={text}
-            onChange={(e) => setText(e.target.value)}
+            onChange={(e) => { setText(e.target.value); setTruncated(false); }}
             onPaste={onPaste}
             rows={4}
+            name="cid-input"
+            autoComplete="off"
+            spellCheck={false}
+            aria-label="Content to hash or paste a CID to inspect"
             className="mono"
             style={{
               width: '100%', border: 'none', borderRadius: 5,
@@ -271,6 +286,11 @@ export default function FileDropCID() {
               lineHeight: 1.5,
             }}
           />
+          {truncated && (
+            <div style={{ fontSize: 'var(--text-2xs)', color: 'var(--carmine)', marginTop: 6 }}>
+              Content truncated to 4000 chars for hashing.
+            </div>
+          )}
         </div>
       ) : (
         <div style={{
@@ -299,13 +319,15 @@ export default function FileDropCID() {
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
         <div style={{ flex: 1, height: 1, background: 'var(--hair)' }} />
-        <div className="mono" style={{ fontSize: 'var(--text-2xs)', color: 'var(--ink-3)' }}>
+        <div className="mono" style={{ fontSize: 'var(--text-2xs)', color: 'var(--ink-3)' }} aria-live="polite">
           {computing ? 'computing…' : 'anatomy of a CID'}
         </div>
         <div style={{ flex: 1, height: 1, background: 'var(--hair)' }} />
       </div>
 
-      <CIDAnatomy cid={cid} pulse={pulseCid} />
+      <div aria-live="polite" aria-label={cid ? `Computed CID: ${cid}` : ''}>
+        <CIDAnatomy cid={cid} pulse={pulseCid} />
+      </div>
     </div>
   );
 }
