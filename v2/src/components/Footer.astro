@@ -8,19 +8,18 @@ const columns: [string, { label: string; href: string }[]][] = [
     { label: 'Blog', href: 'https://blog.ipfs.tech/' },
     { label: 'Tutorials', href: 'https://proto.school/' },
   ]],
-  ['Tools', [
-    { label: 'Kubo', href: 'https://github.com/ipfs/kubo' },
-    { label: 'Helia', href: 'https://helia.io/' },
+  ['Community', [
+    { label: 'Code of Conduct', href: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md' },
+    { label: 'Security', href: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues' },
     { label: 'DASL', href: 'https://dasl.ing/' },
-    { label: 'IPLD', href: 'https://ipld.io/' },
   ]],
   ['Network', [
-    { label: 'Amino', href: 'https://blog.ipfs.tech/2023-09-amino-refactoring/' },
-    { label: 'IPNI', href: 'https://ipni.io/' },
-    { label: 'Gateways', href: 'https://specs.ipfs.tech/http-gateways/' },
+    { label: 'Retrieval Check', href: 'https://check.ipfs.network/' },
+    { label: 'Public Utilities', href: 'https://ipfs.fyi/utils' },
+    { label: 'Implementation Grants', href: 'https://ipfsgrants.io/' },
   ]],
   ['Community', [
-    { label: 'Discuss', href: 'https://discuss.ipfs.tech/' },
+    { label: 'Forums', href: 'https://discuss.ipfs.tech/' },
     { label: 'GitHub', href: 'https://github.com/ipfs' },
     { label: 'Bluesky', href: 'https://bsky.app/profile/ipfs.tech' },
     { label: 'IPFS Foundation', href: 'https://ipfsfoundation.org/' },
@@ -36,7 +35,7 @@ const columns: [string, { label: string; href: string }[]][] = [
         <span style="font-weight: 600; font-size: var(--text-md);">IPFS</span>
       </div>
       <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; max-width: 320px; color: rgba(255,255,255,0.6);">
-        An open-source project. Specs live at specs.ipfs.tech. The community gathers at discuss.ipfs.tech. Development is supported by the IPFS Foundation.
+        IPFS is a constellation of open-source tools for content addressing.
       </p>
     </div>
     {columns.map(([h, items]) => (
@@ -51,9 +50,6 @@ const columns: [string, { label: string; href: string }[]][] = [
         ))}
       </div>
     ))}
-  </div>
-  <div class="mx-auto" style="max-width: 1240px; margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); font-size: var(--text-xs); color: rgba(255,255,255,0.5);">
-    <span>© IPFS · MIT License</span>
   </div>
 </footer>
 
