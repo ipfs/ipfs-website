@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FileDropCID from './FileDropCID';
 import LocationVsContent from './LocationVsContent';
 import TransportRoutes from './TransportRoutes';
@@ -46,15 +46,48 @@ const FOUNDATIONS: Foundation[] = [
 
 export default function Foundations() {
   const [active, setActive] = useState('cid');
+
+  // Sync active tab with the URL hash so it's deep-linkable.
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash && FOUNDATIONS.some((f) => f.id === hash)) {
+      setActive(hash);
+    }
+    const onHashChange = () => {
+      const h = window.location.hash.slice(1);
+      if (h && FOUNDATIONS.some((f) => f.id === h)) setActive(h);
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  const selectTab = (id: string) => {
+    setActive(id);
+    const url = new URL(window.location.href);
+    url.hash = id;
+    window.history.replaceState(null, '', url);
+  };
+
   const node = FOUNDATIONS.find((f) => f.id === active) || FOUNDATIONS[0];
 
   return (
     <>
-      <div className="foundation-tabs">
+      <div className="foundation-tabs" role="tablist" aria-label="IPFS foundations">
         {FOUNDATIONS.map((f) => {
           const isActive = f.id === active;
           return (
-            <button key={f.id} onClick={() => setActive(f.id)}
+            <button key={f.id}
+              role="tab"
+              id={`foundation-tab-${f.id}`}
+              aria-selected={isActive}
+              aria-controls="foundation-panel"
+              tabIndex={isActive ? 0 : -1}
+              onClick={() => selectTab(f.id)}
+              onKeyDown={(e) => {
+                const idx = FOUNDATIONS.findIndex((x) => x.id === active);
+                if (e.key === 'ArrowRight') { e.preventDefault(); const n = FOUNDATIONS[(idx + 1) % FOUNDATIONS.length]; selectTab(n.id); (document.getElementById(`foundation-tab-${n.id}`) as HTMLButtonElement)?.focus(); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); const n = FOUNDATIONS[(idx - 1 + FOUNDATIONS.length) % FOUNDATIONS.length]; selectTab(n.id); (document.getElementById(`foundation-tab-${n.id}`) as HTMLButtonElement)?.focus(); }
+              }}
               style={{
                 textAlign: 'left', cursor: 'pointer', fontFamily: 'inherit',
                 border: isActive ? '1.5px solid var(--turq)' : '1px solid var(--line)',
@@ -63,7 +96,7 @@ export default function Foundations() {
                 boxShadow: isActive
                   ? '0 0 0 5px rgba(107,196,206,0.15), 0 12px 28px -18px rgba(7,58,83,0.35)'
                   : 'none',
-                transition: 'all .18s',
+                transition: 'border-color .18s, box-shadow .18s',
               }}>
               <div style={{
                 position: 'absolute', top: 0, left: 0, right: 0, height: 3,
@@ -82,7 +115,7 @@ export default function Foundations() {
         })}
       </div>
 
-      <div style={{ background: 'var(--pearl)', border: '1px solid var(--line)', borderRadius: 16, padding: 28 }}>
+      <div id="foundation-panel" role="tabpanel" aria-labelledby={`foundation-tab-${active}`} style={{ background: 'var(--pearl)', border: '1px solid var(--line)', borderRadius: 16, padding: 28 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 22, flexWrap: 'wrap', gap: 12 }}>
           <div>
             <h3 style={{ margin: 0, fontSize: 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.015em', color: 'var(--navy)' }}>{node.demoHeading}</h3>
@@ -101,6 +134,10 @@ export default function Foundations() {
         }
         @media (min-width: 768px) {
           .foundation-tabs { grid-template-columns: repeat(2, 1fr); }
+        }
+        .foundation-tabs button:focus-visible {
+          outline: 2px solid var(--turq);
+          outline-offset: 3px;
         }
         .foundation-ctas {
           display: flex;
@@ -128,6 +165,10 @@ export default function Foundations() {
         .foundation-cta:hover {
           border-color: var(--turq);
           transform: translateY(-1px);
+        }
+        .foundation-cta:focus-visible {
+          outline: 2px solid var(--turq);
+          outline-offset: 2px;
         }
       `}</style>
     </>
