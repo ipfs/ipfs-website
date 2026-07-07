@@ -31,7 +31,7 @@ const PROBLEMS: Problem[] = [
   {
     label: 'Use CIDs in your own stack',
     guidance:
-      'Use DASL for simple content-addressed values; reach for full IPLD when you need linked data or Merkle structures. Boxo provides Go building blocks for CID handling and IPFS protocols.',
+      'CID libraries ship in Go, TypeScript, Rust, Python, Java, and more. Use DASL for simple content-addressed values.',
     tools: [
       { name: 'DASL', link: 'https://dasl.ing/', lang: 'http' },
       { name: 'Helia', link: 'https://helia.io/', lang: 'typescript' },
@@ -82,7 +82,7 @@ const PROBLEMS: Problem[] = [
   {
     label: 'Publish a content-addressed static website',
     guidance:
-      'Drop ipfs-deploy-action into your CI pipeline to get a CID per build and pin it automatically. Omnipin offers one-click pinning via MetaMask.',
+      'Add ipfs-deploy-action to CI for a CID per build. Omnipin is a CLI deployment tool with ENS updates; SimplePage is a markdown-based publishing tool',
     tools: [
       { name: 'ipfs-deploy-action', link: 'https://github.com/ipshipyard/ipfs-deploy-action', lang: 'other' },
       { name: 'Omnipin', link: 'https://omnipin.eth.limo/', lang: 'cli' },
