@@ -1,0 +1,39 @@
+# Link check workflow - triggered by workflow_run after successful build
+# Reuses the pre-built artifact from the build workflow
+# Runs for all branches, including PRs, without executing untrusted code
+
+name: Link check
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  check-links:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: website-build-${{ github.event.workflow_run.id }}
+          path: ./dist
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: |
+            --base dist/
+            --no-progress
+            --exclude-loopback
+            --exclude-mail
+            --exclude-path 'dist/_astro/**'
+            dist/
+          fail: true
