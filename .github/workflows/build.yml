@@ -79,7 +79,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: |
-            --base ${{ github.workspace }}/dist/
+            --root-dir ${{ github.workspace }}/dist
             --no-progress
             --exclude-all-private
             ${{ github.workspace }}/dist
