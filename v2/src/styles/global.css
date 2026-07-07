@@ -89,6 +89,7 @@
    surface flips. Brand accents (teal/turq/jade/yellow/carmine) carry over
    unchanged since they already read well on dark. */
 html[data-theme='dark'] {
+  color-scheme: dark;
   --ink: #E7EAF3;
   --ink-2: #B4BAD2;
   --ink-3: #868CA8;
@@ -101,6 +102,10 @@ html[data-theme='dark'] {
   /* Section titles/labels are painted with --navy; lift it to near-white so
      headings have strong contrast on the dark surfaces. */
   --navy: #EDF1FA;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
 }
 
 html[data-theme='dark'] body {
@@ -128,7 +133,11 @@ code, pre, kbd, samp, .mono {
 }
 
 /* Large displays: the 1240px column leaves text feeling small on 1440p+.
-   Scale the whole page up proportionally (layout + type) at wide widths. */
+   Scale the whole page up proportionally at wide widths. `zoom` is used
+   (not `font-size`) because the layout is sized in px, not rem; font-size
+   would grow only the type and leave the px containers/gaps fixed, cramming
+   larger text into the same boxes. `zoom` scales everything uniformly and is
+   supported across all evergreen browsers. */
 @media (min-width: 1440px) {
   html { zoom: 1.1; }
 }
