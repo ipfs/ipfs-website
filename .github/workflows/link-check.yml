@@ -30,10 +30,9 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: |
-            --base dist/
+            --base ${{ github.workspace }}/dist/
             --no-progress
-            --exclude-loopback
-            --exclude-mail
-            --exclude-path 'dist/_astro/**'
-            dist/
+            --exclude-all-private
+            --exclude-path '**/_astro/**'
+            ${{ github.workspace }}/dist
           fail: true
