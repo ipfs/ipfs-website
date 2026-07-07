@@ -70,6 +70,18 @@ const row2 = [
   { n: 15, w: 300 },
 ];
 const src = (n: number) => `/community/community-${n}.jpg`;
+
+// Randomize photo order at build time so the ribbon varies per build.
+function shuffle<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+shuffle(row1);
+shuffle(row2);
 ---
 
 <section id="community" class="relative overflow-hidden text-white" style="padding: 96px 0 88px; background: var(--navy-surface);">
