@@ -30,8 +30,8 @@ const initials = (name: string) =>
     <div class="retro-label proof-label">using IPFS in production at</div>
     <div class="proof-logos">
       {logos.map((l) => (
-        <a class="proof-logo-link" href={l.href} target="_blank" rel="noopener" aria-label={l.alt}>
-          <img class="proof-logo" src={l.src} alt={l.alt} loading="lazy" />
+        <a class="proof-logo-link" href={l.href} target="_blank" rel="noopener">
+          <img class="proof-logo" src={l.src} alt={l.alt} width="150" height="28" loading="lazy" />
         </a>
       ))}
     </div>
@@ -50,7 +50,7 @@ const initials = (name: string) =>
           <blockquote class="proof-quote-text">“{q.text}”</blockquote>
           <figcaption class="proof-quote-cap">
             {q.photo ? (
-              <img class="proof-avatar proof-avatar-photo" src={q.photo} alt={q.who} loading="lazy" />
+              <img class="proof-avatar proof-avatar-photo" src={q.photo} alt={q.who} width="40" height="40" loading="lazy" />
             ) : (
               <div class="proof-avatar">{initials(q.who)}</div>
             )}
@@ -126,6 +126,11 @@ const initials = (name: string) =>
     filter: grayscale(0);
     opacity: 1;
   }
+  .proof-logo-link:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
   /* Dark mode: invert the muted marks so they read light on the dark surface. */
   :global(html[data-theme='dark']) .proof-logo {
     filter: grayscale(1) invert(1) brightness(1.6);
@@ -181,6 +186,7 @@ const initials = (name: string) =>
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
     /* Let cards bleed to the edge so the row reads as scrollable. */
     margin: 0 -32px;
     padding: 4px 32px;
@@ -207,6 +213,10 @@ const initials = (name: string) =>
     border-color: var(--turq);
     transform: translateY(-2px);
     box-shadow: 0 10px 30px -18px rgba(7, 58, 83, 0.25);
+  }
+  .proof-quote:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 3px;
   }
   .proof-quote-link {
     font-size: var(--text-2xs);
@@ -268,5 +278,10 @@ const initials = (name: string) =>
     .proof-logo { height: 22px; }
     .proof-track { margin: 0 -24px; padding: 4px 24px; }
     .proof-quote { flex-basis: 280px; max-width: 280px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .proof-quote:hover,
+    .proof-logo { transition: none; transform: none; }
   }
 </style>
