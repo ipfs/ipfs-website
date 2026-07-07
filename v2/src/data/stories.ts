@@ -77,6 +77,7 @@ export const categories: UseCaseCategory[] = [
       },
       {
         brand: 'GainForest', hue: 130,
+        logo: '/brands/gainforest.svg',
         title: 'Provable rainforest monitoring',
         body: 'GainForest hashes on-the-ground forest measurements and pins them publicly, so funders, scientists, and communities can audit conservation outcomes themselves.',
         linkLabel: 'See GainForest', link: 'gainforest.app', href: 'https://gainforest.app/',
@@ -92,8 +93,9 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'HIN', hue: 270,
         title: 'Secure healthcare messaging for Switzerland',
-        body: 'HIN runs the encrypted messaging backbone between Swiss doctors and patients. Every message is sharded into cryptographic fragments and distributed across an IPFS swarm, with no central database to breach. 700,000 messages a month, up from 350,000 last year.',
+        body: 'HIN runs the encrypted messaging backbone between Swiss doctors and patients. Every message is sharded into cryptographic fragments and distributed across an IPFS swarm, with no central database to breach.',
         linkLabel: 'Read the case study', link: 'docs.ipfs.tech', href: 'https://docs.ipfs.tech/case-studies/vereign/',
+        logo: '/brands/hin.webp',
         quote: {
           who: 'Georg Greve', role: 'CEO and Co-founder, Vereign',
           text: 'There is no central point of compromise anymore. There is no database that can be hacked, because the data just doesn’t exist, even in encrypted form, in one place anywhere. It only comes together at the edge device of the patient.',
@@ -110,7 +112,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'SimplePage', hue: 190,
         title: 'No-code sites that outlive their host',
-        body: 'SimplePage lets anyone build and publish a site on IPFS, so it stays online without depending on a single server, and without the usual decentralization tax on UX.',
+        body: 'Simple Page is a publishing tool for IPFS and ENS. You write markdown in the browser or locally with the CLI and publish by signing one ENS contenthash transaction with your wallet. Your site goes live at your .eth domain, addressed by Ethereum and stored by IPFS.',
         linkLabel: 'Visit SimplePage', link: 'simplepage.eth.link', href: 'https://simplepage.eth.link/',
         quote: {
           who: 'Joel Thorstensson', role: 'SimplePage',
