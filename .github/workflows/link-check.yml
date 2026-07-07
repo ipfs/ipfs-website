@@ -33,6 +33,5 @@ jobs:
             --base ${{ github.workspace }}/dist/
             --no-progress
             --exclude-all-private
-            --exclude-path '**/_astro/**'
             ${{ github.workspace }}/dist
           fail: true
