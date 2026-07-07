@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type Kind = 'spec' | 'node' | 'library' | 'infra';
 interface KindMeta { label: string; color: string; shape: 'circle' | 'square' | 'diamond' | 'ring' }
@@ -53,7 +53,7 @@ function nodeShape(kind: Kind, isActive: boolean): React.CSSProperties {
     width: 22, height: 22,
     background: isActive ? k.color : 'var(--paper)',
     border: `2px solid ${k.color}`,
-    transition: 'all .15s',
+    transition: 'background .15s, border-color .15s, box-shadow .15s',
   };
   if (k.shape === 'circle') return { ...base, borderRadius: '50%' };
   if (k.shape === 'square') return { ...base, borderRadius: 4 };
@@ -75,6 +75,25 @@ function legendShape(kind: Kind): React.CSSProperties {
 export default function Constellation({ height = 480 }: { height?: number }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [locked, setLocked] = useState('dasl');
+
+  // Sync locked node with the URL hash so it's deep-linkable.
+  useEffect(() => {
+    const fromHash = () => {
+      const h = window.location.hash.slice(1);
+      if (h && NODES.some((n) => n.id === h)) setLocked(h);
+    };
+    fromHash();
+    window.addEventListener('hashchange', fromHash);
+    return () => window.removeEventListener('hashchange', fromHash);
+  }, []);
+
+  const selectNode = (id: string) => {
+    setLocked(id);
+    const url = new URL(window.location.href);
+    url.hash = id;
+    window.history.replaceState(null, '', url);
+  };
+
   const active = hovered || locked;
   const activeNode = NODES.find((n) => n.id === active)!;
 
@@ -113,7 +132,10 @@ export default function Constellation({ height = 480 }: { height?: number }) {
             <button key={n.id}
               onMouseEnter={() => setHovered(n.id)}
               onMouseLeave={() => setHovered(null)}
-              onClick={() => setLocked(n.id)}
+              onFocus={() => setHovered(n.id)}
+              onBlur={() => setHovered(null)}
+              onClick={() => selectNode(n.id)}
+              aria-label={`${n.label}: ${n.role}`}
               style={{
                 position: 'absolute', left: `${n.x}%`, top: `${n.y}%`,
                 transform: 'translate(-50%,-50%)', cursor: 'pointer',
@@ -175,7 +197,8 @@ export default function Constellation({ height = 480 }: { height?: number }) {
           )}
           <div style={{ display: 'flex', gap: 8 }}>
             {NODES.map((n) => (
-              <button key={n.id} onClick={() => setLocked(n.id)} aria-label={n.label}
+              <button key={n.id} onClick={() => selectNode(n.id)} aria-label={`Select ${n.label}`}
+                aria-pressed={locked === n.id}
                 style={{
                   width: 8, height: 8, padding: 0,
                   border: 'none', borderRadius: KINDS[n.kind].shape === 'square' ? 1.5 : '50%',
@@ -194,6 +217,15 @@ export default function Constellation({ height = 480 }: { height?: number }) {
         }
         @media (min-width: 768px) {
           .constellation-grid { grid-template-columns: 3fr 2fr; }
+        }
+        .constellation-grid button:focus-visible {
+          outline: 2px solid var(--turq);
+          outline-offset: 4px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .constellation-grid button > div:first-child {
+            transition: none;
+          }
         }
       `}</style>
     </div>
