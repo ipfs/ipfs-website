@@ -6,11 +6,15 @@ import geistPixelCircle from '/fonts/GeistPixelCircle-Regular.woff2?url';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  canonical?: string;
 }
 
 const {
   title = 'IPFS, a constellation of tools for content addressing',
-  description = 'IPFS is a constellation of tools for content addressing. Name data by what it is, not where it lives.',
+  description = 'IPFS is a constellation of open-source tools for content addressing. Name data by what it is, not where it lives.',
+  image = 'https://ipfs.tech/og-image.png',
+  canonical = 'https://ipfs.tech/',
 } = Astro.props;
 ---
 
@@ -24,6 +28,25 @@ const {
     <link rel="preload" href={geistPixelCircle} as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#073A53" />
+
+    {/* Open Graph / Facebook */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IPFS" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="IPFS logo" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content="IPFS logo" />
+
     {/* Set the theme before first paint to avoid a flash of the wrong colors. */}
     <script is:inline>
       (() => {
