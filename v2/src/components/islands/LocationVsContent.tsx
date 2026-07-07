@@ -6,6 +6,11 @@ const btnGhost: React.CSSProperties = {
   fontFamily: "var(--font-display-mono)",
 };
 
+const btnGhostHover = `
+  .lvc-btn:hover { border-color: var(--turq); color: var(--ink); }
+  .lvc-btn:focus-visible { outline: 2px solid var(--turq); outline-offset: 2px; }
+`;
+
 export default function LocationVsContent() {
   const [hostDown, setHostDown] = useState(false);
   const [tampered, setTampered] = useState(false);
@@ -39,10 +44,10 @@ export default function LocationVsContent() {
               : <span>▤ fetched content</span>}
         </div>
         <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
-          <button onClick={() => { setHostDown((d) => !d); setTampered(false); }} className="mono" style={btnGhost}>
+          <button onClick={() => { setHostDown((d) => !d); setTampered(false); }} className="mono lvc-btn" style={btnGhost} aria-pressed={hostDown}>
             {hostDown ? '↺ restore' : '✕ take host down'}
           </button>
-          <button onClick={() => { setTampered((t) => !t); setHostDown(false); }} className="mono" style={btnGhost}>
+          <button onClick={() => { setTampered((t) => !t); setHostDown(false); }} className="mono lvc-btn" style={btnGhost} aria-pressed={tampered}>
             {tampered ? '↺ restore' : '⇄ swap content'}
           </button>
         </div>
@@ -71,6 +76,7 @@ export default function LocationVsContent() {
           The address <em>is</em> the fingerprint. Host, network, middle-box. None of them get to lie.
         </div>
       </div>
+      <style>{btnGhostHover}</style>
     </div>
   );
 }
