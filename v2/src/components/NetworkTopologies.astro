@@ -99,7 +99,7 @@ import SectionHeader from './SectionHeader.astro';
           </svg>
         </div>
         <div class="topo-body">
-          <span class="topo-badge topo-badge--public">Public</span>
+          <h3 class="topo-heading"><span class="topo-badge topo-badge--public">Public</span></h3>
           <p class="topo-desc">Nodes discover peers via the <a href="https://docs.ipfs.tech/concepts/glossary/#amino-dht" target="_blank" rel="noopener">Amino DHT</a> and <a href="https://docs.ipfs.tech/concepts/glossary/#ipni" target="_blank" rel="noopener">IPNI</a>. Any compliant node can join and find content, no coordination required.</p>
         </div>
       </div>
@@ -219,7 +219,7 @@ import SectionHeader from './SectionHeader.astro';
           </svg>
         </div>
         <div class="topo-body">
-          <span class="topo-badge topo-badge--hybrid">Hybrid</span>
+          <h3 class="topo-heading"><span class="topo-badge topo-badge--hybrid">Hybrid</span></h3>
           <p class="topo-desc">Public peers, private data. Content is encrypted. CIDs route over the <a href="https://docs.ipfs.tech/concepts/glossary/#amino-dht" target="_blank" rel="noopener">Amino DHT</a> while ciphertext stays opaque to every transit node.</p>
         </div>
       </div>
@@ -287,7 +287,7 @@ import SectionHeader from './SectionHeader.astro';
           </svg>
         </div>
         <div class="topo-body">
-          <span class="topo-badge topo-badge--private">Private</span>
+          <h3 class="topo-heading"><span class="topo-badge topo-badge--private">Private</span></h3>
           <p class="topo-desc">All peers share a <a href="https://github.com/ipfs/kubo/blob/master/docs/experimental-features.md#private-networks" target="_blank" rel="noopener">swarm key</a>. Routing and transfer stay within the closed network. Nothing routes in or out without it.</p>
         </div>
       </div>
@@ -389,7 +389,7 @@ import SectionHeader from './SectionHeader.astro';
           </svg>
         </div>
         <div class="topo-body">
-          <span class="topo-badge topo-badge--gateway">Trustless Gateways</span>
+          <h3 class="topo-heading"><span class="topo-badge topo-badge--gateway">Trustless Gateways</span></h3>
           <p class="topo-desc"><a href="https://docs.ipfs.tech/concepts/ipfs-gateway/" target="_blank" rel="noopener">Gateways</a> pull content from the IPFS network and serve it over HTTP. Browsers verify data against the CID locally, trust is rooted in CID, not the gateway.</p>
         </div>
       </div>
@@ -436,7 +436,7 @@ import SectionHeader from './SectionHeader.astro';
   .topo-badge {
     display: inline-flex;
     align-items: center;
-    font-family: var(--font-retro);
+    font-family: var(--font-mono);
     font-size: var(--text-xs);
     font-weight: 600;
     padding: 3px 10px;
@@ -446,6 +446,18 @@ import SectionHeader from './SectionHeader.astro';
   }
   .topo-badge--public { color: var(--turq); border-color: var(--turq); background: var(--pearl); }
   .topo-badge--private { color: var(--jade); border-color: var(--jade); background: var(--pearl); }
+
+  .topo-heading {
+    margin: 0;
+    font: inherit;
+    line-height: inherit;
+  }
+
+  .topo-desc a:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 
   .topo-desc {
     margin: 0;
@@ -500,4 +512,12 @@ import SectionHeader from './SectionHeader.astro';
   .h-lock-hole   { fill: var(--violet, #818cf8); }
   .topo-badge--hybrid { color: var(--violet, #818cf8); border-color: var(--violet, #818cf8); background: var(--pearl); }
 
+  /* SMIL <animate> elements don't respect prefers-reduced-motion automatically,
+     so hide them when the user has reduced motion enabled. */
+  @media (prefers-reduced-motion: reduce) {
+    .topo-diagram animate,
+    .topo-diagram animateTransform {
+      display: none;
+    }
+  }
 </style>
