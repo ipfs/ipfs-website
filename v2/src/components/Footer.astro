@@ -12,13 +12,14 @@ const columns: [string, { label: string; href: string }[]][] = [
     { label: 'Code of Conduct', href: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md' },
     { label: 'Security', href: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues' },
     { label: 'DASL', href: 'https://dasl.ing/' },
+    { label: 'IPFS Foundation', href: 'https://ipfsfoundation.org/' },
   ]],
   ['Network', [
     { label: 'Retrieval Check', href: 'https://check.ipfs.network/' },
     { label: 'Public Utilities', href: 'https://ipfs.fyi/utils' },
     { label: 'Implementation Grants', href: 'https://ipfsgrants.io/' },
   ]],
-  ['Community', [
+  ['Social', [
     { label: 'Forums', href: 'https://discuss.ipfs.tech/' },
     { label: 'GitHub', href: 'https://github.com/ipfs' },
     { label: 'Bluesky', href: 'https://bsky.app/profile/ipfs.tech' },
@@ -40,14 +41,16 @@ const columns: [string, { label: string; href: string }[]][] = [
     </div>
     {columns.map(([h, items]) => (
       <div>
-        <div class="retro-label" style="font-size: var(--text-ui); color: var(--teal); margin-bottom: 14px;">
+        <h3 class="retro-label footer-col-heading" style="font-size: var(--text-ui); color: var(--teal); margin-bottom: 14px;">
           {h}
-        </div>
-        {items.map((i) => (
-          <div style="font-size: var(--text-sm); margin-bottom: 8px;">
-            <a href={i.href} style="color: rgba(255,255,255,0.75); text-decoration: none;">{i.label}</a>
-          </div>
-        ))}
+        </h3>
+        <ul class="footer-list">
+          {items.map((i) => (
+            <li>
+              <a href={i.href} class="footer-link" style="color: rgba(255,255,255,0.75); text-decoration: none;">{i.label}</a>
+            </li>
+          ))}
+        </ul>
       </div>
     ))}
   </div>
@@ -58,6 +61,28 @@ const columns: [string, { label: string; href: string }[]][] = [
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     gap: 40px;
+  }
+
+  .footer-col-heading {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-list li {
+    font-size: var(--text-sm);
+    margin-bottom: 8px;
+  }
+
+  .footer-link:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   @media (max-width: 760px) {
