@@ -146,13 +146,6 @@ export const categories: UseCaseCategory[] = [
         linkLabel: 'Watch presentation', link: 'youtube.com', href: 'https://www.youtube.com/watch?v=Y2VgbDS1Hak',
         logo: '/brands/weatherxm.png',
       },
-      {
-        brand: '3S Studios', hue: 340,
-        title: 'Fast game asset delivery for superfans',
-        body: '3S Studios built an IPFS plugin for Unity that reduced game content from 2 GB to 40 MB, then streamed updates over the swarm.',
-        linkLabel: 'Their story', link: 'blog.ipfs.tech', href: 'https://blog.ipfs.tech/2022-11-15-3s-studio/',
-        logo: '/brands/3s.png',
-      },
     ],
   },
   {
