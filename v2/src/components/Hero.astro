@@ -6,6 +6,35 @@ const tagline = {
   post: '.',
 };
 
+// Fetch the GitHub star count at build time so it's baked into the static HTML.
+// Falls back to a fixed number if the request fails (e.g. offline build, rate limit).
+const FALLBACK_STARS = 17000;
+
+async function getStars(repo: string): Promise<number> {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) return FALLBACK_STARS;
+    const data = await res.json();
+    return data.stargazers_count ?? FALLBACK_STARS;
+  } catch {
+    return FALLBACK_STARS;
+  }
+}
+
+const stars = await getStars('ipfs/kubo');
+const starLabel = Intl.NumberFormat('en', {
+  notation: 'compact',
+  maximumFractionDigits: 1,
+}).format(stars);
+
+const metrics = [
+  { value: starLabel, label: 'GitHub stars', href: 'https://github.com/ipfs/kubo' },
+  { value: '1B+', label: 'CIDs published', href: null },
+  { value: '400k+', label: 'public nodes', href: null },
+];
+
 // Deterministic constellation mesh. Positions come from a jittered grid
 // across a 1240x560 viewBox; edges connect each node to its 2 nearest
 // neighbors. Generated at build time so there's no client-side cost.
@@ -123,12 +152,24 @@ for (let i = 0; i < nodes.length; i++) {
     <h1 class="hero-h1" style="font-weight: 600; letter-spacing: -0.025em; margin: 0 0 28px; line-height: 1.04; max-width: 980px; text-wrap: balance;">
       {tagline.pre}<span class="mono-display" style="color: var(--yellow); font-weight: 400;">{tagline.hl}</span>
     </h1>
-    <p style="font-size: var(--text-xl); color: rgba(255,255,255,0.85); max-width: 720px; margin: 0 0 36px; line-height: 1.5;">
+    <p style="font-size: var(--text-2xl); color: rgba(255,255,255,0.85); max-width: 720px; margin: 0 0 36px; line-height: 1.5;">
       IPFS is a constellation of open-source tools for <strong>content addressing</strong>.
     </p>
+    <dl class="hero-metrics">
+      {metrics.map((m) => {
+        const Tag = m.href ? 'a' : 'div';
+        return (
+          <Tag class="hero-metric" {...(m.href ? { href: m.href } : {})}>
+            <dt class="hero-metric-value">{m.value}</dt>
+            <dd class="hero-metric-label">{m.label}</dd>
+          </Tag>
+        );
+      })}
+    </dl>
     <div class="flex flex-wrap items-center" style="gap: 12px;">
       <a href="#tools" class="hero-cta">
         Pick the tool that fits the job
+        <span class="hero-cta-arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </div>
@@ -170,6 +211,39 @@ for (let i = 0; i < nodes.length; i++) {
   }
   .hero-cta:hover .hero-cta-arrow {
     transform: translateX(3px);
+  }
+  .hero-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  .hero-metric {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  a.hero-metric {
+    border-radius: 6px;
+    transition: opacity .15s;
+  }
+  a.hero-metric:hover {
+    opacity: 0.85;
+  }
+  a.hero-metric:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 4px;
+  }
+  .hero-metric-value {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .hero-metric-label {
+    margin: 6px 0 0;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
   }
   .mesh {
     transform-box: fill-box;
