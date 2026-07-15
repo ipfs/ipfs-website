@@ -183,20 +183,22 @@ for (let i = 0; i < nodes.length; i++) {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: transparent;
-    color: #fff;
-    border: 1.5px solid rgba(255,255,255,0.4);
+    /* Solid fill in the headline accent so the CTA reads as the primary action. */
+    background: var(--teal);
+    /* Base token, not the --ink alias: the teal fill stays light in both
+       themes, so the text must stay dark (the alias flips to near-white). */
+    color: var(--color-ink);
+    border: 1.5px solid transparent;
     padding: 13px 22px;
     border-radius: 8px;
     font-size: var(--text-ui);
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    transition: background .15s, border-color .15s, transform .15s;
+    transition: background .15s, transform .15s;
   }
   .hero-cta:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: var(--teal);
+    background: color-mix(in srgb, var(--teal) 85%, var(--color-ink));
   }
   .hero-cta:active {
     transform: translateY(1px);
