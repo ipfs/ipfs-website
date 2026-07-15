@@ -2,6 +2,7 @@ export interface UseCase {
   brand: string;
   hue: number;
   title: string;
+  useCase?: string;
   body: string;
   linkLabel: string;
   // Short display string shown in the card footer (e.g., "atproto.com").
@@ -39,6 +40,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'Seed Hypermedia', hue: 165,
         title: 'Peer-to-peer hypermedia documents',
+        useCase: 'Collaborative hypermedia',
         body: 'Seed builds collaborative documents where every version, comment, and link is addressed by CID, durable across servers, editors, and time.',
         linkLabel: 'Visit Seed', link: 'seed.hyper.media', href: 'https://seed.hyper.media/',
         logo: '/brands/seed-hypermedia.png',
@@ -66,6 +68,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'ORCESTRA', hue: 35,
         title: 'Verifiable scientific datasets across institutions',
+        useCase: 'Research data',
         body: 'The ORCESTRA atmospheric campaign uses IPFS to share verifiable, accessible datasets across research institutions worldwide.',
         linkLabel: 'Case study', link: 'docs.ipfs.tech', href: 'https://docs.ipfs.tech/case-studies/orcestra/',
         logo: '/brands/orcestra.svg',
@@ -93,6 +96,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'HIN', hue: 270,
         title: 'Secure healthcare messaging for Switzerland',
+        useCase: 'Secure Healthcare Messaging',
         body: 'HIN runs the encrypted messaging backbone between Swiss doctors and patients. Every message is sharded into cryptographic fragments and distributed across an IPFS swarm, with no central database to breach.',
         linkLabel: 'Read the case study', link: 'docs.ipfs.tech', href: 'https://docs.ipfs.tech/case-studies/vereign/',
         logo: '/brands/hin.webp',
@@ -112,6 +116,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'SimplePage', hue: 190,
         title: 'No-code sites that outlive their host',
+        useCase: 'Resilient publishing',
         body: 'Simple Page is a publishing tool for IPFS and ENS. You write markdown in the browser or locally with the CLI and publish by signing one ENS contenthash transaction with your wallet. Your site goes live at your .eth domain, addressed by Ethereum and stored by IPFS.',
         linkLabel: 'Visit SimplePage', link: 'simplepage.eth.link', href: 'https://simplepage.eth.link/',
         quote: {
@@ -123,6 +128,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'Snapshot', hue: 48,
         title: 'Permanent, public DAO records',
+        useCase: 'Resilient publishing',
         body: 'Snapshot uses IPFS to publicly record every proposal, vote, and result for more than 9,000 web3 projects and DAOs.',
         linkLabel: 'Case study', link: 'docs.ipfs.tech', href: 'https://docs.ipfs.tech/case-studies/snapshot/',
         logo: '/brands/snapshot.png',
@@ -163,6 +169,7 @@ export const categories: UseCaseCategory[] = [
       {
         brand: 'Nancy Baker Cahill', hue: 15,
         title: 'A permanent home for digital art',
+        useCase: 'Resilient publishing',
         body: 'Nancy Baker Cahill stores all her full-resolution art assets on IPFS via NFT.storage. Each work with its own CID.',
         linkLabel: 'Watch her presentation', link: 'youtube.com', href: 'https://www.youtube.com/watch?v=K2zVNcn6CIU',
         quote: {

@@ -18,7 +18,8 @@ const logos = [
 const quotes = categories.flatMap((c) =>
   c.cases
     .filter((x) => x.quote)
-    .map((x) => ({ ...x.quote!, brand: x.brand, href: x.href, linkLabel: x.linkLabel })),
+    // Carry the category label so each card can head with its use case.
+    .map((x) => ({ ...x.quote!, brand: x.brand, href: x.href, linkLabel: x.linkLabel, useCase: x.useCase })),
 );
 
 const initials = (name: string) =>
@@ -47,6 +48,7 @@ const initials = (name: string) =>
     <div class="proof-track">
       {quotes.map((q) => (
         <a class="proof-quote" href={q.href} target="_blank" rel="noopener">
+          <div class="proof-quote-usecase">{q.useCase}</div>
           <blockquote class="proof-quote-text">“{q.text}”</blockquote>
           <figcaption class="proof-quote-cap">
             {q.photo ? (
@@ -58,7 +60,7 @@ const initials = (name: string) =>
               <div class="proof-quote-who">{q.who}</div>
               <div class="proof-quote-role">{q.role}</div>
             </div>
-            <span class="retro-label proof-quote-brand">{q.brand}</span>
+            <span class=" proof-quote-brand">{q.brand}</span>
           </figcaption>
           <span class="mono proof-quote-link">↗ {q.linkLabel}</span>
         </a>
@@ -217,6 +219,12 @@ const initials = (name: string) =>
   .proof-quote:focus-visible {
     outline: 2px solid var(--turq);
     outline-offset: 3px;
+  }
+  .proof-quote-usecase {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: var(--text-ui);
+    color: var(--ink-3);
   }
   .proof-quote-link {
     font-size: var(--text-2xs);
