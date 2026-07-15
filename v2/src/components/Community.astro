@@ -1,0 +1,239 @@
+---
+const ctas = [
+  // Matrix temporarily hidden so the row fits 5 cards
+  // {
+  //   kind: 'Matrix',
+  //   blurb: 'Ask quick questions, chat with others, and get unblocked in real time.',
+  //   href: 'https://matrix.to/#/#ipfs-space:ipfs.io',
+  //   glyph: '◍',
+  // },
+  {
+    kind: 'Discord',
+    blurb: 'Ask quick questions, chat with others, and get unblocked in real time.',
+    href: 'https://discord.gg/vj7qWuAyHY',
+    glyph: '◉',
+  },
+  {
+    kind: 'Forums',
+    blurb: 'Post detailed questions, propose ideas, and track long-form discussions in public.',
+    href: 'https://discuss.ipfs.tech/',
+    glyph: '◇',
+  },
+  {
+    kind: 'Luma Calendar',
+    blurb: 'Find and join virtual and in-person events: working groups, demos, and community events.',
+    href: 'https://lu.ma/ipfs',
+    glyph: '◐',
+  },
+  {
+    kind: 'Newsletter',
+    blurb: 'Get project updates, release highlights, ecosystem news delivered to your inbox.',
+    href: 'https://ipfs.fyi/newsletter',
+    glyph: '◫',
+  },
+  {
+    kind: 'YouTube',
+    blurb: 'Watch talks, demos, tutorials, and working group calls.',
+    href: 'https://www.youtube.com/@IPFSbot',
+    glyph: '▶',
+  },
+];
+
+// rows of community photos used in the ribbon below the header
+const row1 = [
+  { n: 3, w: 420 },
+  { n: 11, w: 280 },
+  { n: 17, w: 380 },
+  { n: 6, w: 260 },
+  { n: 14, w: 340 },
+  { n: 9, w: 300 },
+  { n: 20, w: 360 },
+  { n: 1, w: 280 },
+  { n: 22, w: 400 },
+  { n: 8, w: 260 },
+  { n: 24, w: 340 },
+  { n: 12, w: 300 },
+  { n: 19, w: 380 },
+];
+const row2 = [
+  { n: 7, w: 260 },
+  { n: 5, w: 400 },
+  { n: 13, w: 300 },
+  { n: 18, w: 360 },
+  { n: 2, w: 320 },
+  { n: 16, w: 280 },
+  { n: 21, w: 340 },
+  { n: 4, w: 380 },
+  { n: 23, w: 280 },
+  { n: 10, w: 360 },
+  { n: 25, w: 320 },
+  { n: 15, w: 300 },
+];
+const src = (n: number) => `/community/community-${n}.jpg`;
+
+// Randomize photo order at build time so the ribbon varies per build.
+function shuffle<T>(arr: T[]): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+shuffle(row1);
+shuffle(row2);
+---
+
+<section id="community" class="relative overflow-hidden text-white" style="padding: 96px 0 88px; background: var(--navy-surface);">
+  <svg class="absolute inset-0 w-full h-full" style="opacity: 0.4;" aria-hidden="true">
+    <defs>
+      <pattern id="ctadots" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="1" cy="1" r="0.9" fill="rgba(107,196,206,0.2)" />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#ctadots)" />
+  </svg>
+
+  <div class="relative mx-auto" style="max-width: 1240px; padding: 0 32px;">
+    <div style="margin-bottom: 40px; max-width: 820px;">
+      <h2 style="margin: 0 0 12px; font-size: var(--text-h2); font-weight: 600; letter-spacing: -0.02em; line-height: 1.08; text-wrap: balance;">
+        By the community, for the community.
+      </h2>
+      <p style="margin: 0; font-size: var(--text-lead); color: rgba(255,255,255,0.7); max-width: 640px; line-height: 1.55;">
+        IPFS is built in the open by 3,000+ contributors and counting. Join the disussions, track proposals, and find the next event online or near you.
+      </p>
+    </div>
+  </div>
+
+  <div class="relative ribbon" aria-hidden="true">
+    <div class="ribbon-row">
+      {[...row1, ...row1, ...row1].map(({ n, w }) => (
+        <div class="ribbon-tile" style={`width: ${w}px;`}>
+          <img src={src(n)} alt="" width="280" height="200" loading="lazy" />
+        </div>
+      ))}
+    </div>
+    <div class="ribbon-row">
+      {[...row2, ...row2, ...row2].map(({ n, w }) => (
+        <div class="ribbon-tile" style={`width: ${w}px;`}>
+          <img src={src(n)} alt="" width="280" height="200" loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="relative mx-auto" style="max-width: 1240px; padding: 0 32px;">
+    <div class="cta-grid">
+      {ctas.map((c) => (
+        <a class="cta-card" href={c.href}>
+          <div class="flex items-center" style="gap: 12px;">
+            <div class="mono cta-glyph" aria-hidden="true">
+              {c.glyph}
+            </div>
+            <div class="retro-label" style="font-size: var(--text-ui); color: var(--teal);">
+              {c.kind}
+            </div>
+          </div>
+          <div style="font-size: var(--text-ui); color: rgba(255,255,255,0.7); line-height: 1.55; flex: 1;">
+            {c.blurb}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* responsive grid: collapses from 5 cols → fewer as space tightens */
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+  }
+  .cta-card {
+    border: 1px solid rgba(107,196,206,0.25);
+    border-radius: 12px;
+    padding: 24px;
+    background: rgba(255,255,255,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: background .15s, border-color .15s, transform .15s;
+  }
+  .cta-card:hover {
+    background: rgba(107,196,206,0.08);
+    border-color: rgba(107,196,206,0.5);
+  }
+  .cta-card:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+  }
+  .cta-glyph {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(107,196,206,0.25), rgba(255,255,255,0.05));
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+  /* community photo ribbon */
+  .ribbon {
+    margin: 0 0 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* fade right edge where the row bleeds off-viewport */
+    -webkit-mask-image: linear-gradient(to right, #000 0, #000 92%, transparent);
+            mask-image: linear-gradient(to right, #000 0, #000 92%, transparent);
+  }
+  .ribbon-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 32px;
+    /* hide scrollbar but keep touch/trackpad swipe */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ribbon-row::-webkit-scrollbar { display: none; }
+  .ribbon-tile {
+    flex: 0 0 auto;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.04);
+    scroll-snap-align: start;
+  }
+  .ribbon-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform .5s ease;
+  }
+  .ribbon-tile:hover img {
+    transform: scale(1.05);
+  }
+  @media (max-width: 640px) {
+    .ribbon { margin-bottom: 40px; gap: 8px; }
+    .ribbon-row { gap: 8px; padding-left: 20px; }
+    /* uniform, smaller tiles on mobile so the row reads as a swipeable strip */
+    .ribbon-tile { height: 150px; width: 220px !important; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ribbon-tile:hover img { transform: none; }
+    .cta-card,
+    .ribbon-tile img { transition: none; }
+  }
+</style>

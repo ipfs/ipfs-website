@@ -1,0 +1,186 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const pillars = [
+  {
+    num: '01',
+    label: 'Addressing',
+    title: 'Name data by what it is.',
+    body: 'A Content Identifier (CID) is a self-describing cryptographic fingerprint. From a plain hash of a single byte to a Merkle DAG that proves an entire dataset, the CID is the contract between publisher and consumer. Anyone can mint one. Anyone can verify one.',
+    question: 'What is the data?',
+    tech: [
+      { name: 'CID', hint: 'self-describing hash', link: 'https://docs.ipfs.tech/concepts/content-addressing/' },
+      { name: 'UnixFS', hint: 'files & directories', link: 'https://specs.ipfs.tech/architecture/unixfs/' },
+      { name: 'DASL', hint: 'a small, opinionated profile', link: 'https://dasl.ing/' },
+      { name: 'IPLD', hint: 'linked data', link: 'https://ipld.io/' },
+    ],
+  },
+  {
+    num: '02',
+    label: 'Discovery',
+    title: 'Find who has it.',
+    body: 'A CID alone does not move bytes. Discovery turns a hash into a list of providers willing to serve it. IPFS is plural here: a global open DHT, indexer-style HTTP routing, and newer routing systems compete and interoperate behind the same content-addressed contract.',
+    question: 'Who has it?',
+    tech: [
+      { name: 'Amino DHT', hint: 'open Kademlia DHT', link: 'https://blog.ipfs.tech/2023-09-amino-refactoring/' },
+      { name: 'IPNI', hint: 'HTTP indexers at scale', link: 'https://cid.contact/' },
+      { name: 'Delegated Routing', hint: 'HTTP API', link: 'https://specs.ipfs.tech/routing/http-routing-v1/' },
+      { name: 'radicle-artifact', hint: 'Secure artifact distribution for git', link: 'https://radicle.network/nodes/radicle.norman.life/rad:z4VYyJ9KuwMNkXGQnmKuGPGKw3inv' },
+    ],
+  },
+  {
+    num: '03',
+    label: 'Transfer',
+    title: 'Move the bytes.',
+    body: 'Once a provider is found, fetch the blocks and verify them on arrival. The transport is interchangeable: HTTP gateways, libp2p with Bitswap, iroh-blobs over QUIC, RASL, even sneakernet. The CID is the integrity check; the wire is whatever fits the deployment.',
+    question: 'How do the bytes arrive?',
+    tech: [
+      { name: 'HTTP Gateways', hint: 'request / response', link: 'https://specs.ipfs.tech/http-gateways/' },
+      { name: 'Bitswap', hint: 'block exchange over libp2p', link: 'https://docs.ipfs.tech/concepts/bitswap/' },
+      { name: 'iroh-blobs', hint: 'QUIC-native transfer', link: 'https://www.iroh.computer/' },
+      { name: 'RASL', hint: 'streaming verifiable bytes', link: 'https://specs.ipfs.tech/' },
+    ],
+  },
+];
+---
+
+<section style="padding: 96px 32px; background: var(--pearl); border-top: 1px solid var(--hair);">
+  <div class="mx-auto" style="max-width: 1240px;">
+    <SectionHeader
+      title="Addressing. Discovery. Transfer."
+      kicker="Self-certifying data publishing decomposes into three problems. IPFS solves each one independently and lets you swap the pieces. The CID is the only shared contract."
+    />
+
+    <div class="pillars-grid">
+      {pillars.map((p) => (
+        <div class="pillar-card">
+          <div class="pillar-head">
+            <span class="mono pillar-num">{p.num}</span>
+            <span class="pillar-label">{p.label}</span>
+          </div>
+          <div class="mono pillar-question">→ {p.question}</div>
+          <h3 class="pillar-title">{p.title}</h3>
+          <p class="pillar-body">{p.body}</p>
+
+          <div class="pillar-tech">
+            {p.tech.map((t) => (
+              <a href={t.link} class="pillar-chip" target="_blank" rel="noopener">
+                <span class="pillar-chip-name">{t.name}</span>
+                <span class="pillar-chip-hint">{t.hint}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 900px) {
+    .pillars-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .pillar-card {
+    position: relative;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow: hidden;
+  }
+  .pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--grad);
+    opacity: 0.6;
+  }
+
+  .pillar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .pillar-num {
+    font-size: var(--text-xs);
+    color: var(--turq);
+    font-weight: 600;
+    letter-spacing: .1em;
+  }
+  .pillar-label {
+    font-family: var(--font-retro);
+    font-style: italic;
+    font-size: var(--text-sm);
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+
+  .pillar-question {
+    font-size: var(--text-xs);
+    color: var(--jade);
+    font-weight: 500;
+    letter-spacing: .02em;
+  }
+  .pillar-title {
+    margin: 0;
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+  }
+  .pillar-body {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--ink-2);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .pillar-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 6px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+  }
+  .pillar-chip {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--pearl);
+    border: 1px solid var(--line);
+    text-decoration: none;
+    transition: border-color .15s, transform .15s, background .15s;
+  }
+  .pillar-chip:hover {
+    border-color: var(--turq);
+    background: var(--paper);
+    transform: translateY(-1px);
+  }
+  .pillar-chip-name {
+    font-family: var(--font-display-mono);
+    font-size: var(--text-sm);
+    color: var(--turq);
+    font-weight: 600;
+  }
+  .pillar-chip-hint {
+    font-size: var(--text-2xs);
+    color: var(--ink-3);
+    text-align: right;
+  }
+</style>

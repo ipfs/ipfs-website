@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import SocialProof from '../components/SocialProof.astro';
+import Foundations from '../components/Foundations.astro';
+import NetworkTopologies from '../components/NetworkTopologies.astro';
+import Tools from '../components/Tools.astro';
+import UseCases from '../components/UseCases.astro';
+import Community from '../components/Community.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="IPFS — Content addressing for data with confidence"
+  description="IPFS gives developers content addressing building blocks for verifiable, portable, and resilient applications across open networks"
+  image="https://ipfs.tech/og-image.png"
+  canonical="https://ipfs.tech/"
+>
+  <Nav />
+  <main id="main">
+    <Hero />
+    <SocialProof />
+    <Foundations />
+    <UseCases />
+    <NetworkTopologies />
+    <Tools />
+    <Community />
+  </main>
+  <Footer />
+</Layout>

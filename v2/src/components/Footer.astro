@@ -1,0 +1,104 @@
+---
+import Logomark from './Logomark.astro';
+
+const columns: [string, { label: string; href: string }[]][] = [
+  ['Learn', [
+    { label: 'Docs', href: 'https://docs.ipfs.tech/' },
+    { label: 'Specs', href: 'https://specs.ipfs.tech/' },
+    { label: 'Blog', href: 'https://blog.ipfs.tech/' },
+    { label: 'Guides', href: 'https://docs.ipfs.tech/how-to/' },
+  ]],
+  ['Community', [
+    { label: 'Code of Conduct', href: 'https://github.com/ipfs/community/blob/master/code-of-conduct.md' },
+    { label: 'Security', href: 'https://github.com/ipfs/community/blob/master/CONTRIBUTING.md#security-issues' },
+    { label: 'DASL', href: 'https://dasl.ing/' },
+    { label: 'IPFS Foundation', href: 'https://ipfsfoundation.org/' },
+  ]],
+  ['Network', [
+    { label: 'Gateway', href: 'https://inbrowser.link/' },
+    { label: 'Retrieval Check', href: 'https://check.ipfs.network/' },
+    { label: 'Public Utilities', href: 'https://ipfs.fyi/utils' },
+    { label: 'Implementation Grants', href: 'https://ipfsgrants.io/' },
+  ]],
+  ['Social', [
+    { label: 'Forums', href: 'https://discuss.ipfs.tech/' },
+    { label: 'GitHub', href: 'https://github.com/ipfs' },
+    { label: 'Bluesky', href: 'https://bsky.app/profile/ipfs.tech' },
+  ]],
+];
+---
+
+<footer style="background: var(--navy-surface); color: rgba(255,255,255,0.75); padding: 48px 32px; border-top: 1px solid rgba(255,255,255,0.08);">
+  <div class="mx-auto footer-grid" style="max-width: 1240px;">
+    <div>
+      <div class="flex items-center" style="gap: 10px; color: #fff; margin-bottom: 14px;">
+        <Logomark size={22} variant="mono" color="#fff" />
+        <span style="font-weight: 600; font-size: var(--text-md);">IPFS</span>
+      </div>
+      <p style="margin: 0; font-size: var(--text-sm); line-height: 1.6; max-width: 320px; color: rgba(255,255,255,0.6);">
+        IPFS is a constellation of open-source tools for content addressing.
+      </p>
+    </div>
+    {columns.map(([h, items]) => (
+      <div>
+        <h3 class="retro-label footer-col-heading" style="font-size: var(--text-ui); color: var(--teal); margin-bottom: 14px;">
+          {h}
+        </h3>
+        <ul class="footer-list">
+          {items.map((i) => (
+            <li>
+              <a href={i.href} class="footer-link" style="color: rgba(255,255,255,0.75); text-decoration: none;">{i.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</footer>
+
+<style>
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-col-heading {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-list li {
+    font-size: var(--text-sm);
+    margin-bottom: 8px;
+  }
+
+  .footer-link:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid > :first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+</style>

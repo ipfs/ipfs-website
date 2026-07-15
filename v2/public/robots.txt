@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ipfs.tech/sitemap-index.xml

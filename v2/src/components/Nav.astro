@@ -1,0 +1,158 @@
+---
+import Logomark from './Logomark.astro';
+---
+
+<nav class="sticky top-0 z-20 backdrop-blur-md border-b" style="background: var(--nav-bg); border-color: var(--hair);">
+  <div class="mx-auto flex items-center justify-between" style="max-width: 1240px; padding: 14px 32px;">
+    <a href="/" class="flex items-center" style="gap: 10px; color: var(--ink); text-decoration: none;">
+      <Logomark size={36} variant="mono" />
+      <span style="font-weight: 600; font-size: var(--text-md); letter-spacing: .02em;">IPFS</span>
+    </a>
+    <div class="nav-links hidden md:flex" style="gap: 28px; font-size: var(--text-ui); color: var(--ink-2);">
+      <a class="nav-link" href="https://docs.ipfs.tech/">Docs</a>
+      <a class="nav-link" href="https://specs.ipfs.tech/">Specs</a>
+      <a class="nav-link" href="#tools">Tools</a>
+      <a class="nav-link" href="#community">Community</a>
+      <a class="nav-link" href="https://blog.ipfs.tech/">Blog</a>
+    </div>
+    <div class="flex items-center" style="gap: 14px;">
+      <a class="nav-link hidden sm:inline" style="font-size: var(--text-sm);" href="https://github.com/ipfs">GitHub ↗</a>
+      <button id="nav-menu-toggle" type="button" class="nav-menu-toggle inline-flex md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode" aria-pressed="false">
+        {/* Sun (shown in dark mode) */}
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        {/* Moon (shown in light mode) */}
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="nav-menu" class="nav-menu md:hidden" hidden>
+    <div class="nav-menu-inner" style="max-width: 1240px;">
+      <a class="nav-link" href="https://docs.ipfs.tech/">Docs</a>
+      <a class="nav-link" href="https://specs.ipfs.tech/">Specs</a>
+      <a class="nav-link" href="#tools">Tools</a>
+      <a class="nav-link" href="#community">Community</a>
+      <a class="nav-link" href="https://blog.ipfs.tech/">Blog</a>
+      <a class="nav-link" href="https://github.com/ipfs">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    btn?.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      document.documentElement.style.colorScheme = next;
+      localStorage.setItem('theme', next);
+      btn.setAttribute('aria-pressed', String(next === 'dark'));
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#0B1126' : '#ffffff');
+    });
+    // Sync aria-pressed with the initial theme.
+    if (btn) btn.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'dark'));
+
+    // Mobile menu toggle.
+    const menuBtn = document.getElementById('nav-menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    menuBtn?.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      menuBtn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+      if (menu) menu.hidden = expanded;
+    });
+    // Close menu when a link is clicked.
+    menu?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        menuBtn?.setAttribute('aria-expanded', 'false');
+        menuBtn?.setAttribute('aria-label', 'Open menu');
+        if (menu) menu.hidden = true;
+      });
+    });
+  })();
+</script>
+
+<style>
+  .nav-link {
+    text-decoration: none;
+    color: var(--ink-2);
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .nav-link:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+  }
+  .nav-menu-toggle {
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .nav-menu-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink-3);
+  }
+  .nav-menu-toggle:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+  }
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+  .theme-toggle:hover {
+    color: var(--ink);
+    border-color: var(--ink-3);
+  }
+  .theme-toggle:focus-visible {
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+  }
+  .nav-menu {
+    border-top: 1px solid var(--hair);
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+  }
+  .nav-menu-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 32px 20px;
+  }
+  .nav-menu-inner .nav-link {
+    padding: 10px 0;
+    font-size: var(--text-ui);
+    color: var(--ink);
+  }
+  /* Show the moon in light mode, the sun in dark mode. */
+  .icon-sun { display: none; }
+  :global(html[data-theme='dark']) .icon-sun { display: block; }
+  :global(html[data-theme='dark']) .icon-moon { display: none; }
+</style>

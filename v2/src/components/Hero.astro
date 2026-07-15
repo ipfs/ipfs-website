@@ -1,0 +1,277 @@
+---
+// Locked to the "buildingBlocks" tagline from the prototype's TAGLINES map.
+const tagline = {
+  pre: 'Building Blocks For ',
+  hl: 'a Better Web',
+  post: '.',
+};
+
+// Fetch the GitHub star count at build time so it's baked into the static HTML.
+// Falls back to a fixed number if the request fails (e.g. offline build, rate limit).
+const FALLBACK_STARS = 17000;
+
+async function getStars(repo: string): Promise<number> {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { Accept: 'application/vnd.github+json' },
+    });
+    if (!res.ok) return FALLBACK_STARS;
+    const data = await res.json();
+    return data.stargazers_count ?? FALLBACK_STARS;
+  } catch {
+    return FALLBACK_STARS;
+  }
+}
+
+const stars = await getStars('ipfs/kubo');
+const starLabel = Intl.NumberFormat('en', {
+  notation: 'compact',
+  maximumFractionDigits: 1,
+}).format(stars);
+
+const metrics = [
+  { value: starLabel, label: 'GitHub stars', href: 'https://github.com/ipfs/kubo' },
+  { value: '1B+', label: 'CIDs published', href: null },
+  { value: '400k+', label: 'public nodes', href: 'https://probelab.io/ipfs/' },
+];
+
+// Deterministic constellation mesh. Positions come from a jittered grid
+// across a 1240x560 viewBox; edges connect each node to its 2 nearest
+// neighbors. Generated at build time so there's no client-side cost.
+const VB_W = 1240;
+const VB_H = 560;
+const COLS = 14;
+const ROWS = 7;
+
+// Seeded PRNG (mulberry32) so the layout is stable across builds.
+function rng(seed: number) {
+  let s = seed >>> 0;
+  return () => {
+    s = (s + 0x6d2b79f5) >>> 0;
+    let t = s;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const rand = rng(0xC1D);
+
+const cellW = VB_W / COLS;
+const cellH = VB_H / ROWS;
+type Node = { x: number; y: number; r: number; accent: boolean };
+const nodes: Node[] = [];
+for (let i = 0; i < COLS; i++) {
+  for (let j = 0; j < ROWS; j++) {
+    // Drop ~15% of cells for an irregular, natural look.
+    if (rand() < 0.15) continue;
+    const jitterX = (rand() - 0.5) * cellW * 0.7;
+    const jitterY = (rand() - 0.5) * cellH * 0.7;
+    nodes.push({
+      x: i * cellW + cellW / 2 + jitterX,
+      y: j * cellH + cellH / 2 + jitterY,
+      r: 1.2 + rand() * 1.4,
+      accent: rand() < 0.12,
+    });
+  }
+}
+
+// Build edges: each node connects to its 2 nearest neighbors. Dedupe pairs.
+const edgeSet = new Set<string>();
+type Edge = { a: Node; b: Node; d: number };
+const edges: Edge[] = [];
+for (let i = 0; i < nodes.length; i++) {
+  const dists = nodes
+    .map((n, k) => ({ k, d: Math.hypot(n.x - nodes[i].x, n.y - nodes[i].y) }))
+    .filter((e) => e.k !== i)
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 6);
+  for (const { k, d } of dists) {
+    const key = i < k ? `${i}-${k}` : `${k}-${i}`;
+    if (edgeSet.has(key)) continue;
+    edgeSet.add(key);
+    edges.push({ a: nodes[i], b: nodes[k], d });
+  }
+}
+---
+
+<section class="relative overflow-hidden text-white" style="background: var(--grad);">
+  <svg
+    class="absolute inset-0 w-full h-full"
+    viewBox={`0 0 ${VB_W} ${VB_H}`}
+    preserveAspectRatio="xMidYMid slice"
+    aria-hidden="true"
+  >
+    <defs>
+      {/* Radial mask: opaque mesh at edges, fading toward the headline anchor (left-center) for legibility. */}
+      <radialGradient id="heromask" cx="28%" cy="55%" r="65%">
+        <stop offset="0%" stop-color="#000" stop-opacity="0" />
+        <stop offset="55%" stop-color="#fff" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#fff" stop-opacity="1" />
+      </radialGradient>
+      <mask id="heromaskApply">
+        <rect width="100%" height="100%" fill="url(#heromask)" />
+      </mask>
+    </defs>
+    <g mask="url(#heromaskApply)" class="mesh">
+      {edges.map(({ a, b, d }) => {
+        // Per-edge stagger: long, slow breathe.
+        const dur = (4 + rand() * 4).toFixed(2);
+        const delay = (-rand() * 8).toFixed(2);
+        const base = Math.max(0.15, 1 - d / 220);
+        return (
+          <line
+            x1={a.x}
+            y1={a.y}
+            x2={b.x}
+            y2={b.y}
+            stroke="rgba(255,255,255,0.22)"
+            stroke-width="0.8"
+            class="edge"
+            style={`opacity:${base};--dur:${dur}s;--delay:${delay}s;--peak:${base.toFixed(2)};--trough:${(base * 0.35).toFixed(2)}`}
+          />
+        );
+      })}
+      {nodes.map((n) => {
+        // Per-node stagger: faster shimmer than edges.
+        const dur = (2 + rand() * 3).toFixed(2);
+        const delay = (-rand() * 5).toFixed(2);
+        return (
+          <circle
+            cx={n.x}
+            cy={n.y}
+            r={n.r}
+            fill={n.accent ? 'var(--teal)' : 'rgba(255,255,255,0.85)'}
+            class="node"
+            style={`--dur:${dur}s;--delay:${delay}s`}
+          />
+        );
+      })}
+    </g>
+  </svg>
+  <div class="relative mx-auto" style="max-width: 1240px; padding: 96px 32px 72px;">
+    <h1 class="hero-h1" style="font-weight: 600; letter-spacing: -0.025em; margin: 0 0 28px; line-height: 1.04; max-width: 980px; text-wrap: balance;">
+      {tagline.pre}<span class="mono-display" style="color: var(--yellow); font-weight: 400;">{tagline.hl}</span>
+    </h1>
+    <p style="font-size: var(--text-2xl); color: rgba(255,255,255,0.85); max-width: 720px; margin: 0 0 36px; line-height: 1.5;">
+      IPFS is a constellation of open-source tools for <strong>content addressing</strong>. Build verifiable, portable, and resilient systems across public and private networks.
+    </p>
+    <dl class="hero-metrics">
+      {metrics.map((m) => {
+        const Tag = m.href ? 'a' : 'div';
+        return (
+          <Tag class="hero-metric" {...(m.href ? { href: m.href } : {})}>
+            <dt class="hero-metric-value">{m.value}</dt>
+            <dd class="hero-metric-label">{m.label}</dd>
+          </Tag>
+        );
+      })}
+    </dl>
+    <div class="flex flex-wrap items-center" style="gap: 12px;">
+      <a href="#tools" class="hero-cta">
+        Pick the tool that fits the job
+        <span class="hero-cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-h1 {
+    font-size: var(--text-h1);
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* Solid fill in the headline accent so the CTA reads as the primary action. */
+    background: var(--teal);
+    /* Base token, not the --ink alias: the teal fill stays light in both
+       themes, so the text must stay dark (the alias flips to near-white). */
+    color: var(--color-ink);
+    border: 1.5px solid transparent;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: var(--text-ui);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .15s, transform .15s;
+  }
+  .hero-cta:hover {
+    background: color-mix(in srgb, var(--teal) 85%, var(--color-ink));
+  }
+  .hero-cta:active {
+    transform: translateY(1px);
+  }
+  .hero-cta:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+  }
+  .hero-cta-arrow {
+    display: inline-block;
+    transition: transform .15s;
+  }
+  .hero-cta:hover .hero-cta-arrow {
+    transform: translateX(3px);
+  }
+  .hero-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  .hero-metric {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  a.hero-metric {
+    border-radius: 6px;
+    transition: opacity .15s;
+  }
+  a.hero-metric:hover {
+    opacity: 0.85;
+  }
+  a.hero-metric:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 4px;
+  }
+  .hero-metric-value {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .hero-metric-label {
+    margin: 6px 0 0;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .mesh {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: meshDrift 90s ease-in-out infinite;
+  }
+  .node {
+    animation: nodeTwinkle var(--dur) ease-in-out var(--delay) infinite;
+  }
+  .edge {
+    animation: edgeBreathe var(--dur) ease-in-out var(--delay) infinite;
+  }
+  @keyframes nodeTwinkle {
+    0%, 100% { opacity: 0.45; }
+    50%      { opacity: 1; }
+  }
+  @keyframes edgeBreathe {
+    0%, 100% { opacity: var(--trough); }
+    50%      { opacity: var(--peak); }
+  }
+  @keyframes meshDrift {
+    0%   { transform: rotate(-0.6deg) translate(-6px, -4px); }
+    50%  { transform: rotate(0.6deg)  translate(6px, 4px); }
+    100% { transform: rotate(-0.6deg) translate(-6px, -4px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .node, .edge, .mesh { animation: none; }
+  }
+</style>

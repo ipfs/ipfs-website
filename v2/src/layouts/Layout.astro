@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+import geistSans400 from '@fontsource/geist-sans/files/geist-sans-latin-400-normal.woff2?url';
+import geistPixelCircle from '/fonts/GeistPixelCircle-Regular.woff2?url';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = 'IPFS, a constellation of tools for content addressing',
+  description = 'IPFS is a constellation of open-source tools for content addressing. Name data by what it is, not where it lives.',
+  image = 'https://ipfs.tech/og-image.png',
+  canonical = 'https://ipfs.tech/',
+} = Astro.props;
+
+// Initial theme-color; the inline script below overrides it to match the
+// resolved theme before first paint. Kept in sync with the dark value the
+// script and Nav toggle write ('#0B1126').
+const themeColorLight = '#ffffff';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <link rel="preload" href={geistSans400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={geistPixelCircle} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonical} />
+    {/* Single theme-color meta owned by JS (below + Nav toggle). A media-scoped
+        pair would fight the JS override when the chosen theme differs from the
+        OS preference, since the OS-matching meta wins regardless. */}
+    <meta name="theme-color" content={themeColorLight} />
+
+    {/* Open Graph / Facebook */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IPFS" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="IPFS logo" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content="IPFS logo" />
+
+    {/* Set the theme before first paint to avoid a flash of the wrong colors.
+        Also syncs color-scheme (native scrollbars/inputs) and the theme-color
+        meta so mobile browser chrome matches. */}
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem('theme');
+        const theme = stored || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const root = document.documentElement;
+        root.dataset.theme = theme;
+        root.style.colorScheme = theme;
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#0B1126' : '#ffffff');
+      })();
+    </script>
+    <script is:inline defer data-domain="ipfs.tech" src="https://plausible.io/js/script.js"></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .skip-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transform: translateY(-100%);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 16px;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    transition: transform .15s;
+  }
+  .skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid var(--turq);
+    outline-offset: 2px;
+  }
+</style>
