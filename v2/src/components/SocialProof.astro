@@ -135,8 +135,8 @@ const initials = (name: string) =>
   }
   /* Dark mode: invert the muted marks so they read light on the dark surface. */
   :global(html[data-theme='dark']) .proof-logo {
-    filter: grayscale(1) invert(1) brightness(1.6);
-    opacity: .65;
+    filter: grayscale(1) invert(1) brightness(1.8);
+    opacity: .8;
   }
   :global(html[data-theme='dark']) .proof-logo:hover {
     opacity: 1;
@@ -286,6 +286,9 @@ const initials = (name: string) =>
     .proof-logo { height: 22px; }
     .proof-track { margin: 0 -24px; padding: 4px 24px; }
     .proof-quote { flex-basis: 280px; max-width: 280px; }
+    /* Bump the arrows to a real touch target and give them room apart. */
+    .proof-arrows { gap: 12px; }
+    .proof-arrow { width: 44px; height: 44px; }
   }
 
   @media (prefers-reduced-motion: reduce) {

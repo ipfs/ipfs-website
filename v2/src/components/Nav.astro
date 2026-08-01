@@ -140,6 +140,15 @@ import Logomark from './Logomark.astro';
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
   }
+  /* Below md, .theme-toggle is the only header control on-screen with .nav-menu-toggle;
+     both need a real touch target since they're tapped on every visit. */
+  @media (max-width: 768px) {
+    .nav-menu-toggle,
+    .theme-toggle {
+      width: 44px;
+      height: 44px;
+    }
+  }
   .nav-menu-inner {
     display: flex;
     flex-direction: column;
