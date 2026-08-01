@@ -7,9 +7,9 @@
 @import "@fontsource/geist-sans/600.css";
 @import "@fontsource/geist-sans/700.css";
 
-/* Workhorse monospace for code, CIDs, terminal-style content. */
-@import "@fontsource/commit-mono/400.css";
-@import "@fontsource/commit-mono/500.css";
+/* Workhorse monospace for code, CIDs, terminal-style content.
+   Only 600 is imported: every --font-mono/--font-display-mono usage in the
+   codebase sets font-weight: 600, so 400/500 would just be unused payload. */
 @import "@fontsource/commit-mono/600.css";
 
 /* Geist Pixel Circle — display accent only (brand wordmark, hero CTA). */
