@@ -43,7 +43,7 @@ export const categories: UseCaseCategory[] = [
         useCase: 'Collaborative hypermedia',
         body: 'Seed builds collaborative documents where every version, comment, and link is addressed by CID, durable across servers, editors, and time.',
         linkLabel: 'Visit Seed', link: 'seed.hyper.media', href: 'https://seed.hyper.media/',
-        logo: '/brands/seed-hypermedia.png',
+        logo: '/brands/seed-hypermedia.webp',
         quote: {
           who: 'Gabo H Beaumont', role: 'Co-Founder, Seed Hypermedia',
           text: 'It’s crucially important to have a distributed file system in our open hypertext system. IPFS is the missing piece that allows for a truly decentralized and open web.',
@@ -103,7 +103,7 @@ export const categories: UseCaseCategory[] = [
         quote: {
           who: 'Georg Greve', role: 'CEO and Co-founder, Vereign',
           text: 'There is no central point of compromise anymore. There is no database that can be hacked, because the data just doesn’t exist, even in encrypted form, in one place anywhere. It only comes together at the edge device of the patient.',
-          photo: '/portraits/georg-grev.jpg',
+          photo: '/portraits/georg-grev.webp',
         },
       },
       {
@@ -111,7 +111,7 @@ export const categories: UseCaseCategory[] = [
         title: 'Restore a censored encyclopedia',
         body: 'When the government of Turkey blocked Wikipedia, a copy was posted to IPFS, restoring access for millions of readers.',
         linkLabel: 'Read the story', link: 'blog.ipfs.tech', href: 'https://blog.ipfs.tech/24-uncensorable-wikipedia/',
-        logo: '/brands/wikipedia.png',
+        logo: '/brands/wikipedia.webp',
       },
       {
         brand: 'SimplePage', hue: 190,
@@ -150,7 +150,7 @@ export const categories: UseCaseCategory[] = [
         title: 'Crowdsourced weather, verified at the edge',
         body: 'WeatherXM ships smart weather vanes with IPFS clients so thousands of stations can collaboratively share atmospheric data.',
         linkLabel: 'Watch presentation', link: 'youtube.com', href: 'https://www.youtube.com/watch?v=Y2VgbDS1Hak',
-        logo: '/brands/weatherxm.png',
+        logo: '/brands/weatherxm.webp',
       },
     ],
   },
