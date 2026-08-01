@@ -84,7 +84,7 @@ for (let i = 0; i < nodes.length; i++) {
     .map((n, k) => ({ k, d: Math.hypot(n.x - nodes[i].x, n.y - nodes[i].y) }))
     .filter((e) => e.k !== i)
     .sort((a, b) => a.d - b.d)
-    .slice(0, 6);
+    .slice(0, 2);
   for (const { k, d } of dists) {
     const key = i < k ? `${i}-${k}` : `${k}-${i}`;
     if (edgeSet.has(key)) continue;
