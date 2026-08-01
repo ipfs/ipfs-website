@@ -156,15 +156,15 @@ for (let i = 0; i < nodes.length; i++) {
       IPFS (InterPlanetary File System) is a constellation of open-source tools for <strong>content addressing</strong>. Build verifiable, portable, and resilient systems across public and private networks.
     </p>
     <dl class="hero-metrics">
-      {metrics.map((m) => {
-        const Tag = m.href ? 'a' : 'div';
-        return (
-          <Tag class="hero-metric" {...(m.href ? { href: m.href } : {})}>
-            <dt class="hero-metric-value">{m.value}</dt>
-            <dd class="hero-metric-label">{m.label}</dd>
-          </Tag>
-        );
-      })}
+      {metrics.map((m) => (
+        <div class="hero-metric">
+          <dt class="hero-metric-value">{m.value}</dt>
+          <dd class="hero-metric-label">{m.label}</dd>
+          {m.href && (
+            <a class="hero-metric-link" href={m.href} aria-label={`${m.value} ${m.label}`}></a>
+          )}
+        </div>
+      ))}
     </dl>
     <div class="flex flex-wrap items-center" style="gap: 12px;">
       <a href="#tools" class="hero-cta">
@@ -221,18 +221,20 @@ for (let i = 0; i < nodes.length; i++) {
     margin: 40px 0;
   }
   .hero-metric {
+    position: relative;
     display: block;
-    text-decoration: none;
     color: inherit;
-  }
-  a.hero-metric {
-    border-radius: 6px;
     transition: opacity .15s;
   }
-  a.hero-metric:hover {
+  .hero-metric-link {
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+  }
+  .hero-metric:has(.hero-metric-link:hover) {
     opacity: 0.85;
   }
-  a.hero-metric:focus-visible {
+  .hero-metric-link:focus-visible {
     outline: 2px solid var(--teal);
     outline-offset: 4px;
   }
