@@ -178,6 +178,14 @@ export const categories: UseCaseCategory[] = [
           photo: '/portraits/nancy-baker-cahill.webp',
         },
       },
+      {
+        brand: 'Indelible.world', hue: 15,
+        title: 'Timestamped authorship attestation for news',
+        useCase: 'Verifiable timestamps and quotes',
+        body: 'Indelible.world is building a platform for news organizations to certify their articles on-chain with immutable, IPFS-compatible CIDs.',
+        linkLabel: "Try out a demo", link: 'indelible.world', href: 'https://docs.indelible.world/tryit',
+        logo: '/brands/indelible.png',
+      },
     ],
   },
 ];
